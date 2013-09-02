@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     Jan 24, 2013 2:39:14 PM                                                        
+
+     VoltInEclipse    
+     This project is test out building VoltDB components and clients in an Eclipse environment
+                   
+     dremella                                                                
+     ====================================================================== -->
+<project name="VeliSphere Montana" default="serverStart">
+	
+    <description>
+            In Memory Database Component for VeliSphere Built on VoltDB
+    </description>
+	
+	<property name="ddlLocation" location="./ddl"/>
+	<property name="jarFileName" value="catalog.jar"/>
+	<property name="ddlFileName" value="logqueue.sql"/>
+	<property name="VoltHome" value="/home/voltdb/voltdb-3.0"/>
+	<property name="VoltLicense" value="${VoltHome}/voltdb/license.xml"/>
+	<property name="sourceCodePath" value="./src"/>
+	<property name="compileOutputDir" value="./bin"/>
+	<property name="voltClasspath" value="./:/home/voltdb/voltdb-3.0/lib/*:/home/voltdb/voltdb-3.0/voltdb/*"/>
+	
+	<path id="class.path">
+		<fileset dir="${VoltHome}">
+			<include name="**/*.jar"/>
+			<include name="./bin"/>
+		</fileset>
+	</path>
+	
+
+    <!-- ================================= 
+          target: serverStart
+          Start the server after compiling the DDL and stored procedures              
+         ================================= -->
+    <target name="serverStart" depends="catalog">
+        <exec executable="${VoltHome}/bin/voltdb">
+        	<arg value="create"/>
+        	<arg value="catalog ${jarFileName}"/>
+        	<arg value="host localhost"/>
+        	<arg value="deployment deployment.xml"/>
+        	<arg value="license ${VoltLicense}"/>
+    	</exec>
+    </target>
+	
+	<target name="compile.src">
+		<javac
+			debug="on"
+			srcdir="${sourceCodePath}"
+			destdir="${compileOutputDir}">
+			<classpath refid="class.path"/>
+		</javac>
+	</target>
+
+    <!-- - - - - - - - - - - - - - - - - - 
+          target: compile
+          Compiles the                       
+         - - - - - - - - - - - - - - - - - -->
+    <target name="catalog" depends="compile.src">
+    	<exec executable="${VoltHome}/bin/voltdb">
+    		<arg value="compile"/>
+    		<arg value="--classpath='./:${voltClasspath}:${compileOutputDir}'"/>
+    		<arg value="-o"/>
+    		<arg value="${jarFileName}"/>
+    		<arg value="${ddlLocation}/${ddlFileName}"/>
+    	</exec>
+    </target>
+	
+	<target name="serverStop">
+		<exec executable="${VoltHome}/bin/voltadmin">
+			<arg value="shutdown"/>
+		</exec>
+	</target>
+	
+	<target name="clean">
+		<delete includeEmptyDirs="true">
+		  <fileset dir="${compileOutputDir}" includes="**/*" defaultexcludes="no"/>
+		</delete>
+	</target>
+</project>

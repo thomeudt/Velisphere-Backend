@@ -1,0 +1,3 @@
+INSERT into "LOGQUEUE"
+ MATERIALIZE TUPLE from parameters and/or literals
+

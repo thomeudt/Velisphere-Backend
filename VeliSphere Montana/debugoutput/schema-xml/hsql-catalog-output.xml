@@ -1,0 +1,126 @@
+ELEMENT: databaseschema
+[
+   ELEMENT: table
+    name = LOGQUEUE
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = EXCHANGENAME
+          nullable = true
+          size = 255
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = MESSAGE
+          nullable = true
+          size = 1024
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = QUEUENAME
+          nullable = false
+          size = 255
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = ROUTINGKEY
+          nullable = true
+          size = 255
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = IDENTIFIER
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = IDENTIFIER,QUEUENAME
+          name = SYS_IDX_SYS_PK_10019_10020
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10019_10020
+          name = SYS_PK_10019
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10017
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10018
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = ACTIONS
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = EXCHANGENAME
+          nullable = true
+          size = 255
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = QUEUENAME
+          nullable = false
+          size = 255
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = ROUTINGKEY
+          nullable = true
+          size = 255
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = IDENTIFIER
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = ACTIONID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = IDENTIFIER,QUEUENAME
+          name = SYS_IDX_SYS_PK_10024_10025
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10024_10025
+          name = SYS_PK_10024
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10021
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10022
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10023
+          type = NOT_NULL
+         [
+
