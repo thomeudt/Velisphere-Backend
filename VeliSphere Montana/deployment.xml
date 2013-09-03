@@ -7,4 +7,8 @@
    <httpd enabled="true">
       <jsonapi enabled="true" />
    </httpd>
+   <snapshot prefix="montana" 
+          frequency="5m" 
+          retain="3"
+   />
 </deployment>

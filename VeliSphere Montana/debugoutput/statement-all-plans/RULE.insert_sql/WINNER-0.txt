@@ -1,0 +1,3 @@
+INSERT into "RULE"
+ MATERIALIZE TUPLE from parameters and/or literals
+

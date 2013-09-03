@@ -1,0 +1,3 @@
+UPDATE
+ INDEX SCAN of "MULTICHECK_MULTICHECK_LINK" using "SYS_IDX_SYS_PK_10098_10099" (unique-scan covering)
+

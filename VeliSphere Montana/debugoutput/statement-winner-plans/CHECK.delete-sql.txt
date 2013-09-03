@@ -1,0 +1,6 @@
+SQL: DELETE FROM CHECK WHERE (CHECKID = ?);
+COST: 6.0
+PLAN:
+DELETE
+ INDEX SCAN of "CHECK" using "SYS_IDX_SYS_PK_10077_10078" (unique-scan covering)
+

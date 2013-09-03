@@ -1,0 +1,3 @@
+INSERT into "MESSAGE_ENDPOINT_LINK"
+ MATERIALIZE TUPLE from parameters and/or literals
+
