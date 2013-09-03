@@ -1,0 +1,3 @@
+INSERT into "ENDPOINT"
+ MATERIALIZE TUPLE from parameters and/or literals
+

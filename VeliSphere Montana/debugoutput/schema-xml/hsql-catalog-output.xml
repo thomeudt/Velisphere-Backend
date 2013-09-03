@@ -396,4 +396,578 @@ ELEMENT: databaseschema
           name = SYS_CT_10050
           type = NOT_NULL
          [
+   ELEMENT: table
+    name = PROPERTY
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = PROPERTYID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = PROPERTYNAME
+          nullable = true
+          size = 255
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = PROPERTYDATATYPE
+          nullable = true
+          size = 32
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = PROPERTYUNIT
+          nullable = true
+          size = 32
+          type = VARCHAR
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = PROPERTYID
+          name = SYS_IDX_SYS_PK_10054_10055
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10054_10055
+          name = SYS_PK_10054
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10053
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = MESSAGE_ENDPOINT_LINK
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = LINKID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = ENDPOINTID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = MESSAGEID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = LINKID
+          name = SYS_IDX_SYS_PK_10059_10060
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10059_10060
+          name = SYS_PK_10059
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10056
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10057
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10058
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = MESSAGE
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = MESSAGEID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = EXPRESSIONCOUNT
+          nullable = true
+          size = 2
+          type = SMALLINT
+         [
+         ELEMENT: column
+          name = TIME_STAMP
+          nullable = false
+          size = 8
+          type = TIMESTAMP
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = MESSAGEID
+          name = SYS_IDX_SYS_PK_10063_10064
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10063_10064
+          name = SYS_PK_10063
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10061
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10062
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = MESSAGE_EXPRESSION_LINK
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = LINKID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = MESSAGEID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = EXPRESSIONID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = LINKID
+          name = SYS_IDX_SYS_PK_10068_10069
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10068_10069
+          name = SYS_PK_10068
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10065
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10066
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10067
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = EXPRESSION
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = EXPRESSIONID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = PROPERTYID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = PAYLOAD
+          nullable = true
+          size = 4096
+          type = VARCHAR
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = EXPRESSIONID
+          name = SYS_IDX_SYS_PK_10072_10073
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10072_10073
+          name = SYS_PK_10072
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10070
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10071
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = CHECK
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = CHECKID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = ENDPOINTID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = PROPERTYID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = CHECKVALUE
+          nullable = true
+          size = 4096
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = OPERATOR
+          nullable = true
+          size = 32
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = STATE
+          nullable = true
+          size = 1
+          type = TINYINT
+         [
+         ELEMENT: column
+          name = EXPIRED
+          nullable = true
+          size = 1
+          type = TINYINT
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = CHECKID
+          name = SYS_IDX_SYS_PK_10077_10078
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10077_10078
+          name = SYS_PK_10077
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10074
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10075
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10076
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = RULE_MULTICHECK_LINK
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = LINKID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = RULEID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = MULTICHECKID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = LINKID
+          name = SYS_IDX_SYS_PK_10082_10083
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10082_10083
+          name = SYS_PK_10082
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10079
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10080
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10081
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = RULE
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = RULEID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = RULENAME
+          nullable = true
+          size = 255
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = STATE
+          nullable = true
+          size = 1
+          type = TINYINT
+         [
+         ELEMENT: column
+          name = EXPIRED
+          nullable = true
+          size = 1
+          type = TINYINT
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = RULEID
+          name = SYS_IDX_SYS_PK_10085_10086
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10085_10086
+          name = SYS_PK_10085
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10084
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = MULTICHECK
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = MULTICHECKID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = OPERATOR
+          nullable = true
+          size = 32
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = STATE
+          nullable = true
+          size = 1
+          type = TINYINT
+         [
+         ELEMENT: column
+          name = EXPIRED
+          nullable = true
+          size = 1
+          type = TINYINT
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = MULTICHECKID
+          name = SYS_IDX_SYS_PK_10088_10089
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10088_10089
+          name = SYS_PK_10088
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10087
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = MULTICHECK_CHECK_LINK
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = LINKID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = MULTICHECKID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = CHECKID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = LINKID
+          name = SYS_IDX_SYS_PK_10093_10094
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10093_10094
+          name = SYS_PK_10093
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10090
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10091
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10092
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = MULTICHECK_MULTICHECK_LINK
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = LINKID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = MULTICHECKLID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = MULTICHECKRID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = LINKID
+          name = SYS_IDX_SYS_PK_10098_10099
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10098_10099
+          name = SYS_PK_10098
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10095
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10096
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10097
+          type = NOT_NULL
+         [
 
