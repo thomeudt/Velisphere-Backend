@@ -1,0 +1,3 @@
+INSERT into "PROPERTYCLASS"
+ MATERIALIZE TUPLE from parameters and/or literals
+
