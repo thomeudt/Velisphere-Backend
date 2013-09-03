@@ -425,29 +425,29 @@ ELEMENT: databaseschema
           type = VARCHAR
          [
          ELEMENT: column
-          name = PROPERTYDATATYPE
+          name = PROPERTYCLASSID
           nullable = false
-          size = 32
+          size = 36
           type = VARCHAR
          [
          ELEMENT: column
-          name = PROPERTYUNIT
-          nullable = true
-          size = 32
+          name = ENDPOINTCLASSID
+          nullable = false
+          size = 36
           type = VARCHAR
          [
       ELEMENT: indexes
       [
          ELEMENT: index
           columns = PROPERTYID
-          name = SYS_IDX_SYS_PK_10056_10057
+          name = SYS_IDX_SYS_PK_10057_10058
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10056_10057
-          name = SYS_PK_10056
+          index = SYS_IDX_SYS_PK_10057_10058
+          name = SYS_PK_10057
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
@@ -458,6 +458,64 @@ ELEMENT: databaseschema
          ELEMENT: constraint
           index = 
           name = SYS_CT_10055
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10056
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = PROPERTYCLASS
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = PROPERTYCLASSID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = PROPERTYCLASSNAME
+          nullable = true
+          size = 255
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = PROPERTYCLASSDATATYPE
+          nullable = false
+          size = 32
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = PROPERTYCLASSUNIT
+          nullable = true
+          size = 32
+          type = VARCHAR
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = PROPERTYCLASSID
+          name = SYS_IDX_SYS_PK_10061_10062
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10061_10062
+          name = SYS_PK_10061
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10059
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10060
           type = NOT_NULL
          [
    ELEMENT: table
@@ -487,29 +545,29 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = LINKID
-          name = SYS_IDX_SYS_PK_10061_10062
+          name = SYS_IDX_SYS_PK_10066_10067
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10061_10062
-          name = SYS_PK_10061
+          index = SYS_IDX_SYS_PK_10066_10067
+          name = SYS_PK_10066
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10058
+          name = SYS_CT_10063
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10059
+          name = SYS_CT_10064
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10060
+          name = SYS_CT_10065
           type = NOT_NULL
          [
    ELEMENT: table
@@ -539,24 +597,24 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = MESSAGEID
-          name = SYS_IDX_SYS_PK_10065_10066
+          name = SYS_IDX_SYS_PK_10070_10071
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10065_10066
-          name = SYS_PK_10065
+          index = SYS_IDX_SYS_PK_10070_10071
+          name = SYS_PK_10070
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10063
+          name = SYS_CT_10068
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10064
+          name = SYS_CT_10069
           type = NOT_NULL
          [
    ELEMENT: table
@@ -586,29 +644,29 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = LINKID
-          name = SYS_IDX_SYS_PK_10070_10071
+          name = SYS_IDX_SYS_PK_10075_10076
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10070_10071
-          name = SYS_PK_10070
+          index = SYS_IDX_SYS_PK_10075_10076
+          name = SYS_PK_10075
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10067
+          name = SYS_CT_10072
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10068
+          name = SYS_CT_10073
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10069
+          name = SYS_CT_10074
           type = NOT_NULL
          [
    ELEMENT: table
@@ -638,24 +696,24 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = EXPRESSIONID
-          name = SYS_IDX_SYS_PK_10074_10075
+          name = SYS_IDX_SYS_PK_10079_10080
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10074_10075
-          name = SYS_PK_10074
+          index = SYS_IDX_SYS_PK_10079_10080
+          name = SYS_PK_10079
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10072
+          name = SYS_CT_10077
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10073
+          name = SYS_CT_10078
           type = NOT_NULL
          [
    ELEMENT: table
@@ -709,29 +767,29 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = CHECKID
-          name = SYS_IDX_SYS_PK_10079_10080
+          name = SYS_IDX_SYS_PK_10084_10085
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10079_10080
-          name = SYS_PK_10079
+          index = SYS_IDX_SYS_PK_10084_10085
+          name = SYS_PK_10084
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10076
+          name = SYS_CT_10081
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10077
+          name = SYS_CT_10082
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10078
+          name = SYS_CT_10083
           type = NOT_NULL
          [
    ELEMENT: table
@@ -761,29 +819,29 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = LINKID
-          name = SYS_IDX_SYS_PK_10084_10085
+          name = SYS_IDX_SYS_PK_10089_10090
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10084_10085
-          name = SYS_PK_10084
+          index = SYS_IDX_SYS_PK_10089_10090
+          name = SYS_PK_10089
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10081
+          name = SYS_CT_10086
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10082
+          name = SYS_CT_10087
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10083
+          name = SYS_CT_10088
           type = NOT_NULL
          [
    ELEMENT: table
@@ -819,19 +877,19 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = RULEID
-          name = SYS_IDX_SYS_PK_10087_10088
+          name = SYS_IDX_SYS_PK_10092_10093
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10087_10088
-          name = SYS_PK_10087
+          index = SYS_IDX_SYS_PK_10092_10093
+          name = SYS_PK_10092
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10086
+          name = SYS_CT_10091
           type = NOT_NULL
          [
    ELEMENT: table
@@ -867,19 +925,19 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = MULTICHECKID
-          name = SYS_IDX_SYS_PK_10090_10091
+          name = SYS_IDX_SYS_PK_10095_10096
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10090_10091
-          name = SYS_PK_10090
+          index = SYS_IDX_SYS_PK_10095_10096
+          name = SYS_PK_10095
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10089
+          name = SYS_CT_10094
           type = NOT_NULL
          [
    ELEMENT: table
@@ -901,58 +959,6 @@ ELEMENT: databaseschema
          [
          ELEMENT: column
           name = CHECKID
-          nullable = false
-          size = 36
-          type = VARCHAR
-         [
-      ELEMENT: indexes
-      [
-         ELEMENT: index
-          columns = LINKID
-          name = SYS_IDX_SYS_PK_10095_10096
-          unique = true
-         [
-      ELEMENT: constraints
-      [
-         ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10095_10096
-          name = SYS_PK_10095
-          type = PRIMARY_KEY
-         [
-         ELEMENT: constraint
-          index = 
-          name = SYS_CT_10092
-          type = NOT_NULL
-         [
-         ELEMENT: constraint
-          index = 
-          name = SYS_CT_10093
-          type = NOT_NULL
-         [
-         ELEMENT: constraint
-          index = 
-          name = SYS_CT_10094
-          type = NOT_NULL
-         [
-   ELEMENT: table
-    name = MULTICHECK_MULTICHECK_LINK
-   [
-      ELEMENT: columns
-      [
-         ELEMENT: column
-          name = LINKID
-          nullable = false
-          size = 36
-          type = VARCHAR
-         [
-         ELEMENT: column
-          name = MULTICHECKLID
-          nullable = false
-          size = 36
-          type = VARCHAR
-         [
-         ELEMENT: column
-          name = MULTICHECKRID
           nullable = false
           size = 36
           type = VARCHAR
@@ -984,6 +990,58 @@ ELEMENT: databaseschema
          ELEMENT: constraint
           index = 
           name = SYS_CT_10099
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = MULTICHECK_MULTICHECK_LINK
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = LINKID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = MULTICHECKLID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = MULTICHECKRID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = LINKID
+          name = SYS_IDX_SYS_PK_10105_10106
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10105_10106
+          name = SYS_PK_10105
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10102
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10103
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10104
           type = NOT_NULL
          [
 
