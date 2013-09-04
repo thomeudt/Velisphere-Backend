@@ -862,16 +862,16 @@ ELEMENT: databaseschema
           type = VARCHAR
          [
          ELEMENT: column
-          name = STATE
+          name = CHECKID
           nullable = true
-          size = 1
-          type = TINYINT
+          size = 36
+          type = VARCHAR
          [
          ELEMENT: column
-          name = EXPIRED
+          name = MULTICHECKID
           nullable = true
-          size = 1
-          type = TINYINT
+          size = 36
+          type = VARCHAR
          [
       ELEMENT: indexes
       [
