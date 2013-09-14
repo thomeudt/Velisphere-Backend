@@ -11,8 +11,7 @@ import org.voltdb.VoltProcedure.VoltAbortException;
 import org.voltdb.VoltType;
 
 
-public class BLE_IsMultiCheckTrue extends VoltProcedure {
-
+public class Unused_BLE_MarkMultiChecksTrue extends VoltProcedure {
 
 	public final SQLStmt sqlFindLinkedChecks = new SQLStmt(
 			"SELECT CHECKID FROM MULTICHECK_CHECK_LINK WHERE MULTICHECKID = ?;"
@@ -99,7 +98,7 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 					
 				}
 				if (operator.equals("AND")){
-					if (evalChecksList.containsValue((byte)1) && evalChecksList.containsValue((byte)0)==false){
+					if (evalChecksList.containsValue((byte)1)){
 						state = 1;
 						
 					}
@@ -125,7 +124,8 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 	}
 }
 
-	
-	
-	
-			
+
+
+
+
+

@@ -10,10 +10,9 @@ import org.voltdb.VoltProcedure.VoltAbortException;
 
 
 public class BLE_ChecksForExpression extends VoltProcedure {
-
-
+	
 	public final SQLStmt sqlFindTrueChecks = new SQLStmt(
-			"SELECT * FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? AND CHECKVALUE = ? AND OPERATOR = ? AND EXPIRED = ?;"
+			"SELECT CHECKID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? AND CHECKVALUE = ? AND OPERATOR = ? AND EXPIRED = ?;"
 			);
 
 	public final SQLStmt sqlUpdateTrueChecks = new SQLStmt(
@@ -40,6 +39,8 @@ public class BLE_ChecksForExpression extends VoltProcedure {
 			while (findTrueChecks.advanceRow()){
 				trueChecksList.add(findTrueChecks.getString("CHECKID"));
 			}
+
+			
 			Iterator<String> itTCL = trueChecksList.iterator();
 			while (itTCL.hasNext()){
 				String sTR = itTCL.next();

@@ -14,7 +14,7 @@ ELEMENT: databaseschema
          ELEMENT: column
           name = MESSAGE
           nullable = true
-          size = 1024
+          size = 32768
           type = VARCHAR
          [
          ELEMENT: column
@@ -1042,6 +1042,287 @@ ELEMENT: databaseschema
          ELEMENT: constraint
           index = 
           name = SYS_CT_10104
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = ACTION
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = ACTIONID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = ACTIONNAME
+          nullable = false
+          size = 255
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = EXPIRED
+          nullable = true
+          size = 1
+          type = TINYINT
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = ACTIONID
+          name = SYS_IDX_SYS_PK_10109_10110
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10109_10110
+          name = SYS_PK_10109
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10107
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10108
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = OUTBOUNDPROPERTYACTION
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = OUTBOUNDPROPERTYACTIONID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = INBOUNDPROPERTYID
+          nullable = true
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = CURRENTSTATEPROPERTYID
+          nullable = true
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = CUSTOMPAYLOAD
+          nullable = true
+          size = 32768
+          type = VARCHAR
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = OUTBOUNDPROPERTYACTIONID
+          name = SYS_IDX_SYS_PK_10112_10113
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10112_10113
+          name = SYS_PK_10112
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10111
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = ACTION_OUTBOUNDPROPERTYACTION_LINK
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = LINKID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = ACTIONID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = OUTBOUNDPROPERTYACTIONID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = LINKID
+          name = SYS_IDX_SYS_PK_10117_10118
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10117_10118
+          name = SYS_PK_10117
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10114
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10115
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10116
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = CHECKPATH
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = CHECKPATHID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = CHECKPATHID
+          name = SYS_IDX_SYS_PK_10120_10121
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10120_10121
+          name = SYS_PK_10120
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10119
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = CHECKPATH_CHECK_LINK
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = LINKID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = CHECKPATHID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = CHECKID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = LINKID
+          name = SYS_IDX_SYS_PK_10125_10126
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10125_10126
+          name = SYS_PK_10125
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10122
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10123
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10124
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = CHECKPATH_MULTICHECK_LINK
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = LINKID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = CHECKPATHID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = MULTICHECKID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = LINKID
+          name = SYS_IDX_SYS_PK_10130_10131
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10130_10131
+          name = SYS_PK_10130
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10127
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10128
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10129
           type = NOT_NULL
          [
 
