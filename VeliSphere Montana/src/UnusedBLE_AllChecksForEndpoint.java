@@ -9,7 +9,7 @@ import org.voltdb.VoltType;
 import org.voltdb.VoltProcedure.VoltAbortException;
 
 
-public class BLE_AllChecksForEndpoint extends VoltProcedure {
+public class UnusedBLE_AllChecksForEndpoint extends VoltProcedure {
 	
 	public final SQLStmt sqlFindTrueChecks = new SQLStmt(
 			"SELECT CHECKID FROM CHECK WHERE ENDPOINTID = ?;"

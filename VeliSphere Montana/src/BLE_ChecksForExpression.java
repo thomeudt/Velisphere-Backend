@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 
@@ -33,7 +34,7 @@ public class BLE_ChecksForExpression extends VoltProcedure {
 
 		if (findTrueChecksResults.length != 0){
 
-			List<String> trueChecksList = new ArrayList<String>();			
+			HashSet<String> trueChecksList = new HashSet<String>();			
 
 			VoltTable findTrueChecks = findTrueChecksResults[0];
 			while (findTrueChecks.advanceRow()){

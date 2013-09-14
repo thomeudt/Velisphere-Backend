@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map.Entry;
@@ -43,7 +44,7 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 		
 		voltQueueSQL( sqlFindLinkedChecks, multiCheckID);
 		
-		List<String> linkedChecksList = new ArrayList<String>();
+		HashSet<String> linkedChecksList = new HashSet<String>();
 		VoltTable[] linkedChecksResults = voltExecuteSQL();
 		
 		if (linkedChecksResults.length != 0){
@@ -77,7 +78,7 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 			}
 		}
 		
-		System.out.println("Eval Checks:" + evalChecksList);
+		// System.out.println("Eval Checks:" + evalChecksList);
 		
 				
 		// check if multicheck is true
@@ -118,7 +119,7 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 			}
 		voltQueueSQL( sqlUpdateTrueMultiCheck, state, multiCheckID);
 		voltExecuteSQL();
-		System.out.println("State: " + state);
+		// System.out.println("State: " + state);
 		voltQueueSQL( sqlFindTrueMultiCheck, multiCheckID, 1);
 						
 		

@@ -35,7 +35,7 @@ public class BLE_CheckPathForMultiChecks extends VoltProcedure {
 			}
 			
 			for (String sTR : mC){
-				System.out.println(sTR);
+				// System.out.println(sTR);
 				voltQueueSQL( sqlResetMultiChecksInCheckpath, sTR);	
 			}
 		}

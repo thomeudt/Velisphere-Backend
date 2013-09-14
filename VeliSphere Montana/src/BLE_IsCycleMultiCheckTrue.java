@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map.Entry;
@@ -43,7 +44,7 @@ public class BLE_IsCycleMultiCheckTrue extends VoltProcedure {
 		
 		voltQueueSQL( sqlFindLinkedMultiChecks, multiCheckID);
 		
-		List<String> linkedMultiChecksList = new ArrayList<String>();
+		HashSet<String> linkedMultiChecksList = new HashSet<String>();
 		VoltTable[] linkedMultiChecksResults = voltExecuteSQL();
 		
 		if (linkedMultiChecksResults.length != 0){
