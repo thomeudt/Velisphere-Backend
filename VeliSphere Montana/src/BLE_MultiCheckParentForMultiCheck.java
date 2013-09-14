@@ -16,7 +16,6 @@ public class BLE_MultiCheckParentForMultiCheck extends VoltProcedure {
 	public final SQLStmt sqlFindLinkedMultiChecks = new SQLStmt(
 			"SELECT MULTICHECKLID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKRID = ?;"
 			);
-
 			
 	public VoltTable[] run( 	
 			String multiCheckID

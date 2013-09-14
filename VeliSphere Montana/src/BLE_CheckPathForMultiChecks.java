@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 import org.voltdb.SQLStmt;
 import org.voltdb.VoltProcedure;
 import org.voltdb.VoltTable;
@@ -19,16 +21,22 @@ public class BLE_CheckPathForMultiChecks extends VoltProcedure {
 			String checkPathID
 			)
 					throws VoltAbortException {
+				
 		voltQueueSQL( sqlMultiChecksInCheckpath, checkPathID);
-
-
+		
 		VoltTable[] multiChecksInCheckpathResults = voltExecuteSQL();
 
 		if (multiChecksInCheckpathResults.length != 0){
 
+			HashSet<String> mC = new HashSet<String>(); 
 			VoltTable multiChecksInCheckpath = multiChecksInCheckpathResults[0];
 			while (multiChecksInCheckpath.advanceRow()){
-				voltQueueSQL( sqlResetMultiChecksInCheckpath, multiChecksInCheckpath.getString("MULTICHECKID"));
+				mC.add(multiChecksInCheckpath.getString("MULTICHECKID"));
+			}
+			
+			for (String sTR : mC){
+				System.out.println(sTR);
+				voltQueueSQL( sqlResetMultiChecksInCheckpath, sTR);	
 			}
 		}
 

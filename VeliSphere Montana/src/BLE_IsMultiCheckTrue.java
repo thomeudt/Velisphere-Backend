@@ -77,6 +77,8 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 			}
 		}
 		
+		System.out.println("Eval Checks:" + evalChecksList);
+		
 				
 		// check if multicheck is true
 
@@ -97,13 +99,13 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 						state = 0;
 					}
 					
-				}
-				if (operator.equals("AND")){
-					if (evalChecksList.containsValue((byte)1) && evalChecksList.containsValue((byte)0)==false){
-						state = 1;
-						
+					if (evalChecksList.containsValue((byte)0) && evalChecksList.containsValue((byte)1)==false){
+						state = 0;
 					}
 					
+					if (evalChecksList.containsValue((byte)1) && evalChecksList.containsValue((byte)0)==false){
+						state = 1;
+					}
 				}
 				
 				if (operator.equals("OR")){
@@ -112,12 +114,11 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 					}
 				}
 				
-								
-					voltQueueSQL( sqlUpdateTrueMultiCheck, state, multiCheckID);
-					voltExecuteSQL();
-							
+				
 			}
-		
+		voltQueueSQL( sqlUpdateTrueMultiCheck, state, multiCheckID);
+		voltExecuteSQL();
+		System.out.println("State: " + state);
 		voltQueueSQL( sqlFindTrueMultiCheck, multiCheckID, 1);
 						
 		

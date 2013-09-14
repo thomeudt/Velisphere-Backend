@@ -14,7 +14,7 @@ import org.voltdb.VoltType;
 public class BLE_IsCycleMultiCheckTrue extends VoltProcedure {
 
 	public final SQLStmt sqlFindLinkedMultiChecks = new SQLStmt(
-			"SELECT MULTICHECKLID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKRID = ?;"
+			"SELECT MULTICHECKRID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKLID = ?;"
 			);
 
 	public final SQLStmt sqlEvaluateLinkedMultiChecks = new SQLStmt(
@@ -50,7 +50,7 @@ public class BLE_IsCycleMultiCheckTrue extends VoltProcedure {
 				
 		VoltTable linkedMultiChecks = linkedMultiChecksResults[0];
 		while (linkedMultiChecks.advanceRow()){
-			linkedMultiChecksList.add(linkedMultiChecks.getString("MULTICHECKLID"));
+			linkedMultiChecksList.add(linkedMultiChecks.getString("MULTICHECKRID"));
 		}
 		}
 		
@@ -78,7 +78,7 @@ public class BLE_IsCycleMultiCheckTrue extends VoltProcedure {
 			}
 		}
 
-		System.out.println(evalMultiChecksList);
+		// System.out.println(evalMultiChecksList);
 		
 		// check if multicheck is true
 
