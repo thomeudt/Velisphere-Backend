@@ -1,7 +1,7 @@
 import org.voltdb.SQLStmt;
 import org.voltdb.VoltProcedure;
 import org.voltdb.VoltTable;
-import org.voltdb.VoltProcedure.VoltAbortException;
+
 
 
 public class BLE_CheckPathForChecks extends VoltProcedure {

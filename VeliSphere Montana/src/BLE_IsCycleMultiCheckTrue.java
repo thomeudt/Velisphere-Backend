@@ -1,14 +1,9 @@
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
-import java.util.Map.Entry;
-
 import org.voltdb.SQLStmt;
 import org.voltdb.VoltProcedure;
 import org.voltdb.VoltTable;
-import org.voltdb.VoltProcedure.VoltAbortException;
 import org.voltdb.VoltType;
 
 
@@ -78,6 +73,7 @@ public class BLE_IsCycleMultiCheckTrue extends VoltProcedure {
 				}
 			}
 		}
+		
 
 		// System.out.println(evalMultiChecksList);
 		

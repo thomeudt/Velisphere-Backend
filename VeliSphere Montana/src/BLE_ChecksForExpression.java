@@ -1,13 +1,9 @@
-import java.util.ArrayList;
+
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
-
 import org.voltdb.SQLStmt;
 import org.voltdb.VoltProcedure;
 import org.voltdb.VoltTable;
-import org.voltdb.VoltType;
-import org.voltdb.VoltProcedure.VoltAbortException;
 
 
 public class BLE_ChecksForExpression extends VoltProcedure {
@@ -48,6 +44,7 @@ public class BLE_ChecksForExpression extends VoltProcedure {
 				voltQueueSQL( sqlUpdateTrueChecks, sTR );
 				voltExecuteSQL();
 			}
+			
 		}
 
 		return findTrueChecksResults;

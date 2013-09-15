@@ -1045,153 +1045,6 @@ ELEMENT: databaseschema
           type = NOT_NULL
          [
    ELEMENT: table
-    name = ACTION
-   [
-      ELEMENT: columns
-      [
-         ELEMENT: column
-          name = ACTIONID
-          nullable = false
-          size = 36
-          type = VARCHAR
-         [
-         ELEMENT: column
-          name = ACTIONNAME
-          nullable = false
-          size = 255
-          type = VARCHAR
-         [
-         ELEMENT: column
-          name = EXPIRED
-          nullable = true
-          size = 1
-          type = TINYINT
-         [
-      ELEMENT: indexes
-      [
-         ELEMENT: index
-          columns = ACTIONID
-          name = SYS_IDX_SYS_PK_10109_10110
-          unique = true
-         [
-      ELEMENT: constraints
-      [
-         ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10109_10110
-          name = SYS_PK_10109
-          type = PRIMARY_KEY
-         [
-         ELEMENT: constraint
-          index = 
-          name = SYS_CT_10107
-          type = NOT_NULL
-         [
-         ELEMENT: constraint
-          index = 
-          name = SYS_CT_10108
-          type = NOT_NULL
-         [
-   ELEMENT: table
-    name = OUTBOUNDPROPERTYACTION
-   [
-      ELEMENT: columns
-      [
-         ELEMENT: column
-          name = OUTBOUNDPROPERTYACTIONID
-          nullable = false
-          size = 36
-          type = VARCHAR
-         [
-         ELEMENT: column
-          name = INBOUNDPROPERTYID
-          nullable = true
-          size = 36
-          type = VARCHAR
-         [
-         ELEMENT: column
-          name = CURRENTSTATEPROPERTYID
-          nullable = true
-          size = 36
-          type = VARCHAR
-         [
-         ELEMENT: column
-          name = CUSTOMPAYLOAD
-          nullable = true
-          size = 32768
-          type = VARCHAR
-         [
-      ELEMENT: indexes
-      [
-         ELEMENT: index
-          columns = OUTBOUNDPROPERTYACTIONID
-          name = SYS_IDX_SYS_PK_10112_10113
-          unique = true
-         [
-      ELEMENT: constraints
-      [
-         ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10112_10113
-          name = SYS_PK_10112
-          type = PRIMARY_KEY
-         [
-         ELEMENT: constraint
-          index = 
-          name = SYS_CT_10111
-          type = NOT_NULL
-         [
-   ELEMENT: table
-    name = ACTION_OUTBOUNDPROPERTYACTION_LINK
-   [
-      ELEMENT: columns
-      [
-         ELEMENT: column
-          name = LINKID
-          nullable = false
-          size = 36
-          type = VARCHAR
-         [
-         ELEMENT: column
-          name = ACTIONID
-          nullable = false
-          size = 36
-          type = VARCHAR
-         [
-         ELEMENT: column
-          name = OUTBOUNDPROPERTYACTIONID
-          nullable = false
-          size = 36
-          type = VARCHAR
-         [
-      ELEMENT: indexes
-      [
-         ELEMENT: index
-          columns = LINKID
-          name = SYS_IDX_SYS_PK_10117_10118
-          unique = true
-         [
-      ELEMENT: constraints
-      [
-         ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10117_10118
-          name = SYS_PK_10117
-          type = PRIMARY_KEY
-         [
-         ELEMENT: constraint
-          index = 
-          name = SYS_CT_10114
-          type = NOT_NULL
-         [
-         ELEMENT: constraint
-          index = 
-          name = SYS_CT_10115
-          type = NOT_NULL
-         [
-         ELEMENT: constraint
-          index = 
-          name = SYS_CT_10116
-          type = NOT_NULL
-         [
-   ELEMENT: table
     name = CHECKPATH
    [
       ELEMENT: columns
@@ -1206,19 +1059,19 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = CHECKPATHID
-          name = SYS_IDX_SYS_PK_10120_10121
+          name = SYS_IDX_SYS_PK_10108_10109
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10120_10121
-          name = SYS_PK_10120
+          index = SYS_IDX_SYS_PK_10108_10109
+          name = SYS_PK_10108
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10119
+          name = SYS_CT_10107
           type = NOT_NULL
          [
    ELEMENT: table
@@ -1248,29 +1101,29 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = LINKID
-          name = SYS_IDX_SYS_PK_10125_10126
+          name = SYS_IDX_SYS_PK_10113_10114
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10125_10126
-          name = SYS_PK_10125
+          index = SYS_IDX_SYS_PK_10113_10114
+          name = SYS_PK_10113
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10122
+          name = SYS_CT_10110
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10123
+          name = SYS_CT_10111
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10124
+          name = SYS_CT_10112
           type = NOT_NULL
          [
    ELEMENT: table
@@ -1300,20 +1153,191 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = LINKID
-          name = SYS_IDX_SYS_PK_10130_10131
+          name = SYS_IDX_SYS_PK_10118_10119
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10130_10131
-          name = SYS_PK_10130
+          index = SYS_IDX_SYS_PK_10118_10119
+          name = SYS_PK_10118
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10127
+          name = SYS_CT_10115
           type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10116
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10117
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = ACTION
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = ACTIONID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = ACTIONNAME
+          nullable = false
+          size = 255
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = TARGETENDPOINTID
+          nullable = true
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = TGTEPIDFROMINBOUNDPROP
+          nullable = true
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = EXPIRED
+          nullable = true
+          size = 1
+          type = TINYINT
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = ACTIONID
+          name = SYS_IDX_SYS_PK_10122_10123
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10122_10123
+          name = SYS_PK_10122
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10120
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10121
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = OUTBOUNDPROPERTYACTION
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = OUTBOUNDPROPERTYACTIONID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = OUTBOUNDPROPERTYID
+          nullable = true
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = INBOUNDPROPERTYID
+          nullable = true
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = CURRENTSTATEPROPERTYID
+          nullable = true
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = CUSTOMPAYLOAD
+          nullable = true
+          size = 32768
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = ACTIONID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = OUTBOUNDPROPERTYACTIONID
+          name = SYS_IDX_SYS_PK_10126_10127
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10126_10127
+          name = SYS_PK_10126
+          type = PRIMARY_KEY
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10124
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10125
+          type = NOT_NULL
+         [
+   ELEMENT: table
+    name = RULE_ACTION_LINK
+   [
+      ELEMENT: columns
+      [
+         ELEMENT: column
+          name = LINKID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = RULEID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = ACTIONID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
+      ELEMENT: indexes
+      [
+         ELEMENT: index
+          columns = LINKID
+          name = SYS_IDX_SYS_PK_10131_10132
+          unique = true
+         [
+      ELEMENT: constraints
+      [
+         ELEMENT: constraint
+          index = SYS_IDX_SYS_PK_10131_10132
+          name = SYS_PK_10131
+          type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
@@ -1323,6 +1347,11 @@ ELEMENT: databaseschema
          ELEMENT: constraint
           index = 
           name = SYS_CT_10129
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10130
           type = NOT_NULL
          [
 
