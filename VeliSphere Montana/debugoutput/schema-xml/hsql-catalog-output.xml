@@ -82,6 +82,12 @@ ELEMENT: databaseschema
           size = 255
           type = VARCHAR
          [
+         ELEMENT: column
+          name = USERPWHASH
+          nullable = true
+          size = 255
+          type = VARCHAR
+         [
       ELEMENT: indexes
       [
          ELEMENT: index
