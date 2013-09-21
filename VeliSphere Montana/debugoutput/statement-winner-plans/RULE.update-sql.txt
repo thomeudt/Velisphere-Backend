@@ -2,5 +2,5 @@ SQL: UPDATE RULE SET RULEID = ?, RULENAME = ?, CHECKID = ?, MULTICHECKID = ? WHE
 COST: 6.0
 PLAN:
 UPDATE
- INDEX SCAN of "RULE" using "SYS_IDX_SYS_PK_10092_10093" (unique-scan covering)
+ INDEX SCAN of "RULE" using "SYS_IDX_SYS_PK_10098_10099" (unique-scan covering)
 
