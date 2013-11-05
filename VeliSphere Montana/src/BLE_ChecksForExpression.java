@@ -23,35 +23,35 @@ public class BLE_ChecksForExpression extends VoltProcedure {
 		if (findTrueChecksResults.length != 0) {
 
 			HashSet<String> trueChecksList = new HashSet<String>();
+					
 
 			VoltTable findTrueChecks = findTrueChecksResults[0];
 			while (findTrueChecks.advanceRow()) {
+				String expressionCheckValue = findTrueChecks.getString("CHECKVALUE");
+				
+				
+				
+				
+				
 				if (findTrueChecks.getString("OPERATOR").equals("=")
-						&& findTrueChecks.getString("CHECKVALUE").equals(
+						&& expressionCheckValue.equals(
 								checkValue)) {
 					trueChecksList.add(findTrueChecks.getString("CHECKID"));
 				} else if (findTrueChecks.getString("OPERATOR").equals("!=")
-						&& findTrueChecks.getString("CHECKVALUE").equals(checkValue)==false) {
+						&& expressionCheckValue.equals(checkValue)==false) {
 					trueChecksList.add(findTrueChecks.getString("CHECKID"));
 				} else if (findTrueChecks.getString("OPERATOR").equals("<")
-						&& Float.parseFloat(findTrueChecks
-								.getString("CHECKVALUE")) < Float
-								.parseFloat(checkValue)) {
+						&&  Float.parseFloat(checkValue) < Float.parseFloat(expressionCheckValue)) {
 					trueChecksList.add(findTrueChecks.getString("CHECKID"));
+				
 				} else if (findTrueChecks.getString("OPERATOR").equals(">")
-						&& Float.parseFloat(findTrueChecks
-								.getString("CHECKVALUE")) > Float
-								.parseFloat(checkValue)) {
+						&& Float.parseFloat(checkValue) > Float.parseFloat(expressionCheckValue)) {
 					trueChecksList.add(findTrueChecks.getString("CHECKID"));
 				} else if (findTrueChecks.getString("OPERATOR").equals(">=")
-						&& Float.parseFloat(findTrueChecks
-								.getString("CHECKVALUE")) >= Float
-								.parseFloat(checkValue)) {
+						&& Float.parseFloat(checkValue) >= Float.parseFloat(expressionCheckValue)) {
 					trueChecksList.add(findTrueChecks.getString("CHECKID"));
 				} else if (findTrueChecks.getString("OPERATOR").equals("<=")
-						&& Float.parseFloat(findTrueChecks
-								.getString("CHECKVALUE")) <= Float
-								.parseFloat(checkValue)) {
+						&& Float.parseFloat(checkValue) <= Float.parseFloat(expressionCheckValue)) {
 					trueChecksList.add(findTrueChecks.getString("CHECKID"));
 				} 			
 
