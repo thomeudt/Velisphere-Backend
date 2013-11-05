@@ -838,6 +838,12 @@ ELEMENT: databaseschema
           size = 1
           type = TINYINT
          [
+         ELEMENT: column
+          name = NAME
+          nullable = true
+          size = 255
+          type = VARCHAR
+         [
       ELEMENT: indexes
       [
          ELEMENT: index
