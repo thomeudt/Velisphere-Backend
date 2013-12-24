@@ -1002,6 +1002,12 @@ ELEMENT: databaseschema
           size = 1
           type = TINYINT
          [
+         ELEMENT: column
+          name = MULTICHECKNAME
+          nullable = true
+          size = 255
+          type = VARCHAR
+         [
       ELEMENT: indexes
       [
          ELEMENT: index
@@ -1134,6 +1140,12 @@ ELEMENT: databaseschema
           name = CHECKPATHID
           nullable = false
           size = 36
+          type = VARCHAR
+         [
+         ELEMENT: column
+          name = UIOBJECT
+          nullable = true
+          size = 32768
           type = VARCHAR
          [
       ELEMENT: indexes
