@@ -3,7 +3,7 @@ import org.voltdb.*;
 public class UI_SelectCheckpathForCheckpathID extends VoltProcedure {
 
 	
-	public final SQLStmt CheckpathForCheckpathID = new SQLStmt(" select checkpathid, uiobject from checkpath " +
+	public final SQLStmt CheckpathForCheckpathID = new SQLStmt(" select checkpathid, checkpathname, uiobject from checkpath " +
 			"where checkpathid = ?;");
 		
 
