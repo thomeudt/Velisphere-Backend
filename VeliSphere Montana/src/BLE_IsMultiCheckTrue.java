@@ -4,6 +4,7 @@ import java.util.Iterator;
 import org.voltdb.SQLStmt;
 import org.voltdb.VoltProcedure;
 import org.voltdb.VoltTable;
+import org.voltdb.VoltTableRow;
 import org.voltdb.VoltType;
 
 
@@ -49,7 +50,10 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 			linkedChecksList.add(linkedChecks.getString("CHECKID"));
 		}
 		}
+	
 		
+		
+	
 				
 		// evaluate linked checks
 		
@@ -58,24 +62,35 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 
 		Iterator<String> itLCL = linkedChecksList.iterator();
 		
-		if (linkedChecksList.isEmpty() == false)
-		{
-
+		
 			while (itLCL.hasNext()){
 				String sTR = itLCL.next();	
+		
+				System.out.println("Evaling check: " + sTR);
 				voltQueueSQL( sqlEvaluateLinkedChecks, sTR);
-				
+
 				VoltTable[] evaluateChecksResults = voltExecuteSQL();
 				VoltTable evaluateChecks = evaluateChecksResults[0];
+				VoltTableRow row = evaluateChecks.fetchRow(0);
+				
+				
+				
+				
+				evalChecksList.put(row.getString("CHECKID"), (Byte) row.get("STATE", VoltType.TINYINT));
+				
+				/*
 				while (evaluateChecks.advanceRow()){
+					System.out.println( "Checkid "+evaluateChecks.getString("CHECKID")+" ist "+(Byte) evaluateChecks.get("STATE", VoltType.TINYINT));
 					evalChecksList.put(evaluateChecks.getString("CHECKID"), (Byte) evaluateChecks.get("STATE", VoltType.TINYINT));
 				}
-			}
-		}
+					*/		
+				}
+			
 		
 		
 		
-		// System.out.println("Eval Checks:" + evalChecksList);
+		
+		
 		
 				
 		// check if multicheck is true
@@ -93,13 +108,15 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 			
 				
 				if (operator.equals("AND")){
-					if (evalChecksList.containsValue((byte)1) && evalChecksList.containsValue((byte)0)){
+					if (evalChecksList.containsValue((byte)0)) {	
 						state = 0;
+						
 					}
 					
-					if (evalChecksList.containsValue((byte)0) && evalChecksList.containsValue((byte)1)==false){
-						state = 0;
-					}
+					// if (evalChecksList.containsValue((byte)0) && evalChecksList.containsValue((byte)1)==false){
+					//	state = 0;
+						
+					//}
 					
 					if (evalChecksList.containsValue((byte)1) && evalChecksList.containsValue((byte)0)==false){
 						state = 1;
