@@ -66,7 +66,7 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 			while (itLCL.hasNext()){
 				String sTR = itLCL.next();	
 		
-				System.out.println("Evaling check: " + sTR);
+				// System.out.println("Evaling check: " + sTR);
 				voltQueueSQL( sqlEvaluateLinkedChecks, sTR);
 
 				VoltTable[] evaluateChecksResults = voltExecuteSQL();
