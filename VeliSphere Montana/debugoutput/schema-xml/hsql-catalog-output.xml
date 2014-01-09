@@ -97,7 +97,7 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = ENTRYID
+          columns = ENTRYID,ENDPOINTID
           name = SYS_IDX_SYS_PK_10025_10026
           unique = true
          [
@@ -316,7 +316,7 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = LINKID
+          columns = LINKID,SPHEREID
           name = SYS_IDX_SYS_PK_10045_10046
           unique = true
          [
@@ -652,7 +652,7 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = LINKID
+          columns = LINKID,ENDPOINTID
           name = SYS_IDX_SYS_PK_10072_10073
           unique = true
          [
@@ -886,7 +886,7 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = CHECKID
+          columns = CHECKID,CHECKPATHID
           name = SYS_IDX_SYS_PK_10091_10092
           unique = true
          [
@@ -963,7 +963,7 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = LINKID
+          columns = LINKID,RULEID
           name = SYS_IDX_SYS_PK_10096_10097
           unique = true
          [
@@ -1081,7 +1081,7 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = MULTICHECKID
+          columns = MULTICHECKID,CHECKPATHID
           name = SYS_IDX_SYS_PK_10103_10104
           unique = true
          [
@@ -1144,7 +1144,7 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = LINKID
+          columns = LINKID,CHECKPATHID
           name = SYS_IDX_SYS_PK_10109_10110
           unique = true
          [
@@ -1217,7 +1217,7 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = LINKID
+          columns = LINKID,CHECKPATHID
           name = SYS_IDX_SYS_PK_10115_10116
           unique = true
          [
@@ -1326,7 +1326,7 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = LINKID
+          columns = LINKID,CHECKPATHID
           name = SYS_IDX_SYS_PK_10123_10124
           unique = true
          [
@@ -1378,7 +1378,7 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = LINKID
+          columns = LINKID,CHECKPATHID
           name = SYS_IDX_SYS_PK_10128_10129
           unique = true
          [
@@ -1507,7 +1507,7 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = OUTBOUNDPROPERTYACTIONID
+          columns = OUTBOUNDPROPERTYACTIONID,ACTIONID
           name = SYS_IDX_SYS_PK_10136_10137
           unique = true
          [
@@ -1554,7 +1554,7 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = LINKID
+          columns = LINKID,RULEID
           name = SYS_IDX_SYS_PK_10141_10142
           unique = true
          [
