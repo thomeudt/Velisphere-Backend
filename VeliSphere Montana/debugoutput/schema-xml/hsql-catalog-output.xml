@@ -460,6 +460,11 @@ ELEMENT: databaseschema
           name = SYS_IDX_SYS_PK_10058_10059
           unique = true
          [
+         ELEMENT: index
+          columns = ENDPOINTCLASSID
+          name = EPEPC
+          unique = false
+         [
       ELEMENT: constraints
       [
          ELEMENT: constraint
@@ -511,12 +516,40 @@ ELEMENT: databaseschema
           size = 36
           type = VARCHAR
          [
+         ELEMENT: column
+          name = ACT
+          nullable = true
+          size = 1
+          type = TINYINT
+         [
+         ELEMENT: column
+          name = SENSE
+          nullable = true
+          size = 1
+          type = TINYINT
+         [
+         ELEMENT: column
+          name = STATUS
+          nullable = true
+          size = 1
+          type = TINYINT
+         [
       ELEMENT: indexes
       [
          ELEMENT: index
           columns = PROPERTYID
           name = SYS_IDX_SYS_PK_10063_10064
           unique = true
+         [
+         ELEMENT: index
+          columns = ENDPOINTCLASSID
+          name = PREPC
+          unique = false
+         [
+         ELEMENT: index
+          columns = PROPERTYCLASSID
+          name = PRPRC
+          unique = false
          [
       ELEMENT: constraints
       [
@@ -844,18 +877,44 @@ ELEMENT: databaseschema
           size = 255
           type = VARCHAR
          [
+         ELEMENT: column
+          name = CHECKPATHID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
       ELEMENT: indexes
       [
          ELEMENT: index
           columns = CHECKID
-          name = SYS_IDX_SYS_PK_10090_10091
+          name = SYS_IDX_SYS_PK_10091_10092
           unique = true
+         [
+         ELEMENT: index
+          columns = ENDPOINTID
+          name = CHEP
+          unique = false
+         [
+         ELEMENT: index
+          columns = PROPERTYID
+          name = CHPR
+          unique = false
+         [
+         ELEMENT: index
+          columns = CHECKPATHID
+          name = CHCP
+          unique = false
+         [
+         ELEMENT: index
+          columns = STATE
+          name = CHST
+          unique = false
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10090_10091
-          name = SYS_PK_10090
+          index = SYS_IDX_SYS_PK_10091_10092
+          name = SYS_PK_10091
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
@@ -871,6 +930,11 @@ ELEMENT: databaseschema
          ELEMENT: constraint
           index = 
           name = SYS_CT_10089
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10090
           type = NOT_NULL
          [
    ELEMENT: table
@@ -900,20 +964,15 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = LINKID
-          name = SYS_IDX_SYS_PK_10095_10096
+          name = SYS_IDX_SYS_PK_10096_10097
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10095_10096
-          name = SYS_PK_10095
+          index = SYS_IDX_SYS_PK_10096_10097
+          name = SYS_PK_10096
           type = PRIMARY_KEY
-         [
-         ELEMENT: constraint
-          index = 
-          name = SYS_CT_10092
-          type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
@@ -923,6 +982,11 @@ ELEMENT: databaseschema
          ELEMENT: constraint
           index = 
           name = SYS_CT_10094
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10095
           type = NOT_NULL
          [
    ELEMENT: table
@@ -958,19 +1022,19 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = RULEID
-          name = SYS_IDX_SYS_PK_10098_10099
+          name = SYS_IDX_SYS_PK_10099_10100
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10098_10099
-          name = SYS_PK_10098
+          index = SYS_IDX_SYS_PK_10099_10100
+          name = SYS_PK_10099
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10097
+          name = SYS_CT_10098
           type = NOT_NULL
          [
    ELEMENT: table
@@ -1008,23 +1072,44 @@ ELEMENT: databaseschema
           size = 255
           type = VARCHAR
          [
+         ELEMENT: column
+          name = CHECKPATHID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
       ELEMENT: indexes
       [
          ELEMENT: index
           columns = MULTICHECKID
-          name = SYS_IDX_SYS_PK_10101_10102
+          name = SYS_IDX_SYS_PK_10103_10104
           unique = true
+         [
+         ELEMENT: index
+          columns = CHECKPATHID
+          name = MCCP
+          unique = false
+         [
+         ELEMENT: index
+          columns = STATE
+          name = MCST
+          unique = false
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10101_10102
-          name = SYS_PK_10101
+          index = SYS_IDX_SYS_PK_10103_10104
+          name = SYS_PK_10103
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10100
+          name = SYS_CT_10101
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10102
           type = NOT_NULL
          [
    ELEMENT: table
@@ -1050,33 +1135,54 @@ ELEMENT: databaseschema
           size = 36
           type = VARCHAR
          [
+         ELEMENT: column
+          name = CHECKPATHID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
       ELEMENT: indexes
       [
          ELEMENT: index
           columns = LINKID
-          name = SYS_IDX_SYS_PK_10106_10107
+          name = SYS_IDX_SYS_PK_10109_10110
           unique = true
+         [
+         ELEMENT: index
+          columns = MULTICHECKID
+          name = MCLMC
+          unique = false
+         [
+         ELEMENT: index
+          columns = CHECKID
+          name = MCLCH
+          unique = false
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10106_10107
-          name = SYS_PK_10106
+          index = SYS_IDX_SYS_PK_10109_10110
+          name = SYS_PK_10109
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10103
-          type = NOT_NULL
-         [
-         ELEMENT: constraint
-          index = 
-          name = SYS_CT_10104
-          type = NOT_NULL
-         [
-         ELEMENT: constraint
-          index = 
           name = SYS_CT_10105
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10106
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10107
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10108
           type = NOT_NULL
          [
    ELEMENT: table
@@ -1102,33 +1208,54 @@ ELEMENT: databaseschema
           size = 36
           type = VARCHAR
          [
+         ELEMENT: column
+          name = CHECKPATHID
+          nullable = false
+          size = 36
+          type = VARCHAR
+         [
       ELEMENT: indexes
       [
          ELEMENT: index
           columns = LINKID
-          name = SYS_IDX_SYS_PK_10111_10112
+          name = SYS_IDX_SYS_PK_10115_10116
           unique = true
+         [
+         ELEMENT: index
+          columns = MULTICHECKRID
+          name = MCMCLR
+          unique = false
+         [
+         ELEMENT: index
+          columns = MULTICHECKLID
+          name = MCMCLL
+          unique = false
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10111_10112
-          name = SYS_PK_10111
+          index = SYS_IDX_SYS_PK_10115_10116
+          name = SYS_PK_10115
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10108
+          name = SYS_CT_10111
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10109
+          name = SYS_CT_10112
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10110
+          name = SYS_CT_10113
+          type = NOT_NULL
+         [
+         ELEMENT: constraint
+          index = 
+          name = SYS_CT_10114
           type = NOT_NULL
          [
    ELEMENT: table
@@ -1158,19 +1285,19 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = CHECKPATHID
-          name = SYS_IDX_SYS_PK_10114_10115
+          name = SYS_IDX_SYS_PK_10118_10119
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10114_10115
-          name = SYS_PK_10114
+          index = SYS_IDX_SYS_PK_10118_10119
+          name = SYS_PK_10118
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10113
+          name = SYS_CT_10117
           type = NOT_NULL
          [
    ELEMENT: table
@@ -1200,29 +1327,29 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = LINKID
-          name = SYS_IDX_SYS_PK_10119_10120
+          name = SYS_IDX_SYS_PK_10123_10124
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10119_10120
-          name = SYS_PK_10119
+          index = SYS_IDX_SYS_PK_10123_10124
+          name = SYS_PK_10123
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10116
+          name = SYS_CT_10120
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10117
+          name = SYS_CT_10121
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10118
+          name = SYS_CT_10122
           type = NOT_NULL
          [
    ELEMENT: table
@@ -1252,29 +1379,29 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = LINKID
-          name = SYS_IDX_SYS_PK_10124_10125
+          name = SYS_IDX_SYS_PK_10128_10129
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10124_10125
-          name = SYS_PK_10124
+          index = SYS_IDX_SYS_PK_10128_10129
+          name = SYS_PK_10128
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10121
+          name = SYS_CT_10125
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10122
+          name = SYS_CT_10126
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10123
+          name = SYS_CT_10127
           type = NOT_NULL
          [
    ELEMENT: table
@@ -1316,24 +1443,24 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = ACTIONID
-          name = SYS_IDX_SYS_PK_10128_10129
+          name = SYS_IDX_SYS_PK_10132_10133
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10128_10129
-          name = SYS_PK_10128
+          index = SYS_IDX_SYS_PK_10132_10133
+          name = SYS_PK_10132
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10126
+          name = SYS_CT_10130
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10127
+          name = SYS_CT_10131
           type = NOT_NULL
          [
    ELEMENT: table
@@ -1381,24 +1508,24 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = OUTBOUNDPROPERTYACTIONID
-          name = SYS_IDX_SYS_PK_10132_10133
+          name = SYS_IDX_SYS_PK_10136_10137
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10132_10133
-          name = SYS_PK_10132
+          index = SYS_IDX_SYS_PK_10136_10137
+          name = SYS_PK_10136
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10130
+          name = SYS_CT_10134
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10131
+          name = SYS_CT_10135
           type = NOT_NULL
          [
    ELEMENT: table
@@ -1428,29 +1555,29 @@ ELEMENT: databaseschema
       [
          ELEMENT: index
           columns = LINKID
-          name = SYS_IDX_SYS_PK_10137_10138
+          name = SYS_IDX_SYS_PK_10141_10142
           unique = true
          [
       ELEMENT: constraints
       [
          ELEMENT: constraint
-          index = SYS_IDX_SYS_PK_10137_10138
-          name = SYS_PK_10137
+          index = SYS_IDX_SYS_PK_10141_10142
+          name = SYS_PK_10141
           type = PRIMARY_KEY
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10134
+          name = SYS_CT_10138
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10135
+          name = SYS_CT_10139
           type = NOT_NULL
          [
          ELEMENT: constraint
           index = 
-          name = SYS_CT_10136
+          name = SYS_CT_10140
           type = NOT_NULL
          [
 

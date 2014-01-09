@@ -9,7 +9,7 @@ public class BLE_CheckPathForMultiChecks extends VoltProcedure {
 
 
 	public final SQLStmt sqlMultiChecksInCheckpath = new SQLStmt(
-			"SELECT CHECKPATHID, MULTICHECKID FROM CHECKPATH_MULTICHECK_LINK WHERE CHECKPATHID = ?;"
+			"SELECT CHECKPATHID, MULTICHECKID FROM MULTICHECK WHERE CHECKPATHID = ?;"
 			);
 	public final SQLStmt sqlResetMultiChecksInCheckpath = new SQLStmt(
 			"UPDATE MULTICHECK SET STATE = 0 WHERE MULTICHECKID = ?;"
@@ -32,6 +32,8 @@ public class BLE_CheckPathForMultiChecks extends VoltProcedure {
 			while (multiChecksInCheckpath.advanceRow()){
 				mC.add(multiChecksInCheckpath.getString("MULTICHECKID"));
 			}
+			
+			// resetting multichecks
 			
 			for (String sTR : mC){
 				// System.out.println(sTR);

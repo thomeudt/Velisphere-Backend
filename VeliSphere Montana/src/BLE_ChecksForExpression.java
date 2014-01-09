@@ -7,11 +7,14 @@ import org.voltdb.VoltTable;
 public class BLE_ChecksForExpression extends VoltProcedure {
 
 	public final SQLStmt sqlFindTrueChecks = new SQLStmt(
-			"SELECT CHECKID, OPERATOR, CHECKVALUE FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? AND EXPIRED = ?;");
+			"SELECT CHECKID, OPERATOR, CHECKVALUE, CHECKPATHID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? AND EXPIRED = ?;");
 
 	public final SQLStmt sqlUpdateTrueChecks = new SQLStmt(
 			"UPDATE CHECK SET STATE = 1 WHERE CHECKID = ?;");
-
+	
+	public final SQLStmt sqlUpdateFalseChecks = new SQLStmt(
+			"UPDATE CHECK SET STATE = 0 WHERE CHECKID = ?;");
+	
 	public VoltTable[] run(String endpointID, String propertyID,
 			String checkValue, byte expired)
 			throws VoltAbortException {
@@ -23,6 +26,7 @@ public class BLE_ChecksForExpression extends VoltProcedure {
 		if (findTrueChecksResults.length != 0) {
 
 			HashSet<String> trueChecksList = new HashSet<String>();
+			
 					
 
 			VoltTable findTrueChecks = findTrueChecksResults[0];
@@ -30,8 +34,10 @@ public class BLE_ChecksForExpression extends VoltProcedure {
 				String expressionCheckValue = findTrueChecks.getString("CHECKVALUE");
 				
 				
+				// reset check to false first, then evaluate
 				
-				
+				voltQueueSQL(sqlUpdateFalseChecks, findTrueChecks.getString("CHECKID"));
+				voltExecuteSQL();
 				
 				if (findTrueChecks.getString("OPERATOR").equals("=")
 						&& expressionCheckValue.equals(
@@ -53,8 +59,8 @@ public class BLE_ChecksForExpression extends VoltProcedure {
 				} else if (findTrueChecks.getString("OPERATOR").equals("<=")
 						&& Float.parseFloat(checkValue) <= Float.parseFloat(expressionCheckValue)) {
 					trueChecksList.add(findTrueChecks.getString("CHECKID"));
-				} 			
-
+				} 
+				
 			}
 
 			Iterator<String> itTCL = trueChecksList.iterator();

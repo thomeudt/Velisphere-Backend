@@ -80,7 +80,7 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 				
 				/*
 				while (evaluateChecks.advanceRow()){
-					System.out.println( "Checkid "+evaluateChecks.getString("CHECKID")+" ist "+(Byte) evaluateChecks.get("STATE", VoltType.TINYINT));
+					
 					evalChecksList.put(evaluateChecks.getString("CHECKID"), (Byte) evaluateChecks.get("STATE", VoltType.TINYINT));
 				}
 					*/		
@@ -140,8 +140,3 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 		return voltExecuteSQL();
 	}
 }
-
-	
-	
-	
-			

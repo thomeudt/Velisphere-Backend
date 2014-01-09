@@ -4,6 +4,7 @@ import java.util.Iterator;
 import org.voltdb.SQLStmt;
 import org.voltdb.VoltProcedure;
 import org.voltdb.VoltTable;
+import org.voltdb.VoltTableRow;
 import org.voltdb.VoltType;
 
 
@@ -68,9 +69,12 @@ public class BLE_IsCycleMultiCheckTrue extends VoltProcedure {
 				
 				VoltTable[] evaluateMultiChecksResults = voltExecuteSQL();
 				VoltTable evaluateMultiChecks = evaluateMultiChecksResults[0];
+				
+				
 				while (evaluateMultiChecks.advanceRow()){
 					evalMultiChecksList.put(evaluateMultiChecks.getString("MULTICHECKID"), (Byte) evaluateMultiChecks.get("STATE", VoltType.TINYINT));
 				}
+				
 			}
 		}
 		
