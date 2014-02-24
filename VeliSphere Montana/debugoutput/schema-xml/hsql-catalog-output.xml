@@ -534,6 +534,12 @@ ELEMENT: databaseschema
           size = 1
           type = TINYINT
          [
+         ELEMENT: column
+          name = CONFIGURABLE
+          nullable = true
+          size = 1
+          type = TINYINT
+         [
       ELEMENT: indexes
       [
          ELEMENT: index
@@ -886,7 +892,7 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = CHECKID,CHECKPATHID
+          columns = CHECKID
           name = SYS_IDX_SYS_PK_10091_10092
           unique = true
          [
@@ -963,7 +969,7 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = LINKID,RULEID
+          columns = LINKID
           name = SYS_IDX_SYS_PK_10096_10097
           unique = true
          [
@@ -1025,6 +1031,16 @@ ELEMENT: databaseschema
           name = SYS_IDX_SYS_PK_10099_10100
           unique = true
          [
+         ELEMENT: index
+          columns = CHECKID
+          name = RCHECK
+          unique = false
+         [
+         ELEMENT: index
+          columns = MULTICHECKID
+          name = RMCHECK
+          unique = false
+         [
       ELEMENT: constraints
       [
          ELEMENT: constraint
@@ -1081,7 +1097,7 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = MULTICHECKID,CHECKPATHID
+          columns = MULTICHECKID
           name = SYS_IDX_SYS_PK_10103_10104
           unique = true
          [
@@ -1144,18 +1160,18 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = LINKID,CHECKPATHID
+          columns = LINKID
           name = SYS_IDX_SYS_PK_10109_10110
           unique = true
          [
          ELEMENT: index
           columns = MULTICHECKID
-          name = MCLMC
+          name = MCLMCIDX
           unique = false
          [
          ELEMENT: index
           columns = CHECKID
-          name = MCLCH
+          name = MCLCHIDX
           unique = false
          [
       ELEMENT: constraints
@@ -1217,7 +1233,7 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = LINKID,CHECKPATHID
+          columns = LINKID
           name = SYS_IDX_SYS_PK_10115_10116
           unique = true
          [
@@ -1326,9 +1342,19 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = LINKID,CHECKPATHID
+          columns = LINKID
           name = SYS_IDX_SYS_PK_10123_10124
           unique = true
+         [
+         ELEMENT: index
+          columns = CHECKID
+          name = CHECKIDIDX
+          unique = false
+         [
+         ELEMENT: index
+          columns = CHECKPATHID
+          name = CHECKPATHIDIDX
+          unique = false
          [
       ELEMENT: constraints
       [
@@ -1378,9 +1404,14 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = LINKID,CHECKPATHID
+          columns = LINKID
           name = SYS_IDX_SYS_PK_10128_10129
           unique = true
+         [
+         ELEMENT: index
+          columns = CHECKPATHID
+          name = CPMCIDX
+          unique = false
          [
       ELEMENT: constraints
       [
@@ -1507,9 +1538,14 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = OUTBOUNDPROPERTYACTIONID,ACTIONID
+          columns = OUTBOUNDPROPERTYACTIONID
           name = SYS_IDX_SYS_PK_10136_10137
           unique = true
+         [
+         ELEMENT: index
+          columns = ACTIONID
+          name = OUTBOUNDPROPACTION
+          unique = false
          [
       ELEMENT: constraints
       [
@@ -1554,9 +1590,14 @@ ELEMENT: databaseschema
       ELEMENT: indexes
       [
          ELEMENT: index
-          columns = LINKID,RULEID
+          columns = LINKID
           name = SYS_IDX_SYS_PK_10141_10142
           unique = true
+         [
+         ELEMENT: index
+          columns = RULEID
+          name = RALRULEID
+          unique = false
          [
       ELEMENT: constraints
       [
