@@ -7,7 +7,7 @@ import org.voltdb.VoltTable;
 public class BLE_ChecksForExpression extends VoltProcedure {
 
 	public final SQLStmt sqlFindTrueChecks = new SQLStmt(
-			"SELECT CHECKID, OPERATOR, CHECKVALUE, CHECKPATHID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? AND EXPIRED = ?;");
+			"SELECT CHECKID, OPERATOR, CHECKVALUE, CHECKPATHID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? AND EXPIRED = ? ORDER BY CHECKID;");
 
 	public final SQLStmt sqlUpdateTrueChecks = new SQLStmt(
 			"UPDATE CHECK SET STATE = 1 WHERE CHECKID = ?;");

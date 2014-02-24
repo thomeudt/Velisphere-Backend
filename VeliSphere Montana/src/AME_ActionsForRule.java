@@ -5,7 +5,7 @@ import org.voltdb.VoltTable;
 public class AME_ActionsForRule extends VoltProcedure {
 
 	public final SQLStmt sqlFindAllActions = new SQLStmt(
-			"SELECT ACTIONID FROM RULE_ACTION_LINK WHERE RULEID = ?;");
+			"SELECT ACTIONID FROM RULE_ACTION_LINK WHERE RULEID = ? ORDER BY ACTIONID;");
 
 	public VoltTable[] run(String ruleID)
 			throws VoltAbortException {

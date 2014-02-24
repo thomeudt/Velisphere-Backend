@@ -6,7 +6,7 @@ import org.voltdb.VoltTable;
 public class BLE_AllChecksForExpression extends VoltProcedure {
 	
 	public final SQLStmt sqlFindTrueChecks = new SQLStmt(
-			"SELECT CHECKID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ?;"
+			"SELECT CHECKID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? ORDER BY CHECKID;"
 			);
 
 

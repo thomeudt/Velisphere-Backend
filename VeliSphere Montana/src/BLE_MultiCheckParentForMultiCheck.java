@@ -6,7 +6,7 @@ import org.voltdb.VoltTable;
 public class BLE_MultiCheckParentForMultiCheck extends VoltProcedure {
 
 	public final SQLStmt sqlFindLinkedMultiChecks = new SQLStmt(
-			"SELECT MULTICHECKLID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKRID = ?;"
+			"SELECT MULTICHECKLID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKRID = ? ORDER BY MULTICHECKLID;"
 			);
 			
 	public VoltTable[] run( 	

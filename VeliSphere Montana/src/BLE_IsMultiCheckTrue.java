@@ -12,15 +12,15 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 
 
 	public final SQLStmt sqlFindLinkedChecks = new SQLStmt(
-			"SELECT CHECKID FROM MULTICHECK_CHECK_LINK WHERE MULTICHECKID = ?;"
+			"SELECT CHECKID FROM MULTICHECK_CHECK_LINK WHERE MULTICHECKID = ? ORDER BY CHECKID;"
 			);
 
 	public final SQLStmt sqlEvaluateLinkedChecks = new SQLStmt(
-			"SELECT CHECKID, STATE FROM CHECK WHERE CHECKID = ?"
+			"SELECT CHECKID, STATE FROM CHECK WHERE CHECKID = ? ORDER BY CHECKID"
 			);
 	
 	public final SQLStmt sqlFindOperatorForMultiCheck = new SQLStmt(
-			"SELECT OPERATOR FROM MULTICHECK WHERE MULTICHECKID = ?;"
+			"SELECT OPERATOR FROM MULTICHECK WHERE MULTICHECKID = ? ORDER BY OPERATOR;"
 			);
 			
 	public final SQLStmt sqlUpdateTrueMultiCheck = new SQLStmt(
@@ -28,7 +28,7 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 			);
 
 	public final SQLStmt sqlFindTrueMultiCheck = new SQLStmt(
-			"SELECT MULTICHECKID FROM MULTICHECK WHERE MULTICHECKID = ? AND STATE = ?;"
+			"SELECT MULTICHECKID FROM MULTICHECK WHERE MULTICHECKID = ? AND STATE = ? ORDER BY MULTICHECKID;"
 			);
 		
 	public VoltTable[] run( 	
