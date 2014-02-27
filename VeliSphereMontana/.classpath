@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="bin" path="src"/>
+	<classpathentry kind="var" path="JRE_LIB" sourcepath="JRE_SRC"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/commons-lang3-3.0.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/groovy-all-2.1.7-indy.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/jetty-continuation-7.6.1.v20120215.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/jetty-http-7.6.1.v20120215.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/jetty-io-7.6.1.v20120215.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/jetty-server-7.6.1.v20120215.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/jetty-util-7.6.1.v20120215.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/jline-2.10.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/jna.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/jsch-0.1.50.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/protobuf-java-2.4.1.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/servlet-api-2.5.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/slf4j-api-1.6.2.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/slf4j-nop-1.6.2.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/snappy-java-1.1.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/super-csv-2.1.0.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/tomcat-jdbc.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/tomcat-juli.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/lib/zmq-2.1.11.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/voltdb/voltdb-4.0.2.3.jar"/>
+	<classpathentry kind="lib" path="/home/thorsten/voltdb-4.0.2.3/voltdb/voltdbclient-4.0.2.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

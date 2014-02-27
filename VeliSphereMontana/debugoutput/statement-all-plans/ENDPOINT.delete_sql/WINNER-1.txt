@@ -1,0 +1,3 @@
+DELETE
+ INDEX SCAN of "ENDPOINT" using "SYS_IDX_SYS_PK_10058_10059" (unique-scan covering)
+

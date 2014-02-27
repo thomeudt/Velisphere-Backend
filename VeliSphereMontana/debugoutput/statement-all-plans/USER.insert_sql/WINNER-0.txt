@@ -1,0 +1,3 @@
+INSERT into "USER"
+ MATERIALIZE TUPLE from parameters and/or literals
+

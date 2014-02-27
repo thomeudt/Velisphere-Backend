@@ -1,0 +1,3 @@
+INSERT into "MULTICHECK"
+ MATERIALIZE TUPLE from parameters and/or literals
+
