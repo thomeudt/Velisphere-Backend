@@ -9,9 +9,9 @@ public class LGE_InsertEndpointPropertyLog extends VoltProcedure {
 
   
   
-  public VoltTable[] run( 	 
-			  	String entryID, 
-				String endpointID, 
+  public VoltTable[] run( 	  
+				String endpointID,
+				String entryID,
 				String propertyID,
 				String propertyEntry,
 				TimestampType timeStamp)

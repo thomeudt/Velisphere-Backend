@@ -10,6 +10,8 @@
             In Memory Database Component for VeliSphere Built on VoltDB
     </description>
 	
+	<echo message="Starting Script for VeliSphere Montana..."/>
+	
 	<property name="ddlLocation" location="./ddl"/>
 	<property name="jarFileName" value="/home/thorsten/git/velimontana/VeliSphereMontana/catalog.jar"/>
 	<property name="ddlFileName" value="logqueue.sql"/>
@@ -32,7 +34,8 @@
           Start the server after compiling the DDL and stored procedures              
          ================================= -->
 <target name="serverStart" depends="catalog">
-<parallel>
+	<echo message="Starting VeliSphere Monatana v0.62"/>
+	<parallel>
         <exec executable="${VoltHome}/bin/voltdb">
         	<arg value="create"/>
         	<arg value="${jarFileName}"/>
