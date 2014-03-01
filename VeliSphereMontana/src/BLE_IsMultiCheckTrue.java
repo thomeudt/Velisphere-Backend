@@ -16,7 +16,7 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 			);
 
 	public final SQLStmt sqlEvaluateLinkedChecks = new SQLStmt(
-			"SELECT CHECKID, STATE FROM CHECKSTATE WHERE CHECKID = ? ORDER BY CHECKID"
+			"SELECT CHECKID, STATE FROM CHECKSTATE WHERE CHECKID IN ? ORDER BY CHECKID"
 			);
 	
 	public final SQLStmt sqlFindOperatorForMultiCheck = new SQLStmt(
@@ -26,16 +26,25 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 	public final SQLStmt sqlUpdateTrueMultiCheck = new SQLStmt(
 			"UPDATE MULTICHECK SET STATE = ? WHERE MULTICHECKID = ?;"
 			);
-
+/*
 	public final SQLStmt sqlFindTrueMultiCheck = new SQLStmt(
 			"SELECT MULTICHECKID FROM MULTICHECK WHERE MULTICHECKID = ? AND STATE = ? ORDER BY MULTICHECKID;"
 			);
-		
+*/
+	
 	public VoltTable[] run( 	
 			String checkpathID,
 			String multiCheckID
 			)
 					throws VoltAbortException {
+
+		// create structure for return value
+		
+
+		VoltTable trueMultiChecks = new VoltTable(
+				new VoltTable.ColumnInfo("MULTICHECKID", VoltType.STRING),
+				new VoltTable.ColumnInfo("CHECKPATHID", VoltType.STRING));
+
 		
 		// find linked checks
 		
@@ -51,16 +60,25 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 			linkedChecksList.add(linkedChecks.getString("CHECKID"));
 		}
 		}
-	
-		
-		
-	
 				
 		// evaluate linked checks
+	
+		voltQueueSQL( sqlEvaluateLinkedChecks, (Object) linkedChecksList.toArray());
+		VoltTable[] evaluateChecksResults = voltExecuteSQL();
+		VoltTable evaluateChecks = evaluateChecksResults[0];
+
+		HashMap<String, Byte> evalChecksList = new HashMap<String, Byte>();
+
+		if (evaluateChecks.getRowCount() > 0){
+			while (evaluateChecks.advanceRow()){
+				evalChecksList.put(evaluateChecks.getString("CHECKID"), (Byte) evaluateChecks.get("STATE", VoltType.TINYINT));
+			}
+		}
+			
 		
+		/**
 		HashMap<String, Byte> evalChecksList = new HashMap<String, Byte>();
 		
-
 		Iterator<String> itLCL = linkedChecksList.iterator();
 		
 		
@@ -84,12 +102,12 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 					
 					evalChecksList.put(evaluateChecks.getString("CHECKID"), (Byte) evaluateChecks.get("STATE", VoltType.TINYINT));
 				}
-					*/		
+					/		
 				}
 			
 		
 		
-		
+		*/
 		
 		
 		
@@ -100,44 +118,43 @@ public class BLE_IsMultiCheckTrue extends VoltProcedure {
 		
 		if (evalChecksList.isEmpty() == false)
 		{						
-			voltQueueSQL( sqlFindOperatorForMultiCheck, multiCheckID);
-		
+			voltQueueSQL( sqlFindOperatorForMultiCheck, multiCheckID);		
 			VoltTable[] operatorForMultiCheckResults = voltExecuteSQL();
 			VoltTable operatorForMultiCheck = operatorForMultiCheckResults[0];
 			operatorForMultiCheck.advanceRow();
 			String operator = operatorForMultiCheck.getString("OPERATOR");
-			
-				
+							
 				if (operator.equals("AND")){
 					if (evalChecksList.containsValue((byte)0)) {	
 						state = 0;
 						
 					}
-					
-					// if (evalChecksList.containsValue((byte)0) && evalChecksList.containsValue((byte)1)==false){
-					//	state = 0;
-						
-					//}
-					
+							
 					if (evalChecksList.containsValue((byte)1) && evalChecksList.containsValue((byte)0)==false){
+						
+						trueMultiChecks.addRow(multiCheckID, checkpathID);	
 						state = 1;
 					}
 				}
 				
 				if (operator.equals("OR")){
 					if (evalChecksList.containsValue((byte)1)){
+						trueMultiChecks.addRow(multiCheckID, checkpathID);	
 						state = 1;
 					}
 				}
-				
+
+				voltQueueSQL( sqlUpdateTrueMultiCheck, state, multiCheckID);
+				voltExecuteSQL();
+
 				
 			}
-		voltQueueSQL( sqlUpdateTrueMultiCheck, state, multiCheckID);
-		voltExecuteSQL();
-		// System.out.println("State: " + state);
-		voltQueueSQL( sqlFindTrueMultiCheck, multiCheckID, 1);
-						
+			
 		
-		return voltExecuteSQL();
+		//voltQueueSQL( sqlFindTrueMultiCheck, multiCheckID, 1);
+						
+		VoltTable returnTrueMultichecks[] = new  VoltTable[1];
+		returnTrueMultichecks[0] = trueMultiChecks;
+		return returnTrueMultichecks;
 	}
 }

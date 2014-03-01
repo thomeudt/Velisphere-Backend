@@ -1,22 +1,21 @@
-import java.util.ArrayList;
-
 import org.voltdb.SQLStmt;
 import org.voltdb.VoltProcedure;
 import org.voltdb.VoltTable;
 import org.voltdb.VoltProcedure.VoltAbortException;
 
 
-public class FindRulesForCheckID extends VoltProcedure {
+public class BLE_FindRulesForMultiCheckID extends VoltProcedure {
 
 
 	public final SQLStmt sql = new SQLStmt(
-			"SELECT RULEID FROM RULE WHERE CHECKID IN ? ORDER BY RULEID;"
+			"SELECT RULEID FROM RULE WHERE MULTICHECKID = ? ORDER BY RULEID;"
 			);
 
 	public VoltTable[] run(
-			String[] checkIDs)
+			String checkpathID,
+			String checkID)
 					throws VoltAbortException {
-		voltQueueSQL( sql , (Object) checkIDs);
+		voltQueueSQL( sql , checkID);
 		
 		return voltExecuteSQL();
 	}

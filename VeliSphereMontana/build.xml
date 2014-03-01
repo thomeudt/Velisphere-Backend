@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- ====================================================================== 
-     Jan 24, 2013 2:39:14 PM                                                        
-
-     VoltInEclipse    
-     This project is test out building VoltDB components and clients in an Eclipse environment
-                   
-     dremella                                                                
+     
+     Build Script for Testing Montana in Eclipse
+                                                                     
      ====================================================================== -->
 <project name="VeliSphere Montana" default="serverStart">
 	

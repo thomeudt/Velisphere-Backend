@@ -16,28 +16,57 @@ public class BLE_IsCycleMultiCheckTrue extends VoltProcedure {
 			);
 
 	public final SQLStmt sqlEvaluateLinkedMultiChecks = new SQLStmt(
-			"SELECT MULTICHECKID, STATE FROM MULTICHECK WHERE MULTICHECKID = ? ORDER BY MULTICHECKID;"
+			"SELECT MULTICHECKID, STATE FROM MULTICHECK WHERE MULTICHECKID IN ? ORDER BY MULTICHECKID;"
 			);
 	
 	public final SQLStmt sqlFindOperatorForMultiCheck = new SQLStmt(
 			"SELECT OPERATOR FROM MULTICHECK WHERE MULTICHECKID = ? ORDER BY OPERATOR;"
 			);
 			
-	public final SQLStmt sqlUpdateTrueMultiCheck = new SQLStmt(
+	public final SQLStmt sqlUpdateMultiCheck = new SQLStmt(
 			"UPDATE MULTICHECK SET STATE = ? WHERE MULTICHECKID = ?;"
 			);
 
-	public final SQLStmt sqlFindTrueMultiCheck = new SQLStmt(
+/**	public final SQLStmt sqlFindTrueMultiCheck = new SQLStmt(
 			"SELECT MULTICHECKID FROM MULTICHECK WHERE MULTICHECKID = ? AND STATE = ? ORDER BY MULTICHECKID;"
 			);
-		
+	**/	
 	public VoltTable[] run( 	
 			String checkpathID,
 			String multiCheckID
 			)
 					throws VoltAbortException {
+
+		// create structure for return value
+		
+
+		VoltTable trueMultiChecks = new VoltTable(
+				new VoltTable.ColumnInfo("MULTICHECKID", VoltType.STRING),
+				new VoltTable.ColumnInfo("CHECKPATHID", VoltType.STRING));
+
+		
+		// find linked multichecks
+
+
+		
+		voltQueueSQL( sqlFindLinkedMultiChecks, multiCheckID);
+		
+		HashSet<String> linkedMultiChecksList = new HashSet<String>();
+		VoltTable[] linkedMultiChecksResults = voltExecuteSQL();
+		
+		if (linkedMultiChecksResults.length != 0){
+				
+		VoltTable linkedMultiChecks = linkedMultiChecksResults[0];
+		while (linkedMultiChecks.advanceRow()){
+			//evalMultiChecksList.put(linkedMultiChecks.getString("MULTICHECKID"), (Byte) linkedMultiChecks.get("STATE", VoltType.TINYINT));
+			
+			linkedMultiChecksList.add(linkedMultiChecks.getString("MULTICHECKRID"));
+		}
+		}
+
 		
 		
+		/**
 		// find linked multichecks
 		
 		voltQueueSQL( sqlFindLinkedMultiChecks, multiCheckID);
@@ -53,36 +82,29 @@ public class BLE_IsCycleMultiCheckTrue extends VoltProcedure {
 		}
 		}
 		
-		
+		*/
 		
 		// evaluate linked multichecks
 		
 		HashMap<String, Byte> evalMultiChecksList = new HashMap<String, Byte>();
 		
 
-		Iterator<String> itLCL = linkedMultiChecksList.iterator();
 		
 		if (linkedMultiChecksList.isEmpty() == false)
 		{
 
-			while (itLCL.hasNext()){
-				String sTR = itLCL.next();	
-				voltQueueSQL( sqlEvaluateLinkedMultiChecks, sTR);
+				voltQueueSQL( sqlEvaluateLinkedMultiChecks, (Object) linkedMultiChecksList.toArray());
 				
 				VoltTable[] evaluateMultiChecksResults = voltExecuteSQL();
 				VoltTable evaluateMultiChecks = evaluateMultiChecksResults[0];
-				
-				
+								
 				while (evaluateMultiChecks.advanceRow()){
 					evalMultiChecksList.put(evaluateMultiChecks.getString("MULTICHECKID"), (Byte) evaluateMultiChecks.get("STATE", VoltType.TINYINT));
 				}
 				
-			}
+			
 		}
-		
-
-		// System.out.println(evalMultiChecksList);
-		
+				
 		// check if multicheck is true
 
 		Byte state = 0;
@@ -106,7 +128,7 @@ public class BLE_IsCycleMultiCheckTrue extends VoltProcedure {
 				if (operator.equals("AND")){
 					if (evalMultiChecksList.containsValue((byte)1) && evalMultiChecksList.containsValue((byte)0)==false){
 						state = 1;
-						
+						trueMultiChecks.addRow(multiCheckID, checkpathID);							
 					}
 					
 				}
@@ -114,23 +136,20 @@ public class BLE_IsCycleMultiCheckTrue extends VoltProcedure {
 				if (operator.equals("OR")){
 					if (evalMultiChecksList.containsValue((byte)1)){
 						state = 1;
+						trueMultiChecks.addRow(multiCheckID, checkpathID);	
 					}
 				}
 				
 				
 				
-				voltQueueSQL( sqlUpdateTrueMultiCheck, state, multiCheckID);
-				voltExecuteSQL();
-					
-				
+				voltQueueSQL( sqlUpdateMultiCheck, state, multiCheckID);
+				voltExecuteSQL();		
 				
 			}
-		
-		
-		voltQueueSQL( sqlFindTrueMultiCheck, multiCheckID, 1);
-						
-		
-		return voltExecuteSQL();
+										
+		VoltTable returnTrueMultichecks[] = new  VoltTable[1];
+		returnTrueMultichecks[0] = trueMultiChecks;
+		return returnTrueMultichecks;
 	}
 }
 

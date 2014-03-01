@@ -18,6 +18,6 @@ public class LGE_InsertEndpointPropertyLog extends VoltProcedure {
       throws VoltAbortException {
           voltQueueSQL( sql, entryID, endpointID, propertyID, propertyEntry, timeStamp );
           voltExecuteSQL();
-          return null;
+          return voltExecuteSQL();
       }
 }
