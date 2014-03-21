@@ -1,0 +1,6 @@
+SQL: SELECT * FROM RULE WHERE (RULEID = ?) AND (CHECKPATHID = ?);
+PLAN:
+RETURN RESULTS TO STORED PROCEDURE
+ INDEX SCAN of "RULE" using its primary key index
+  uniquely match (RULEID = ?0) AND (CHECKPATHID = ?1)
+

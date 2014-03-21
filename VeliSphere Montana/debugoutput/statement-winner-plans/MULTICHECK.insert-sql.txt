@@ -1,6 +1,0 @@
-SQL: INSERT INTO MULTICHECK VALUES (?, ?, ?, ?, ?, ?);
-COST: 0.0
-PLAN:
-INSERT into "MULTICHECK"
- MATERIALIZE TUPLE from parameters and/or literals
-

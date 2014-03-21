@@ -1,0 +1,6 @@
+SQL: UPDATE CHECKSTATE SET STATE = ? WHERE CHECKPATHID = ? AND CHECKID = ?;
+PLAN:
+UPDATE
+ INDEX SCAN of "CHECKSTATE" using its primary key index
+  uniquely match (CHECKID = ?2) AND (CHECKPATHID = ?1)
+

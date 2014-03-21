@@ -1,0 +1,5 @@
+ORDER BY (SORT)
+ NESTLOOP INDEX JOIN
+ inline (INDEX SCAN of "OUTBOUNDPROPERTYACTION" using "OUTBOUNDPROPACTION" (unique-scan covering))
+  INDEX SCAN of "ACTION" using "SYS_IDX_SYS_PK_10132_10133" (for sort order only)
+

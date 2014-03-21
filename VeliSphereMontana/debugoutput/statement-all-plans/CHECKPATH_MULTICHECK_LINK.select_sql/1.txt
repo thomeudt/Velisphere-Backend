@@ -1,0 +1,2 @@
+INDEX SCAN of "CHECKPATH_MULTICHECK_LINK" using "CPMCIDX" (unique-scan covering)
+

@@ -1,0 +1,3 @@
+INSERT into "CHECKPATH"
+ MATERIALIZE TUPLE from parameters and/or literals
+

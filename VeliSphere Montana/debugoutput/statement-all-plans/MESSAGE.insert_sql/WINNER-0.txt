@@ -1,3 +1,0 @@
-INSERT into "MESSAGE"
- MATERIALIZE TUPLE from parameters and/or literals
-

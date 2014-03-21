@@ -1,0 +1,6 @@
+SQL: DELETE FROM ACTION WHERE (ACTIONID = ?) AND (CHECKPATHID = ?);
+PLAN:
+DELETEACTION
+ INDEX SCAN of "ACTION" using its primary key index
+  uniquely match (ACTIONID = ?0) AND (CHECKPATHID = ?1)
+

@@ -1,0 +1,10 @@
+SQL: UPDATE CHECK SET STATE = ? WHERE CHECKID = ?
+PLAN:
+RETURN RESULTS TO STORED PROCEDURE
+ AGGREGATION ops: SUM(VOLT_TEMP_TABLE.modified_tuples)
+  RECEIVE FROM ALL PARTITIONS
+   SEND PARTITION RESULTS TO COORDINATOR
+    UPDATE
+     INDEX SCAN of "CHECK" using its primary key index
+     range-scan on 1 of 3 cols from (CHECKID >= ?1) while (CHECKID = ?1), filter by (CHECKID = ?1)
+

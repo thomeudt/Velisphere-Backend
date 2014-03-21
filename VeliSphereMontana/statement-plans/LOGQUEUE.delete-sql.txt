@@ -1,0 +1,6 @@
+SQL: DELETE FROM LOGQUEUE WHERE (IDENTIFIER = ?) AND (QUEUENAME = ?);
+PLAN:
+DELETELOGQUEUE
+ INDEX SCAN of "LOGQUEUE" using its primary key index
+  uniquely match (IDENTIFIER = ?0) AND (QUEUENAME = ?1)
+

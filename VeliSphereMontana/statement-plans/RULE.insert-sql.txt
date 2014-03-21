@@ -1,0 +1,5 @@
+SQL: INSERT INTO RULE VALUES (?, ?, ?, ?, ?);
+PLAN:
+INSERT into "RULE"
+ MATERIALIZE TUPLE from parameters and/or literals
+

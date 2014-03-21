@@ -1,0 +1,6 @@
+SQL: select propertyclassid, propertyclassdatatype, propertyclassname, propertyclassunit from propertyclass where propertyclassid = ?;
+COST: 3.0
+PLAN:
+RETURN RESULTS TO STORED PROCEDURE
+ INDEX SCAN of "PROPERTYCLASS" using "SYS_IDX_SYS_PK_10067_10068" (unique-scan covering)
+

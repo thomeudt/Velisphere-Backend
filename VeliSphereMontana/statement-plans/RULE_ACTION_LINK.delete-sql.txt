@@ -1,0 +1,6 @@
+SQL: DELETE FROM RULE_ACTION_LINK WHERE (RULEID = ?);
+PLAN:
+DELETERULE_ACTION_LINK
+ INDEX SCAN of "RULE_ACTION_LINK" using its primary key index
+  uniquely match (RULEID = ?0)
+

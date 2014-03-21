@@ -1,0 +1,6 @@
+SQL: select propertyname from property where propertyid = ?;
+PLAN:
+RETURN RESULTS TO STORED PROCEDURE
+ INDEX SCAN of "PROPERTY" using its primary key index
+  uniquely match (PROPERTYID = ?0)
+

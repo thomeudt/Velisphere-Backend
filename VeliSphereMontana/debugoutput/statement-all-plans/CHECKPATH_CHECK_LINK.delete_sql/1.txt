@@ -1,0 +1,3 @@
+DELETE
+ INDEX SCAN of "CHECKPATH_CHECK_LINK" using "CHECKPATHIDIDX" (unique-scan covering)
+

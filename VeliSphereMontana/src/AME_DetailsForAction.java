@@ -10,7 +10,9 @@ public class AME_DetailsForAction extends VoltProcedure {
 			"OUTBOUNDPROPERTYACTION.CUSTOMPAYLOAD FROM ACTION INNER JOIN OUTBOUNDPROPERTYACTION ON " +
 			"ACTION.ACTIONID = OUTBOUNDPROPERTYACTION.ACTIONID AND OUTBOUNDPROPERTYACTION.ACTIONID = ? ORDER BY ACTION.ACTIONID;");
 
-	public VoltTable[] run(String actionID)
+	public VoltTable[] run(
+			String checkpathID,
+			String actionID)
 			throws VoltAbortException {
 		voltQueueSQL(sqlFindAllDetails, actionID);
 		// voltExecuteSQL();

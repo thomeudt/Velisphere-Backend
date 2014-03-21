@@ -1,0 +1,5 @@
+SQL: INSERT INTO MESSAGE VALUES (?, ?, ?);
+PLAN:
+INSERT into "MESSAGE"
+ MATERIALIZE TUPLE from parameters and/or literals
+

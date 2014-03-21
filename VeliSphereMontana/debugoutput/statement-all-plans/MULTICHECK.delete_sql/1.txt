@@ -1,0 +1,3 @@
+DELETE
+ INDEX SCAN of "MULTICHECK" using "MCCP" (unique-scan covering)
+

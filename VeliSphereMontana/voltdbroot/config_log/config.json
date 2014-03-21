@@ -1,0 +1,8 @@
+{
+    "log4jDst": [{
+        "format": "'.'yyyy-MM-dd",
+        "path": "/home/thorsten/git/velimontana/VeliSphereMontana/log/volt.log"
+    }],
+    "pid": 64178,
+    "workingDir": "/home/thorsten/git/velimontana/VeliSphereMontana"
+}

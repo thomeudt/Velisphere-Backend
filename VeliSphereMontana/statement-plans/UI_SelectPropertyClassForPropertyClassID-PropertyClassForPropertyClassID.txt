@@ -1,0 +1,6 @@
+SQL: select propertyclassid, propertyclassdatatype, propertyclassname, propertyclassunit from propertyclass where propertyclassid = ?;
+PLAN:
+RETURN RESULTS TO STORED PROCEDURE
+ INDEX SCAN of "PROPERTYCLASS" using its primary key index
+  uniquely match (PROPERTYCLASSID = ?0)
+

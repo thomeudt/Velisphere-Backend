@@ -1,0 +1,3 @@
+DELETE
+ INDEX SCAN of "ENDPOINTPROPERTYLOG" using "SYS_IDX_SYS_PK_10025_10026" (unique-scan covering)
+

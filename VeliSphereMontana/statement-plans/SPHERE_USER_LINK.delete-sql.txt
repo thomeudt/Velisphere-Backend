@@ -1,0 +1,6 @@
+SQL: DELETE FROM SPHERE_USER_LINK WHERE (LINKID = ?) AND (SPHEREID = ?);
+PLAN:
+DELETESPHERE_USER_LINK
+ INDEX SCAN of "SPHERE_USER_LINK" using its primary key index
+  uniquely match (LINKID = ?0) AND (SPHEREID = ?1)
+

@@ -1,6 +1,0 @@
-SQL: INSERT INTO MESSAGE VALUES (?, ?, ?);
-COST: 0.0
-PLAN:
-INSERT into "MESSAGE"
- MATERIALIZE TUPLE from parameters and/or literals
-

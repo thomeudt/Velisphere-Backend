@@ -1,0 +1,6 @@
+SQL: DELETE FROM SPHERE WHERE (SPHEREID = ?);
+PLAN:
+DELETESPHERE
+ INDEX SCAN of "SPHERE" using its primary key index
+  uniquely match (SPHEREID = ?0)
+

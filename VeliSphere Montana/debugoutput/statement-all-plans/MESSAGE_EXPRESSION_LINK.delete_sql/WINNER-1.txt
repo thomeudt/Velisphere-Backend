@@ -1,3 +1,0 @@
-DELETE
- INDEX SCAN of "MESSAGE_EXPRESSION_LINK" using "SYS_IDX_SYS_PK_10068_10069" (unique-scan covering)
-

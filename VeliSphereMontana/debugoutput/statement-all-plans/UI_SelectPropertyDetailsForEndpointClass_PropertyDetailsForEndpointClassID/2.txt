@@ -1,0 +1,5 @@
+ORDER BY (SORT)
+ NESTLOOP INDEX JOIN
+ inline (INDEX SCAN of "PROPERTY" using "PRPRC" (unique-scan covering))
+  SEQUENTIAL SCAN of "PROPERTYCLASS"
+

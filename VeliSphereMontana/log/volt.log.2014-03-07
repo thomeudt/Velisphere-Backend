@@ -1,0 +1,948 @@
+2014-03-07 15:58:29,926   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10020_10021 on table: ENDPOINTPROPERTYLOG of type: BALANCED_TREE
+2014-03-07 15:58:29,939   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10025_10026 on table: USER of type: BALANCED_TREE
+2014-03-07 15:58:29,939   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10030_10031 on table: ENDPOINT_USER_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,941   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10035_10036 on table: ENDPOINT_SPHERE_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,943   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10040_10041 on table: SPHERE_USER_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,944   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10044_10045 on table: SPHERE of type: BALANCED_TREE
+2014-03-07 15:58:29,944   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10048_10049 on table: ENDPOINTCLASS of type: BALANCED_TREE
+2014-03-07 15:58:29,944   INFO  [main] COMPILER: [null]: Created index: EPEPC on table: ENDPOINT of type: BALANCED_TREE
+2014-03-07 15:58:29,945   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10053_10054 on table: ENDPOINT of type: BALANCED_TREE
+2014-03-07 15:58:29,952   INFO  [main] COMPILER: [null]: Created index: PREPC on table: PROPERTY of type: BALANCED_TREE
+2014-03-07 15:58:29,952   INFO  [main] COMPILER: [null]: Created index: PRPRC on table: PROPERTY of type: BALANCED_TREE
+2014-03-07 15:58:29,952   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10058_10059 on table: PROPERTY of type: BALANCED_TREE
+2014-03-07 15:58:29,953   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10062_10063 on table: PROPERTYCLASS of type: BALANCED_TREE
+2014-03-07 15:58:29,954   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10067_10068 on table: MESSAGE_ENDPOINT_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,954   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10071_10072 on table: MESSAGE of type: BALANCED_TREE
+2014-03-07 15:58:29,955   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10076_10077 on table: MESSAGE_EXPRESSION_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,955   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10080_10081 on table: EXPRESSION of type: BALANCED_TREE
+2014-03-07 15:58:29,956   INFO  [main] COMPILER: [null]: Created index: CHEP on table: CHECK of type: BALANCED_TREE
+2014-03-07 15:58:29,956   INFO  [main] COMPILER: [null]: Created index: CHPR on table: CHECK of type: BALANCED_TREE
+2014-03-07 15:58:29,957   INFO  [main] COMPILER: [null]: Created index: CHCP on table: CHECK of type: BALANCED_TREE
+2014-03-07 15:58:29,957   INFO  [main] COMPILER: [null]: Created index: CHST on table: CHECK of type: BALANCED_TREE
+2014-03-07 15:58:29,957   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10086_10087 on table: CHECK of type: BALANCED_TREE
+2014-03-07 15:58:29,958   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10090_10091 on table: CHECKSTATE of type: BALANCED_TREE
+2014-03-07 15:58:29,959   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10095_10096 on table: RULE_MULTICHECK_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,960   INFO  [main] COMPILER: [null]: Created index: RCHECK on table: RULE of type: BALANCED_TREE
+2014-03-07 15:58:29,960   INFO  [main] COMPILER: [null]: Created index: RMCHECK on table: RULE of type: BALANCED_TREE
+2014-03-07 15:58:29,960   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10099_10100 on table: RULE of type: BALANCED_TREE
+2014-03-07 15:58:29,961   INFO  [main] COMPILER: [null]: Created index: MCCP on table: MULTICHECK of type: BALANCED_TREE
+2014-03-07 15:58:29,961   INFO  [main] COMPILER: [null]: Created index: MCST on table: MULTICHECK of type: BALANCED_TREE
+2014-03-07 15:58:29,961   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10103_10104 on table: MULTICHECK of type: BALANCED_TREE
+2014-03-07 15:58:29,962   INFO  [main] COMPILER: [null]: Created index: MCLMCIDX on table: MULTICHECK_CHECK_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,962   INFO  [main] COMPILER: [null]: Created index: MCLCHIDX on table: MULTICHECK_CHECK_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,962   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10109_10110 on table: MULTICHECK_CHECK_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,962   INFO  [main] COMPILER: [null]: Created index: MCMCLR on table: MULTICHECK_MULTICHECK_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,962   INFO  [main] COMPILER: [null]: Created index: MCMCLL on table: MULTICHECK_MULTICHECK_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,963   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10115_10116 on table: MULTICHECK_MULTICHECK_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,963   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10118_10119 on table: CHECKPATH of type: BALANCED_TREE
+2014-03-07 15:58:29,963   INFO  [main] COMPILER: [null]: Created index: CHECKIDIDX on table: CHECKPATH_CHECK_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,963   INFO  [main] COMPILER: [null]: Created index: CHECKPATHIDIDX on table: CHECKPATH_CHECK_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,963   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10123_10124 on table: CHECKPATH_CHECK_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,964   INFO  [main] COMPILER: [null]: Created index: CPMCIDX on table: CHECKPATH_MULTICHECK_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,964   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10128_10129 on table: CHECKPATH_MULTICHECK_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,964   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10132_10133 on table: ACTION of type: BALANCED_TREE
+2014-03-07 15:58:29,965   INFO  [main] COMPILER: [null]: Created index: OUTBOUNDPROPACTION on table: OUTBOUNDPROPERTYACTION of type: BALANCED_TREE
+2014-03-07 15:58:29,965   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10136_10137 on table: OUTBOUNDPROPERTYACTION of type: BALANCED_TREE
+2014-03-07 15:58:29,965   INFO  [main] COMPILER: [null]: Created index: RULEACTIONLINK on table: RULE_ACTION_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,965   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10141_10142 on table: RULE_ACTION_LINK of type: BALANCED_TREE
+2014-03-07 15:58:29,980   INFO  [main] COMPILER: [ACTION.insert]: Compiling Statement: INSERT INTO ACTION VALUES (?, ?, ?, ?, ?);
+2014-03-07 15:58:30,044   INFO  [main] COMPILER: [ACTION.select]: Compiling Statement: SELECT * FROM ACTION WHERE (ACTIONID = ?);
+2014-03-07 15:58:30,067   INFO  [main] COMPILER: [ACTION.delete]: Compiling Statement: DELETE FROM ACTION WHERE (ACTIONID = ?);
+2014-03-07 15:58:30,074   INFO  [main] COMPILER: [ACTION.update]: Compiling Statement: UPDATE ACTION SET ACTIONID = ?, ACTIONNAME = ?, TARGETENDPOINTID = ?, TGTEPIDFROMINBOUNDPROP = ?, EXPIRED = ? WHERE (ACTIONID = ?);
+2014-03-07 15:58:30,081   INFO  [main] COMPILER: [CHECK.insert]: Compiling Statement: INSERT INTO CHECK VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
+2014-03-07 15:58:30,093   INFO  [main] COMPILER: [CHECK.select]: Compiling Statement: SELECT * FROM CHECK WHERE (CHECKID = ?) AND (CHECKPATHID = ?) AND (ENDPOINTID = ?);
+2014-03-07 15:58:30,100   INFO  [main] COMPILER: [CHECK.delete]: Compiling Statement: DELETE FROM CHECK WHERE (CHECKID = ?) AND (CHECKPATHID = ?) AND (ENDPOINTID = ?);
+2014-03-07 15:58:30,105   INFO  [main] COMPILER: [CHECK.update]: Compiling Statement: UPDATE CHECK SET CHECKID = ?, ENDPOINTID = ?, PROPERTYID = ?, CHECKVALUE = ?, OPERATOR = ?, STATE = ?, EXPIRED = ?, NAME = ?, CHECKPATHID = ? WHERE (CHECKID = ?) AND (CHECKPATHID = ?) AND (ENDPOINTID = ?);
+2014-03-07 15:58:30,116   INFO  [main] COMPILER: [CHECKPATH.insert]: Compiling Statement: INSERT INTO CHECKPATH VALUES (?, ?, ?);
+2014-03-07 15:58:30,118   INFO  [main] COMPILER: [CHECKPATH.select]: Compiling Statement: SELECT * FROM CHECKPATH WHERE (CHECKPATHID = ?);
+2014-03-07 15:58:30,127   INFO  [main] COMPILER: [CHECKPATH.delete]: Compiling Statement: DELETE FROM CHECKPATH WHERE (CHECKPATHID = ?);
+2014-03-07 15:58:30,131   INFO  [main] COMPILER: [CHECKPATH.update]: Compiling Statement: UPDATE CHECKPATH SET CHECKPATHID = ?, CHECKPATHNAME = ?, UIOBJECT = ? WHERE (CHECKPATHID = ?);
+2014-03-07 15:58:30,134   INFO  [main] COMPILER: [CHECKPATH_CHECK_LINK.insert]: Compiling Statement: INSERT INTO CHECKPATH_CHECK_LINK VALUES (?, ?, ?);
+2014-03-07 15:58:30,136   INFO  [main] COMPILER: [CHECKPATH_CHECK_LINK.select]: Compiling Statement: SELECT * FROM CHECKPATH_CHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,147   INFO  [main] COMPILER: [CHECKPATH_CHECK_LINK.delete]: Compiling Statement: DELETE FROM CHECKPATH_CHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,150   INFO  [main] COMPILER: [CHECKPATH_CHECK_LINK.update]: Compiling Statement: UPDATE CHECKPATH_CHECK_LINK SET LINKID = ?, CHECKPATHID = ?, CHECKID = ? WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,154   INFO  [main] COMPILER: [CHECKPATH_MULTICHECK_LINK.insert]: Compiling Statement: INSERT INTO CHECKPATH_MULTICHECK_LINK VALUES (?, ?, ?);
+2014-03-07 15:58:30,156   INFO  [main] COMPILER: [CHECKPATH_MULTICHECK_LINK.select]: Compiling Statement: SELECT * FROM CHECKPATH_MULTICHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,161   INFO  [main] COMPILER: [CHECKPATH_MULTICHECK_LINK.delete]: Compiling Statement: DELETE FROM CHECKPATH_MULTICHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,163   INFO  [main] COMPILER: [CHECKPATH_MULTICHECK_LINK.update]: Compiling Statement: UPDATE CHECKPATH_MULTICHECK_LINK SET LINKID = ?, CHECKPATHID = ?, MULTICHECKID = ? WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,182   INFO  [main] COMPILER: [CHECKSTATE.insert]: Compiling Statement: INSERT INTO CHECKSTATE VALUES (?, ?, ?);
+2014-03-07 15:58:30,184   INFO  [main] COMPILER: [CHECKSTATE.select]: Compiling Statement: SELECT * FROM CHECKSTATE WHERE (CHECKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,187   INFO  [main] COMPILER: [CHECKSTATE.delete]: Compiling Statement: DELETE FROM CHECKSTATE WHERE (CHECKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,190   INFO  [main] COMPILER: [CHECKSTATE.update]: Compiling Statement: UPDATE CHECKSTATE SET CHECKID = ?, STATE = ?, CHECKPATHID = ? WHERE (CHECKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,193   INFO  [main] COMPILER: [ENDPOINT.insert]: Compiling Statement: INSERT INTO ENDPOINT VALUES (?, ?, ?);
+2014-03-07 15:58:30,196   INFO  [main] COMPILER: [ENDPOINT.delete]: Compiling Statement: DELETE FROM ENDPOINT WHERE (ENDPOINTID = ?);
+2014-03-07 15:58:30,199   INFO  [main] COMPILER: [ENDPOINT.update]: Compiling Statement: UPDATE ENDPOINT SET ENDPOINTID = ?, ENDPOINTNAME = ?, ENDPOINTCLASSID = ? WHERE (ENDPOINTID = ?);
+2014-03-07 15:58:30,204   INFO  [main] COMPILER: [ENDPOINT_SPHERE_LINK.insert]: Compiling Statement: INSERT INTO ENDPOINT_SPHERE_LINK VALUES (?, ?, ?);
+2014-03-07 15:58:30,206   INFO  [main] COMPILER: [ENDPOINT_SPHERE_LINK.delete]: Compiling Statement: DELETE FROM ENDPOINT_SPHERE_LINK WHERE (LINKID = ?);
+2014-03-07 15:58:30,208   INFO  [main] COMPILER: [ENDPOINT_SPHERE_LINK.update]: Compiling Statement: UPDATE ENDPOINT_SPHERE_LINK SET LINKID = ?, ENDPOINTID = ?, SPHEREID = ? WHERE (LINKID = ?);
+2014-03-07 15:58:30,212   INFO  [main] COMPILER: [ENDPOINT_USER_LINK.insert]: Compiling Statement: INSERT INTO ENDPOINT_USER_LINK VALUES (?, ?, ?);
+2014-03-07 15:58:30,214   INFO  [main] COMPILER: [ENDPOINT_USER_LINK.delete]: Compiling Statement: DELETE FROM ENDPOINT_USER_LINK WHERE (LINKID = ?);
+2014-03-07 15:58:30,216   INFO  [main] COMPILER: [ENDPOINT_USER_LINK.update]: Compiling Statement: UPDATE ENDPOINT_USER_LINK SET LINKID = ?, ENDPOINTID = ?, USERID = ? WHERE (LINKID = ?);
+2014-03-07 15:58:30,220   INFO  [main] COMPILER: [ENDPOINTCLASS.insert]: Compiling Statement: INSERT INTO ENDPOINTCLASS VALUES (?, ?);
+2014-03-07 15:58:30,221   INFO  [main] COMPILER: [ENDPOINTCLASS.select]: Compiling Statement: SELECT * FROM ENDPOINTCLASS WHERE (ENDPOINTCLASSID = ?);
+2014-03-07 15:58:30,223   INFO  [main] COMPILER: [ENDPOINTCLASS.delete]: Compiling Statement: DELETE FROM ENDPOINTCLASS WHERE (ENDPOINTCLASSID = ?);
+2014-03-07 15:58:30,225   INFO  [main] COMPILER: [ENDPOINTCLASS.update]: Compiling Statement: UPDATE ENDPOINTCLASS SET ENDPOINTCLASSID = ?, ENDPOINTCLASSNAME = ? WHERE (ENDPOINTCLASSID = ?);
+2014-03-07 15:58:30,227   INFO  [main] COMPILER: [ENDPOINTPROPERTYLOG.insert]: Compiling Statement: INSERT INTO ENDPOINTPROPERTYLOG VALUES (?, ?, ?, ?, ?);
+2014-03-07 15:58:30,229   INFO  [main] COMPILER: [ENDPOINTPROPERTYLOG.select]: Compiling Statement: SELECT * FROM ENDPOINTPROPERTYLOG WHERE (ENTRYID = ?) AND (ENDPOINTID = ?);
+2014-03-07 15:58:30,235   INFO  [main] COMPILER: [ENDPOINTPROPERTYLOG.delete]: Compiling Statement: DELETE FROM ENDPOINTPROPERTYLOG WHERE (ENTRYID = ?) AND (ENDPOINTID = ?);
+2014-03-07 15:58:30,237   INFO  [main] COMPILER: [ENDPOINTPROPERTYLOG.update]: Compiling Statement: UPDATE ENDPOINTPROPERTYLOG SET ENTRYID = ?, ENDPOINTID = ?, PROPERTYID = ?, PROPERTYENTRY = ?, TIME_STAMP = ? WHERE (ENTRYID = ?) AND (ENDPOINTID = ?);
+2014-03-07 15:58:30,240   INFO  [main] COMPILER: [EXPRESSION.insert]: Compiling Statement: INSERT INTO EXPRESSION VALUES (?, ?, ?);
+2014-03-07 15:58:30,242   INFO  [main] COMPILER: [EXPRESSION.delete]: Compiling Statement: DELETE FROM EXPRESSION WHERE (EXPRESSIONID = ?);
+2014-03-07 15:58:30,245   INFO  [main] COMPILER: [EXPRESSION.update]: Compiling Statement: UPDATE EXPRESSION SET EXPRESSIONID = ?, PROPERTYID = ?, PAYLOAD = ? WHERE (EXPRESSIONID = ?);
+2014-03-07 15:58:30,247   INFO  [main] COMPILER: [MESSAGE.insert]: Compiling Statement: INSERT INTO MESSAGE VALUES (?, ?, ?);
+2014-03-07 15:58:30,249   INFO  [main] COMPILER: [MESSAGE.select]: Compiling Statement: SELECT * FROM MESSAGE WHERE (MESSAGEID = ?);
+2014-03-07 15:58:30,252   INFO  [main] COMPILER: [MESSAGE.delete]: Compiling Statement: DELETE FROM MESSAGE WHERE (MESSAGEID = ?);
+2014-03-07 15:58:30,253   INFO  [main] COMPILER: [MESSAGE.update]: Compiling Statement: UPDATE MESSAGE SET MESSAGEID = ?, EXPRESSIONCOUNT = ?, TIME_STAMP = ? WHERE (MESSAGEID = ?);
+2014-03-07 15:58:30,255   INFO  [main] COMPILER: [MESSAGE_ENDPOINT_LINK.insert]: Compiling Statement: INSERT INTO MESSAGE_ENDPOINT_LINK VALUES (?, ?, ?);
+2014-03-07 15:58:30,257   INFO  [main] COMPILER: [MESSAGE_ENDPOINT_LINK.select]: Compiling Statement: SELECT * FROM MESSAGE_ENDPOINT_LINK WHERE (LINKID = ?) AND (ENDPOINTID = ?);
+2014-03-07 15:58:30,260   INFO  [main] COMPILER: [MESSAGE_ENDPOINT_LINK.delete]: Compiling Statement: DELETE FROM MESSAGE_ENDPOINT_LINK WHERE (LINKID = ?) AND (ENDPOINTID = ?);
+2014-03-07 15:58:30,262   INFO  [main] COMPILER: [MESSAGE_ENDPOINT_LINK.update]: Compiling Statement: UPDATE MESSAGE_ENDPOINT_LINK SET LINKID = ?, ENDPOINTID = ?, MESSAGEID = ? WHERE (LINKID = ?) AND (ENDPOINTID = ?);
+2014-03-07 15:58:30,264   INFO  [main] COMPILER: [MESSAGE_EXPRESSION_LINK.insert]: Compiling Statement: INSERT INTO MESSAGE_EXPRESSION_LINK VALUES (?, ?, ?);
+2014-03-07 15:58:30,266   INFO  [main] COMPILER: [MESSAGE_EXPRESSION_LINK.delete]: Compiling Statement: DELETE FROM MESSAGE_EXPRESSION_LINK WHERE (LINKID = ?);
+2014-03-07 15:58:30,268   INFO  [main] COMPILER: [MESSAGE_EXPRESSION_LINK.update]: Compiling Statement: UPDATE MESSAGE_EXPRESSION_LINK SET LINKID = ?, MESSAGEID = ?, EXPRESSIONID = ? WHERE (LINKID = ?);
+2014-03-07 15:58:30,271   INFO  [main] COMPILER: [MULTICHECK.insert]: Compiling Statement: INSERT INTO MULTICHECK VALUES (?, ?, ?, ?, ?, ?);
+2014-03-07 15:58:30,278   INFO  [main] COMPILER: [MULTICHECK.select]: Compiling Statement: SELECT * FROM MULTICHECK WHERE (MULTICHECKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,281   INFO  [main] COMPILER: [MULTICHECK.delete]: Compiling Statement: DELETE FROM MULTICHECK WHERE (MULTICHECKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,283   INFO  [main] COMPILER: [MULTICHECK.update]: Compiling Statement: UPDATE MULTICHECK SET MULTICHECKID = ?, OPERATOR = ?, STATE = ?, EXPIRED = ?, MULTICHECKNAME = ?, CHECKPATHID = ? WHERE (MULTICHECKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,287   INFO  [main] COMPILER: [MULTICHECK_CHECK_LINK.insert]: Compiling Statement: INSERT INTO MULTICHECK_CHECK_LINK VALUES (?, ?, ?, ?);
+2014-03-07 15:58:30,288   INFO  [main] COMPILER: [MULTICHECK_CHECK_LINK.select]: Compiling Statement: SELECT * FROM MULTICHECK_CHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,291   INFO  [main] COMPILER: [MULTICHECK_CHECK_LINK.delete]: Compiling Statement: DELETE FROM MULTICHECK_CHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,298   INFO  [main] COMPILER: [MULTICHECK_CHECK_LINK.update]: Compiling Statement: UPDATE MULTICHECK_CHECK_LINK SET LINKID = ?, MULTICHECKID = ?, CHECKID = ?, CHECKPATHID = ? WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,301   INFO  [main] COMPILER: [MULTICHECK_MULTICHECK_LINK.insert]: Compiling Statement: INSERT INTO MULTICHECK_MULTICHECK_LINK VALUES (?, ?, ?, ?);
+2014-03-07 15:58:30,304   INFO  [main] COMPILER: [MULTICHECK_MULTICHECK_LINK.select]: Compiling Statement: SELECT * FROM MULTICHECK_MULTICHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,306   INFO  [main] COMPILER: [MULTICHECK_MULTICHECK_LINK.delete]: Compiling Statement: DELETE FROM MULTICHECK_MULTICHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,308   INFO  [main] COMPILER: [MULTICHECK_MULTICHECK_LINK.update]: Compiling Statement: UPDATE MULTICHECK_MULTICHECK_LINK SET LINKID = ?, MULTICHECKLID = ?, MULTICHECKRID = ?, CHECKPATHID = ? WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,311   INFO  [main] COMPILER: [OUTBOUNDPROPERTYACTION.insert]: Compiling Statement: INSERT INTO OUTBOUNDPROPERTYACTION VALUES (?, ?, ?, ?, ?, ?);
+2014-03-07 15:58:30,313   INFO  [main] COMPILER: [OUTBOUNDPROPERTYACTION.select]: Compiling Statement: SELECT * FROM OUTBOUNDPROPERTYACTION WHERE (OUTBOUNDPROPERTYACTIONID = ?) AND (ACTIONID = ?);
+2014-03-07 15:58:30,316   INFO  [main] COMPILER: [OUTBOUNDPROPERTYACTION.delete]: Compiling Statement: DELETE FROM OUTBOUNDPROPERTYACTION WHERE (OUTBOUNDPROPERTYACTIONID = ?) AND (ACTIONID = ?);
+2014-03-07 15:58:30,318   INFO  [main] COMPILER: [OUTBOUNDPROPERTYACTION.update]: Compiling Statement: UPDATE OUTBOUNDPROPERTYACTION SET OUTBOUNDPROPERTYACTIONID = ?, OUTBOUNDPROPERTYID = ?, INBOUNDPROPERTYID = ?, CURRENTSTATEPROPERTYID = ?, CUSTOMPAYLOAD = ?, ACTIONID = ? WHERE (OUTBOUNDPROPERTYACTIONID = ?) AND (ACTIONID = ?);
+2014-03-07 15:58:30,321   INFO  [main] COMPILER: [PROPERTY.insert]: Compiling Statement: INSERT INTO PROPERTY VALUES (?, ?, ?, ?, ?, ?, ?, ?);
+2014-03-07 15:58:30,325   INFO  [main] COMPILER: [PROPERTY.delete]: Compiling Statement: DELETE FROM PROPERTY WHERE (PROPERTYID = ?);
+2014-03-07 15:58:30,327   INFO  [main] COMPILER: [PROPERTY.update]: Compiling Statement: UPDATE PROPERTY SET PROPERTYID = ?, PROPERTYNAME = ?, PROPERTYCLASSID = ?, ENDPOINTCLASSID = ?, ACT = ?, SENSE = ?, STATUS = ?, CONFIGURABLE = ? WHERE (PROPERTYID = ?);
+2014-03-07 15:58:30,332   INFO  [main] COMPILER: [PROPERTYCLASS.insert]: Compiling Statement: INSERT INTO PROPERTYCLASS VALUES (?, ?, ?, ?);
+2014-03-07 15:58:30,333   INFO  [main] COMPILER: [PROPERTYCLASS.delete]: Compiling Statement: DELETE FROM PROPERTYCLASS WHERE (PROPERTYCLASSID = ?);
+2014-03-07 15:58:30,335   INFO  [main] COMPILER: [PROPERTYCLASS.update]: Compiling Statement: UPDATE PROPERTYCLASS SET PROPERTYCLASSID = ?, PROPERTYCLASSNAME = ?, PROPERTYCLASSDATATYPE = ?, PROPERTYCLASSUNIT = ? WHERE (PROPERTYCLASSID = ?);
+2014-03-07 15:58:30,338   INFO  [main] COMPILER: [RULE.insert]: Compiling Statement: INSERT INTO RULE VALUES (?, ?, ?, ?, ?);
+2014-03-07 15:58:30,339   INFO  [main] COMPILER: [RULE.select]: Compiling Statement: SELECT * FROM RULE WHERE (RULEID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,344   INFO  [main] COMPILER: [RULE.delete]: Compiling Statement: DELETE FROM RULE WHERE (RULEID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,346   INFO  [main] COMPILER: [RULE.update]: Compiling Statement: UPDATE RULE SET RULEID = ?, RULENAME = ?, CHECKID = ?, MULTICHECKID = ?, CHECKPATHID = ? WHERE (RULEID = ?) AND (CHECKPATHID = ?);
+2014-03-07 15:58:30,349   INFO  [main] COMPILER: [RULE_ACTION_LINK.insert]: Compiling Statement: INSERT INTO RULE_ACTION_LINK VALUES (?, ?, ?);
+2014-03-07 15:58:30,350   INFO  [main] COMPILER: [RULE_ACTION_LINK.select]: Compiling Statement: SELECT * FROM RULE_ACTION_LINK WHERE (RULEID = ?);
+2014-03-07 15:58:30,359   INFO  [main] COMPILER: [RULE_ACTION_LINK.delete]: Compiling Statement: DELETE FROM RULE_ACTION_LINK WHERE (RULEID = ?);
+2014-03-07 15:58:30,361   INFO  [main] COMPILER: [RULE_ACTION_LINK.update]: Compiling Statement: UPDATE RULE_ACTION_LINK SET LINKID = ?, RULEID = ?, ACTIONID = ? WHERE (RULEID = ?);
+2014-03-07 15:58:30,363   INFO  [main] COMPILER: [RULE_MULTICHECK_LINK.insert]: Compiling Statement: INSERT INTO RULE_MULTICHECK_LINK VALUES (?, ?, ?);
+2014-03-07 15:58:30,365   INFO  [main] COMPILER: [RULE_MULTICHECK_LINK.select]: Compiling Statement: SELECT * FROM RULE_MULTICHECK_LINK WHERE (LINKID = ?) AND (RULEID = ?);
+2014-03-07 15:58:30,367   INFO  [main] COMPILER: [RULE_MULTICHECK_LINK.delete]: Compiling Statement: DELETE FROM RULE_MULTICHECK_LINK WHERE (LINKID = ?) AND (RULEID = ?);
+2014-03-07 15:58:30,371   INFO  [main] COMPILER: [RULE_MULTICHECK_LINK.update]: Compiling Statement: UPDATE RULE_MULTICHECK_LINK SET LINKID = ?, RULEID = ?, MULTICHECKID = ? WHERE (LINKID = ?) AND (RULEID = ?);
+2014-03-07 15:58:30,373   INFO  [main] COMPILER: [SPHERE.insert]: Compiling Statement: INSERT INTO SPHERE VALUES (?, ?, ?);
+2014-03-07 15:58:30,374   INFO  [main] COMPILER: [SPHERE.select]: Compiling Statement: SELECT * FROM SPHERE WHERE (SPHEREID = ?);
+2014-03-07 15:58:30,384   INFO  [main] COMPILER: [SPHERE.delete]: Compiling Statement: DELETE FROM SPHERE WHERE (SPHEREID = ?);
+2014-03-07 15:58:30,389   INFO  [main] COMPILER: [SPHERE.update]: Compiling Statement: UPDATE SPHERE SET SPHEREID = ?, SPHERENAME = ?, PUBLIC = ? WHERE (SPHEREID = ?);
+2014-03-07 15:58:30,393   INFO  [main] COMPILER: [SPHERE_USER_LINK.insert]: Compiling Statement: INSERT INTO SPHERE_USER_LINK VALUES (?, ?, ?);
+2014-03-07 15:58:30,395   INFO  [main] COMPILER: [SPHERE_USER_LINK.select]: Compiling Statement: SELECT * FROM SPHERE_USER_LINK WHERE (LINKID = ?) AND (SPHEREID = ?);
+2014-03-07 15:58:30,397   INFO  [main] COMPILER: [SPHERE_USER_LINK.delete]: Compiling Statement: DELETE FROM SPHERE_USER_LINK WHERE (LINKID = ?) AND (SPHEREID = ?);
+2014-03-07 15:58:30,399   INFO  [main] COMPILER: [SPHERE_USER_LINK.update]: Compiling Statement: UPDATE SPHERE_USER_LINK SET LINKID = ?, SPHEREID = ?, USERID = ? WHERE (LINKID = ?) AND (SPHEREID = ?);
+2014-03-07 15:58:30,401   INFO  [main] COMPILER: [USER.insert]: Compiling Statement: INSERT INTO USER VALUES (?, ?, ?, ?);
+2014-03-07 15:58:30,402   INFO  [main] COMPILER: [USER.select]: Compiling Statement: SELECT * FROM USER WHERE (USERID = ?);
+2014-03-07 15:58:30,404   INFO  [main] COMPILER: [USER.delete]: Compiling Statement: DELETE FROM USER WHERE (USERID = ?);
+2014-03-07 15:58:30,406   INFO  [main] COMPILER: [USER.update]: Compiling Statement: UPDATE USER SET USERID = ?, USERNAME = ?, USEREMAIL = ?, USERPWHASH = ? WHERE (USERID = ?);
+2014-03-07 15:58:30,449   INFO  [main] COMPILER: [FindAllChecks.class]: Compiling Statement: SELECT * FROM CHECK ORDER BY CHECKID;
+2014-03-07 15:58:30,465   WARN  [main] COMPILER: [FindAllChecks.class]: Procedure FindAllChecks has a statement with a non-deterministic result - statement: "SELECT * FROM CHECK ORDER BY CHECKID;", reason: insufficient ordering criteria.
+2014-03-07 15:58:30,473   INFO  [main] COMPILER: [FindAllMultichecksForCheck.class]: Compiling Statement: SELECT MULTICHECKID FROM MULTICHECK_CHECK_LINK WHERE CHECKID = ?;
+2014-03-07 15:58:30,476   WARN  [main] COMPILER: [FindAllMultichecksForCheck.class]: Procedure FindAllMultichecksForCheck has a statement with a non-deterministic result - statement: "SELECT MULTICHECKID FROM MULTICHECK_CHECK_LINK WHERE CHECKID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 15:58:30,477   INFO  [main] COMPILER: [UI_SelectAllProperties.class]: Compiling Statement: SELECT * FROM PROPERTY ORDER BY PROPERTYNAME;
+2014-03-07 15:58:30,479   WARN  [main] COMPILER: [UI_SelectAllProperties.class]: Procedure UI_SelectAllProperties has a statement with a non-deterministic result - statement: "SELECT * FROM PROPERTY ORDER BY PROPERTYNAME;", reason: insufficient ordering criteria.
+2014-03-07 15:58:30,480   INFO  [main] COMPILER: [UI_SelectPropertyNameForPropertyID.class]: Compiling Statement: select propertyname from property where propertyid = ?;
+2014-03-07 15:58:30,483   INFO  [main] COMPILER: [AME_DetailsForAction.class]: Compiling Statement: SELECT ACTION.ACTIONID, ACTION.TARGETENDPOINTID, ACTION.TGTEPIDFROMINBOUNDPROP, OUTBOUNDPROPERTYACTION.OUTBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.INBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.CURRENTSTATEPROPERTYID, OUTBOUNDPROPERTYACTION.CUSTOMPAYLOAD FROM ACTION INNER JOIN OUTBOUNDPROPERTYACTION ON ACTION.ACTIONID = OUTBOUNDPROPERTYACTION.ACTIONID AND OUTBOUNDPROPERTYACTION.ACTIONID = ? ORDER BY ACTION.ACTIONID;
+2014-03-07 15:58:30,491   WARN  [main] COMPILER: [AME_DetailsForAction.class]: Procedure AME_DetailsForAction has a statement with a non-deterministic result - statement: "SELECT ACTION.ACTIONID, ACTION.TARGETENDPOINTID, ACTION.TGTEPIDFROMINBOUNDPROP, OUTBOUNDPROPERTYACTION.OUTBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.INBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.CURRENTSTATEPROPERTYID, OUTBOUNDPROPERTYACTION.CUSTOMPAYLOAD FROM ACTION INNER JOIN OUTBOUNDPROPERTYACTION ON ACTION.ACTIONID = OUTBOUNDPROPERTYACTION.ACTIONID AND OUTBOUNDPROPERTYACTION.ACTIONID = ? ORDER BY ACTION.ACTIONID;", reason: insufficient ordering criteria.
+2014-03-07 15:58:30,492   INFO  [main] COMPILER: [UI_SelectChecksForEndpoint.class]: Compiling Statement: select * from check join property on check.propertyid = property.propertyid and check.endpointid = ? ORDER BY name;
+2014-03-07 15:58:30,500   INFO  [main] COMPILER: [UI_SelectChecksForEndpoint.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 0 of statement ' select * from check join property on check.propertyid = property.propertyid and check.endpointid = ? ORDER BY name;'
+2014-03-07 15:58:30,500   WARN  [main] COMPILER: [UI_SelectChecksForEndpoint.class]: Procedure UI_SelectChecksForEndpoint has a statement with a non-deterministic result - statement: "select * from check join property on check.propertyid = property.propertyid and check.endpointid = ? ORDER BY name;", reason: insufficient ordering criteria.
+2014-03-07 15:58:30,501   INFO  [main] COMPILER: [BLE_FindRulesForMultiCheckID.class]: Compiling Statement: SELECT RULEID FROM RULE WHERE MULTICHECKID = ? ORDER BY RULEID;
+2014-03-07 15:58:30,505   INFO  [main] COMPILER: [UI_SelectAllEndpointClasses.class]: Compiling Statement: SELECT * FROM ENDPOINTCLASS ORDER BY ENDPOINTCLASSNAME;
+2014-03-07 15:58:30,508   WARN  [main] COMPILER: [UI_SelectAllEndpointClasses.class]: Procedure UI_SelectAllEndpointClasses has a statement with a non-deterministic result - statement: "SELECT * FROM ENDPOINTCLASS ORDER BY ENDPOINTCLASSNAME;", reason: insufficient ordering criteria.
+2014-03-07 15:58:30,509   INFO  [main] COMPILER: [UI_SelectPropertyClassForPropertyClassID.class]: Compiling Statement: select propertyclassid, propertyclassdatatype, propertyclassname, propertyclassunit from propertyclass where propertyclassid = ?;
+2014-03-07 15:58:30,512   INFO  [main] COMPILER: [UI_DeleteMulticheckMulticheckLink.class]: Compiling Statement: DELETE FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKLID = ?;
+2014-03-07 15:58:30,517   INFO  [main] COMPILER: [BLE_MultiCheckParentForMultiCheck.class]: Compiling Statement: SELECT MULTICHECKLID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKRID = ? ORDER BY MULTICHECKLID;
+2014-03-07 15:58:30,520   INFO  [main] COMPILER: [SelectAllUsers.class]: Compiling Statement: SELECT * FROM USER ORDER BY USERNAME;
+2014-03-07 15:58:30,522   WARN  [main] COMPILER: [SelectAllUsers.class]: Procedure SelectAllUsers has a statement with a non-deterministic result - statement: "SELECT * FROM USER ORDER BY USERNAME;", reason: insufficient ordering criteria.
+2014-03-07 15:58:30,523   INFO  [main] COMPILER: [UI_SelectPropertyClassForPropertyID.class]: Compiling Statement: select propertyclassid from property where propertyid = ?;
+2014-03-07 15:58:30,526   INFO  [main] COMPILER: [BLE_FindRulesForCheckID.class]: Compiling Statement: SELECT RULEID FROM RULE WHERE CHECKID = ? ORDER BY RULEID;
+2014-03-07 15:58:30,529   INFO  [main] COMPILER: [UI_UpdateCheck.class]: Compiling Statement: UPDATE CHECK SET NAME = ?, CHECKVALUE = ?, OPERATOR = ?, STATE = 0 WHERE CHECKID = ?;
+2014-03-07 15:58:30,536   INFO  [main] COMPILER: [UI_SelectAllEndpoints.class]: Compiling Statement: SELECT * FROM ENDPOINT ORDER BY ENDPOINTNAME;
+2014-03-07 15:58:30,538   WARN  [main] COMPILER: [UI_SelectAllEndpoints.class]: Procedure UI_SelectAllEndpoints has a statement with a non-deterministic result - statement: "SELECT * FROM ENDPOINT ORDER BY ENDPOINTNAME;", reason: insufficient ordering criteria.
+2014-03-07 15:58:30,539   INFO  [main] COMPILER: [FindMultiChecksForMultiCheckID.class]: Compiling Statement: SELECT MULTICHECKID, STATE, OPERATOR FROM MULTICHECK WHERE MULTICHECKID = ?;
+2014-03-07 15:58:30,543   INFO  [main] COMPILER: [UI_UpdateMulticheck.class]: Compiling Statement: UPDATE MULTICHECK SET MULTICHECKNAME = ?, OPERATOR = ? WHERE MULTICHECKID = ?;
+2014-03-07 15:58:30,547   INFO  [main] COMPILER: [UI_UpdateSpherenameForSphereID.class]: Compiling Statement: UPDATE SPHERE SET SPHERENAME = ? WHERE SPHEREID = ?;
+2014-03-07 15:58:30,549   INFO  [main] COMPILER: [UI_UpdateSpherenameForSphereID.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 1 of statement ' UPDATE SPHERE SET SPHERENAME = ? WHERE SPHEREID = ?;'
+2014-03-07 15:58:30,550   INFO  [main] COMPILER: [UI_SelectCheckForCheckID.class]: Compiling Statement: select checkid, name from check where checkid = ?;
+2014-03-07 15:58:30,561   INFO  [main] COMPILER: [ImprovedFindMatchingChecksEqual.class]: Compiling Statement: SELECT * FROM CHECK WHERE STATE = 1 AND ENDPOINTID = ?;
+2014-03-07 15:58:30,565   INFO  [main] COMPILER: [ImprovedFindMatchingChecksEqual.class]: Compiling Statement: UPDATE CHECK SET STATE = 1 WHERE ENDPOINTID = ? AND PROPERTYID = ? AND CHECKVALUE = ? AND OPERATOR = ? AND EXPIRED = ?;
+2014-03-07 15:58:30,570   INFO  [main] COMPILER: [ImprovedFindMatchingChecksEqual.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 0 of statement 'SELECT * FROM CHECK WHERE STATE = 1 AND ENDPOINTID = ?;'
+2014-03-07 15:58:30,570   WARN  [main] COMPILER: [ImprovedFindMatchingChecksEqual.class]: Procedure ImprovedFindMatchingChecksEqual is RW and has a statement whose result has a non-deterministic ordering - statement: "SELECT * FROM CHECK WHERE STATE = 1 AND ENDPOINTID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 15:58:30,571   INFO  [main] COMPILER: [UI_UpdateCheckpathName.class]: Compiling Statement: UPDATE CHECKPATH SET CHECKPATHNAME = ? WHERE CHECKPATHID = ?;
+2014-03-07 15:58:30,576   INFO  [main] COMPILER: [UI_UpdateCheckpathName.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 1 of statement ' UPDATE CHECKPATH SET CHECKPATHNAME = ? WHERE CHECKPATHID = ?;'
+2014-03-07 15:58:30,577   INFO  [main] COMPILER: [UpdateMultiChecks.class]: Compiling Statement: UPDATE MULTICHECK SET STATE = ? WHERE MULTICHECKID = ?
+2014-03-07 15:58:30,581   INFO  [main] COMPILER: [AME_ActionsForRule.class]: Compiling Statement: SELECT ACTIONID FROM RULE_ACTION_LINK WHERE RULEID = ? ORDER BY ACTIONID;
+2014-03-07 15:58:30,591   INFO  [main] COMPILER: [UI_SelectActPropertiesForEndpoint.class]: Compiling Statement: select * from endpoint, property, endpointclass where endpoint.endpointclassid = property.endpointclassid and endpointclass.endpointclassid = property.endpointclassid and endpoint.endpointid = ? and property.act = 1 ORDER BY endpoint.endpointname;
+2014-03-07 15:58:30,640   WARN  [main] COMPILER: [UI_SelectActPropertiesForEndpoint.class]: Procedure UI_SelectActPropertiesForEndpoint has a statement with a non-deterministic result - statement: "select * from endpoint, property, endpointclass where endpoint.endpointclassid = property.endpointclassid and endpointclass.endpointclassid = property.endpointclassid and endpoint.endpointid = ? and property.act = 1 ORDER BY endpoint.endpointname;", reason: insufficient ordering criteria.
+2014-03-07 15:58:30,641   INFO  [main] COMPILER: [UI_SelectEndpointsForUser.class]: Compiling Statement: SELECT * FROM ENDPOINT JOIN ENDPOINT_USER_LINK ON ENDPOINT.ENDPOINTID = ENDPOINT_USER_LINK.ENDPOINTID AND ENDPOINT_USER_LINK.USERID = ?;
+2014-03-07 15:58:30,647   WARN  [main] COMPILER: [UI_SelectEndpointsForUser.class]: Procedure UI_SelectEndpointsForUser has a statement with a non-deterministic result - statement: "SELECT * FROM ENDPOINT JOIN ENDPOINT_USER_LINK ON ENDPOINT.ENDPOINTID = ENDPOINT_USER_LINK.ENDPOINTID AND ENDPOINT_USER_LINK.USERID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 15:58:30,648   INFO  [main] COMPILER: [BLE_IsCycleMultiCheckTrue.class]: Compiling Statement: SELECT MULTICHECKRID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKLID = ? ORDER BY MULTICHECKRID;
+2014-03-07 15:58:30,650   INFO  [main] COMPILER: [BLE_IsCycleMultiCheckTrue.class]: Compiling Statement: SELECT MULTICHECKID, STATE FROM MULTICHECK WHERE MULTICHECKID IN ? ORDER BY MULTICHECKID;
+2014-03-07 15:58:30,653   INFO  [main] COMPILER: [BLE_IsCycleMultiCheckTrue.class]: Compiling Statement: SELECT OPERATOR FROM MULTICHECK WHERE MULTICHECKID = ? ORDER BY OPERATOR;
+2014-03-07 15:58:30,665   INFO  [main] COMPILER: [BLE_IsCycleMultiCheckTrue.class]: Compiling Statement: UPDATE MULTICHECK SET STATE = ? WHERE MULTICHECKID = ?;
+2014-03-07 15:58:30,668   INFO  [main] COMPILER: [FindParentMultiChecksForMultiCheckID.class]: Compiling Statement: SELECT MULTICHECKLID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKRID = ?;
+2014-03-07 15:58:30,670   WARN  [main] COMPILER: [FindParentMultiChecksForMultiCheckID.class]: Procedure FindParentMultiChecksForMultiCheckID has a statement with a non-deterministic result - statement: "SELECT MULTICHECKLID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKRID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 15:58:30,672   INFO  [main] COMPILER: [UI_LastLogEntryForEndpointProperty.class]: Compiling Statement: SELECT TOP 1 ENDPOINTID, PROPERTYID, PROPERTYENTRY, TIME_STAMP FROM ENDPOINTPROPERTYLOG WHERE ENDPOINTID = ? AND  PROPERTYID = ? ORDER BY TIME_STAMP DESC;
+2014-03-07 15:58:30,686   INFO  [main] COMPILER: [UI_LastLogEntryForEndpointProperty.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 0 of statement ' SELECT TOP 1 ENDPOINTID, PROPERTYID, PROPERTYENTRY, TIME_STAMP FROM ENDPOINTPROPERTYLOG WHERE ENDPOINTID = ? AND  PROPERTYID = ? ORDER BY TIME_STAMP DESC;'
+2014-03-07 15:58:30,686   WARN  [main] COMPILER: [UI_LastLogEntryForEndpointProperty.class]: Procedure UI_LastLogEntryForEndpointProperty has a statement with a non-deterministic result - statement: "SELECT TOP 1 ENDPOINTID, PROPERTYID, PROPERTYENTRY, TIME_STAMP FROM ENDPOINTPROPERTYLOG WHERE ENDPOINTID = ? AND  PROPERTYID = ? ORDER BY TIME_STAMP DESC;" , reason: insufficient ordering criteria.
+2014-03-07 15:58:30,687   INFO  [main] COMPILER: [UI_UpdateEndpointnameForEndpointID.class]: Compiling Statement: UPDATE ENDPOINT SET ENDPOINTNAME = ? WHERE ENDPOINTID = ?;
+2014-03-07 15:58:30,696   INFO  [main] COMPILER: [UI_DeleteEndpointFromSphere.class]: Compiling Statement: DELETE FROM ENDPOINT_SPHERE_LINK WHERE ENDPOINTID = ? AND SPHEREID = ?;
+2014-03-07 15:58:30,699   INFO  [main] COMPILER: [UI_SelectAllCheckpaths.class]: Compiling Statement: SELECT CHECKPATHID, CHECKPATHNAME FROM CHECKPATH ORDER BY CHECKPATHNAME;
+2014-03-07 15:58:30,701   WARN  [main] COMPILER: [UI_SelectAllCheckpaths.class]: Procedure UI_SelectAllCheckpaths has a statement with a non-deterministic result - statement: "SELECT CHECKPATHID, CHECKPATHNAME FROM CHECKPATH ORDER BY CHECKPATHNAME;", reason: insufficient ordering criteria.
+2014-03-07 15:58:30,703   INFO  [main] COMPILER: [UI_SelectCheckpathForCheckpathID.class]: Compiling Statement: select checkpathid, checkpathname, uiobject from checkpath where checkpathid = ?;
+2014-03-07 15:58:30,708   INFO  [main] COMPILER: [UI_SelectCheckpathForCheckpathID.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 0 of statement ' select checkpathid, checkpathname, uiobject from checkpath where checkpathid = ?;'
+2014-03-07 15:58:30,709   INFO  [main] COMPILER: [UI_FindUserForEmail.class]: Compiling Statement: SELECT * FROM USER WHERE USEREMAIL = ?;
+2014-03-07 15:58:30,724   WARN  [main] COMPILER: [UI_FindUserForEmail.class]: Procedure UI_FindUserForEmail has a statement with a non-deterministic result - statement: "SELECT * FROM USER WHERE USEREMAIL = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 15:58:30,726   INFO  [main] COMPILER: [UI_SelectAllSpheres.class]: Compiling Statement: SELECT * FROM SPHERE ORDER BY SPHERENAME;
+2014-03-07 15:58:30,734   WARN  [main] COMPILER: [UI_SelectAllSpheres.class]: Procedure UI_SelectAllSpheres has a statement with a non-deterministic result - statement: "SELECT * FROM SPHERE ORDER BY SPHERENAME;", reason: insufficient ordering criteria.
+2014-03-07 15:58:30,735   INFO  [main] COMPILER: [ImprovedFindAllMultichecksForCheck.class]: Compiling Statement: SELECT MULTICHECKID FROM MULTICHECK_CHECK_LINK WHERE CHECKID = ?;
+2014-03-07 15:58:30,742   INFO  [main] COMPILER: [ImprovedFindAllMultichecksForCheck.class]: Compiling Statement: UPDATE MULTICHECK SET STATE = 0 WHERE MULTICHECKID = ?
+2014-03-07 15:58:30,744   WARN  [main] COMPILER: [ImprovedFindAllMultichecksForCheck.class]: Procedure ImprovedFindAllMultichecksForCheck is RW and has a statement whose result has a non-deterministic ordering - statement: "SELECT MULTICHECKID FROM MULTICHECK_CHECK_LINK WHERE CHECKID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 15:58:30,745   INFO  [main] COMPILER: [BLE_UpdateCheckState.class]: Compiling Statement: UPDATE CHECKSTATE SET STATE = ? WHERE CHECKPATHID = ? AND CHECKID = ?;
+2014-03-07 15:58:30,753   INFO  [main] COMPILER: [UpdateChecks.class]: Compiling Statement: UPDATE CHECK SET STATE = ? WHERE CHECKID = ?
+2014-03-07 15:58:30,766   INFO  [main] COMPILER: [UI_DeleteMulticheckCheckLink.class]: Compiling Statement: DELETE FROM MULTICHECK_CHECK_LINK WHERE MULTICHECKID = ?;
+2014-03-07 15:58:30,770   INFO  [main] COMPILER: [UI_SelectAllPropertyClasses.class]: Compiling Statement: SELECT * FROM PROPERTYCLASS ORDER BY PROPERTYCLASSNAME;
+2014-03-07 15:58:30,773   WARN  [main] COMPILER: [UI_SelectAllPropertyClasses.class]: Procedure UI_SelectAllPropertyClasses has a statement with a non-deterministic result - statement: "SELECT * FROM PROPERTYCLASS ORDER BY PROPERTYCLASSNAME;", reason: insufficient ordering criteria.
+2014-03-07 15:58:30,774   INFO  [main] COMPILER: [BLE_AllChecksForExpression.class]: Compiling Statement: SELECT CHECKID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? ORDER BY CHECKID;
+2014-03-07 15:58:30,781   INFO  [main] COMPILER: [FindChecksForMultiCheckID.class]: Compiling Statement: SELECT CHECKID FROM MULTICHECK_CHECK_LINK WHERE MULTICHECKID = ?;
+2014-03-07 15:58:30,783   WARN  [main] COMPILER: [FindChecksForMultiCheckID.class]: Procedure FindChecksForMultiCheckID has a statement with a non-deterministic result - statement: "SELECT CHECKID FROM MULTICHECK_CHECK_LINK WHERE MULTICHECKID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 15:58:30,784   INFO  [main] COMPILER: [FindLinkedMultiChecksForMultiCheckID.class]: Compiling Statement: SELECT MULTICHECKRID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKLID = ?;
+2014-03-07 15:58:30,786   WARN  [main] COMPILER: [FindLinkedMultiChecksForMultiCheckID.class]: Procedure FindLinkedMultiChecksForMultiCheckID has a statement with a non-deterministic result - statement: "SELECT MULTICHECKRID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKLID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 15:58:30,787   INFO  [main] COMPILER: [FindChecksForCheckID.class]: Compiling Statement: SELECT CHECKID, STATE FROM CHECK WHERE CHECKID = ?;
+2014-03-07 15:58:30,790   INFO  [main] COMPILER: [UI_DeleteCheck.class]: Compiling Statement: DELETE FROM CHECK WHERE CHECKID = ?;
+2014-03-07 15:58:30,796   INFO  [main] COMPILER: [BLE_CheckPathForMultiChecks.class]: Compiling Statement: UPDATE MULTICHECK SET STATE = 0 WHERE MULTICHECKID = ? AND CHECKPATHID = ?;
+2014-03-07 15:58:30,798   INFO  [main] COMPILER: [BLE_CheckPathForMultiChecks.class]: Compiling Statement: SELECT CHECKPATHID, MULTICHECKID FROM MULTICHECK WHERE CHECKPATHID = ? ORDER BY CHECKPATHID, MULTICHECKID;
+2014-03-07 15:58:30,808   INFO  [main] COMPILER: [BLE_ChecksForExpression.class]: Compiling Statement: SELECT CHECKID, OPERATOR, CHECKVALUE, CHECKPATHID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? AND EXPIRED = ? ORDER BY CHECKID;
+2014-03-07 15:58:30,816   WARN  [main] COMPILER: [BLE_ChecksForExpression.class]: Procedure BLE_ChecksForExpression has a statement with a non-deterministic result - statement: "SELECT CHECKID, OPERATOR, CHECKVALUE, CHECKPATHID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? AND EXPIRED = ? ORDER BY CHECKID;", reason: insufficient ordering criteria.
+2014-03-07 15:58:30,817   INFO  [main] COMPILER: [UI_SelectSensePropertiesForEndpoint.class]: Compiling Statement: select * from endpoint, property, endpointclass where endpoint.endpointclassid = property.endpointclassid and endpointclass.endpointclassid = property.endpointclassid and endpoint.endpointid = ? and property.sense = 1 ORDER BY endpoint.endpointname;
+2014-03-07 15:58:30,851   WARN  [main] COMPILER: [UI_SelectSensePropertiesForEndpoint.class]: Procedure UI_SelectSensePropertiesForEndpoint has a statement with a non-deterministic result - statement: "select * from endpoint, property, endpointclass where endpoint.endpointclassid = property.endpointclassid and endpointclass.endpointclassid = property.endpointclassid and endpoint.endpointid = ? and property.sense = 1 ORDER BY endpoint.endpointname;", reason: insufficient ordering criteria.
+2014-03-07 15:58:30,852   INFO  [main] COMPILER: [LGE_InsertEndpointPropertyLog.class]: Compiling Statement: INSERT INTO ENDPOINTPROPERTYLOG VALUES (?, ?, ?, ?, ?);
+2014-03-07 15:58:30,863   INFO  [main] COMPILER: [BLE_IsMultiCheckTrue.class]: Compiling Statement: SELECT CHECKID FROM MULTICHECK_CHECK_LINK WHERE MULTICHECKID = ? ORDER BY CHECKID;
+2014-03-07 15:58:30,865   INFO  [main] COMPILER: [BLE_IsMultiCheckTrue.class]: Compiling Statement: UPDATE MULTICHECK SET STATE = ? WHERE MULTICHECKID = ?;
+2014-03-07 15:58:30,867   INFO  [main] COMPILER: [BLE_IsMultiCheckTrue.class]: Compiling Statement: SELECT CHECKID, STATE FROM CHECKSTATE WHERE CHECKID IN ? ORDER BY CHECKID
+2014-03-07 15:58:30,870   INFO  [main] COMPILER: [BLE_IsMultiCheckTrue.class]: Compiling Statement: SELECT OPERATOR FROM MULTICHECK WHERE MULTICHECKID = ? ORDER BY OPERATOR;
+2014-03-07 15:58:30,873   INFO  [main] COMPILER: [UI_UpdateCheckpath.class]: Compiling Statement: UPDATE CHECKPATH SET UIOBJECT = ? WHERE CHECKPATHID = ?;
+2014-03-07 15:58:30,875   INFO  [main] COMPILER: [UI_UpdateCheckpath.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 1 of statement ' UPDATE CHECKPATH SET UIOBJECT = ? WHERE CHECKPATHID = ?;'
+2014-03-07 15:58:30,876   INFO  [main] COMPILER: [UI_SelectEndpointForEndpointID.class]: Compiling Statement: SELECT ENDPOINTID, ENDPOINTNAME, ENDPOINTCLASSID FROM ENDPOINT WHERE ENDPOINTID = ? ORDER BY ENDPOINTNAME;
+2014-03-07 15:58:30,878   WARN  [main] COMPILER: [UI_SelectEndpointForEndpointID.class]: Procedure UI_SelectEndpointForEndpointID has a statement with a non-deterministic result - statement: "SELECT ENDPOINTID, ENDPOINTNAME, ENDPOINTCLASSID FROM ENDPOINT WHERE ENDPOINTID = ? ORDER BY ENDPOINTNAME;", reason: insufficient ordering criteria.
+2014-03-07 15:58:30,878   INFO  [main] COMPILER: [ResetChecks.class]: Compiling Statement: UPDATE CHECK SET STATE = 0 WHERE ENDPOINTID = ?
+2014-03-07 15:58:30,885   INFO  [main] COMPILER: [ResetChecks.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 0 of statement 'UPDATE CHECK SET STATE = 0 WHERE ENDPOINTID = ?'
+2014-03-07 15:58:30,886   INFO  [main] COMPILER: [UI_SelectEndpointClassForEndpointClassID.class]: Compiling Statement: SELECT ENDPOINTCLASSID, ENDPOINTCLASSNAME FROM ENDPOINTCLASS WHERE ENDPOINTCLASSID = ? ORDER BY ENDPOINTCLASSNAME;
+2014-03-07 15:58:30,888   INFO  [main] COMPILER: [UI_SelectEndpointClassForEndpointClassID.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 0 of statement ' SELECT ENDPOINTCLASSID, ENDPOINTCLASSNAME FROM ENDPOINTCLASS WHERE ENDPOINTCLASSID = ? ORDER BY ENDPOINTCLASSNAME;'
+2014-03-07 15:58:30,888   WARN  [main] COMPILER: [UI_SelectEndpointClassForEndpointClassID.class]: Procedure UI_SelectEndpointClassForEndpointClassID has a statement with a non-deterministic result - statement: "SELECT ENDPOINTCLASSID, ENDPOINTCLASSNAME FROM ENDPOINTCLASS WHERE ENDPOINTCLASSID = ? ORDER BY ENDPOINTCLASSNAME;", reason: insufficient ordering criteria.
+2014-03-07 15:58:30,889   INFO  [main] COMPILER: [UI_SelectEndpointsForSphere.class]: Compiling Statement: SELECT * FROM ENDPOINT JOIN ENDPOINT_SPHERE_LINK ON ENDPOINT.ENDPOINTID = ENDPOINT_SPHERE_LINK.ENDPOINTID AND ENDPOINT_SPHERE_LINK.SPHEREID = ?;
+2014-03-07 15:58:30,892   WARN  [main] COMPILER: [UI_SelectEndpointsForSphere.class]: Procedure UI_SelectEndpointsForSphere has a statement with a non-deterministic result - statement: "SELECT * FROM ENDPOINT JOIN ENDPOINT_SPHERE_LINK ON ENDPOINT.ENDPOINTID = ENDPOINT_SPHERE_LINK.ENDPOINTID AND ENDPOINT_SPHERE_LINK.SPHEREID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 15:58:30,893   INFO  [main] COMPILER: [UI_SelectPropertyDetailsForEndpointClass.class]: Compiling Statement: select * from property join propertyclass on property.propertyclassid = propertyclass.propertyclassid and property.endpointclassid = ? ORDER BY propertyname;
+2014-03-07 15:58:30,901   WARN  [main] COMPILER: [UI_SelectPropertyDetailsForEndpointClass.class]: Procedure UI_SelectPropertyDetailsForEndpointClass has a statement with a non-deterministic result - statement: "select * from property join propertyclass on property.propertyclassid = propertyclass.propertyclassid and property.endpointclassid = ? ORDER BY propertyname;", reason: insufficient ordering criteria.
+2014-03-07 20:58:32,357   INFO  [main] CONSOLE: Initializing VoltDB...
+
+ _    __      ____  ____  ____ 
+| |  / /___  / / /_/ __ \/ __ )
+| | / / __ \/ / __/ / / / __  |
+| |/ / /_/ / / /_/ /_/ / /_/ / 
+|___/\____/_/\__/_____/_____/
+
+--------------------------------
+
+2014-03-07 20:58:32,371   INFO  [main] CONSOLE: Build: 4.0.2.3 voltdb-4.0.2.3-0-ge2f2df4-local Community Edition
+2014-03-07 20:58:32,378   INFO  [main] NETWORK: Default network thread count: 2
+2014-03-07 20:58:32,437   INFO  [main] HOST: Beginning inter-node communication on port 3021.
+2014-03-07 20:58:32,438   INFO  [main] HOST: Attempting to bind to leader ip localhost/127.0.0.1:3021
+2014-03-07 20:58:32,452   INFO  [main] CONSOLE: Connecting to VoltDB cluster as the leader...
+2014-03-07 20:58:32,523   INFO  [main] ZK-SERVER: binding to port /127.0.0.1:2181
+2014-03-07 20:58:32,551   INFO  [main] ZK-SERVER: Created server with tickTime 3000 minSessionTimeout 6000 maxSessionTimeout 60000
+2014-03-07 20:58:32,630   INFO  [main] ZK-SERVER: Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=2000 watcher=org.voltcore.zk.ZKUtil$1@64bd4e4d
+2014-03-07 20:58:32,636   INFO  [main-SendThread()] ZK-CLIENT: Opening socket connection to server /127.0.0.1:2181
+2014-03-07 20:58:32,638   INFO  [NIOServerCxn.Factory:/127.0.0.1:2181] ZK-SERVER: Accepted socket connection from /127.0.0.1:40140
+2014-03-07 20:58:32,639   INFO  [main-SendThread(localhost:2181)] ZK-CLIENT: Socket connection established to localhost/127.0.0.1:2181, initiating session
+2014-03-07 20:58:32,641   INFO  [NIOServerCxn.Factory:/127.0.0.1:2181] ZK-SERVER: Client attempting to establish new session at /127.0.0.1:40140
+2014-03-07 20:58:32,653   INFO  [ZooKeeperServer] ZK-SERVER: Established session 0x16b5d8aba0800000 with negotiated timeout 6000 for client /127.0.0.1:40140
+2014-03-07 20:58:32,653   INFO  [main-SendThread(localhost:2181)] ZK-CLIENT: Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x16b5d8aba0800000, negotiated timeout = 6000
+2014-03-07 20:58:32,695   INFO  [Socket Joiner] HOST: Attempting to bind to internal ip 0.0.0.0/0.0.0.0:3021
+2014-03-07 20:58:32,730   INFO  [main] HOST: Host id of this node is: 0
+2014-03-07 20:58:32,730   INFO  [main] CONSOLE: Host id of this node is: 0
+2014-03-07 20:58:32,760   INFO  [main] HOST: URL of deployment: deployment.xml
+2014-03-07 20:58:33,049   INFO  [main] HOST: Dead host timeout set to 90000 milliseconds
+2014-03-07 20:58:35,137   INFO  [main] EXPORT: System is not using any export functionality.
+2014-03-07 20:58:35,145   INFO  [main] CONSOLE: Initializing the database. This may take a moment...
+2014-03-07 20:58:35,257   INFO  [Iv2ExecutionSite: 0:0] HOST: Loading native VoltDB code (voltdb-4.0.2.3). A confirmation message will follow if the loading is successful.
+2014-03-07 20:58:35,284   INFO  [Iv2ExecutionSite: 0:0] HOST: Successfully loaded native VoltDB library voltdb-4.0.2.3.
+2014-03-07 20:58:35,752   INFO  [main] TM: Setting maximum size of MPI read pool to: 20
+2014-03-07 20:58:35,966   INFO  [Leader elector-/db/leaders/globalservice] HOST: Host 0 promoted to be the global service provider
+2014-03-07 20:58:36,028   INFO  [LeaderAppointer-Babysitters] TM: Appointing HSId 0:0 as leader for partition 0
+2014-03-07 20:58:36,046   INFO  [LeaderAppointer-Babysitters] TM: Appointing HSId 0:1 as leader for partition 1
+2014-03-07 20:58:36,051   INFO  [LeaderCache] TM: SP 0:0 for partition 0 found (including self) 1 surviving replicas to repair.  Survivors: 0:0
+2014-03-07 20:58:36,066   INFO  [LeaderAppointer-Babysitters] TM: Appointing HSId 0:2 as leader for partition 2
+2014-03-07 20:58:36,066   INFO  [LeaderCache] TM: SP 0:1 for partition 1 found (including self) 1 surviving replicas to repair.  Survivors: 0:1
+2014-03-07 20:58:36,066   INFO  [LeaderCache] TM: SP 0:1 for partition 1 finished leader promotion. Took 1 ms.
+2014-03-07 20:58:36,066   INFO  [LeaderCache] TM: SP 0:0 for partition 0 finished leader promotion. Took 20 ms.
+2014-03-07 20:58:36,079   INFO  [LeaderCache] TM: SP 0:2 for partition 2 found (including self) 1 surviving replicas to repair.  Survivors: 0:2
+2014-03-07 20:58:36,079   INFO  [LeaderCache] TM: SP 0:2 for partition 2 finished leader promotion. Took 2 ms.
+2014-03-07 20:58:36,098   INFO  [LeaderCache] HOST: Mailbox is not registered for site id -4
+2014-03-07 20:58:36,098   INFO  [LeaderCache] HOST: Mailbox is not registered for site id -4
+2014-03-07 20:58:36,098   INFO  [LeaderCache] HOST: Mailbox is not registered for site id -4
+2014-03-07 20:58:36,102   INFO  [LeaderCache] TM: MP 0:3 for partition 16383 found 3 surviving leaders to repair.  Survivors: 0:0, 0:1, 0:2
+2014-03-07 20:58:36,104   INFO  [LeaderCache] TM: MP 0:3 for partition 16383 finished leader promotion. Took 11 ms.
+2014-03-07 20:58:36,128   INFO  [LeaderCache] HOST: Mailbox is not registered for site id -4
+2014-03-07 20:58:36,166   INFO  [main] HOST: Database start action is Create.
+2014-03-07 20:58:36,206   INFO  [main] HOST: PID of this Volt process is 2521
+2014-03-07 20:58:36,206   INFO  [main] HOST: Listening for native wire protocol clients on port 21212.
+2014-03-07 20:58:36,207   INFO  [main] HOST: Listening for admin wire protocol clients on port 21211.
+2014-03-07 20:58:36,207   INFO  [main] HOST: Local machine HTTP monitoring is listening on port 8080.
+2014-03-07 20:58:36,207   INFO  [main] HOST: Json API over HTTP enabled at path /api/1.0/, listening on port 8080.
+2014-03-07 20:58:36,207   INFO  [main] HOST: Available JVM arguments: -Xmx2048m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp -XX:-ReduceInitialCardMarks -Dlog4j.configuration=file:///home/thorsten/voltdb-4.0.2.3/voltdb/log4j.xml -Djava.library.path=/home/thorsten/voltdb-4.0.2.3/voltdb
+2014-03-07 20:58:36,207   INFO  [main] HOST: JVM class path: /home/thorsten/voltdb-4.0.2.3/voltdb/voltdb-4.0.2.3.jar:/home/thorsten/voltdb-4.0.2.3/lib/jna.jar:/home/thorsten/voltdb-4.0.2.3/lib/servlet-api-2.5.jar:/home/thorsten/voltdb-4.0.2.3/lib/tomcat-juli.jar:/home/thorsten/voltdb-4.0.2.3/lib/log4j-1.2.16.jar:/home/thorsten/voltdb-4.0.2.3/lib/snappy-java-1.1.0.1.jar:/home/thorsten/voltdb-4.0.2.3/lib/slf4j-nop-1.6.2.jar:/home/thorsten/voltdb-4.0.2.3/lib/commons-cli-1.2.jar:/home/thorsten/voltdb-4.0.2.3/lib/groovy-all-2.1.7-indy.jar:/home/thorsten/voltdb-4.0.2.3/lib/jsch-0.1.50.jar:/home/thorsten/voltdb-4.0.2.3/lib/super-csv-2.1.0.jar:/home/thorsten/voltdb-4.0.2.3/lib/jetty-io-7.6.1.v20120215.jar:/home/thorsten/voltdb-4.0.2.3/lib/commons-lang3-3.0.jar:/home/thorsten/voltdb-4.0.2.3/lib/jetty-server-7.6.1.v20120215.jar:/home/thorsten/voltdb-4.0.2.3/lib/jetty-util-7.6.1.v20120215.jar:/home/thorsten/voltdb-4.0.2.3/lib/jline-2.10.jar:/home/thorsten/voltdb-4.0.2.3/lib/protobuf-java-2.4.1.jar:/home/thorsten/voltdb-4.0.2.3/lib/slf4j-api-1.6.2.jar:/home/thorsten/voltdb-4.0.2.3/lib/tomcat-jdbc.jar:/home/thorsten/voltdb-4.0.2.3/lib/jetty-http-7.6.1.v20120215.jar:/home/thorsten/voltdb-4.0.2.3/lib/jetty-continuation-7.6.1.v20120215.jar:/home/thorsten/voltdb-4.0.2.3/lib/zmq-2.1.11.jar
+2014-03-07 20:58:36,207   INFO  [main] HOST: Maximum usable Java heap set to 1820 mb.
+2014-03-07 20:58:36,207   INFO  [main] HOST: Minimum required Java heap for catalog and server config is 654 MB.
+2014-03-07 20:58:36,207   INFO  [main] HOST: Cluster has 1 hosts with leader hostname: "localhost". 3 sites per host. K = 0.
+2014-03-07 20:58:36,207   INFO  [main] HOST: The entire cluster has 1 copy of each of the 3 logical partitions.
+2014-03-07 20:58:36,207   INFO  [main] HOST: Detection of network partitions in the cluster is enabled.
+2014-03-07 20:58:36,207   INFO  [main] HOST: Client authentication is not enabled. Anonymous clients accepted.
+2014-03-07 20:58:36,208   INFO  [main] HOST: No schedule set for automated snapshots.
+2014-03-07 20:58:36,208   INFO  [main] HOST: Using "voltdbroot" for voltdbroot directory.
+2014-03-07 20:58:36,208   INFO  [main] HOST: CPU INFO:         2 Cores (Reported by Java), -1 Sockets, 2 Hardware Threads
+2014-03-07 20:58:36,208   INFO  [main] HOST: CPU DESC:         Intel(R) Core(TM) i5-3570K CPU @ 3.40GHz 6144 KB cache
+2014-03-07 20:58:36,208   INFO  [main] HOST: HOST MEMORY (MB): 2703
+2014-03-07 20:58:36,209   INFO  [main] HOST: OS PROFILE:       Linux 2.6.32-431.5.1.el6.x86_64 amd64 en_US
+2014-03-07 20:58:36,209   INFO  [main] HOST: JAVA VERSION:     1.7.0_51
+2014-03-07 20:58:36,209   INFO  [main] HOST: JAVA RUNTIME:     Java(TM) SE Runtime Environment (1.7.0_51-b13)
+2014-03-07 20:58:36,209   INFO  [main] HOST: JAVA VM:          Java HotSpot(TM) 64-Bit Server VM (24.51-b03, mixed mode)
+2014-03-07 20:58:36,209   INFO  [main] HOST: About to list cluster interfaces for all nodes with format [ip1 ip2 ... ipN] client-port:admin-port:http-port
+2014-03-07 20:58:36,209   INFO  [main] HOST:   Host id: 0 with interfaces: 16.1.1.110 2a02:8070:8333:b700:20c:29ff:fe99:4c48%2 21212,21211,8080 [SELF]
+2014-03-07 20:58:36,221   WARN  [main] CONSOLE: This is not a highly available cluster. K-Safety is set to 0.
+2014-03-07 20:58:36,221   WARN  [main] CONSOLE: Durability is turned off. Command logging is off.
+2014-03-07 20:58:36,239   INFO  [SnapshotDaemon] LOGGING: This node was selected as the leader for snapshot truncation
+2014-03-07 20:58:36,248   INFO  [SnapshotDaemon] LOGGING: Checking for existence of snapshot truncation request
+2014-03-07 20:58:36,254   INFO  [Thread-9] HOST: Logging config info
+2014-03-07 20:58:36,344   INFO  [Thread-10] CONSOLE: Server completed initialization.
+2014-03-07 16:24:09,095   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10020_10021 on table: ENDPOINTPROPERTYLOG of type: BALANCED_TREE
+2014-03-07 16:24:09,103   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10025_10026 on table: USER of type: BALANCED_TREE
+2014-03-07 16:24:09,104   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10030_10031 on table: ENDPOINT_USER_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,106   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10035_10036 on table: ENDPOINT_SPHERE_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,108   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10040_10041 on table: SPHERE_USER_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,108   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10044_10045 on table: SPHERE of type: BALANCED_TREE
+2014-03-07 16:24:09,109   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10048_10049 on table: ENDPOINTCLASS of type: BALANCED_TREE
+2014-03-07 16:24:09,109   INFO  [main] COMPILER: [null]: Created index: EPEPC on table: ENDPOINT of type: BALANCED_TREE
+2014-03-07 16:24:09,109   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10053_10054 on table: ENDPOINT of type: BALANCED_TREE
+2014-03-07 16:24:09,118   INFO  [main] COMPILER: [null]: Created index: PREPC on table: PROPERTY of type: BALANCED_TREE
+2014-03-07 16:24:09,119   INFO  [main] COMPILER: [null]: Created index: PRPRC on table: PROPERTY of type: BALANCED_TREE
+2014-03-07 16:24:09,120   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10058_10059 on table: PROPERTY of type: BALANCED_TREE
+2014-03-07 16:24:09,120   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10062_10063 on table: PROPERTYCLASS of type: BALANCED_TREE
+2014-03-07 16:24:09,121   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10067_10068 on table: MESSAGE_ENDPOINT_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,122   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10071_10072 on table: MESSAGE of type: BALANCED_TREE
+2014-03-07 16:24:09,123   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10076_10077 on table: MESSAGE_EXPRESSION_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,123   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10080_10081 on table: EXPRESSION of type: BALANCED_TREE
+2014-03-07 16:24:09,124   INFO  [main] COMPILER: [null]: Created index: CHEP on table: CHECK of type: BALANCED_TREE
+2014-03-07 16:24:09,124   INFO  [main] COMPILER: [null]: Created index: CHPR on table: CHECK of type: BALANCED_TREE
+2014-03-07 16:24:09,125   INFO  [main] COMPILER: [null]: Created index: CHCP on table: CHECK of type: BALANCED_TREE
+2014-03-07 16:24:09,125   INFO  [main] COMPILER: [null]: Created index: CHST on table: CHECK of type: BALANCED_TREE
+2014-03-07 16:24:09,125   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10086_10087 on table: CHECK of type: BALANCED_TREE
+2014-03-07 16:24:09,126   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10090_10091 on table: CHECKSTATE of type: BALANCED_TREE
+2014-03-07 16:24:09,127   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10095_10096 on table: RULE_MULTICHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,128   INFO  [main] COMPILER: [null]: Created index: RCHECK on table: RULE of type: BALANCED_TREE
+2014-03-07 16:24:09,128   INFO  [main] COMPILER: [null]: Created index: RMCHECK on table: RULE of type: BALANCED_TREE
+2014-03-07 16:24:09,128   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10099_10100 on table: RULE of type: BALANCED_TREE
+2014-03-07 16:24:09,129   INFO  [main] COMPILER: [null]: Created index: MCCP on table: MULTICHECK of type: BALANCED_TREE
+2014-03-07 16:24:09,129   INFO  [main] COMPILER: [null]: Created index: MCST on table: MULTICHECK of type: BALANCED_TREE
+2014-03-07 16:24:09,129   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10103_10104 on table: MULTICHECK of type: BALANCED_TREE
+2014-03-07 16:24:09,129   INFO  [main] COMPILER: [null]: Created index: MCLMCIDX on table: MULTICHECK_CHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,129   INFO  [main] COMPILER: [null]: Created index: MCLCHIDX on table: MULTICHECK_CHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,129   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10109_10110 on table: MULTICHECK_CHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,130   INFO  [main] COMPILER: [null]: Created index: MCMCLR on table: MULTICHECK_MULTICHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,130   INFO  [main] COMPILER: [null]: Created index: MCMCLL on table: MULTICHECK_MULTICHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,130   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10115_10116 on table: MULTICHECK_MULTICHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,130   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10118_10119 on table: CHECKPATH of type: BALANCED_TREE
+2014-03-07 16:24:09,131   INFO  [main] COMPILER: [null]: Created index: CHECKIDIDX on table: CHECKPATH_CHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,131   INFO  [main] COMPILER: [null]: Created index: CHECKPATHIDIDX on table: CHECKPATH_CHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,131   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10123_10124 on table: CHECKPATH_CHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,131   INFO  [main] COMPILER: [null]: Created index: CPMCIDX on table: CHECKPATH_MULTICHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,132   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10128_10129 on table: CHECKPATH_MULTICHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,132   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10132_10133 on table: ACTION of type: BALANCED_TREE
+2014-03-07 16:24:09,133   INFO  [main] COMPILER: [null]: Created index: OUTBOUNDPROPACTION on table: OUTBOUNDPROPERTYACTION of type: BALANCED_TREE
+2014-03-07 16:24:09,133   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10136_10137 on table: OUTBOUNDPROPERTYACTION of type: BALANCED_TREE
+2014-03-07 16:24:09,133   INFO  [main] COMPILER: [null]: Created index: RULEACTIONLINK on table: RULE_ACTION_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,133   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10141_10142 on table: RULE_ACTION_LINK of type: BALANCED_TREE
+2014-03-07 16:24:09,146   INFO  [main] COMPILER: [ACTION.insert]: Compiling Statement: INSERT INTO ACTION VALUES (?, ?, ?, ?, ?);
+2014-03-07 16:24:09,206   INFO  [main] COMPILER: [ACTION.select]: Compiling Statement: SELECT * FROM ACTION WHERE (ACTIONID = ?);
+2014-03-07 16:24:09,224   INFO  [main] COMPILER: [ACTION.delete]: Compiling Statement: DELETE FROM ACTION WHERE (ACTIONID = ?);
+2014-03-07 16:24:09,228   INFO  [main] COMPILER: [ACTION.update]: Compiling Statement: UPDATE ACTION SET ACTIONID = ?, ACTIONNAME = ?, TARGETENDPOINTID = ?, TGTEPIDFROMINBOUNDPROP = ?, EXPIRED = ? WHERE (ACTIONID = ?);
+2014-03-07 16:24:09,233   INFO  [main] COMPILER: [CHECK.insert]: Compiling Statement: INSERT INTO CHECK VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
+2014-03-07 16:24:09,244   INFO  [main] COMPILER: [CHECK.select]: Compiling Statement: SELECT * FROM CHECK WHERE (CHECKID = ?) AND (CHECKPATHID = ?) AND (ENDPOINTID = ?);
+2014-03-07 16:24:09,251   INFO  [main] COMPILER: [CHECK.delete]: Compiling Statement: DELETE FROM CHECK WHERE (CHECKID = ?) AND (CHECKPATHID = ?) AND (ENDPOINTID = ?);
+2014-03-07 16:24:09,256   INFO  [main] COMPILER: [CHECK.update]: Compiling Statement: UPDATE CHECK SET CHECKID = ?, ENDPOINTID = ?, PROPERTYID = ?, CHECKVALUE = ?, OPERATOR = ?, STATE = ?, EXPIRED = ?, NAME = ?, CHECKPATHID = ? WHERE (CHECKID = ?) AND (CHECKPATHID = ?) AND (ENDPOINTID = ?);
+2014-03-07 16:24:09,267   INFO  [main] COMPILER: [CHECKPATH.insert]: Compiling Statement: INSERT INTO CHECKPATH VALUES (?, ?, ?);
+2014-03-07 16:24:09,269   INFO  [main] COMPILER: [CHECKPATH.select]: Compiling Statement: SELECT * FROM CHECKPATH WHERE (CHECKPATHID = ?);
+2014-03-07 16:24:09,272   INFO  [main] COMPILER: [CHECKPATH.delete]: Compiling Statement: DELETE FROM CHECKPATH WHERE (CHECKPATHID = ?);
+2014-03-07 16:24:09,275   INFO  [main] COMPILER: [CHECKPATH.update]: Compiling Statement: UPDATE CHECKPATH SET CHECKPATHID = ?, CHECKPATHNAME = ?, UIOBJECT = ? WHERE (CHECKPATHID = ?);
+2014-03-07 16:24:09,278   INFO  [main] COMPILER: [CHECKPATH_CHECK_LINK.insert]: Compiling Statement: INSERT INTO CHECKPATH_CHECK_LINK VALUES (?, ?, ?);
+2014-03-07 16:24:09,280   INFO  [main] COMPILER: [CHECKPATH_CHECK_LINK.select]: Compiling Statement: SELECT * FROM CHECKPATH_CHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,291   INFO  [main] COMPILER: [CHECKPATH_CHECK_LINK.delete]: Compiling Statement: DELETE FROM CHECKPATH_CHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,294   INFO  [main] COMPILER: [CHECKPATH_CHECK_LINK.update]: Compiling Statement: UPDATE CHECKPATH_CHECK_LINK SET LINKID = ?, CHECKPATHID = ?, CHECKID = ? WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,299   INFO  [main] COMPILER: [CHECKPATH_MULTICHECK_LINK.insert]: Compiling Statement: INSERT INTO CHECKPATH_MULTICHECK_LINK VALUES (?, ?, ?);
+2014-03-07 16:24:09,301   INFO  [main] COMPILER: [CHECKPATH_MULTICHECK_LINK.select]: Compiling Statement: SELECT * FROM CHECKPATH_MULTICHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,304   INFO  [main] COMPILER: [CHECKPATH_MULTICHECK_LINK.delete]: Compiling Statement: DELETE FROM CHECKPATH_MULTICHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,307   INFO  [main] COMPILER: [CHECKPATH_MULTICHECK_LINK.update]: Compiling Statement: UPDATE CHECKPATH_MULTICHECK_LINK SET LINKID = ?, CHECKPATHID = ?, MULTICHECKID = ? WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,321   INFO  [main] COMPILER: [CHECKSTATE.insert]: Compiling Statement: INSERT INTO CHECKSTATE VALUES (?, ?, ?);
+2014-03-07 16:24:09,322   INFO  [main] COMPILER: [CHECKSTATE.select]: Compiling Statement: SELECT * FROM CHECKSTATE WHERE (CHECKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,325   INFO  [main] COMPILER: [CHECKSTATE.delete]: Compiling Statement: DELETE FROM CHECKSTATE WHERE (CHECKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,331   INFO  [main] COMPILER: [CHECKSTATE.update]: Compiling Statement: UPDATE CHECKSTATE SET CHECKID = ?, STATE = ?, CHECKPATHID = ? WHERE (CHECKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,334   INFO  [main] COMPILER: [ENDPOINT.insert]: Compiling Statement: INSERT INTO ENDPOINT VALUES (?, ?, ?);
+2014-03-07 16:24:09,337   INFO  [main] COMPILER: [ENDPOINT.delete]: Compiling Statement: DELETE FROM ENDPOINT WHERE (ENDPOINTID = ?);
+2014-03-07 16:24:09,340   INFO  [main] COMPILER: [ENDPOINT.update]: Compiling Statement: UPDATE ENDPOINT SET ENDPOINTID = ?, ENDPOINTNAME = ?, ENDPOINTCLASSID = ? WHERE (ENDPOINTID = ?);
+2014-03-07 16:24:09,346   INFO  [main] COMPILER: [ENDPOINT_SPHERE_LINK.insert]: Compiling Statement: INSERT INTO ENDPOINT_SPHERE_LINK VALUES (?, ?, ?);
+2014-03-07 16:24:09,348   INFO  [main] COMPILER: [ENDPOINT_SPHERE_LINK.delete]: Compiling Statement: DELETE FROM ENDPOINT_SPHERE_LINK WHERE (LINKID = ?);
+2014-03-07 16:24:09,351   INFO  [main] COMPILER: [ENDPOINT_SPHERE_LINK.update]: Compiling Statement: UPDATE ENDPOINT_SPHERE_LINK SET LINKID = ?, ENDPOINTID = ?, SPHEREID = ? WHERE (LINKID = ?);
+2014-03-07 16:24:09,355   INFO  [main] COMPILER: [ENDPOINT_USER_LINK.insert]: Compiling Statement: INSERT INTO ENDPOINT_USER_LINK VALUES (?, ?, ?);
+2014-03-07 16:24:09,357   INFO  [main] COMPILER: [ENDPOINT_USER_LINK.delete]: Compiling Statement: DELETE FROM ENDPOINT_USER_LINK WHERE (LINKID = ?);
+2014-03-07 16:24:09,359   INFO  [main] COMPILER: [ENDPOINT_USER_LINK.update]: Compiling Statement: UPDATE ENDPOINT_USER_LINK SET LINKID = ?, ENDPOINTID = ?, USERID = ? WHERE (LINKID = ?);
+2014-03-07 16:24:09,362   INFO  [main] COMPILER: [ENDPOINTCLASS.insert]: Compiling Statement: INSERT INTO ENDPOINTCLASS VALUES (?, ?);
+2014-03-07 16:24:09,365   INFO  [main] COMPILER: [ENDPOINTCLASS.select]: Compiling Statement: SELECT * FROM ENDPOINTCLASS WHERE (ENDPOINTCLASSID = ?);
+2014-03-07 16:24:09,367   INFO  [main] COMPILER: [ENDPOINTCLASS.delete]: Compiling Statement: DELETE FROM ENDPOINTCLASS WHERE (ENDPOINTCLASSID = ?);
+2014-03-07 16:24:09,369   INFO  [main] COMPILER: [ENDPOINTCLASS.update]: Compiling Statement: UPDATE ENDPOINTCLASS SET ENDPOINTCLASSID = ?, ENDPOINTCLASSNAME = ? WHERE (ENDPOINTCLASSID = ?);
+2014-03-07 16:24:09,371   INFO  [main] COMPILER: [ENDPOINTPROPERTYLOG.insert]: Compiling Statement: INSERT INTO ENDPOINTPROPERTYLOG VALUES (?, ?, ?, ?, ?);
+2014-03-07 16:24:09,373   INFO  [main] COMPILER: [ENDPOINTPROPERTYLOG.select]: Compiling Statement: SELECT * FROM ENDPOINTPROPERTYLOG WHERE (ENTRYID = ?) AND (ENDPOINTID = ?);
+2014-03-07 16:24:09,376   INFO  [main] COMPILER: [ENDPOINTPROPERTYLOG.delete]: Compiling Statement: DELETE FROM ENDPOINTPROPERTYLOG WHERE (ENTRYID = ?) AND (ENDPOINTID = ?);
+2014-03-07 16:24:09,378   INFO  [main] COMPILER: [ENDPOINTPROPERTYLOG.update]: Compiling Statement: UPDATE ENDPOINTPROPERTYLOG SET ENTRYID = ?, ENDPOINTID = ?, PROPERTYID = ?, PROPERTYENTRY = ?, TIME_STAMP = ? WHERE (ENTRYID = ?) AND (ENDPOINTID = ?);
+2014-03-07 16:24:09,382   INFO  [main] COMPILER: [EXPRESSION.insert]: Compiling Statement: INSERT INTO EXPRESSION VALUES (?, ?, ?);
+2014-03-07 16:24:09,384   INFO  [main] COMPILER: [EXPRESSION.delete]: Compiling Statement: DELETE FROM EXPRESSION WHERE (EXPRESSIONID = ?);
+2014-03-07 16:24:09,388   INFO  [main] COMPILER: [EXPRESSION.update]: Compiling Statement: UPDATE EXPRESSION SET EXPRESSIONID = ?, PROPERTYID = ?, PAYLOAD = ? WHERE (EXPRESSIONID = ?);
+2014-03-07 16:24:09,391   INFO  [main] COMPILER: [MESSAGE.insert]: Compiling Statement: INSERT INTO MESSAGE VALUES (?, ?, ?);
+2014-03-07 16:24:09,392   INFO  [main] COMPILER: [MESSAGE.select]: Compiling Statement: SELECT * FROM MESSAGE WHERE (MESSAGEID = ?);
+2014-03-07 16:24:09,396   INFO  [main] COMPILER: [MESSAGE.delete]: Compiling Statement: DELETE FROM MESSAGE WHERE (MESSAGEID = ?);
+2014-03-07 16:24:09,397   INFO  [main] COMPILER: [MESSAGE.update]: Compiling Statement: UPDATE MESSAGE SET MESSAGEID = ?, EXPRESSIONCOUNT = ?, TIME_STAMP = ? WHERE (MESSAGEID = ?);
+2014-03-07 16:24:09,400   INFO  [main] COMPILER: [MESSAGE_ENDPOINT_LINK.insert]: Compiling Statement: INSERT INTO MESSAGE_ENDPOINT_LINK VALUES (?, ?, ?);
+2014-03-07 16:24:09,401   INFO  [main] COMPILER: [MESSAGE_ENDPOINT_LINK.select]: Compiling Statement: SELECT * FROM MESSAGE_ENDPOINT_LINK WHERE (LINKID = ?) AND (ENDPOINTID = ?);
+2014-03-07 16:24:09,403   INFO  [main] COMPILER: [MESSAGE_ENDPOINT_LINK.delete]: Compiling Statement: DELETE FROM MESSAGE_ENDPOINT_LINK WHERE (LINKID = ?) AND (ENDPOINTID = ?);
+2014-03-07 16:24:09,406   INFO  [main] COMPILER: [MESSAGE_ENDPOINT_LINK.update]: Compiling Statement: UPDATE MESSAGE_ENDPOINT_LINK SET LINKID = ?, ENDPOINTID = ?, MESSAGEID = ? WHERE (LINKID = ?) AND (ENDPOINTID = ?);
+2014-03-07 16:24:09,409   INFO  [main] COMPILER: [MESSAGE_EXPRESSION_LINK.insert]: Compiling Statement: INSERT INTO MESSAGE_EXPRESSION_LINK VALUES (?, ?, ?);
+2014-03-07 16:24:09,410   INFO  [main] COMPILER: [MESSAGE_EXPRESSION_LINK.delete]: Compiling Statement: DELETE FROM MESSAGE_EXPRESSION_LINK WHERE (LINKID = ?);
+2014-03-07 16:24:09,413   INFO  [main] COMPILER: [MESSAGE_EXPRESSION_LINK.update]: Compiling Statement: UPDATE MESSAGE_EXPRESSION_LINK SET LINKID = ?, MESSAGEID = ?, EXPRESSIONID = ? WHERE (LINKID = ?);
+2014-03-07 16:24:09,415   INFO  [main] COMPILER: [MULTICHECK.insert]: Compiling Statement: INSERT INTO MULTICHECK VALUES (?, ?, ?, ?, ?, ?);
+2014-03-07 16:24:09,418   INFO  [main] COMPILER: [MULTICHECK.select]: Compiling Statement: SELECT * FROM MULTICHECK WHERE (MULTICHECKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,421   INFO  [main] COMPILER: [MULTICHECK.delete]: Compiling Statement: DELETE FROM MULTICHECK WHERE (MULTICHECKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,423   INFO  [main] COMPILER: [MULTICHECK.update]: Compiling Statement: UPDATE MULTICHECK SET MULTICHECKID = ?, OPERATOR = ?, STATE = ?, EXPIRED = ?, MULTICHECKNAME = ?, CHECKPATHID = ? WHERE (MULTICHECKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,428   INFO  [main] COMPILER: [MULTICHECK_CHECK_LINK.insert]: Compiling Statement: INSERT INTO MULTICHECK_CHECK_LINK VALUES (?, ?, ?, ?);
+2014-03-07 16:24:09,430   INFO  [main] COMPILER: [MULTICHECK_CHECK_LINK.select]: Compiling Statement: SELECT * FROM MULTICHECK_CHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,433   INFO  [main] COMPILER: [MULTICHECK_CHECK_LINK.delete]: Compiling Statement: DELETE FROM MULTICHECK_CHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,441   INFO  [main] COMPILER: [MULTICHECK_CHECK_LINK.update]: Compiling Statement: UPDATE MULTICHECK_CHECK_LINK SET LINKID = ?, MULTICHECKID = ?, CHECKID = ?, CHECKPATHID = ? WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,444   INFO  [main] COMPILER: [MULTICHECK_MULTICHECK_LINK.insert]: Compiling Statement: INSERT INTO MULTICHECK_MULTICHECK_LINK VALUES (?, ?, ?, ?);
+2014-03-07 16:24:09,445   INFO  [main] COMPILER: [MULTICHECK_MULTICHECK_LINK.select]: Compiling Statement: SELECT * FROM MULTICHECK_MULTICHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,448   INFO  [main] COMPILER: [MULTICHECK_MULTICHECK_LINK.delete]: Compiling Statement: DELETE FROM MULTICHECK_MULTICHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,450   INFO  [main] COMPILER: [MULTICHECK_MULTICHECK_LINK.update]: Compiling Statement: UPDATE MULTICHECK_MULTICHECK_LINK SET LINKID = ?, MULTICHECKLID = ?, MULTICHECKRID = ?, CHECKPATHID = ? WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,453   INFO  [main] COMPILER: [OUTBOUNDPROPERTYACTION.insert]: Compiling Statement: INSERT INTO OUTBOUNDPROPERTYACTION VALUES (?, ?, ?, ?, ?, ?);
+2014-03-07 16:24:09,454   INFO  [main] COMPILER: [OUTBOUNDPROPERTYACTION.select]: Compiling Statement: SELECT * FROM OUTBOUNDPROPERTYACTION WHERE (OUTBOUNDPROPERTYACTIONID = ?) AND (ACTIONID = ?);
+2014-03-07 16:24:09,457   INFO  [main] COMPILER: [OUTBOUNDPROPERTYACTION.delete]: Compiling Statement: DELETE FROM OUTBOUNDPROPERTYACTION WHERE (OUTBOUNDPROPERTYACTIONID = ?) AND (ACTIONID = ?);
+2014-03-07 16:24:09,459   INFO  [main] COMPILER: [OUTBOUNDPROPERTYACTION.update]: Compiling Statement: UPDATE OUTBOUNDPROPERTYACTION SET OUTBOUNDPROPERTYACTIONID = ?, OUTBOUNDPROPERTYID = ?, INBOUNDPROPERTYID = ?, CURRENTSTATEPROPERTYID = ?, CUSTOMPAYLOAD = ?, ACTIONID = ? WHERE (OUTBOUNDPROPERTYACTIONID = ?) AND (ACTIONID = ?);
+2014-03-07 16:24:09,462   INFO  [main] COMPILER: [PROPERTY.insert]: Compiling Statement: INSERT INTO PROPERTY VALUES (?, ?, ?, ?, ?, ?, ?, ?);
+2014-03-07 16:24:09,465   INFO  [main] COMPILER: [PROPERTY.delete]: Compiling Statement: DELETE FROM PROPERTY WHERE (PROPERTYID = ?);
+2014-03-07 16:24:09,467   INFO  [main] COMPILER: [PROPERTY.update]: Compiling Statement: UPDATE PROPERTY SET PROPERTYID = ?, PROPERTYNAME = ?, PROPERTYCLASSID = ?, ENDPOINTCLASSID = ?, ACT = ?, SENSE = ?, STATUS = ?, CONFIGURABLE = ? WHERE (PROPERTYID = ?);
+2014-03-07 16:24:09,470   INFO  [main] COMPILER: [PROPERTYCLASS.insert]: Compiling Statement: INSERT INTO PROPERTYCLASS VALUES (?, ?, ?, ?);
+2014-03-07 16:24:09,472   INFO  [main] COMPILER: [PROPERTYCLASS.delete]: Compiling Statement: DELETE FROM PROPERTYCLASS WHERE (PROPERTYCLASSID = ?);
+2014-03-07 16:24:09,473   INFO  [main] COMPILER: [PROPERTYCLASS.update]: Compiling Statement: UPDATE PROPERTYCLASS SET PROPERTYCLASSID = ?, PROPERTYCLASSNAME = ?, PROPERTYCLASSDATATYPE = ?, PROPERTYCLASSUNIT = ? WHERE (PROPERTYCLASSID = ?);
+2014-03-07 16:24:09,476   INFO  [main] COMPILER: [RULE.insert]: Compiling Statement: INSERT INTO RULE VALUES (?, ?, ?, ?, ?);
+2014-03-07 16:24:09,477   INFO  [main] COMPILER: [RULE.select]: Compiling Statement: SELECT * FROM RULE WHERE (RULEID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,479   INFO  [main] COMPILER: [RULE.delete]: Compiling Statement: DELETE FROM RULE WHERE (RULEID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,481   INFO  [main] COMPILER: [RULE.update]: Compiling Statement: UPDATE RULE SET RULEID = ?, RULENAME = ?, CHECKID = ?, MULTICHECKID = ?, CHECKPATHID = ? WHERE (RULEID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:09,484   INFO  [main] COMPILER: [RULE_ACTION_LINK.insert]: Compiling Statement: INSERT INTO RULE_ACTION_LINK VALUES (?, ?, ?);
+2014-03-07 16:24:09,485   INFO  [main] COMPILER: [RULE_ACTION_LINK.select]: Compiling Statement: SELECT * FROM RULE_ACTION_LINK WHERE (RULEID = ?);
+2014-03-07 16:24:09,498   INFO  [main] COMPILER: [RULE_ACTION_LINK.delete]: Compiling Statement: DELETE FROM RULE_ACTION_LINK WHERE (RULEID = ?);
+2014-03-07 16:24:09,500   INFO  [main] COMPILER: [RULE_ACTION_LINK.update]: Compiling Statement: UPDATE RULE_ACTION_LINK SET LINKID = ?, RULEID = ?, ACTIONID = ? WHERE (RULEID = ?);
+2014-03-07 16:24:09,502   INFO  [main] COMPILER: [RULE_MULTICHECK_LINK.insert]: Compiling Statement: INSERT INTO RULE_MULTICHECK_LINK VALUES (?, ?, ?);
+2014-03-07 16:24:09,503   INFO  [main] COMPILER: [RULE_MULTICHECK_LINK.select]: Compiling Statement: SELECT * FROM RULE_MULTICHECK_LINK WHERE (LINKID = ?) AND (RULEID = ?);
+2014-03-07 16:24:09,505   INFO  [main] COMPILER: [RULE_MULTICHECK_LINK.delete]: Compiling Statement: DELETE FROM RULE_MULTICHECK_LINK WHERE (LINKID = ?) AND (RULEID = ?);
+2014-03-07 16:24:09,507   INFO  [main] COMPILER: [RULE_MULTICHECK_LINK.update]: Compiling Statement: UPDATE RULE_MULTICHECK_LINK SET LINKID = ?, RULEID = ?, MULTICHECKID = ? WHERE (LINKID = ?) AND (RULEID = ?);
+2014-03-07 16:24:09,509   INFO  [main] COMPILER: [SPHERE.insert]: Compiling Statement: INSERT INTO SPHERE VALUES (?, ?, ?);
+2014-03-07 16:24:09,510   INFO  [main] COMPILER: [SPHERE.select]: Compiling Statement: SELECT * FROM SPHERE WHERE (SPHEREID = ?);
+2014-03-07 16:24:09,512   INFO  [main] COMPILER: [SPHERE.delete]: Compiling Statement: DELETE FROM SPHERE WHERE (SPHEREID = ?);
+2014-03-07 16:24:09,513   INFO  [main] COMPILER: [SPHERE.update]: Compiling Statement: UPDATE SPHERE SET SPHEREID = ?, SPHERENAME = ?, PUBLIC = ? WHERE (SPHEREID = ?);
+2014-03-07 16:24:09,515   INFO  [main] COMPILER: [SPHERE_USER_LINK.insert]: Compiling Statement: INSERT INTO SPHERE_USER_LINK VALUES (?, ?, ?);
+2014-03-07 16:24:09,517   INFO  [main] COMPILER: [SPHERE_USER_LINK.select]: Compiling Statement: SELECT * FROM SPHERE_USER_LINK WHERE (LINKID = ?) AND (SPHEREID = ?);
+2014-03-07 16:24:09,519   INFO  [main] COMPILER: [SPHERE_USER_LINK.delete]: Compiling Statement: DELETE FROM SPHERE_USER_LINK WHERE (LINKID = ?) AND (SPHEREID = ?);
+2014-03-07 16:24:09,521   INFO  [main] COMPILER: [SPHERE_USER_LINK.update]: Compiling Statement: UPDATE SPHERE_USER_LINK SET LINKID = ?, SPHEREID = ?, USERID = ? WHERE (LINKID = ?) AND (SPHEREID = ?);
+2014-03-07 16:24:09,523   INFO  [main] COMPILER: [USER.insert]: Compiling Statement: INSERT INTO USER VALUES (?, ?, ?, ?);
+2014-03-07 16:24:09,525   INFO  [main] COMPILER: [USER.select]: Compiling Statement: SELECT * FROM USER WHERE (USERID = ?);
+2014-03-07 16:24:09,527   INFO  [main] COMPILER: [USER.delete]: Compiling Statement: DELETE FROM USER WHERE (USERID = ?);
+2014-03-07 16:24:09,528   INFO  [main] COMPILER: [USER.update]: Compiling Statement: UPDATE USER SET USERID = ?, USERNAME = ?, USEREMAIL = ?, USERPWHASH = ? WHERE (USERID = ?);
+2014-03-07 16:24:09,553   INFO  [main] COMPILER: [FindAllChecks.class]: Compiling Statement: SELECT * FROM CHECK ORDER BY CHECKID;
+2014-03-07 16:24:09,559   WARN  [main] COMPILER: [FindAllChecks.class]: Procedure FindAllChecks has a statement with a non-deterministic result - statement: "SELECT * FROM CHECK ORDER BY CHECKID;", reason: insufficient ordering criteria.
+2014-03-07 16:24:09,563   INFO  [main] COMPILER: [FindAllMultichecksForCheck.class]: Compiling Statement: SELECT MULTICHECKID FROM MULTICHECK_CHECK_LINK WHERE CHECKID = ?;
+2014-03-07 16:24:09,565   WARN  [main] COMPILER: [FindAllMultichecksForCheck.class]: Procedure FindAllMultichecksForCheck has a statement with a non-deterministic result - statement: "SELECT MULTICHECKID FROM MULTICHECK_CHECK_LINK WHERE CHECKID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 16:24:09,566   INFO  [main] COMPILER: [UI_SelectAllProperties.class]: Compiling Statement: SELECT * FROM PROPERTY ORDER BY PROPERTYNAME;
+2014-03-07 16:24:09,569   WARN  [main] COMPILER: [UI_SelectAllProperties.class]: Procedure UI_SelectAllProperties has a statement with a non-deterministic result - statement: "SELECT * FROM PROPERTY ORDER BY PROPERTYNAME;", reason: insufficient ordering criteria.
+2014-03-07 16:24:09,571   INFO  [main] COMPILER: [UI_SelectPropertyNameForPropertyID.class]: Compiling Statement: select propertyname from property where propertyid = ?;
+2014-03-07 16:24:09,574   INFO  [main] COMPILER: [AME_DetailsForAction.class]: Compiling Statement: SELECT ACTION.ACTIONID, ACTION.TARGETENDPOINTID, ACTION.TGTEPIDFROMINBOUNDPROP, OUTBOUNDPROPERTYACTION.OUTBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.INBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.CURRENTSTATEPROPERTYID, OUTBOUNDPROPERTYACTION.CUSTOMPAYLOAD FROM ACTION INNER JOIN OUTBOUNDPROPERTYACTION ON ACTION.ACTIONID = OUTBOUNDPROPERTYACTION.ACTIONID AND OUTBOUNDPROPERTYACTION.ACTIONID = ? ORDER BY ACTION.ACTIONID;
+2014-03-07 16:24:09,581   WARN  [main] COMPILER: [AME_DetailsForAction.class]: Procedure AME_DetailsForAction has a statement with a non-deterministic result - statement: "SELECT ACTION.ACTIONID, ACTION.TARGETENDPOINTID, ACTION.TGTEPIDFROMINBOUNDPROP, OUTBOUNDPROPERTYACTION.OUTBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.INBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.CURRENTSTATEPROPERTYID, OUTBOUNDPROPERTYACTION.CUSTOMPAYLOAD FROM ACTION INNER JOIN OUTBOUNDPROPERTYACTION ON ACTION.ACTIONID = OUTBOUNDPROPERTYACTION.ACTIONID AND OUTBOUNDPROPERTYACTION.ACTIONID = ? ORDER BY ACTION.ACTIONID;", reason: insufficient ordering criteria.
+2014-03-07 16:24:09,583   INFO  [main] COMPILER: [UI_SelectChecksForEndpoint.class]: Compiling Statement: select * from check join property on check.propertyid = property.propertyid and check.endpointid = ? ORDER BY name;
+2014-03-07 16:24:09,591   INFO  [main] COMPILER: [UI_SelectChecksForEndpoint.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 0 of statement ' select * from check join property on check.propertyid = property.propertyid and check.endpointid = ? ORDER BY name;'
+2014-03-07 16:24:09,591   WARN  [main] COMPILER: [UI_SelectChecksForEndpoint.class]: Procedure UI_SelectChecksForEndpoint has a statement with a non-deterministic result - statement: "select * from check join property on check.propertyid = property.propertyid and check.endpointid = ? ORDER BY name;", reason: insufficient ordering criteria.
+2014-03-07 16:24:09,593   INFO  [main] COMPILER: [BLE_FindRulesForMultiCheckID.class]: Compiling Statement: SELECT RULEID FROM RULE WHERE MULTICHECKID = ? ORDER BY RULEID;
+2014-03-07 16:24:09,597   INFO  [main] COMPILER: [UI_SelectAllEndpointClasses.class]: Compiling Statement: SELECT * FROM ENDPOINTCLASS ORDER BY ENDPOINTCLASSNAME;
+2014-03-07 16:24:09,599   WARN  [main] COMPILER: [UI_SelectAllEndpointClasses.class]: Procedure UI_SelectAllEndpointClasses has a statement with a non-deterministic result - statement: "SELECT * FROM ENDPOINTCLASS ORDER BY ENDPOINTCLASSNAME;", reason: insufficient ordering criteria.
+2014-03-07 16:24:09,600   INFO  [main] COMPILER: [UI_SelectPropertyClassForPropertyClassID.class]: Compiling Statement: select propertyclassid, propertyclassdatatype, propertyclassname, propertyclassunit from propertyclass where propertyclassid = ?;
+2014-03-07 16:24:09,604   INFO  [main] COMPILER: [UI_DeleteMulticheckMulticheckLink.class]: Compiling Statement: DELETE FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKLID = ?;
+2014-03-07 16:24:09,608   INFO  [main] COMPILER: [BLE_MultiCheckParentForMultiCheck.class]: Compiling Statement: SELECT MULTICHECKLID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKRID = ? ORDER BY MULTICHECKLID;
+2014-03-07 16:24:09,612   INFO  [main] COMPILER: [SelectAllUsers.class]: Compiling Statement: SELECT * FROM USER ORDER BY USERNAME;
+2014-03-07 16:24:09,618   WARN  [main] COMPILER: [SelectAllUsers.class]: Procedure SelectAllUsers has a statement with a non-deterministic result - statement: "SELECT * FROM USER ORDER BY USERNAME;", reason: insufficient ordering criteria.
+2014-03-07 16:24:09,619   INFO  [main] COMPILER: [UI_SelectPropertyClassForPropertyID.class]: Compiling Statement: select propertyclassid from property where propertyid = ?;
+2014-03-07 16:24:09,622   INFO  [main] COMPILER: [BLE_FindRulesForCheckID.class]: Compiling Statement: SELECT RULEID FROM RULE WHERE CHECKID = ? ORDER BY RULEID;
+2014-03-07 16:24:09,626   INFO  [main] COMPILER: [UI_UpdateCheck.class]: Compiling Statement: UPDATE CHECK SET NAME = ?, CHECKVALUE = ?, OPERATOR = ?, STATE = 0 WHERE CHECKID = ?;
+2014-03-07 16:24:09,633   INFO  [main] COMPILER: [UI_SelectAllEndpoints.class]: Compiling Statement: SELECT * FROM ENDPOINT ORDER BY ENDPOINTNAME;
+2014-03-07 16:24:09,635   WARN  [main] COMPILER: [UI_SelectAllEndpoints.class]: Procedure UI_SelectAllEndpoints has a statement with a non-deterministic result - statement: "SELECT * FROM ENDPOINT ORDER BY ENDPOINTNAME;", reason: insufficient ordering criteria.
+2014-03-07 16:24:09,636   INFO  [main] COMPILER: [FindMultiChecksForMultiCheckID.class]: Compiling Statement: SELECT MULTICHECKID, STATE, OPERATOR FROM MULTICHECK WHERE MULTICHECKID = ?;
+2014-03-07 16:24:09,640   INFO  [main] COMPILER: [UI_UpdateMulticheck.class]: Compiling Statement: UPDATE MULTICHECK SET MULTICHECKNAME = ?, OPERATOR = ? WHERE MULTICHECKID = ?;
+2014-03-07 16:24:09,644   INFO  [main] COMPILER: [UI_UpdateSpherenameForSphereID.class]: Compiling Statement: UPDATE SPHERE SET SPHERENAME = ? WHERE SPHEREID = ?;
+2014-03-07 16:24:09,646   INFO  [main] COMPILER: [UI_UpdateSpherenameForSphereID.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 1 of statement ' UPDATE SPHERE SET SPHERENAME = ? WHERE SPHEREID = ?;'
+2014-03-07 16:24:09,647   INFO  [main] COMPILER: [UI_DeleteCheckState.class]: Compiling Statement: DELETE FROM CHECKSTATE WHERE CHECKID = ?;
+2014-03-07 16:24:09,651   INFO  [main] COMPILER: [UI_SelectCheckForCheckID.class]: Compiling Statement: select checkid, name from check where checkid = ?;
+2014-03-07 16:24:09,655   INFO  [main] COMPILER: [ImprovedFindMatchingChecksEqual.class]: Compiling Statement: SELECT * FROM CHECK WHERE STATE = 1 AND ENDPOINTID = ?;
+2014-03-07 16:24:09,660   INFO  [main] COMPILER: [ImprovedFindMatchingChecksEqual.class]: Compiling Statement: UPDATE CHECK SET STATE = 1 WHERE ENDPOINTID = ? AND PROPERTYID = ? AND CHECKVALUE = ? AND OPERATOR = ? AND EXPIRED = ?;
+2014-03-07 16:24:09,669   INFO  [main] COMPILER: [ImprovedFindMatchingChecksEqual.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 0 of statement 'SELECT * FROM CHECK WHERE STATE = 1 AND ENDPOINTID = ?;'
+2014-03-07 16:24:09,669   WARN  [main] COMPILER: [ImprovedFindMatchingChecksEqual.class]: Procedure ImprovedFindMatchingChecksEqual is RW and has a statement whose result has a non-deterministic ordering - statement: "SELECT * FROM CHECK WHERE STATE = 1 AND ENDPOINTID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 16:24:09,671   INFO  [main] COMPILER: [UI_UpdateCheckpathName.class]: Compiling Statement: UPDATE CHECKPATH SET CHECKPATHNAME = ? WHERE CHECKPATHID = ?;
+2014-03-07 16:24:09,674   INFO  [main] COMPILER: [UI_UpdateCheckpathName.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 1 of statement ' UPDATE CHECKPATH SET CHECKPATHNAME = ? WHERE CHECKPATHID = ?;'
+2014-03-07 16:24:09,675   INFO  [main] COMPILER: [UpdateMultiChecks.class]: Compiling Statement: UPDATE MULTICHECK SET STATE = ? WHERE MULTICHECKID = ?
+2014-03-07 16:24:09,679   INFO  [main] COMPILER: [AME_ActionsForRule.class]: Compiling Statement: SELECT ACTIONID FROM RULE_ACTION_LINK WHERE RULEID = ? ORDER BY ACTIONID;
+2014-03-07 16:24:09,685   INFO  [main] COMPILER: [UI_SelectActPropertiesForEndpoint.class]: Compiling Statement: select * from endpoint, property, endpointclass where endpoint.endpointclassid = property.endpointclassid and endpointclass.endpointclassid = property.endpointclassid and endpoint.endpointid = ? and property.act = 1 ORDER BY endpoint.endpointname;
+2014-03-07 16:24:09,736   WARN  [main] COMPILER: [UI_SelectActPropertiesForEndpoint.class]: Procedure UI_SelectActPropertiesForEndpoint has a statement with a non-deterministic result - statement: "select * from endpoint, property, endpointclass where endpoint.endpointclassid = property.endpointclassid and endpointclass.endpointclassid = property.endpointclassid and endpoint.endpointid = ? and property.act = 1 ORDER BY endpoint.endpointname;", reason: insufficient ordering criteria.
+2014-03-07 16:24:09,738   INFO  [main] COMPILER: [UI_SelectEndpointsForUser.class]: Compiling Statement: SELECT * FROM ENDPOINT JOIN ENDPOINT_USER_LINK ON ENDPOINT.ENDPOINTID = ENDPOINT_USER_LINK.ENDPOINTID AND ENDPOINT_USER_LINK.USERID = ?;
+2014-03-07 16:24:09,741   WARN  [main] COMPILER: [UI_SelectEndpointsForUser.class]: Procedure UI_SelectEndpointsForUser has a statement with a non-deterministic result - statement: "SELECT * FROM ENDPOINT JOIN ENDPOINT_USER_LINK ON ENDPOINT.ENDPOINTID = ENDPOINT_USER_LINK.ENDPOINTID AND ENDPOINT_USER_LINK.USERID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 16:24:09,743   INFO  [main] COMPILER: [BLE_IsCycleMultiCheckTrue.class]: Compiling Statement: SELECT MULTICHECKRID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKLID = ? ORDER BY MULTICHECKRID;
+2014-03-07 16:24:09,745   INFO  [main] COMPILER: [BLE_IsCycleMultiCheckTrue.class]: Compiling Statement: SELECT MULTICHECKID, STATE FROM MULTICHECK WHERE MULTICHECKID IN ? ORDER BY MULTICHECKID;
+2014-03-07 16:24:09,754   INFO  [main] COMPILER: [BLE_IsCycleMultiCheckTrue.class]: Compiling Statement: SELECT OPERATOR FROM MULTICHECK WHERE MULTICHECKID = ? ORDER BY OPERATOR;
+2014-03-07 16:24:09,757   INFO  [main] COMPILER: [BLE_IsCycleMultiCheckTrue.class]: Compiling Statement: UPDATE MULTICHECK SET STATE = ? WHERE MULTICHECKID = ?;
+2014-03-07 16:24:09,760   INFO  [main] COMPILER: [FindParentMultiChecksForMultiCheckID.class]: Compiling Statement: SELECT MULTICHECKLID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKRID = ?;
+2014-03-07 16:24:09,762   WARN  [main] COMPILER: [FindParentMultiChecksForMultiCheckID.class]: Procedure FindParentMultiChecksForMultiCheckID has a statement with a non-deterministic result - statement: "SELECT MULTICHECKLID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKRID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 16:24:09,763   INFO  [main] COMPILER: [UI_LastLogEntryForEndpointProperty.class]: Compiling Statement: SELECT TOP 1 ENDPOINTID, PROPERTYID, PROPERTYENTRY, TIME_STAMP FROM ENDPOINTPROPERTYLOG WHERE ENDPOINTID = ? AND  PROPERTYID = ? ORDER BY TIME_STAMP DESC;
+2014-03-07 16:24:09,782   INFO  [main] COMPILER: [UI_LastLogEntryForEndpointProperty.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 0 of statement ' SELECT TOP 1 ENDPOINTID, PROPERTYID, PROPERTYENTRY, TIME_STAMP FROM ENDPOINTPROPERTYLOG WHERE ENDPOINTID = ? AND  PROPERTYID = ? ORDER BY TIME_STAMP DESC;'
+2014-03-07 16:24:09,782   WARN  [main] COMPILER: [UI_LastLogEntryForEndpointProperty.class]: Procedure UI_LastLogEntryForEndpointProperty has a statement with a non-deterministic result - statement: "SELECT TOP 1 ENDPOINTID, PROPERTYID, PROPERTYENTRY, TIME_STAMP FROM ENDPOINTPROPERTYLOG WHERE ENDPOINTID = ? AND  PROPERTYID = ? ORDER BY TIME_STAMP DESC;" , reason: insufficient ordering criteria.
+2014-03-07 16:24:09,784   INFO  [main] COMPILER: [UI_UpdateEndpointnameForEndpointID.class]: Compiling Statement: UPDATE ENDPOINT SET ENDPOINTNAME = ? WHERE ENDPOINTID = ?;
+2014-03-07 16:24:09,787   INFO  [main] COMPILER: [UI_DeleteEndpointFromSphere.class]: Compiling Statement: DELETE FROM ENDPOINT_SPHERE_LINK WHERE ENDPOINTID = ? AND SPHEREID = ?;
+2014-03-07 16:24:09,790   INFO  [main] COMPILER: [UI_SelectAllCheckpaths.class]: Compiling Statement: SELECT CHECKPATHID, CHECKPATHNAME FROM CHECKPATH ORDER BY CHECKPATHNAME;
+2014-03-07 16:24:09,792   WARN  [main] COMPILER: [UI_SelectAllCheckpaths.class]: Procedure UI_SelectAllCheckpaths has a statement with a non-deterministic result - statement: "SELECT CHECKPATHID, CHECKPATHNAME FROM CHECKPATH ORDER BY CHECKPATHNAME;", reason: insufficient ordering criteria.
+2014-03-07 16:24:09,793   INFO  [main] COMPILER: [UI_SelectCheckpathForCheckpathID.class]: Compiling Statement: select checkpathid, checkpathname, uiobject from checkpath where checkpathid = ?;
+2014-03-07 16:24:09,795   INFO  [main] COMPILER: [UI_SelectCheckpathForCheckpathID.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 0 of statement ' select checkpathid, checkpathname, uiobject from checkpath where checkpathid = ?;'
+2014-03-07 16:24:09,802   INFO  [main] COMPILER: [UI_FindUserForEmail.class]: Compiling Statement: SELECT * FROM USER WHERE USEREMAIL = ?;
+2014-03-07 16:24:09,805   WARN  [main] COMPILER: [UI_FindUserForEmail.class]: Procedure UI_FindUserForEmail has a statement with a non-deterministic result - statement: "SELECT * FROM USER WHERE USEREMAIL = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 16:24:09,806   INFO  [main] COMPILER: [UI_SelectAllSpheres.class]: Compiling Statement: SELECT * FROM SPHERE ORDER BY SPHERENAME;
+2014-03-07 16:24:09,808   WARN  [main] COMPILER: [UI_SelectAllSpheres.class]: Procedure UI_SelectAllSpheres has a statement with a non-deterministic result - statement: "SELECT * FROM SPHERE ORDER BY SPHERENAME;", reason: insufficient ordering criteria.
+2014-03-07 16:24:09,809   INFO  [main] COMPILER: [ImprovedFindAllMultichecksForCheck.class]: Compiling Statement: SELECT MULTICHECKID FROM MULTICHECK_CHECK_LINK WHERE CHECKID = ?;
+2014-03-07 16:24:09,811   INFO  [main] COMPILER: [ImprovedFindAllMultichecksForCheck.class]: Compiling Statement: UPDATE MULTICHECK SET STATE = 0 WHERE MULTICHECKID = ?
+2014-03-07 16:24:09,813   WARN  [main] COMPILER: [ImprovedFindAllMultichecksForCheck.class]: Procedure ImprovedFindAllMultichecksForCheck is RW and has a statement whose result has a non-deterministic ordering - statement: "SELECT MULTICHECKID FROM MULTICHECK_CHECK_LINK WHERE CHECKID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 16:24:09,814   INFO  [main] COMPILER: [BLE_UpdateCheckState.class]: Compiling Statement: UPDATE CHECKSTATE SET STATE = ? WHERE CHECKPATHID = ? AND CHECKID = ?;
+2014-03-07 16:24:09,827   INFO  [main] COMPILER: [UpdateChecks.class]: Compiling Statement: UPDATE CHECK SET STATE = ? WHERE CHECKID = ?
+2014-03-07 16:24:09,831   INFO  [main] COMPILER: [UI_DeleteMulticheckCheckLink.class]: Compiling Statement: DELETE FROM MULTICHECK_CHECK_LINK WHERE MULTICHECKID = ?;
+2014-03-07 16:24:09,835   INFO  [main] COMPILER: [UI_SelectAllPropertyClasses.class]: Compiling Statement: SELECT * FROM PROPERTYCLASS ORDER BY PROPERTYCLASSNAME;
+2014-03-07 16:24:09,837   WARN  [main] COMPILER: [UI_SelectAllPropertyClasses.class]: Procedure UI_SelectAllPropertyClasses has a statement with a non-deterministic result - statement: "SELECT * FROM PROPERTYCLASS ORDER BY PROPERTYCLASSNAME;", reason: insufficient ordering criteria.
+2014-03-07 16:24:09,838   INFO  [main] COMPILER: [BLE_AllChecksForExpression.class]: Compiling Statement: SELECT CHECKID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? ORDER BY CHECKID;
+2014-03-07 16:24:09,847   INFO  [main] COMPILER: [FindChecksForMultiCheckID.class]: Compiling Statement: SELECT CHECKID FROM MULTICHECK_CHECK_LINK WHERE MULTICHECKID = ?;
+2014-03-07 16:24:09,849   WARN  [main] COMPILER: [FindChecksForMultiCheckID.class]: Procedure FindChecksForMultiCheckID has a statement with a non-deterministic result - statement: "SELECT CHECKID FROM MULTICHECK_CHECK_LINK WHERE MULTICHECKID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 16:24:09,850   INFO  [main] COMPILER: [FindLinkedMultiChecksForMultiCheckID.class]: Compiling Statement: SELECT MULTICHECKRID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKLID = ?;
+2014-03-07 16:24:09,853   WARN  [main] COMPILER: [FindLinkedMultiChecksForMultiCheckID.class]: Procedure FindLinkedMultiChecksForMultiCheckID has a statement with a non-deterministic result - statement: "SELECT MULTICHECKRID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKLID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 16:24:09,854   INFO  [main] COMPILER: [FindChecksForCheckID.class]: Compiling Statement: SELECT CHECKID, STATE FROM CHECK WHERE CHECKID = ?;
+2014-03-07 16:24:09,858   INFO  [main] COMPILER: [BLE_CheckPathForMultiChecks.class]: Compiling Statement: UPDATE MULTICHECK SET STATE = 0 WHERE MULTICHECKID = ? AND CHECKPATHID = ?;
+2014-03-07 16:24:09,860   INFO  [main] COMPILER: [BLE_CheckPathForMultiChecks.class]: Compiling Statement: SELECT CHECKPATHID, MULTICHECKID FROM MULTICHECK WHERE CHECKPATHID = ? ORDER BY CHECKPATHID, MULTICHECKID;
+2014-03-07 16:24:09,873   INFO  [main] COMPILER: [BLE_ChecksForExpression.class]: Compiling Statement: SELECT CHECKID, OPERATOR, CHECKVALUE, CHECKPATHID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? AND EXPIRED = ? ORDER BY CHECKID;
+2014-03-07 16:24:09,888   WARN  [main] COMPILER: [BLE_ChecksForExpression.class]: Procedure BLE_ChecksForExpression has a statement with a non-deterministic result - statement: "SELECT CHECKID, OPERATOR, CHECKVALUE, CHECKPATHID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? AND EXPIRED = ? ORDER BY CHECKID;", reason: insufficient ordering criteria.
+2014-03-07 16:24:09,889   INFO  [main] COMPILER: [UI_SelectSensePropertiesForEndpoint.class]: Compiling Statement: select * from endpoint, property, endpointclass where endpoint.endpointclassid = property.endpointclassid and endpointclass.endpointclassid = property.endpointclassid and endpoint.endpointid = ? and property.sense = 1 ORDER BY endpoint.endpointname;
+2014-03-07 16:24:09,934   WARN  [main] COMPILER: [UI_SelectSensePropertiesForEndpoint.class]: Procedure UI_SelectSensePropertiesForEndpoint has a statement with a non-deterministic result - statement: "select * from endpoint, property, endpointclass where endpoint.endpointclassid = property.endpointclassid and endpointclass.endpointclassid = property.endpointclassid and endpoint.endpointid = ? and property.sense = 1 ORDER BY endpoint.endpointname;", reason: insufficient ordering criteria.
+2014-03-07 16:24:09,936   INFO  [main] COMPILER: [LGE_InsertEndpointPropertyLog.class]: Compiling Statement: INSERT INTO ENDPOINTPROPERTYLOG VALUES (?, ?, ?, ?, ?);
+2014-03-07 16:24:09,956   INFO  [main] COMPILER: [BLE_IsMultiCheckTrue.class]: Compiling Statement: SELECT CHECKID FROM MULTICHECK_CHECK_LINK WHERE MULTICHECKID = ? ORDER BY CHECKID;
+2014-03-07 16:24:09,958   INFO  [main] COMPILER: [BLE_IsMultiCheckTrue.class]: Compiling Statement: UPDATE MULTICHECK SET STATE = ? WHERE MULTICHECKID = ?;
+2014-03-07 16:24:09,959   INFO  [main] COMPILER: [BLE_IsMultiCheckTrue.class]: Compiling Statement: SELECT CHECKID, STATE FROM CHECKSTATE WHERE CHECKID IN ? ORDER BY CHECKID
+2014-03-07 16:24:09,961   INFO  [main] COMPILER: [BLE_IsMultiCheckTrue.class]: Compiling Statement: SELECT OPERATOR FROM MULTICHECK WHERE MULTICHECKID = ? ORDER BY OPERATOR;
+2014-03-07 16:24:09,964   INFO  [main] COMPILER: [UI_UpdateCheckpath.class]: Compiling Statement: UPDATE CHECKPATH SET UIOBJECT = ? WHERE CHECKPATHID = ?;
+2014-03-07 16:24:09,967   INFO  [main] COMPILER: [UI_UpdateCheckpath.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 1 of statement ' UPDATE CHECKPATH SET UIOBJECT = ? WHERE CHECKPATHID = ?;'
+2014-03-07 16:24:09,968   INFO  [main] COMPILER: [UI_SelectEndpointForEndpointID.class]: Compiling Statement: SELECT ENDPOINTID, ENDPOINTNAME, ENDPOINTCLASSID FROM ENDPOINT WHERE ENDPOINTID = ? ORDER BY ENDPOINTNAME;
+2014-03-07 16:24:09,970   WARN  [main] COMPILER: [UI_SelectEndpointForEndpointID.class]: Procedure UI_SelectEndpointForEndpointID has a statement with a non-deterministic result - statement: "SELECT ENDPOINTID, ENDPOINTNAME, ENDPOINTCLASSID FROM ENDPOINT WHERE ENDPOINTID = ? ORDER BY ENDPOINTNAME;", reason: insufficient ordering criteria.
+2014-03-07 16:24:09,971   INFO  [main] COMPILER: [ResetChecks.class]: Compiling Statement: UPDATE CHECK SET STATE = 0 WHERE ENDPOINTID = ?
+2014-03-07 16:24:09,978   INFO  [main] COMPILER: [ResetChecks.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 0 of statement 'UPDATE CHECK SET STATE = 0 WHERE ENDPOINTID = ?'
+2014-03-07 16:24:09,979   INFO  [main] COMPILER: [UI_SelectEndpointClassForEndpointClassID.class]: Compiling Statement: SELECT ENDPOINTCLASSID, ENDPOINTCLASSNAME FROM ENDPOINTCLASS WHERE ENDPOINTCLASSID = ? ORDER BY ENDPOINTCLASSNAME;
+2014-03-07 16:24:09,981   INFO  [main] COMPILER: [UI_SelectEndpointClassForEndpointClassID.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 0 of statement ' SELECT ENDPOINTCLASSID, ENDPOINTCLASSNAME FROM ENDPOINTCLASS WHERE ENDPOINTCLASSID = ? ORDER BY ENDPOINTCLASSNAME;'
+2014-03-07 16:24:09,981   WARN  [main] COMPILER: [UI_SelectEndpointClassForEndpointClassID.class]: Procedure UI_SelectEndpointClassForEndpointClassID has a statement with a non-deterministic result - statement: "SELECT ENDPOINTCLASSID, ENDPOINTCLASSNAME FROM ENDPOINTCLASS WHERE ENDPOINTCLASSID = ? ORDER BY ENDPOINTCLASSNAME;", reason: insufficient ordering criteria.
+2014-03-07 16:24:09,982   INFO  [main] COMPILER: [UI_SelectEndpointsForSphere.class]: Compiling Statement: SELECT * FROM ENDPOINT JOIN ENDPOINT_SPHERE_LINK ON ENDPOINT.ENDPOINTID = ENDPOINT_SPHERE_LINK.ENDPOINTID AND ENDPOINT_SPHERE_LINK.SPHEREID = ?;
+2014-03-07 16:24:09,985   WARN  [main] COMPILER: [UI_SelectEndpointsForSphere.class]: Procedure UI_SelectEndpointsForSphere has a statement with a non-deterministic result - statement: "SELECT * FROM ENDPOINT JOIN ENDPOINT_SPHERE_LINK ON ENDPOINT.ENDPOINTID = ENDPOINT_SPHERE_LINK.ENDPOINTID AND ENDPOINT_SPHERE_LINK.SPHEREID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 16:24:09,986   INFO  [main] COMPILER: [UI_SelectPropertyDetailsForEndpointClass.class]: Compiling Statement: select * from property join propertyclass on property.propertyclassid = propertyclass.propertyclassid and property.endpointclassid = ? ORDER BY propertyname;
+2014-03-07 16:24:09,994   WARN  [main] COMPILER: [UI_SelectPropertyDetailsForEndpointClass.class]: Procedure UI_SelectPropertyDetailsForEndpointClass has a statement with a non-deterministic result - statement: "select * from property join propertyclass on property.propertyclassid = propertyclass.propertyclassid and property.endpointclassid = ? ORDER BY propertyname;", reason: insufficient ordering criteria.
+2014-03-07 21:24:11,527   INFO  [main] CONSOLE: Initializing VoltDB...
+
+ _    __      ____  ____  ____ 
+| |  / /___  / / /_/ __ \/ __ )
+| | / / __ \/ / __/ / / / __  |
+| |/ / /_/ / / /_/ /_/ / /_/ / 
+|___/\____/_/\__/_____/_____/
+
+--------------------------------
+
+2014-03-07 21:24:11,533   INFO  [main] CONSOLE: Build: 4.0.2.3 voltdb-4.0.2.3-0-ge2f2df4-local Community Edition
+2014-03-07 21:24:11,546   INFO  [main] NETWORK: Default network thread count: 2
+2014-03-07 21:24:11,571   INFO  [main] HOST: Beginning inter-node communication on port 3021.
+2014-03-07 21:24:11,571   INFO  [main] HOST: Attempting to bind to leader ip localhost/127.0.0.1:3021
+2014-03-07 21:24:11,573   INFO  [main] CONSOLE: Connecting to the VoltDB cluster leader localhost/127.0.0.1:3021
+2014-03-07 21:24:11,578   INFO  [Socket Joiner] HOST: Received request type REQUEST_HOSTID
+2014-03-07 21:24:11,586   INFO  [main] HOST: Leader provided address 127.0.0.1
+2014-03-07 21:24:11,586   INFO  [main] HOST: Clock skew to across all nodes in the cluster is 1
+2014-03-07 21:24:11,587   INFO  [main] NETWORK: 1 notified of host 0
+2014-03-07 21:24:11,604   INFO  [ZooKeeperServer] REJOIN: Joining site 1:-1 known  active sites 0:-1, 1:-1
+2014-03-07 21:24:11,626   INFO  [main] ZK-SERVER: binding to port /127.0.0.1:2181
+2014-03-07 21:24:11,801   FATAL [main] HOST: Logging ports that are bound for listening, this doesn't include ports bound by outgoing connections which can also cause a failure to bind
+2014-03-07 21:24:11,837   FATAL [main] HOST: The PID of this process is 3204
+2014-03-07 21:24:11,837   FATAL [main] HOST: COMMAND    PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+2014-03-07 21:24:11,837   FATAL [main] HOST: java      2447 thorsten   97u  IPv6  22625      0t0  TCP *:53509 (LISTEN)
+2014-03-07 21:24:11,837   FATAL [main] HOST: java      2521 thorsten   34u  IPv6  20395      0t0  TCP 127.0.0.1:3021 (LISTEN)
+2014-03-07 21:24:11,837   FATAL [main] HOST: java      2521 thorsten   40u  IPv6  20402      0t0  TCP 127.0.0.1:2181 (LISTEN)
+2014-03-07 21:24:11,837   FATAL [main] HOST: java      2521 thorsten   54u  IPv6  20409      0t0  TCP *:8080 (LISTEN)
+2014-03-07 21:24:11,837   FATAL [main] HOST: java      2521 thorsten   55u  IPv6  20476      0t0  TCP *:21212 (LISTEN)
+2014-03-07 21:24:11,837   FATAL [main] HOST: java      2521 thorsten   56u  IPv6  20477      0t0  TCP *:21211 (LISTEN)
+2014-03-07 21:24:11,843   FATAL [main] HOST: ZooKeeper service unable to bind to port : 2181
+2014-03-07 21:24:11,843   FATAL [main] HOST: java.net.BindException: Address already in use
+2014-03-07 21:24:12,175   WARN  [Volt Network - 1] HOST: Received remote hangup from foreign host localhost/127.0.0.1:38888
+2014-03-07 21:24:12,178   INFO  [ZooKeeperServer] REJOIN: Agreement, Processing FaultMessage {failed: 1:-1, reporting: 0:-1, witnessed: true}
+2014-03-07 21:24:12,181   WARN  [Volt Network - 1] NETWORK: Host 1 failed
+2014-03-07 21:24:12,192   INFO  [ZooKeeperServer] REJOIN: Agreement, Sending survivors SITE_FAILURE_UPDATE from site: 0:-1 survivors: [0:-1] failed: [1:-1]
+2014-03-07 21:24:12,202   INFO  [ZooKeeperServer] REJOIN: Agreement, Adding 1:-1 to failed sites history
+2014-03-07 21:24:12,202   INFO  [ZooKeeperServer] REJOIN: Agreement, handling site faults for newly failed sites 1:-1 initiatorSafeInitPoints {1:-1->-1}
+2014-03-07 21:24:12,203   WARN  [ZooKeeperServer] NETWORK: Host 1 failed
+2014-03-07 16:24:27,476   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10020_10021 on table: ENDPOINTPROPERTYLOG of type: BALANCED_TREE
+2014-03-07 16:24:27,482   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10025_10026 on table: USER of type: BALANCED_TREE
+2014-03-07 16:24:27,483   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10030_10031 on table: ENDPOINT_USER_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,484   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10035_10036 on table: ENDPOINT_SPHERE_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,486   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10040_10041 on table: SPHERE_USER_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,487   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10044_10045 on table: SPHERE of type: BALANCED_TREE
+2014-03-07 16:24:27,487   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10048_10049 on table: ENDPOINTCLASS of type: BALANCED_TREE
+2014-03-07 16:24:27,488   INFO  [main] COMPILER: [null]: Created index: EPEPC on table: ENDPOINT of type: BALANCED_TREE
+2014-03-07 16:24:27,488   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10053_10054 on table: ENDPOINT of type: BALANCED_TREE
+2014-03-07 16:24:27,489   INFO  [main] COMPILER: [null]: Created index: PREPC on table: PROPERTY of type: BALANCED_TREE
+2014-03-07 16:24:27,489   INFO  [main] COMPILER: [null]: Created index: PRPRC on table: PROPERTY of type: BALANCED_TREE
+2014-03-07 16:24:27,490   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10058_10059 on table: PROPERTY of type: BALANCED_TREE
+2014-03-07 16:24:27,490   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10062_10063 on table: PROPERTYCLASS of type: BALANCED_TREE
+2014-03-07 16:24:27,492   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10067_10068 on table: MESSAGE_ENDPOINT_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,492   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10071_10072 on table: MESSAGE of type: BALANCED_TREE
+2014-03-07 16:24:27,493   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10076_10077 on table: MESSAGE_EXPRESSION_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,494   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10080_10081 on table: EXPRESSION of type: BALANCED_TREE
+2014-03-07 16:24:27,495   INFO  [main] COMPILER: [null]: Created index: CHEP on table: CHECK of type: BALANCED_TREE
+2014-03-07 16:24:27,495   INFO  [main] COMPILER: [null]: Created index: CHPR on table: CHECK of type: BALANCED_TREE
+2014-03-07 16:24:27,495   INFO  [main] COMPILER: [null]: Created index: CHCP on table: CHECK of type: BALANCED_TREE
+2014-03-07 16:24:27,496   INFO  [main] COMPILER: [null]: Created index: CHST on table: CHECK of type: BALANCED_TREE
+2014-03-07 16:24:27,496   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10086_10087 on table: CHECK of type: BALANCED_TREE
+2014-03-07 16:24:27,497   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10090_10091 on table: CHECKSTATE of type: BALANCED_TREE
+2014-03-07 16:24:27,498   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10095_10096 on table: RULE_MULTICHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,499   INFO  [main] COMPILER: [null]: Created index: RCHECK on table: RULE of type: BALANCED_TREE
+2014-03-07 16:24:27,500   INFO  [main] COMPILER: [null]: Created index: RMCHECK on table: RULE of type: BALANCED_TREE
+2014-03-07 16:24:27,500   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10099_10100 on table: RULE of type: BALANCED_TREE
+2014-03-07 16:24:27,501   INFO  [main] COMPILER: [null]: Created index: MCCP on table: MULTICHECK of type: BALANCED_TREE
+2014-03-07 16:24:27,501   INFO  [main] COMPILER: [null]: Created index: MCST on table: MULTICHECK of type: BALANCED_TREE
+2014-03-07 16:24:27,501   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10103_10104 on table: MULTICHECK of type: BALANCED_TREE
+2014-03-07 16:24:27,502   INFO  [main] COMPILER: [null]: Created index: MCLMCIDX on table: MULTICHECK_CHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,502   INFO  [main] COMPILER: [null]: Created index: MCLCHIDX on table: MULTICHECK_CHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,502   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10109_10110 on table: MULTICHECK_CHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,503   INFO  [main] COMPILER: [null]: Created index: MCMCLR on table: MULTICHECK_MULTICHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,504   INFO  [main] COMPILER: [null]: Created index: MCMCLL on table: MULTICHECK_MULTICHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,504   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10115_10116 on table: MULTICHECK_MULTICHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,504   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10118_10119 on table: CHECKPATH of type: BALANCED_TREE
+2014-03-07 16:24:27,505   INFO  [main] COMPILER: [null]: Created index: CHECKIDIDX on table: CHECKPATH_CHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,505   INFO  [main] COMPILER: [null]: Created index: CHECKPATHIDIDX on table: CHECKPATH_CHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,506   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10123_10124 on table: CHECKPATH_CHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,506   INFO  [main] COMPILER: [null]: Created index: CPMCIDX on table: CHECKPATH_MULTICHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,512   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10128_10129 on table: CHECKPATH_MULTICHECK_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,513   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10132_10133 on table: ACTION of type: BALANCED_TREE
+2014-03-07 16:24:27,514   INFO  [main] COMPILER: [null]: Created index: OUTBOUNDPROPACTION on table: OUTBOUNDPROPERTYACTION of type: BALANCED_TREE
+2014-03-07 16:24:27,515   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10136_10137 on table: OUTBOUNDPROPERTYACTION of type: BALANCED_TREE
+2014-03-07 16:24:27,515   INFO  [main] COMPILER: [null]: Created index: RULEACTIONLINK on table: RULE_ACTION_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,515   INFO  [main] COMPILER: [null]: Created index: SYS_IDX_SYS_PK_10141_10142 on table: RULE_ACTION_LINK of type: BALANCED_TREE
+2014-03-07 16:24:27,547   INFO  [main] COMPILER: [ACTION.insert]: Compiling Statement: INSERT INTO ACTION VALUES (?, ?, ?, ?, ?);
+2014-03-07 16:24:27,597   INFO  [main] COMPILER: [ACTION.select]: Compiling Statement: SELECT * FROM ACTION WHERE (ACTIONID = ?);
+2014-03-07 16:24:27,610   INFO  [main] COMPILER: [ACTION.delete]: Compiling Statement: DELETE FROM ACTION WHERE (ACTIONID = ?);
+2014-03-07 16:24:27,614   INFO  [main] COMPILER: [ACTION.update]: Compiling Statement: UPDATE ACTION SET ACTIONID = ?, ACTIONNAME = ?, TARGETENDPOINTID = ?, TGTEPIDFROMINBOUNDPROP = ?, EXPIRED = ? WHERE (ACTIONID = ?);
+2014-03-07 16:24:27,619   INFO  [main] COMPILER: [CHECK.insert]: Compiling Statement: INSERT INTO CHECK VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
+2014-03-07 16:24:27,625   INFO  [main] COMPILER: [CHECK.select]: Compiling Statement: SELECT * FROM CHECK WHERE (CHECKID = ?) AND (CHECKPATHID = ?) AND (ENDPOINTID = ?);
+2014-03-07 16:24:27,632   INFO  [main] COMPILER: [CHECK.delete]: Compiling Statement: DELETE FROM CHECK WHERE (CHECKID = ?) AND (CHECKPATHID = ?) AND (ENDPOINTID = ?);
+2014-03-07 16:24:27,636   INFO  [main] COMPILER: [CHECK.update]: Compiling Statement: UPDATE CHECK SET CHECKID = ?, ENDPOINTID = ?, PROPERTYID = ?, CHECKVALUE = ?, OPERATOR = ?, STATE = ?, EXPIRED = ?, NAME = ?, CHECKPATHID = ? WHERE (CHECKID = ?) AND (CHECKPATHID = ?) AND (ENDPOINTID = ?);
+2014-03-07 16:24:27,643   INFO  [main] COMPILER: [CHECKPATH.insert]: Compiling Statement: INSERT INTO CHECKPATH VALUES (?, ?, ?);
+2014-03-07 16:24:27,644   INFO  [main] COMPILER: [CHECKPATH.select]: Compiling Statement: SELECT * FROM CHECKPATH WHERE (CHECKPATHID = ?);
+2014-03-07 16:24:27,647   INFO  [main] COMPILER: [CHECKPATH.delete]: Compiling Statement: DELETE FROM CHECKPATH WHERE (CHECKPATHID = ?);
+2014-03-07 16:24:27,650   INFO  [main] COMPILER: [CHECKPATH.update]: Compiling Statement: UPDATE CHECKPATH SET CHECKPATHID = ?, CHECKPATHNAME = ?, UIOBJECT = ? WHERE (CHECKPATHID = ?);
+2014-03-07 16:24:27,655   INFO  [main] COMPILER: [CHECKPATH_CHECK_LINK.insert]: Compiling Statement: INSERT INTO CHECKPATH_CHECK_LINK VALUES (?, ?, ?);
+2014-03-07 16:24:27,657   INFO  [main] COMPILER: [CHECKPATH_CHECK_LINK.select]: Compiling Statement: SELECT * FROM CHECKPATH_CHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,664   INFO  [main] COMPILER: [CHECKPATH_CHECK_LINK.delete]: Compiling Statement: DELETE FROM CHECKPATH_CHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,668   INFO  [main] COMPILER: [CHECKPATH_CHECK_LINK.update]: Compiling Statement: UPDATE CHECKPATH_CHECK_LINK SET LINKID = ?, CHECKPATHID = ?, CHECKID = ? WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,672   INFO  [main] COMPILER: [CHECKPATH_MULTICHECK_LINK.insert]: Compiling Statement: INSERT INTO CHECKPATH_MULTICHECK_LINK VALUES (?, ?, ?);
+2014-03-07 16:24:27,674   INFO  [main] COMPILER: [CHECKPATH_MULTICHECK_LINK.select]: Compiling Statement: SELECT * FROM CHECKPATH_MULTICHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,679   INFO  [main] COMPILER: [CHECKPATH_MULTICHECK_LINK.delete]: Compiling Statement: DELETE FROM CHECKPATH_MULTICHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,687   INFO  [main] COMPILER: [CHECKPATH_MULTICHECK_LINK.update]: Compiling Statement: UPDATE CHECKPATH_MULTICHECK_LINK SET LINKID = ?, CHECKPATHID = ?, MULTICHECKID = ? WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,690   INFO  [main] COMPILER: [CHECKSTATE.insert]: Compiling Statement: INSERT INTO CHECKSTATE VALUES (?, ?, ?);
+2014-03-07 16:24:27,692   INFO  [main] COMPILER: [CHECKSTATE.select]: Compiling Statement: SELECT * FROM CHECKSTATE WHERE (CHECKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,695   INFO  [main] COMPILER: [CHECKSTATE.delete]: Compiling Statement: DELETE FROM CHECKSTATE WHERE (CHECKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,701   INFO  [main] COMPILER: [CHECKSTATE.update]: Compiling Statement: UPDATE CHECKSTATE SET CHECKID = ?, STATE = ?, CHECKPATHID = ? WHERE (CHECKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,705   INFO  [main] COMPILER: [ENDPOINT.insert]: Compiling Statement: INSERT INTO ENDPOINT VALUES (?, ?, ?);
+2014-03-07 16:24:27,708   INFO  [main] COMPILER: [ENDPOINT.delete]: Compiling Statement: DELETE FROM ENDPOINT WHERE (ENDPOINTID = ?);
+2014-03-07 16:24:27,717   INFO  [main] COMPILER: [ENDPOINT.update]: Compiling Statement: UPDATE ENDPOINT SET ENDPOINTID = ?, ENDPOINTNAME = ?, ENDPOINTCLASSID = ? WHERE (ENDPOINTID = ?);
+2014-03-07 16:24:27,720   INFO  [main] COMPILER: [ENDPOINT_SPHERE_LINK.insert]: Compiling Statement: INSERT INTO ENDPOINT_SPHERE_LINK VALUES (?, ?, ?);
+2014-03-07 16:24:27,722   INFO  [main] COMPILER: [ENDPOINT_SPHERE_LINK.delete]: Compiling Statement: DELETE FROM ENDPOINT_SPHERE_LINK WHERE (LINKID = ?);
+2014-03-07 16:24:27,725   INFO  [main] COMPILER: [ENDPOINT_SPHERE_LINK.update]: Compiling Statement: UPDATE ENDPOINT_SPHERE_LINK SET LINKID = ?, ENDPOINTID = ?, SPHEREID = ? WHERE (LINKID = ?);
+2014-03-07 16:24:27,728   INFO  [main] COMPILER: [ENDPOINT_USER_LINK.insert]: Compiling Statement: INSERT INTO ENDPOINT_USER_LINK VALUES (?, ?, ?);
+2014-03-07 16:24:27,730   INFO  [main] COMPILER: [ENDPOINT_USER_LINK.delete]: Compiling Statement: DELETE FROM ENDPOINT_USER_LINK WHERE (LINKID = ?);
+2014-03-07 16:24:27,733   INFO  [main] COMPILER: [ENDPOINT_USER_LINK.update]: Compiling Statement: UPDATE ENDPOINT_USER_LINK SET LINKID = ?, ENDPOINTID = ?, USERID = ? WHERE (LINKID = ?);
+2014-03-07 16:24:27,736   INFO  [main] COMPILER: [ENDPOINTCLASS.insert]: Compiling Statement: INSERT INTO ENDPOINTCLASS VALUES (?, ?);
+2014-03-07 16:24:27,737   INFO  [main] COMPILER: [ENDPOINTCLASS.select]: Compiling Statement: SELECT * FROM ENDPOINTCLASS WHERE (ENDPOINTCLASSID = ?);
+2014-03-07 16:24:27,740   INFO  [main] COMPILER: [ENDPOINTCLASS.delete]: Compiling Statement: DELETE FROM ENDPOINTCLASS WHERE (ENDPOINTCLASSID = ?);
+2014-03-07 16:24:27,742   INFO  [main] COMPILER: [ENDPOINTCLASS.update]: Compiling Statement: UPDATE ENDPOINTCLASS SET ENDPOINTCLASSID = ?, ENDPOINTCLASSNAME = ? WHERE (ENDPOINTCLASSID = ?);
+2014-03-07 16:24:27,744   INFO  [main] COMPILER: [ENDPOINTPROPERTYLOG.insert]: Compiling Statement: INSERT INTO ENDPOINTPROPERTYLOG VALUES (?, ?, ?, ?, ?);
+2014-03-07 16:24:27,746   INFO  [main] COMPILER: [ENDPOINTPROPERTYLOG.select]: Compiling Statement: SELECT * FROM ENDPOINTPROPERTYLOG WHERE (ENTRYID = ?) AND (ENDPOINTID = ?);
+2014-03-07 16:24:27,749   INFO  [main] COMPILER: [ENDPOINTPROPERTYLOG.delete]: Compiling Statement: DELETE FROM ENDPOINTPROPERTYLOG WHERE (ENTRYID = ?) AND (ENDPOINTID = ?);
+2014-03-07 16:24:27,752   INFO  [main] COMPILER: [ENDPOINTPROPERTYLOG.update]: Compiling Statement: UPDATE ENDPOINTPROPERTYLOG SET ENTRYID = ?, ENDPOINTID = ?, PROPERTYID = ?, PROPERTYENTRY = ?, TIME_STAMP = ? WHERE (ENTRYID = ?) AND (ENDPOINTID = ?);
+2014-03-07 16:24:27,755   INFO  [main] COMPILER: [EXPRESSION.insert]: Compiling Statement: INSERT INTO EXPRESSION VALUES (?, ?, ?);
+2014-03-07 16:24:27,757   INFO  [main] COMPILER: [EXPRESSION.delete]: Compiling Statement: DELETE FROM EXPRESSION WHERE (EXPRESSIONID = ?);
+2014-03-07 16:24:27,760   INFO  [main] COMPILER: [EXPRESSION.update]: Compiling Statement: UPDATE EXPRESSION SET EXPRESSIONID = ?, PROPERTYID = ?, PAYLOAD = ? WHERE (EXPRESSIONID = ?);
+2014-03-07 16:24:27,763   INFO  [main] COMPILER: [MESSAGE.insert]: Compiling Statement: INSERT INTO MESSAGE VALUES (?, ?, ?);
+2014-03-07 16:24:27,765   INFO  [main] COMPILER: [MESSAGE.select]: Compiling Statement: SELECT * FROM MESSAGE WHERE (MESSAGEID = ?);
+2014-03-07 16:24:27,767   INFO  [main] COMPILER: [MESSAGE.delete]: Compiling Statement: DELETE FROM MESSAGE WHERE (MESSAGEID = ?);
+2014-03-07 16:24:27,769   INFO  [main] COMPILER: [MESSAGE.update]: Compiling Statement: UPDATE MESSAGE SET MESSAGEID = ?, EXPRESSIONCOUNT = ?, TIME_STAMP = ? WHERE (MESSAGEID = ?);
+2014-03-07 16:24:27,771   INFO  [main] COMPILER: [MESSAGE_ENDPOINT_LINK.insert]: Compiling Statement: INSERT INTO MESSAGE_ENDPOINT_LINK VALUES (?, ?, ?);
+2014-03-07 16:24:27,773   INFO  [main] COMPILER: [MESSAGE_ENDPOINT_LINK.select]: Compiling Statement: SELECT * FROM MESSAGE_ENDPOINT_LINK WHERE (LINKID = ?) AND (ENDPOINTID = ?);
+2014-03-07 16:24:27,776   INFO  [main] COMPILER: [MESSAGE_ENDPOINT_LINK.delete]: Compiling Statement: DELETE FROM MESSAGE_ENDPOINT_LINK WHERE (LINKID = ?) AND (ENDPOINTID = ?);
+2014-03-07 16:24:27,778   INFO  [main] COMPILER: [MESSAGE_ENDPOINT_LINK.update]: Compiling Statement: UPDATE MESSAGE_ENDPOINT_LINK SET LINKID = ?, ENDPOINTID = ?, MESSAGEID = ? WHERE (LINKID = ?) AND (ENDPOINTID = ?);
+2014-03-07 16:24:27,780   INFO  [main] COMPILER: [MESSAGE_EXPRESSION_LINK.insert]: Compiling Statement: INSERT INTO MESSAGE_EXPRESSION_LINK VALUES (?, ?, ?);
+2014-03-07 16:24:27,782   INFO  [main] COMPILER: [MESSAGE_EXPRESSION_LINK.delete]: Compiling Statement: DELETE FROM MESSAGE_EXPRESSION_LINK WHERE (LINKID = ?);
+2014-03-07 16:24:27,785   INFO  [main] COMPILER: [MESSAGE_EXPRESSION_LINK.update]: Compiling Statement: UPDATE MESSAGE_EXPRESSION_LINK SET LINKID = ?, MESSAGEID = ?, EXPRESSIONID = ? WHERE (LINKID = ?);
+2014-03-07 16:24:27,787   INFO  [main] COMPILER: [MULTICHECK.insert]: Compiling Statement: INSERT INTO MULTICHECK VALUES (?, ?, ?, ?, ?, ?);
+2014-03-07 16:24:27,790   INFO  [main] COMPILER: [MULTICHECK.select]: Compiling Statement: SELECT * FROM MULTICHECK WHERE (MULTICHECKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,793   INFO  [main] COMPILER: [MULTICHECK.delete]: Compiling Statement: DELETE FROM MULTICHECK WHERE (MULTICHECKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,795   INFO  [main] COMPILER: [MULTICHECK.update]: Compiling Statement: UPDATE MULTICHECK SET MULTICHECKID = ?, OPERATOR = ?, STATE = ?, EXPIRED = ?, MULTICHECKNAME = ?, CHECKPATHID = ? WHERE (MULTICHECKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,798   INFO  [main] COMPILER: [MULTICHECK_CHECK_LINK.insert]: Compiling Statement: INSERT INTO MULTICHECK_CHECK_LINK VALUES (?, ?, ?, ?);
+2014-03-07 16:24:27,800   INFO  [main] COMPILER: [MULTICHECK_CHECK_LINK.select]: Compiling Statement: SELECT * FROM MULTICHECK_CHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,803   INFO  [main] COMPILER: [MULTICHECK_CHECK_LINK.delete]: Compiling Statement: DELETE FROM MULTICHECK_CHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,805   INFO  [main] COMPILER: [MULTICHECK_CHECK_LINK.update]: Compiling Statement: UPDATE MULTICHECK_CHECK_LINK SET LINKID = ?, MULTICHECKID = ?, CHECKID = ?, CHECKPATHID = ? WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,808   INFO  [main] COMPILER: [MULTICHECK_MULTICHECK_LINK.insert]: Compiling Statement: INSERT INTO MULTICHECK_MULTICHECK_LINK VALUES (?, ?, ?, ?);
+2014-03-07 16:24:27,810   INFO  [main] COMPILER: [MULTICHECK_MULTICHECK_LINK.select]: Compiling Statement: SELECT * FROM MULTICHECK_MULTICHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,813   INFO  [main] COMPILER: [MULTICHECK_MULTICHECK_LINK.delete]: Compiling Statement: DELETE FROM MULTICHECK_MULTICHECK_LINK WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,815   INFO  [main] COMPILER: [MULTICHECK_MULTICHECK_LINK.update]: Compiling Statement: UPDATE MULTICHECK_MULTICHECK_LINK SET LINKID = ?, MULTICHECKLID = ?, MULTICHECKRID = ?, CHECKPATHID = ? WHERE (LINKID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,818   INFO  [main] COMPILER: [OUTBOUNDPROPERTYACTION.insert]: Compiling Statement: INSERT INTO OUTBOUNDPROPERTYACTION VALUES (?, ?, ?, ?, ?, ?);
+2014-03-07 16:24:27,820   INFO  [main] COMPILER: [OUTBOUNDPROPERTYACTION.select]: Compiling Statement: SELECT * FROM OUTBOUNDPROPERTYACTION WHERE (OUTBOUNDPROPERTYACTIONID = ?) AND (ACTIONID = ?);
+2014-03-07 16:24:27,823   INFO  [main] COMPILER: [OUTBOUNDPROPERTYACTION.delete]: Compiling Statement: DELETE FROM OUTBOUNDPROPERTYACTION WHERE (OUTBOUNDPROPERTYACTIONID = ?) AND (ACTIONID = ?);
+2014-03-07 16:24:27,825   INFO  [main] COMPILER: [OUTBOUNDPROPERTYACTION.update]: Compiling Statement: UPDATE OUTBOUNDPROPERTYACTION SET OUTBOUNDPROPERTYACTIONID = ?, OUTBOUNDPROPERTYID = ?, INBOUNDPROPERTYID = ?, CURRENTSTATEPROPERTYID = ?, CUSTOMPAYLOAD = ?, ACTIONID = ? WHERE (OUTBOUNDPROPERTYACTIONID = ?) AND (ACTIONID = ?);
+2014-03-07 16:24:27,828   INFO  [main] COMPILER: [PROPERTY.insert]: Compiling Statement: INSERT INTO PROPERTY VALUES (?, ?, ?, ?, ?, ?, ?, ?);
+2014-03-07 16:24:27,831   INFO  [main] COMPILER: [PROPERTY.delete]: Compiling Statement: DELETE FROM PROPERTY WHERE (PROPERTYID = ?);
+2014-03-07 16:24:27,833   INFO  [main] COMPILER: [PROPERTY.update]: Compiling Statement: UPDATE PROPERTY SET PROPERTYID = ?, PROPERTYNAME = ?, PROPERTYCLASSID = ?, ENDPOINTCLASSID = ?, ACT = ?, SENSE = ?, STATUS = ?, CONFIGURABLE = ? WHERE (PROPERTYID = ?);
+2014-03-07 16:24:27,838   INFO  [main] COMPILER: [PROPERTYCLASS.insert]: Compiling Statement: INSERT INTO PROPERTYCLASS VALUES (?, ?, ?, ?);
+2014-03-07 16:24:27,840   INFO  [main] COMPILER: [PROPERTYCLASS.delete]: Compiling Statement: DELETE FROM PROPERTYCLASS WHERE (PROPERTYCLASSID = ?);
+2014-03-07 16:24:27,842   INFO  [main] COMPILER: [PROPERTYCLASS.update]: Compiling Statement: UPDATE PROPERTYCLASS SET PROPERTYCLASSID = ?, PROPERTYCLASSNAME = ?, PROPERTYCLASSDATATYPE = ?, PROPERTYCLASSUNIT = ? WHERE (PROPERTYCLASSID = ?);
+2014-03-07 16:24:27,844   INFO  [main] COMPILER: [RULE.insert]: Compiling Statement: INSERT INTO RULE VALUES (?, ?, ?, ?, ?);
+2014-03-07 16:24:27,846   INFO  [main] COMPILER: [RULE.select]: Compiling Statement: SELECT * FROM RULE WHERE (RULEID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,849   INFO  [main] COMPILER: [RULE.delete]: Compiling Statement: DELETE FROM RULE WHERE (RULEID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,850   INFO  [main] COMPILER: [RULE.update]: Compiling Statement: UPDATE RULE SET RULEID = ?, RULENAME = ?, CHECKID = ?, MULTICHECKID = ?, CHECKPATHID = ? WHERE (RULEID = ?) AND (CHECKPATHID = ?);
+2014-03-07 16:24:27,854   INFO  [main] COMPILER: [RULE_ACTION_LINK.insert]: Compiling Statement: INSERT INTO RULE_ACTION_LINK VALUES (?, ?, ?);
+2014-03-07 16:24:27,856   INFO  [main] COMPILER: [RULE_ACTION_LINK.select]: Compiling Statement: SELECT * FROM RULE_ACTION_LINK WHERE (RULEID = ?);
+2014-03-07 16:24:27,867   INFO  [main] COMPILER: [RULE_ACTION_LINK.delete]: Compiling Statement: DELETE FROM RULE_ACTION_LINK WHERE (RULEID = ?);
+2014-03-07 16:24:27,868   INFO  [main] COMPILER: [RULE_ACTION_LINK.update]: Compiling Statement: UPDATE RULE_ACTION_LINK SET LINKID = ?, RULEID = ?, ACTIONID = ? WHERE (RULEID = ?);
+2014-03-07 16:24:27,871   INFO  [main] COMPILER: [RULE_MULTICHECK_LINK.insert]: Compiling Statement: INSERT INTO RULE_MULTICHECK_LINK VALUES (?, ?, ?);
+2014-03-07 16:24:27,873   INFO  [main] COMPILER: [RULE_MULTICHECK_LINK.select]: Compiling Statement: SELECT * FROM RULE_MULTICHECK_LINK WHERE (LINKID = ?) AND (RULEID = ?);
+2014-03-07 16:24:27,875   INFO  [main] COMPILER: [RULE_MULTICHECK_LINK.delete]: Compiling Statement: DELETE FROM RULE_MULTICHECK_LINK WHERE (LINKID = ?) AND (RULEID = ?);
+2014-03-07 16:24:27,877   INFO  [main] COMPILER: [RULE_MULTICHECK_LINK.update]: Compiling Statement: UPDATE RULE_MULTICHECK_LINK SET LINKID = ?, RULEID = ?, MULTICHECKID = ? WHERE (LINKID = ?) AND (RULEID = ?);
+2014-03-07 16:24:27,879   INFO  [main] COMPILER: [SPHERE.insert]: Compiling Statement: INSERT INTO SPHERE VALUES (?, ?, ?);
+2014-03-07 16:24:27,880   INFO  [main] COMPILER: [SPHERE.select]: Compiling Statement: SELECT * FROM SPHERE WHERE (SPHEREID = ?);
+2014-03-07 16:24:27,888   INFO  [main] COMPILER: [SPHERE.delete]: Compiling Statement: DELETE FROM SPHERE WHERE (SPHEREID = ?);
+2014-03-07 16:24:27,889   INFO  [main] COMPILER: [SPHERE.update]: Compiling Statement: UPDATE SPHERE SET SPHEREID = ?, SPHERENAME = ?, PUBLIC = ? WHERE (SPHEREID = ?);
+2014-03-07 16:24:27,894   INFO  [main] COMPILER: [SPHERE_USER_LINK.insert]: Compiling Statement: INSERT INTO SPHERE_USER_LINK VALUES (?, ?, ?);
+2014-03-07 16:24:27,895   INFO  [main] COMPILER: [SPHERE_USER_LINK.select]: Compiling Statement: SELECT * FROM SPHERE_USER_LINK WHERE (LINKID = ?) AND (SPHEREID = ?);
+2014-03-07 16:24:27,898   INFO  [main] COMPILER: [SPHERE_USER_LINK.delete]: Compiling Statement: DELETE FROM SPHERE_USER_LINK WHERE (LINKID = ?) AND (SPHEREID = ?);
+2014-03-07 16:24:27,900   INFO  [main] COMPILER: [SPHERE_USER_LINK.update]: Compiling Statement: UPDATE SPHERE_USER_LINK SET LINKID = ?, SPHEREID = ?, USERID = ? WHERE (LINKID = ?) AND (SPHEREID = ?);
+2014-03-07 16:24:27,903   INFO  [main] COMPILER: [USER.insert]: Compiling Statement: INSERT INTO USER VALUES (?, ?, ?, ?);
+2014-03-07 16:24:27,904   INFO  [main] COMPILER: [USER.select]: Compiling Statement: SELECT * FROM USER WHERE (USERID = ?);
+2014-03-07 16:24:27,906   INFO  [main] COMPILER: [USER.delete]: Compiling Statement: DELETE FROM USER WHERE (USERID = ?);
+2014-03-07 16:24:27,908   INFO  [main] COMPILER: [USER.update]: Compiling Statement: UPDATE USER SET USERID = ?, USERNAME = ?, USEREMAIL = ?, USERPWHASH = ? WHERE (USERID = ?);
+2014-03-07 16:24:27,931   INFO  [main] COMPILER: [FindAllChecks.class]: Compiling Statement: SELECT * FROM CHECK ORDER BY CHECKID;
+2014-03-07 16:24:27,947   WARN  [main] COMPILER: [FindAllChecks.class]: Procedure FindAllChecks has a statement with a non-deterministic result - statement: "SELECT * FROM CHECK ORDER BY CHECKID;", reason: insufficient ordering criteria.
+2014-03-07 16:24:27,950   INFO  [main] COMPILER: [FindAllMultichecksForCheck.class]: Compiling Statement: SELECT MULTICHECKID FROM MULTICHECK_CHECK_LINK WHERE CHECKID = ?;
+2014-03-07 16:24:27,953   WARN  [main] COMPILER: [FindAllMultichecksForCheck.class]: Procedure FindAllMultichecksForCheck has a statement with a non-deterministic result - statement: "SELECT MULTICHECKID FROM MULTICHECK_CHECK_LINK WHERE CHECKID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 16:24:27,954   INFO  [main] COMPILER: [UI_SelectAllProperties.class]: Compiling Statement: SELECT * FROM PROPERTY ORDER BY PROPERTYNAME;
+2014-03-07 16:24:27,957   WARN  [main] COMPILER: [UI_SelectAllProperties.class]: Procedure UI_SelectAllProperties has a statement with a non-deterministic result - statement: "SELECT * FROM PROPERTY ORDER BY PROPERTYNAME;", reason: insufficient ordering criteria.
+2014-03-07 16:24:27,958   INFO  [main] COMPILER: [UI_SelectPropertyNameForPropertyID.class]: Compiling Statement: select propertyname from property where propertyid = ?;
+2014-03-07 16:24:27,961   INFO  [main] COMPILER: [AME_DetailsForAction.class]: Compiling Statement: SELECT ACTION.ACTIONID, ACTION.TARGETENDPOINTID, ACTION.TGTEPIDFROMINBOUNDPROP, OUTBOUNDPROPERTYACTION.OUTBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.INBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.CURRENTSTATEPROPERTYID, OUTBOUNDPROPERTYACTION.CUSTOMPAYLOAD FROM ACTION INNER JOIN OUTBOUNDPROPERTYACTION ON ACTION.ACTIONID = OUTBOUNDPROPERTYACTION.ACTIONID AND OUTBOUNDPROPERTYACTION.ACTIONID = ? ORDER BY ACTION.ACTIONID;
+2014-03-07 16:24:27,969   WARN  [main] COMPILER: [AME_DetailsForAction.class]: Procedure AME_DetailsForAction has a statement with a non-deterministic result - statement: "SELECT ACTION.ACTIONID, ACTION.TARGETENDPOINTID, ACTION.TGTEPIDFROMINBOUNDPROP, OUTBOUNDPROPERTYACTION.OUTBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.INBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.CURRENTSTATEPROPERTYID, OUTBOUNDPROPERTYACTION.CUSTOMPAYLOAD FROM ACTION INNER JOIN OUTBOUNDPROPERTYACTION ON ACTION.ACTIONID = OUTBOUNDPROPERTYACTION.ACTIONID AND OUTBOUNDPROPERTYACTION.ACTIONID = ? ORDER BY ACTION.ACTIONID;", reason: insufficient ordering criteria.
+2014-03-07 16:24:27,970   INFO  [main] COMPILER: [UI_SelectChecksForEndpoint.class]: Compiling Statement: select * from check join property on check.propertyid = property.propertyid and check.endpointid = ? ORDER BY name;
+2014-03-07 16:24:27,979   INFO  [main] COMPILER: [UI_SelectChecksForEndpoint.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 0 of statement ' select * from check join property on check.propertyid = property.propertyid and check.endpointid = ? ORDER BY name;'
+2014-03-07 16:24:27,979   WARN  [main] COMPILER: [UI_SelectChecksForEndpoint.class]: Procedure UI_SelectChecksForEndpoint has a statement with a non-deterministic result - statement: "select * from check join property on check.propertyid = property.propertyid and check.endpointid = ? ORDER BY name;", reason: insufficient ordering criteria.
+2014-03-07 16:24:27,981   INFO  [main] COMPILER: [BLE_FindRulesForMultiCheckID.class]: Compiling Statement: SELECT RULEID FROM RULE WHERE MULTICHECKID = ? ORDER BY RULEID;
+2014-03-07 16:24:27,984   INFO  [main] COMPILER: [UI_SelectAllEndpointClasses.class]: Compiling Statement: SELECT * FROM ENDPOINTCLASS ORDER BY ENDPOINTCLASSNAME;
+2014-03-07 16:24:27,987   WARN  [main] COMPILER: [UI_SelectAllEndpointClasses.class]: Procedure UI_SelectAllEndpointClasses has a statement with a non-deterministic result - statement: "SELECT * FROM ENDPOINTCLASS ORDER BY ENDPOINTCLASSNAME;", reason: insufficient ordering criteria.
+2014-03-07 16:24:27,988   INFO  [main] COMPILER: [UI_SelectPropertyClassForPropertyClassID.class]: Compiling Statement: select propertyclassid, propertyclassdatatype, propertyclassname, propertyclassunit from propertyclass where propertyclassid = ?;
+2014-03-07 16:24:27,994   INFO  [main] COMPILER: [UI_DeleteMulticheckMulticheckLink.class]: Compiling Statement: DELETE FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKLID = ?;
+2014-03-07 16:24:27,999   INFO  [main] COMPILER: [BLE_MultiCheckParentForMultiCheck.class]: Compiling Statement: SELECT MULTICHECKLID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKRID = ? ORDER BY MULTICHECKLID;
+2014-03-07 16:24:28,004   INFO  [main] COMPILER: [SelectAllUsers.class]: Compiling Statement: SELECT * FROM USER ORDER BY USERNAME;
+2014-03-07 16:24:28,006   WARN  [main] COMPILER: [SelectAllUsers.class]: Procedure SelectAllUsers has a statement with a non-deterministic result - statement: "SELECT * FROM USER ORDER BY USERNAME;", reason: insufficient ordering criteria.
+2014-03-07 16:24:28,008   INFO  [main] COMPILER: [UI_SelectPropertyClassForPropertyID.class]: Compiling Statement: select propertyclassid from property where propertyid = ?;
+2014-03-07 16:24:28,011   INFO  [main] COMPILER: [BLE_FindRulesForCheckID.class]: Compiling Statement: SELECT RULEID FROM RULE WHERE CHECKID = ? ORDER BY RULEID;
+2014-03-07 16:24:28,014   INFO  [main] COMPILER: [UI_UpdateCheck.class]: Compiling Statement: UPDATE CHECK SET NAME = ?, CHECKVALUE = ?, OPERATOR = ?, STATE = 0 WHERE CHECKID = ?;
+2014-03-07 16:24:28,022   INFO  [main] COMPILER: [UI_SelectAllEndpoints.class]: Compiling Statement: SELECT * FROM ENDPOINT ORDER BY ENDPOINTNAME;
+2014-03-07 16:24:28,024   WARN  [main] COMPILER: [UI_SelectAllEndpoints.class]: Procedure UI_SelectAllEndpoints has a statement with a non-deterministic result - statement: "SELECT * FROM ENDPOINT ORDER BY ENDPOINTNAME;", reason: insufficient ordering criteria.
+2014-03-07 16:24:28,025   INFO  [main] COMPILER: [FindMultiChecksForMultiCheckID.class]: Compiling Statement: SELECT MULTICHECKID, STATE, OPERATOR FROM MULTICHECK WHERE MULTICHECKID = ?;
+2014-03-07 16:24:28,030   INFO  [main] COMPILER: [UI_UpdateMulticheck.class]: Compiling Statement: UPDATE MULTICHECK SET MULTICHECKNAME = ?, OPERATOR = ? WHERE MULTICHECKID = ?;
+2014-03-07 16:24:28,034   INFO  [main] COMPILER: [UI_UpdateSpherenameForSphereID.class]: Compiling Statement: UPDATE SPHERE SET SPHERENAME = ? WHERE SPHEREID = ?;
+2014-03-07 16:24:28,036   INFO  [main] COMPILER: [UI_UpdateSpherenameForSphereID.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 1 of statement ' UPDATE SPHERE SET SPHERENAME = ? WHERE SPHEREID = ?;'
+2014-03-07 16:24:28,037   INFO  [main] COMPILER: [UI_DeleteCheckState.class]: Compiling Statement: DELETE FROM CHECKSTATE WHERE CHECKID = ?;
+2014-03-07 16:24:28,041   INFO  [main] COMPILER: [UI_SelectCheckForCheckID.class]: Compiling Statement: select checkid, name from check where checkid = ?;
+2014-03-07 16:24:28,045   INFO  [main] COMPILER: [ImprovedFindMatchingChecksEqual.class]: Compiling Statement: SELECT * FROM CHECK WHERE STATE = 1 AND ENDPOINTID = ?;
+2014-03-07 16:24:28,050   INFO  [main] COMPILER: [ImprovedFindMatchingChecksEqual.class]: Compiling Statement: UPDATE CHECK SET STATE = 1 WHERE ENDPOINTID = ? AND PROPERTYID = ? AND CHECKVALUE = ? AND OPERATOR = ? AND EXPIRED = ?;
+2014-03-07 16:24:28,054   INFO  [main] COMPILER: [ImprovedFindMatchingChecksEqual.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 0 of statement 'SELECT * FROM CHECK WHERE STATE = 1 AND ENDPOINTID = ?;'
+2014-03-07 16:24:28,054   WARN  [main] COMPILER: [ImprovedFindMatchingChecksEqual.class]: Procedure ImprovedFindMatchingChecksEqual is RW and has a statement whose result has a non-deterministic ordering - statement: "SELECT * FROM CHECK WHERE STATE = 1 AND ENDPOINTID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 16:24:28,055   INFO  [main] COMPILER: [UI_UpdateCheckpathName.class]: Compiling Statement: UPDATE CHECKPATH SET CHECKPATHNAME = ? WHERE CHECKPATHID = ?;
+2014-03-07 16:24:28,058   INFO  [main] COMPILER: [UI_UpdateCheckpathName.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 1 of statement ' UPDATE CHECKPATH SET CHECKPATHNAME = ? WHERE CHECKPATHID = ?;'
+2014-03-07 16:24:28,059   INFO  [main] COMPILER: [UpdateMultiChecks.class]: Compiling Statement: UPDATE MULTICHECK SET STATE = ? WHERE MULTICHECKID = ?
+2014-03-07 16:24:28,063   INFO  [main] COMPILER: [AME_ActionsForRule.class]: Compiling Statement: SELECT ACTIONID FROM RULE_ACTION_LINK WHERE RULEID = ? ORDER BY ACTIONID;
+2014-03-07 16:24:28,067   INFO  [main] COMPILER: [UI_SelectActPropertiesForEndpoint.class]: Compiling Statement: select * from endpoint, property, endpointclass where endpoint.endpointclassid = property.endpointclassid and endpointclass.endpointclassid = property.endpointclassid and endpoint.endpointid = ? and property.act = 1 ORDER BY endpoint.endpointname;
+2014-03-07 16:24:28,085   WARN  [main] COMPILER: [UI_SelectActPropertiesForEndpoint.class]: Procedure UI_SelectActPropertiesForEndpoint has a statement with a non-deterministic result - statement: "select * from endpoint, property, endpointclass where endpoint.endpointclassid = property.endpointclassid and endpointclass.endpointclassid = property.endpointclassid and endpoint.endpointid = ? and property.act = 1 ORDER BY endpoint.endpointname;", reason: insufficient ordering criteria.
+2014-03-07 16:24:28,087   INFO  [main] COMPILER: [UI_SelectEndpointsForUser.class]: Compiling Statement: SELECT * FROM ENDPOINT JOIN ENDPOINT_USER_LINK ON ENDPOINT.ENDPOINTID = ENDPOINT_USER_LINK.ENDPOINTID AND ENDPOINT_USER_LINK.USERID = ?;
+2014-03-07 16:24:28,090   WARN  [main] COMPILER: [UI_SelectEndpointsForUser.class]: Procedure UI_SelectEndpointsForUser has a statement with a non-deterministic result - statement: "SELECT * FROM ENDPOINT JOIN ENDPOINT_USER_LINK ON ENDPOINT.ENDPOINTID = ENDPOINT_USER_LINK.ENDPOINTID AND ENDPOINT_USER_LINK.USERID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 16:24:28,092   INFO  [main] COMPILER: [BLE_IsCycleMultiCheckTrue.class]: Compiling Statement: SELECT MULTICHECKRID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKLID = ? ORDER BY MULTICHECKRID;
+2014-03-07 16:24:28,095   INFO  [main] COMPILER: [BLE_IsCycleMultiCheckTrue.class]: Compiling Statement: SELECT MULTICHECKID, STATE FROM MULTICHECK WHERE MULTICHECKID IN ? ORDER BY MULTICHECKID;
+2014-03-07 16:24:28,107   INFO  [main] COMPILER: [BLE_IsCycleMultiCheckTrue.class]: Compiling Statement: SELECT OPERATOR FROM MULTICHECK WHERE MULTICHECKID = ? ORDER BY OPERATOR;
+2014-03-07 16:24:28,109   INFO  [main] COMPILER: [BLE_IsCycleMultiCheckTrue.class]: Compiling Statement: UPDATE MULTICHECK SET STATE = ? WHERE MULTICHECKID = ?;
+2014-03-07 16:24:28,113   INFO  [main] COMPILER: [FindParentMultiChecksForMultiCheckID.class]: Compiling Statement: SELECT MULTICHECKLID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKRID = ?;
+2014-03-07 16:24:28,115   WARN  [main] COMPILER: [FindParentMultiChecksForMultiCheckID.class]: Procedure FindParentMultiChecksForMultiCheckID has a statement with a non-deterministic result - statement: "SELECT MULTICHECKLID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKRID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 16:24:28,116   INFO  [main] COMPILER: [UI_LastLogEntryForEndpointProperty.class]: Compiling Statement: SELECT TOP 1 ENDPOINTID, PROPERTYID, PROPERTYENTRY, TIME_STAMP FROM ENDPOINTPROPERTYLOG WHERE ENDPOINTID = ? AND  PROPERTYID = ? ORDER BY TIME_STAMP DESC;
+2014-03-07 16:24:28,120   INFO  [main] COMPILER: [UI_LastLogEntryForEndpointProperty.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 0 of statement ' SELECT TOP 1 ENDPOINTID, PROPERTYID, PROPERTYENTRY, TIME_STAMP FROM ENDPOINTPROPERTYLOG WHERE ENDPOINTID = ? AND  PROPERTYID = ? ORDER BY TIME_STAMP DESC;'
+2014-03-07 16:24:28,120   WARN  [main] COMPILER: [UI_LastLogEntryForEndpointProperty.class]: Procedure UI_LastLogEntryForEndpointProperty has a statement with a non-deterministic result - statement: "SELECT TOP 1 ENDPOINTID, PROPERTYID, PROPERTYENTRY, TIME_STAMP FROM ENDPOINTPROPERTYLOG WHERE ENDPOINTID = ? AND  PROPERTYID = ? ORDER BY TIME_STAMP DESC;" , reason: insufficient ordering criteria.
+2014-03-07 16:24:28,122   INFO  [main] COMPILER: [UI_UpdateEndpointnameForEndpointID.class]: Compiling Statement: UPDATE ENDPOINT SET ENDPOINTNAME = ? WHERE ENDPOINTID = ?;
+2014-03-07 16:24:28,125   INFO  [main] COMPILER: [UI_DeleteEndpointFromSphere.class]: Compiling Statement: DELETE FROM ENDPOINT_SPHERE_LINK WHERE ENDPOINTID = ? AND SPHEREID = ?;
+2014-03-07 16:24:28,128   INFO  [main] COMPILER: [UI_SelectAllCheckpaths.class]: Compiling Statement: SELECT CHECKPATHID, CHECKPATHNAME FROM CHECKPATH ORDER BY CHECKPATHNAME;
+2014-03-07 16:24:28,132   WARN  [main] COMPILER: [UI_SelectAllCheckpaths.class]: Procedure UI_SelectAllCheckpaths has a statement with a non-deterministic result - statement: "SELECT CHECKPATHID, CHECKPATHNAME FROM CHECKPATH ORDER BY CHECKPATHNAME;", reason: insufficient ordering criteria.
+2014-03-07 16:24:28,133   INFO  [main] COMPILER: [UI_SelectCheckpathForCheckpathID.class]: Compiling Statement: select checkpathid, checkpathname, uiobject from checkpath where checkpathid = ?;
+2014-03-07 16:24:28,136   INFO  [main] COMPILER: [UI_SelectCheckpathForCheckpathID.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 0 of statement ' select checkpathid, checkpathname, uiobject from checkpath where checkpathid = ?;'
+2014-03-07 16:24:28,137   INFO  [main] COMPILER: [UI_FindUserForEmail.class]: Compiling Statement: SELECT * FROM USER WHERE USEREMAIL = ?;
+2014-03-07 16:24:28,147   WARN  [main] COMPILER: [UI_FindUserForEmail.class]: Procedure UI_FindUserForEmail has a statement with a non-deterministic result - statement: "SELECT * FROM USER WHERE USEREMAIL = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 16:24:28,148   INFO  [main] COMPILER: [UI_SelectAllSpheres.class]: Compiling Statement: SELECT * FROM SPHERE ORDER BY SPHERENAME;
+2014-03-07 16:24:28,159   WARN  [main] COMPILER: [UI_SelectAllSpheres.class]: Procedure UI_SelectAllSpheres has a statement with a non-deterministic result - statement: "SELECT * FROM SPHERE ORDER BY SPHERENAME;", reason: insufficient ordering criteria.
+2014-03-07 16:24:28,160   INFO  [main] COMPILER: [ImprovedFindAllMultichecksForCheck.class]: Compiling Statement: SELECT MULTICHECKID FROM MULTICHECK_CHECK_LINK WHERE CHECKID = ?;
+2014-03-07 16:24:28,165   INFO  [main] COMPILER: [ImprovedFindAllMultichecksForCheck.class]: Compiling Statement: UPDATE MULTICHECK SET STATE = 0 WHERE MULTICHECKID = ?
+2014-03-07 16:24:28,168   WARN  [main] COMPILER: [ImprovedFindAllMultichecksForCheck.class]: Procedure ImprovedFindAllMultichecksForCheck is RW and has a statement whose result has a non-deterministic ordering - statement: "SELECT MULTICHECKID FROM MULTICHECK_CHECK_LINK WHERE CHECKID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 16:24:28,169   INFO  [main] COMPILER: [BLE_UpdateCheckState.class]: Compiling Statement: UPDATE CHECKSTATE SET STATE = ? WHERE CHECKPATHID = ? AND CHECKID = ?;
+2014-03-07 16:24:28,172   INFO  [main] COMPILER: [UpdateChecks.class]: Compiling Statement: UPDATE CHECK SET STATE = ? WHERE CHECKID = ?
+2014-03-07 16:24:28,176   INFO  [main] COMPILER: [UI_DeleteMulticheckCheckLink.class]: Compiling Statement: DELETE FROM MULTICHECK_CHECK_LINK WHERE MULTICHECKID = ?;
+2014-03-07 16:24:28,180   INFO  [main] COMPILER: [UI_SelectAllPropertyClasses.class]: Compiling Statement: SELECT * FROM PROPERTYCLASS ORDER BY PROPERTYCLASSNAME;
+2014-03-07 16:24:28,184   WARN  [main] COMPILER: [UI_SelectAllPropertyClasses.class]: Procedure UI_SelectAllPropertyClasses has a statement with a non-deterministic result - statement: "SELECT * FROM PROPERTYCLASS ORDER BY PROPERTYCLASSNAME;", reason: insufficient ordering criteria.
+2014-03-07 16:24:28,186   INFO  [main] COMPILER: [BLE_AllChecksForExpression.class]: Compiling Statement: SELECT CHECKID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? ORDER BY CHECKID;
+2014-03-07 16:24:28,194   INFO  [main] COMPILER: [FindChecksForMultiCheckID.class]: Compiling Statement: SELECT CHECKID FROM MULTICHECK_CHECK_LINK WHERE MULTICHECKID = ?;
+2014-03-07 16:24:28,196   WARN  [main] COMPILER: [FindChecksForMultiCheckID.class]: Procedure FindChecksForMultiCheckID has a statement with a non-deterministic result - statement: "SELECT CHECKID FROM MULTICHECK_CHECK_LINK WHERE MULTICHECKID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 16:24:28,202   INFO  [main] COMPILER: [FindLinkedMultiChecksForMultiCheckID.class]: Compiling Statement: SELECT MULTICHECKRID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKLID = ?;
+2014-03-07 16:24:28,205   WARN  [main] COMPILER: [FindLinkedMultiChecksForMultiCheckID.class]: Procedure FindLinkedMultiChecksForMultiCheckID has a statement with a non-deterministic result - statement: "SELECT MULTICHECKRID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKLID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 16:24:28,206   INFO  [main] COMPILER: [FindChecksForCheckID.class]: Compiling Statement: SELECT CHECKID, STATE FROM CHECK WHERE CHECKID = ?;
+2014-03-07 16:24:28,213   INFO  [main] COMPILER: [BLE_CheckPathForMultiChecks.class]: Compiling Statement: UPDATE MULTICHECK SET STATE = 0 WHERE MULTICHECKID = ? AND CHECKPATHID = ?;
+2014-03-07 16:24:28,215   INFO  [main] COMPILER: [BLE_CheckPathForMultiChecks.class]: Compiling Statement: SELECT CHECKPATHID, MULTICHECKID FROM MULTICHECK WHERE CHECKPATHID = ? ORDER BY CHECKPATHID, MULTICHECKID;
+2014-03-07 16:24:28,218   INFO  [main] COMPILER: [BLE_ChecksForExpression.class]: Compiling Statement: SELECT CHECKID, OPERATOR, CHECKVALUE, CHECKPATHID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? AND EXPIRED = ? ORDER BY CHECKID;
+2014-03-07 16:24:28,227   WARN  [main] COMPILER: [BLE_ChecksForExpression.class]: Procedure BLE_ChecksForExpression has a statement with a non-deterministic result - statement: "SELECT CHECKID, OPERATOR, CHECKVALUE, CHECKPATHID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? AND EXPIRED = ? ORDER BY CHECKID;", reason: insufficient ordering criteria.
+2014-03-07 16:24:28,229   INFO  [main] COMPILER: [UI_SelectSensePropertiesForEndpoint.class]: Compiling Statement: select * from endpoint, property, endpointclass where endpoint.endpointclassid = property.endpointclassid and endpointclass.endpointclassid = property.endpointclassid and endpoint.endpointid = ? and property.sense = 1 ORDER BY endpoint.endpointname;
+2014-03-07 16:24:28,260   WARN  [main] COMPILER: [UI_SelectSensePropertiesForEndpoint.class]: Procedure UI_SelectSensePropertiesForEndpoint has a statement with a non-deterministic result - statement: "select * from endpoint, property, endpointclass where endpoint.endpointclassid = property.endpointclassid and endpointclass.endpointclassid = property.endpointclassid and endpoint.endpointid = ? and property.sense = 1 ORDER BY endpoint.endpointname;", reason: insufficient ordering criteria.
+2014-03-07 16:24:28,261   INFO  [main] COMPILER: [LGE_InsertEndpointPropertyLog.class]: Compiling Statement: INSERT INTO ENDPOINTPROPERTYLOG VALUES (?, ?, ?, ?, ?);
+2014-03-07 16:24:28,273   INFO  [main] COMPILER: [BLE_IsMultiCheckTrue.class]: Compiling Statement: SELECT CHECKID FROM MULTICHECK_CHECK_LINK WHERE MULTICHECKID = ? ORDER BY CHECKID;
+2014-03-07 16:24:28,275   INFO  [main] COMPILER: [BLE_IsMultiCheckTrue.class]: Compiling Statement: UPDATE MULTICHECK SET STATE = ? WHERE MULTICHECKID = ?;
+2014-03-07 16:24:28,276   INFO  [main] COMPILER: [BLE_IsMultiCheckTrue.class]: Compiling Statement: SELECT CHECKID, STATE FROM CHECKSTATE WHERE CHECKID IN ? ORDER BY CHECKID
+2014-03-07 16:24:28,279   INFO  [main] COMPILER: [BLE_IsMultiCheckTrue.class]: Compiling Statement: SELECT OPERATOR FROM MULTICHECK WHERE MULTICHECKID = ? ORDER BY OPERATOR;
+2014-03-07 16:24:28,282   INFO  [main] COMPILER: [UI_UpdateCheckpath.class]: Compiling Statement: UPDATE CHECKPATH SET UIOBJECT = ? WHERE CHECKPATHID = ?;
+2014-03-07 16:24:28,284   INFO  [main] COMPILER: [UI_UpdateCheckpath.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 1 of statement ' UPDATE CHECKPATH SET UIOBJECT = ? WHERE CHECKPATHID = ?;'
+2014-03-07 16:24:28,285   INFO  [main] COMPILER: [UI_SelectEndpointForEndpointID.class]: Compiling Statement: SELECT ENDPOINTID, ENDPOINTNAME, ENDPOINTCLASSID FROM ENDPOINT WHERE ENDPOINTID = ? ORDER BY ENDPOINTNAME;
+2014-03-07 16:24:28,288   WARN  [main] COMPILER: [UI_SelectEndpointForEndpointID.class]: Procedure UI_SelectEndpointForEndpointID has a statement with a non-deterministic result - statement: "SELECT ENDPOINTID, ENDPOINTNAME, ENDPOINTCLASSID FROM ENDPOINT WHERE ENDPOINTID = ? ORDER BY ENDPOINTNAME;", reason: insufficient ordering criteria.
+2014-03-07 16:24:28,289   INFO  [main] COMPILER: [ResetChecks.class]: Compiling Statement: UPDATE CHECK SET STATE = 0 WHERE ENDPOINTID = ?
+2014-03-07 16:24:28,291   INFO  [main] COMPILER: [ResetChecks.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 0 of statement 'UPDATE CHECK SET STATE = 0 WHERE ENDPOINTID = ?'
+2014-03-07 16:24:28,293   INFO  [main] COMPILER: [UI_SelectEndpointClassForEndpointClassID.class]: Compiling Statement: SELECT ENDPOINTCLASSID, ENDPOINTCLASSNAME FROM ENDPOINTCLASS WHERE ENDPOINTCLASSID = ? ORDER BY ENDPOINTCLASSNAME;
+2014-03-07 16:24:28,295   INFO  [main] COMPILER: [UI_SelectEndpointClassForEndpointClassID.class]: This procedure might benefit from an @ProcInfo annotation designating parameter 0 of statement ' SELECT ENDPOINTCLASSID, ENDPOINTCLASSNAME FROM ENDPOINTCLASS WHERE ENDPOINTCLASSID = ? ORDER BY ENDPOINTCLASSNAME;'
+2014-03-07 16:24:28,295   WARN  [main] COMPILER: [UI_SelectEndpointClassForEndpointClassID.class]: Procedure UI_SelectEndpointClassForEndpointClassID has a statement with a non-deterministic result - statement: "SELECT ENDPOINTCLASSID, ENDPOINTCLASSNAME FROM ENDPOINTCLASS WHERE ENDPOINTCLASSID = ? ORDER BY ENDPOINTCLASSNAME;", reason: insufficient ordering criteria.
+2014-03-07 16:24:28,296   INFO  [main] COMPILER: [UI_SelectEndpointsForSphere.class]: Compiling Statement: SELECT * FROM ENDPOINT JOIN ENDPOINT_SPHERE_LINK ON ENDPOINT.ENDPOINTID = ENDPOINT_SPHERE_LINK.ENDPOINTID AND ENDPOINT_SPHERE_LINK.SPHEREID = ?;
+2014-03-07 16:24:28,304   WARN  [main] COMPILER: [UI_SelectEndpointsForSphere.class]: Procedure UI_SelectEndpointsForSphere has a statement with a non-deterministic result - statement: "SELECT * FROM ENDPOINT JOIN ENDPOINT_SPHERE_LINK ON ENDPOINT.ENDPOINTID = ENDPOINT_SPHERE_LINK.ENDPOINTID AND ENDPOINT_SPHERE_LINK.SPHEREID = ?;", reason: the query result does not guarantee a consistent ordering
+2014-03-07 16:24:28,306   INFO  [main] COMPILER: [UI_SelectPropertyDetailsForEndpointClass.class]: Compiling Statement: select * from property join propertyclass on property.propertyclassid = propertyclass.propertyclassid and property.endpointclassid = ? ORDER BY propertyname;
+2014-03-07 16:24:28,319   WARN  [main] COMPILER: [UI_SelectPropertyDetailsForEndpointClass.class]: Procedure UI_SelectPropertyDetailsForEndpointClass has a statement with a non-deterministic result - statement: "select * from property join propertyclass on property.propertyclassid = propertyclass.propertyclassid and property.endpointclassid = ? ORDER BY propertyname;", reason: insufficient ordering criteria.
+2014-03-07 21:24:29,599   INFO  [main] CONSOLE: Initializing VoltDB...
+
+ _    __      ____  ____  ____ 
+| |  / /___  / / /_/ __ \/ __ )
+| | / / __ \/ / __/ / / / __  |
+| |/ / /_/ / / /_/ /_/ / /_/ / 
+|___/\____/_/\__/_____/_____/
+
+--------------------------------
+
+2014-03-07 21:24:29,606   INFO  [main] CONSOLE: Build: 4.0.2.3 voltdb-4.0.2.3-0-ge2f2df4-local Community Edition
+2014-03-07 21:24:29,613   INFO  [main] NETWORK: Default network thread count: 2
+2014-03-07 21:24:29,637   INFO  [main] HOST: Beginning inter-node communication on port 3021.
+2014-03-07 21:24:29,637   INFO  [main] HOST: Attempting to bind to leader ip localhost/127.0.0.1:3021
+2014-03-07 21:24:29,639   INFO  [main] CONSOLE: Connecting to VoltDB cluster as the leader...
+2014-03-07 21:24:29,674   INFO  [main] ZK-SERVER: binding to port /127.0.0.1:2181
+2014-03-07 21:24:29,689   INFO  [main] ZK-SERVER: Created server with tickTime 3000 minSessionTimeout 6000 maxSessionTimeout 60000
+2014-03-07 21:24:29,735   INFO  [main] ZK-SERVER: Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=2000 watcher=org.voltcore.zk.ZKUtil$1@2a03803
+2014-03-07 21:24:29,740   INFO  [main-SendThread()] ZK-CLIENT: Opening socket connection to server /127.0.0.1:2181
+2014-03-07 21:24:29,742   INFO  [NIOServerCxn.Factory:/127.0.0.1:2181] ZK-SERVER: Accepted socket connection from /127.0.0.1:40244
+2014-03-07 21:24:29,742   INFO  [main-SendThread(localhost:2181)] ZK-CLIENT: Socket connection established to localhost/127.0.0.1:2181, initiating session
+2014-03-07 21:24:29,744   INFO  [NIOServerCxn.Factory:/127.0.0.1:2181] ZK-SERVER: Client attempting to establish new session at /127.0.0.1:40244
+2014-03-07 21:24:29,756   INFO  [main-SendThread(localhost:2181)] ZK-CLIENT: Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x16b5e48cd8800000, negotiated timeout = 6000
+2014-03-07 21:24:29,761   INFO  [ZooKeeperServer] ZK-SERVER: Established session 0x16b5e48cd8800000 with negotiated timeout 6000 for client /127.0.0.1:40244
+2014-03-07 21:24:29,803   INFO  [Socket Joiner] HOST: Attempting to bind to internal ip 0.0.0.0/0.0.0.0:3021
+2014-03-07 21:24:29,830   INFO  [main] HOST: Host id of this node is: 0
+2014-03-07 21:24:29,830   INFO  [main] CONSOLE: Host id of this node is: 0
+2014-03-07 21:24:29,845   INFO  [main] HOST: URL of deployment: deployment.xml
+2014-03-07 21:24:30,091   INFO  [main] HOST: Dead host timeout set to 90000 milliseconds
+2014-03-07 21:24:31,571   INFO  [main] EXPORT: System is not using any export functionality.
+2014-03-07 21:24:31,575   INFO  [main] CONSOLE: Initializing the database. This may take a moment...
+2014-03-07 21:24:31,690   INFO  [Iv2ExecutionSite: 0:0] HOST: Loading native VoltDB code (voltdb-4.0.2.3). A confirmation message will follow if the loading is successful.
+2014-03-07 21:24:31,694   INFO  [Iv2ExecutionSite: 0:0] HOST: Successfully loaded native VoltDB library voltdb-4.0.2.3.
+2014-03-07 21:24:32,024   INFO  [main] TM: Setting maximum size of MPI read pool to: 20
+2014-03-07 21:24:32,195   INFO  [Leader elector-/db/leaders/globalservice] HOST: Host 0 promoted to be the global service provider
+2014-03-07 21:24:32,220   INFO  [LeaderAppointer-Babysitters] TM: Appointing HSId 0:0 as leader for partition 0
+2014-03-07 21:24:32,229   INFO  [LeaderAppointer-Babysitters] TM: Appointing HSId 0:1 as leader for partition 1
+2014-03-07 21:24:32,236   INFO  [LeaderCache] TM: SP 0:0 for partition 0 found (including self) 1 surviving replicas to repair.  Survivors: 0:0
+2014-03-07 21:24:32,246   INFO  [LeaderCache] TM: SP 0:1 for partition 1 found (including self) 1 surviving replicas to repair.  Survivors: 0:1
+2014-03-07 21:24:32,247   INFO  [LeaderAppointer-Babysitters] TM: Appointing HSId 0:2 as leader for partition 2
+2014-03-07 21:24:32,251   INFO  [LeaderCache] TM: SP 0:1 for partition 1 finished leader promotion. Took 12 ms.
+2014-03-07 21:24:32,255   INFO  [LeaderCache] TM: SP 0:0 for partition 0 finished leader promotion. Took 25 ms.
+2014-03-07 21:24:32,259   INFO  [LeaderCache] TM: SP 0:2 for partition 2 found (including self) 1 surviving replicas to repair.  Survivors: 0:2
+2014-03-07 21:24:32,259   INFO  [LeaderCache] TM: SP 0:2 for partition 2 finished leader promotion. Took 3 ms.
+2014-03-07 21:24:32,262   INFO  [LeaderCache] HOST: Mailbox is not registered for site id -4
+2014-03-07 21:24:32,274   INFO  [LeaderCache] HOST: Mailbox is not registered for site id -4
+2014-03-07 21:24:32,274   INFO  [LeaderCache] HOST: Mailbox is not registered for site id -4
+2014-03-07 21:24:32,280   INFO  [LeaderCache] TM: MP 0:3 for partition 16383 found 3 surviving leaders to repair.  Survivors: 0:0, 0:1, 0:2
+2014-03-07 21:24:32,283   INFO  [LeaderCache] TM: MP 0:3 for partition 16383 finished leader promotion. Took 10 ms.
+2014-03-07 21:24:32,296   INFO  [LeaderCache] HOST: Mailbox is not registered for site id -4
+2014-03-07 21:24:32,324   INFO  [main] HOST: Database start action is Create.
+2014-03-07 21:24:32,363   INFO  [main] HOST: PID of this Volt process is 3266
+2014-03-07 21:24:32,364   INFO  [main] HOST: Listening for native wire protocol clients on port 21212.
+2014-03-07 21:24:32,364   INFO  [main] HOST: Listening for admin wire protocol clients on port 21211.
+2014-03-07 21:24:32,364   INFO  [main] HOST: Local machine HTTP monitoring is listening on port 8080.
+2014-03-07 21:24:32,364   INFO  [main] HOST: Json API over HTTP enabled at path /api/1.0/, listening on port 8080.
+2014-03-07 21:24:32,364   INFO  [main] HOST: Available JVM arguments: -Xmx2048m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp -XX:-ReduceInitialCardMarks -Dlog4j.configuration=file:///home/thorsten/voltdb-4.0.2.3/voltdb/log4j.xml -Djava.library.path=/home/thorsten/voltdb-4.0.2.3/voltdb
+2014-03-07 21:24:32,364   INFO  [main] HOST: JVM class path: /home/thorsten/voltdb-4.0.2.3/voltdb/voltdb-4.0.2.3.jar:/home/thorsten/voltdb-4.0.2.3/lib/jna.jar:/home/thorsten/voltdb-4.0.2.3/lib/servlet-api-2.5.jar:/home/thorsten/voltdb-4.0.2.3/lib/tomcat-juli.jar:/home/thorsten/voltdb-4.0.2.3/lib/log4j-1.2.16.jar:/home/thorsten/voltdb-4.0.2.3/lib/snappy-java-1.1.0.1.jar:/home/thorsten/voltdb-4.0.2.3/lib/slf4j-nop-1.6.2.jar:/home/thorsten/voltdb-4.0.2.3/lib/commons-cli-1.2.jar:/home/thorsten/voltdb-4.0.2.3/lib/groovy-all-2.1.7-indy.jar:/home/thorsten/voltdb-4.0.2.3/lib/jsch-0.1.50.jar:/home/thorsten/voltdb-4.0.2.3/lib/super-csv-2.1.0.jar:/home/thorsten/voltdb-4.0.2.3/lib/jetty-io-7.6.1.v20120215.jar:/home/thorsten/voltdb-4.0.2.3/lib/commons-lang3-3.0.jar:/home/thorsten/voltdb-4.0.2.3/lib/jetty-server-7.6.1.v20120215.jar:/home/thorsten/voltdb-4.0.2.3/lib/jetty-util-7.6.1.v20120215.jar:/home/thorsten/voltdb-4.0.2.3/lib/jline-2.10.jar:/home/thorsten/voltdb-4.0.2.3/lib/protobuf-java-2.4.1.jar:/home/thorsten/voltdb-4.0.2.3/lib/slf4j-api-1.6.2.jar:/home/thorsten/voltdb-4.0.2.3/lib/tomcat-jdbc.jar:/home/thorsten/voltdb-4.0.2.3/lib/jetty-http-7.6.1.v20120215.jar:/home/thorsten/voltdb-4.0.2.3/lib/jetty-continuation-7.6.1.v20120215.jar:/home/thorsten/voltdb-4.0.2.3/lib/zmq-2.1.11.jar
+2014-03-07 21:24:32,364   INFO  [main] HOST: Maximum usable Java heap set to 1820 mb.
+2014-03-07 21:24:32,364   INFO  [main] HOST: Minimum required Java heap for catalog and server config is 654 MB.
+2014-03-07 21:24:32,364   INFO  [main] HOST: Cluster has 1 hosts with leader hostname: "localhost". 3 sites per host. K = 0.
+2014-03-07 21:24:32,364   INFO  [main] HOST: The entire cluster has 1 copy of each of the 3 logical partitions.
+2014-03-07 21:24:32,364   INFO  [main] HOST: Detection of network partitions in the cluster is enabled.
+2014-03-07 21:24:32,365   INFO  [main] HOST: Client authentication is not enabled. Anonymous clients accepted.
+2014-03-07 21:24:32,365   INFO  [main] HOST: No schedule set for automated snapshots.
+2014-03-07 21:24:32,365   INFO  [main] HOST: Using "voltdbroot" for voltdbroot directory.
+2014-03-07 21:24:32,365   INFO  [main] HOST: CPU INFO:         2 Cores (Reported by Java), -1 Sockets, 2 Hardware Threads
+2014-03-07 21:24:32,365   INFO  [main] HOST: CPU DESC:         Intel(R) Core(TM) i5-3570K CPU @ 3.40GHz 6144 KB cache
+2014-03-07 21:24:32,365   INFO  [main] HOST: HOST MEMORY (MB): 2703
+2014-03-07 21:24:32,365   INFO  [main] HOST: OS PROFILE:       Linux 2.6.32-431.5.1.el6.x86_64 amd64 en_US
+2014-03-07 21:24:32,365   INFO  [main] HOST: JAVA VERSION:     1.7.0_51
+2014-03-07 21:24:32,365   INFO  [main] HOST: JAVA RUNTIME:     Java(TM) SE Runtime Environment (1.7.0_51-b13)
+2014-03-07 21:24:32,365   INFO  [main] HOST: JAVA VM:          Java HotSpot(TM) 64-Bit Server VM (24.51-b03, mixed mode)
+2014-03-07 21:24:32,366   INFO  [main] HOST: About to list cluster interfaces for all nodes with format [ip1 ip2 ... ipN] client-port:admin-port:http-port
+2014-03-07 21:24:32,366   INFO  [main] HOST:   Host id: 0 with interfaces: 16.1.1.110 2a02:8070:8333:b700:20c:29ff:fe99:4c48%2 21212,21211,8080 [SELF]
+2014-03-07 21:24:32,367   WARN  [main] CONSOLE: This is not a highly available cluster. K-Safety is set to 0.
+2014-03-07 21:24:32,367   WARN  [main] CONSOLE: Durability is turned off. Command logging is off.
+2014-03-07 21:24:32,384   INFO  [SnapshotDaemon] LOGGING: This node was selected as the leader for snapshot truncation
+2014-03-07 21:24:32,386   INFO  [SnapshotDaemon] LOGGING: Checking for existence of snapshot truncation request
+2014-03-07 21:24:32,387   INFO  [Thread-9] HOST: Logging config info
+2014-03-07 21:24:32,419   INFO  [Thread-10] CONSOLE: Server completed initialization.
+2014-03-07 21:38:57,953   WARN  [Volt Network - 1] AUTH: Procedure UI_DeleteMulticheck was not found. This message is rate limited to once every 60 seconds.
+2014-03-07 22:23:18,108   WARN  [Volt Network - 0] org.voltcore.network.VoltNetwork: Network was 2697 milliseconds late in updating the estimated time
+2014-03-07 22:30:01,855   WARN  [Volt Network - 0] org.voltcore.network.VoltNetwork: Network was 156127 milliseconds late in updating the estimated time

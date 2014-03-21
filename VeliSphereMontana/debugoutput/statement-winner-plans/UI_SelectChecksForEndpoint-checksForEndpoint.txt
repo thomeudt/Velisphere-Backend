@@ -1,0 +1,11 @@
+SQL: select * from check join property on check.propertyid = property.propertyid and check.endpointid = ? ORDER BY name;
+COST: 5958.0
+PLAN:
+RETURN RESULTS TO STORED PROCEDURE
+ ORDER BY (SORT)
+  NESTLOOP INDEX JOIN
+  inline (INDEX SCAN of "PROPERTY" using "SYS_IDX_SYS_PK_10063_10064" (unique-scan covering))
+   RECEIVE FROM ALL PARTITIONS
+    SEND PARTITION RESULTS TO COORDINATOR
+     INDEX SCAN of "CHECK" using "CHEP" (unique-scan covering)
+

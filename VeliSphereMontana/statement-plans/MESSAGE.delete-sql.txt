@@ -1,0 +1,6 @@
+SQL: DELETE FROM MESSAGE WHERE (MESSAGEID = ?);
+PLAN:
+DELETEMESSAGE
+ INDEX SCAN of "MESSAGE" using its primary key index
+  uniquely match (MESSAGEID = ?0)
+

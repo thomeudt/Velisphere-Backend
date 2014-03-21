@@ -34,7 +34,7 @@
           Start the server after compiling the DDL and stored procedures              
          ================================= -->
 <target name="serverStart" depends="catalog">
-	<echo message="Starting VeliSphere Monatana v0.62"/>
+	<echo message="Starting VeliSphere Monatana v0.7.0"/>
 	<parallel>
         <exec executable="${VoltHome}/bin/voltdb">
         	<arg value="create"/>

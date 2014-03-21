@@ -1,0 +1,8 @@
+SQL: select checkpathid, checkpathname, uiobject from checkpath where checkpathid = ?;
+PLAN:
+RETURN RESULTS TO STORED PROCEDURE
+ RECEIVE FROM ALL PARTITIONS
+  SEND PARTITION RESULTS TO COORDINATOR
+   INDEX SCAN of "CHECKPATH" using its primary key index
+    uniquely match (CHECKPATHID = ?0)
+
