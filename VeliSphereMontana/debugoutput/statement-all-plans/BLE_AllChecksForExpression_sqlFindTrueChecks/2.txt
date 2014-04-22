@@ -1,3 +1,0 @@
-ORDER BY (SORT)
- INDEX SCAN of "CHECK" using "CHPR" (unique-scan covering)
-

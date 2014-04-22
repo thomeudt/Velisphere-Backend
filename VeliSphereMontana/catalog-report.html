@@ -82,12 +82,12 @@
             <h4>Catalog Overview Statistics</h4>
             <table class='table table-condensed'>
 <tr><td>Compiled by VoltDB Version</td><td>4.0.2.3</td></tr>
-<tr><td>Compiled on</td><td>Fri, 21 Mar 2014 18:22:21 GMT+00:00</td></tr>
+<tr><td>Compiled on</td><td>Tue, 22 Apr 2014 19:51:51 GMT+00:00</td></tr>
 <tr><td>Table Count</td><td>24 (17 partitioned / 7 replicated)</td></tr>
 <tr><td>Materialized View Count</td><td>0</td></tr>
-<tr><td>Index Count</td><td>44</td></tr>
-<tr><td>Procedure Count</td><td>57 (11 partitioned / 46 replicated) (35 read-only / 22 read-write)</td></tr>
-<tr><td>SQL Statement Count</td><td>67</td></tr>
+<tr><td>Index Count</td><td>45</td></tr>
+<tr><td>Procedure Count</td><td>58 (12 partitioned / 46 replicated) (36 read-only / 22 read-write)</td></tr>
+<tr><td>SQL Statement Count</td><td>68</td></tr>
 </table>
 
 <h4>Warnings</h4><table class='table table-condensed'>
@@ -101,6 +101,7 @@
 <tr><td><a href='#p-ui_selectallendpoints'>UI_SelectAllEndpoints</a></td><td>Procedure UI_SelectAllEndpoints has a statement with a non-deterministic result - statement: "SELECT * FROM ENDPOINT ORDER BY ENDPOINTNAME;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-improvedfindmatchingchecksequal'>ImprovedFindMatchingChecksEqual</a></td><td>Procedure ImprovedFindMatchingChecksEqual is RW and has a statement whose result has a non-deterministic ordering - statement: "SELECT * FROM CHECK WHERE STATE = 1 AND ENDPOINTID = ?;", reason: the query result does not guarantee a consistent ordering</td></tr>
 <tr><td><a href='#p-ui_selectactpropertiesforendpoint'>UI_SelectActPropertiesForEndpoint</a></td><td>Procedure UI_SelectActPropertiesForEndpoint has a statement with a non-deterministic result - statement: "select * from endpoint, property, endpointclass where endpoint.endpointclassid = property.endpointclassid and endpointclass.endpointclassid = property.endpointclassid and endpoint.endpointid = ? and property.act = 1 ORDER BY endpoint.endpointname;", reason: insufficient ordering criteria.</td></tr>
+<tr><td><a href='#p-ui_selectactionsforcheckid'>UI_SelectActionsForCheckID</a></td><td>Procedure UI_SelectActionsForCheckID has a statement with a non-deterministic result - statement: "SELECT ACTION.ACTIONID, ACTION.ACTIONNAME, ACTION.TARGETENDPOINTID, OUTBOUNDPROPERTYACTION.OUTBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.INBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.CURRENTSTATEPROPERTYID, OUTBOUNDPROPERTYACTION.CUSTOMPAYLOAD FROM ACTION INNER JOIN OUTBOUNDPROPERTYACTION ON ACTION.ACTIONID = OUTBOUNDPROPERTYACTION.ACTIONID AND ACTION.CHECKID = ? ORDER BY ACTION.ACTIONID;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-ui_selectendpointsforuser'>UI_SelectEndpointsForUser</a></td><td>Procedure UI_SelectEndpointsForUser has a statement with a non-deterministic result - statement: "SELECT * FROM ENDPOINT JOIN ENDPOINT_USER_LINK ON ENDPOINT.ENDPOINTID = ENDPOINT_USER_LINK.ENDPOINTID AND ENDPOINT_USER_LINK.USERID = ?;", reason: the query result does not guarantee a consistent ordering</td></tr>
 <tr><td><a href='#p-findparentmultichecksformulticheckid'>FindParentMultiChecksForMultiCheckID</a></td><td>Procedure FindParentMultiChecksForMultiCheckID has a statement with a non-deterministic result - statement: "SELECT MULTICHECKLID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKRID = ?;", reason: the query result does not guarantee a consistent ordering</td></tr>
 <tr><td><a href='#p-ui_lastlogentryforendpointproperty'>UI_LastLogEntryForEndpointProperty</a></td><td>Procedure UI_LastLogEntryForEndpointProperty has a statement with a non-deterministic result - statement: "SELECT TOP 1 ENDPOINTID, PROPERTYID, PROPERTYENTRY, TIME_STAMP FROM ENDPOINTPROPERTYLOG WHERE ENDPOINTID = ? AND  PROPERTYID = ? ORDER BY TIME_STAMP DESC;" , reason: index scan may provide insufficient ordering</td></tr>
@@ -111,6 +112,7 @@
 <tr><td><a href='#p-ui_selectallpropertyclasses'>UI_SelectAllPropertyClasses</a></td><td>Procedure UI_SelectAllPropertyClasses has a statement with a non-deterministic result - statement: "SELECT * FROM PROPERTYCLASS ORDER BY PROPERTYCLASSNAME;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-findchecksformulticheckid'>FindChecksForMultiCheckID</a></td><td>Procedure FindChecksForMultiCheckID has a statement with a non-deterministic result - statement: "SELECT CHECKID FROM MULTICHECK_CHECK_LINK WHERE MULTICHECKID = ?;", reason: the query result does not guarantee a consistent ordering</td></tr>
 <tr><td><a href='#p-findlinkedmultichecksformulticheckid'>FindLinkedMultiChecksForMultiCheckID</a></td><td>Procedure FindLinkedMultiChecksForMultiCheckID has a statement with a non-deterministic result - statement: "SELECT MULTICHECKRID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKLID = ?;", reason: the query result does not guarantee a consistent ordering</td></tr>
+<tr><td><a href='#p-ble_checksforexpression'>BLE_ChecksForExpression</a></td><td>Procedure BLE_ChecksForExpression has a statement with a non-deterministic result - statement: "SELECT CHECKID, OPERATOR, CHECKVALUE, CHECKPATHID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? AND EXPIRED = ? ORDER BY CHECKID, CHECKVALUE, CHECKPATHID;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-ui_selectsensepropertiesforendpoint'>UI_SelectSensePropertiesForEndpoint</a></td><td>Procedure UI_SelectSensePropertiesForEndpoint has a statement with a non-deterministic result - statement: "select * from endpoint, property, endpointclass where endpoint.endpointclassid = property.endpointclassid and endpointclass.endpointclassid = property.endpointclassid and endpoint.endpointid = ? and property.sense = 1 ORDER BY endpoint.endpointname;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-ui_selectendpointforendpointid'>UI_SelectEndpointForEndpointID</a></td><td>Procedure UI_SelectEndpointForEndpointID has a statement with a non-deterministic result - statement: "SELECT ENDPOINTID, ENDPOINTNAME, ENDPOINTCLASSID FROM ENDPOINT WHERE ENDPOINTID = ? ORDER BY ENDPOINTNAME;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-ui_selectendpointclassforendpointclassid'>UI_SelectEndpointClassForEndpointClassID</a></td><td>Procedure UI_SelectEndpointClassForEndpointClassID has a statement with a non-deterministic result - statement: "SELECT ENDPOINTCLASSID, ENDPOINTCLASSNAME FROM ENDPOINTCLASS WHERE ENDPOINTCLASSID = ? ORDER BY ENDPOINTCLASSNAME;", reason: insufficient ordering criteria.</td></tr>
@@ -139,12 +141,12 @@
                 <tr class='primaryrow'><td style='white-space: nowrap;'><i id='s-action--icon' class='icon-chevron-right'></i> <a href='#' id='s-action' class='togglex'>ACTION</a></td><td><span class='label label l-Table'>Table</span></td><td style='whitespace: nowrap;'><span class='label label-success l-Partitioned'>Partitioned</span><small> on CHECKPATHID</small></td><td>8</td><td>3</td><td><span class='label label-info l-Has-PKey'>Has-PKey</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='s-action--dropdown'>
 <p><pre>CREATE TABLE ACTION (     ACTIONID VARCHAR(36) NOT NULL,    ACTIONNAME VARCHAR(255) NOT NULL,    TARGETENDPOINTID VARCHAR(36),    TGTEPIDFROMINBOUNDPROP VARCHAR(36),    EXPIRED TINYINT,    CHECKID VARCHAR(36),    MULTICHECKID VARCHAR(36),    CHECKPATHID VARCHAR(36) NOT NULL,    PRIMARY KEY (ACTIONID,CHECKPATHID)  );</pre></p>
-<p>Read-only by procedures: <a href='#p-AME_DetailsForAction'>AME_DetailsForAction</a>, <a href='#p-BLE_FindActionsForCheckID'>BLE_FindActionsForCheckID</a>, <a href='#p-BLE_FindActionsForMultiCheckID'>BLE_FindActionsForMultiCheckID</a></p>    <table class='table tableL2 table-condensed'>
+<p>Read-only by procedures: <a href='#p-AME_DetailsForAction'>AME_DetailsForAction</a>, <a href='#p-BLE_FindActionsForCheckID'>BLE_FindActionsForCheckID</a>, <a href='#p-BLE_FindActionsForMultiCheckID'>BLE_FindActionsForMultiCheckID</a>, <a href='#p-UI_SelectActionsForCheckID'>UI_SelectActionsForCheckID</a></p>    <table class='table tableL2 table-condensed'>
     <thead><tr><th>Index Name</th><th>Type</th><th>Columns</th><th>Uniqueness</th></tr></thead>
     <tbody>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-action-rcheck--icon' class='icon-chevron-right'></i> <a href='#' id='s-action-rcheck' class='togglex'>RCHECK</a></td><td>BALANCED_TREE</td><td>CHECKID</td><td><span class='label label-info l-Nonunique'>Nonunique</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-action-rcheck--dropdown'>
-<p>Used by procedures: <a href='#p-BLE_FindActionsForCheckID'>BLE_FindActionsForCheckID</a></p></td></tr>
+<p>Used by procedures: <a href='#p-BLE_FindActionsForCheckID'>BLE_FindActionsForCheckID</a>, <a href='#p-UI_SelectActionsForCheckID'>UI_SelectActionsForCheckID</a></p></td></tr>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-action-rmcheck--icon' class='icon-chevron-right'></i> <a href='#' id='s-action-rmcheck' class='togglex'>RMCHECK</a></td><td>BALANCED_TREE</td><td>MULTICHECKID</td><td><span class='label label-info l-Nonunique'>Nonunique</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-action-rmcheck--dropdown'>
 <p>Used by procedures: <a href='#p-BLE_FindActionsForMultiCheckID'>BLE_FindActionsForMultiCheckID</a></p></td></tr>
@@ -154,18 +156,21 @@
     </tbody>
     </table>
 </td></tr>
-<tr class='primaryrow'><td style='white-space: nowrap;'><i id='s-check--icon' class='icon-chevron-right'></i> <a href='#' id='s-check' class='togglex'>CHECK</a></td><td><span class='label label l-Table'>Table</span></td><td style='whitespace: nowrap;'><span class='label label-success l-Partitioned'>Partitioned</span><small> on ENDPOINTID</small></td><td>9</td><td>5</td><td><span class='label label-info l-Has-PKey'>Has-PKey</span></td></tr>
+<tr class='primaryrow'><td style='white-space: nowrap;'><i id='s-check--icon' class='icon-chevron-right'></i> <a href='#' id='s-check' class='togglex'>CHECK</a></td><td><span class='label label l-Table'>Table</span></td><td style='whitespace: nowrap;'><span class='label label-success l-Partitioned'>Partitioned</span><small> on ENDPOINTID</small></td><td>9</td><td>6</td><td><span class='label label-info l-Has-PKey'>Has-PKey</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='s-check--dropdown'>
 <p><pre>CREATE TABLE CHECK (     CHECKID VARCHAR(36) NOT NULL,    ENDPOINTID VARCHAR(36) NOT NULL,    PROPERTYID VARCHAR(36) NOT NULL,    CHECKVALUE VARCHAR(4096),    OPERATOR VARCHAR (32),    STATE TINYINT,    EXPIRED TINYINT,    NAME VARCHAR(255),    CHECKPATHID VARCHAR(36) NOT NULL,    PRIMARY KEY (CHECKID, CHECKPATHID, ENDPOINTID) );</pre></p>
 <p>Read-only by procedures: <a href='#p-BLE_AllChecksForExpression'>BLE_AllChecksForExpression</a>, <a href='#p-BLE_ChecksForExpression'>BLE_ChecksForExpression</a>, <a href='#p-FindAllChecks'>FindAllChecks</a>, <a href='#p-FindChecksForCheckID'>FindChecksForCheckID</a>, <a href='#p-UI_SelectCheckForCheckID'>UI_SelectCheckForCheckID</a>, <a href='#p-UI_SelectChecksForEndpoint'>UI_SelectChecksForEndpoint</a></p><p>Read/Write by procedures: <a href='#p-ImprovedFindMatchingChecksEqual'>ImprovedFindMatchingChecksEqual</a>, <a href='#p-ResetChecks'>ResetChecks</a>, <a href='#p-UI_DeleteCheck'>UI_DeleteCheck</a>, <a href='#p-UI_UpdateCheck'>UI_UpdateCheck</a>, <a href='#p-UpdateChecks'>UpdateChecks</a></p>    <table class='table tableL2 table-condensed'>
     <thead><tr><th>Index Name</th><th>Type</th><th>Columns</th><th>Uniqueness</th></tr></thead>
     <tbody>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-check-chcomb--icon' class='icon-chevron-right'></i> <a href='#' id='s-check-chcomb' class='togglex'>CHCOMB</a></td><td>BALANCED_TREE</td><td>ENDPOINTID, PROPERTYID, CHECKPATHID, STATE</td><td><span class='label label-info l-Nonunique'>Nonunique</span></td></tr>
+<tr class='dropdown2'><td colspan='5' id='s-check-chcomb--dropdown'>
+<p>Used by procedures: <a href='#p-BLE_AllChecksForExpression'>BLE_AllChecksForExpression</a>, <a href='#p-BLE_ChecksForExpression'>BLE_ChecksForExpression</a></p></td></tr>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-check-chcp--icon' class='icon-chevron-right'></i> <a href='#' id='s-check-chcp' class='togglex'>CHCP</a></td><td>BALANCED_TREE</td><td>CHECKPATHID</td><td><span class='label label-info l-Nonunique'>Nonunique</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-check-chcp--dropdown'>
 </td></tr>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-check-chep--icon' class='icon-chevron-right'></i> <a href='#' id='s-check-chep' class='togglex'>CHEP</a></td><td>BALANCED_TREE</td><td>ENDPOINTID</td><td><span class='label label-info l-Nonunique'>Nonunique</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-check-chep--dropdown'>
-<p>Used by procedures: <a href='#p-BLE_AllChecksForExpression'>BLE_AllChecksForExpression</a>, <a href='#p-BLE_ChecksForExpression'>BLE_ChecksForExpression</a>, <a href='#p-ImprovedFindMatchingChecksEqual'>ImprovedFindMatchingChecksEqual</a>, <a href='#p-UI_SelectChecksForEndpoint'>UI_SelectChecksForEndpoint</a></p></td></tr>
+<p>Used by procedures: <a href='#p-ImprovedFindMatchingChecksEqual'>ImprovedFindMatchingChecksEqual</a>, <a href='#p-UI_SelectChecksForEndpoint'>UI_SelectChecksForEndpoint</a></p></td></tr>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-check-chpr--icon' class='icon-chevron-right'></i> <a href='#' id='s-check-chpr' class='togglex'>CHPR</a></td><td>BALANCED_TREE</td><td>PROPERTYID</td><td><span class='label label-info l-Nonunique'>Nonunique</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-check-chpr--dropdown'>
 </td></tr>
@@ -406,12 +411,12 @@
 <tr class='primaryrow'><td style='white-space: nowrap;'><i id='s-outboundpropertyaction--icon' class='icon-chevron-right'></i> <a href='#' id='s-outboundpropertyaction' class='togglex'>OUTBOUNDPROPERTYACTION</a></td><td><span class='label label l-Table'>Table</span></td><td style='whitespace: nowrap;'><span class='label label-success l-Partitioned'>Partitioned</span><small> on CHECKPATHID</small></td><td>8</td><td>2</td><td><span class='label label-info l-Has-PKey'>Has-PKey</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='s-outboundpropertyaction--dropdown'>
 <p><pre>CREATE TABLE OUTBOUNDPROPERTYACTION (     OUTBOUNDPROPERTYACTIONID VARCHAR(36) NOT NULL,    OUTBOUNDPROPERTYID VARCHAR(36),    INBOUNDPROPERTYID VARCHAR(36),    CURRENTSTATEPROPERTYID VARCHAR(36),    CURRENTSTATEENDPOINTID VARCHAR(36),    CUSTOMPAYLOAD VARCHAR(32768),    ACTIONID VARCHAR(36) NOT NULL,    CHECKPATHID VARCHAR(36) NOT NULL,    PRIMARY KEY (OUTBOUNDPROPERTYACTIONID, CHECKPATHID) );</pre></p>
-<p>Read-only by procedures: <a href='#p-AME_DetailsForAction'>AME_DetailsForAction</a></p>    <table class='table tableL2 table-condensed'>
+<p>Read-only by procedures: <a href='#p-AME_DetailsForAction'>AME_DetailsForAction</a>, <a href='#p-UI_SelectActionsForCheckID'>UI_SelectActionsForCheckID</a></p>    <table class='table tableL2 table-condensed'>
     <thead><tr><th>Index Name</th><th>Type</th><th>Columns</th><th>Uniqueness</th></tr></thead>
     <tbody>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-outboundpropertyaction-outboundpropaction--icon' class='icon-chevron-right'></i> <a href='#' id='s-outboundpropertyaction-outboundpropaction' class='togglex'>OUTBOUNDPROPACTION</a></td><td>BALANCED_TREE</td><td>ACTIONID</td><td><span class='label label-info l-Nonunique'>Nonunique</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-outboundpropertyaction-outboundpropaction--dropdown'>
-<p>Used by procedures: <a href='#p-AME_DetailsForAction'>AME_DetailsForAction</a></p></td></tr>
+<p>Used by procedures: <a href='#p-AME_DetailsForAction'>AME_DetailsForAction</a>, <a href='#p-UI_SelectActionsForCheckID'>UI_SelectActionsForCheckID</a></p></td></tr>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-outboundpropertyaction-sys_idx_sys_pk_10129_10130--icon' class='icon-chevron-right'></i> <a href='#' id='s-outboundpropertyaction-sys_idx_sys_pk_10129_10130' class='togglex'>SYS_IDX_SYS_PK_10129_10130</a></td><td>BALANCED_TREE</td><td>OUTBOUNDPROPERTYACTIONID, CHECKPATHID</td><td><span class='label label-important l-Unique'>Unique</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-outboundpropertyaction-sys_idx_sys_pk_10129_10130--dropdown'>
 </td></tr>
@@ -519,13 +524,13 @@
 </td></tr>
 <tr class='primaryrow'><td style='white-space: nowrap'><i id='p-ble_allchecksforexpression--icon' class='icon-chevron-right'></i> <a href='#p-ble_allchecksforexpression' id='p-ble_allchecksforexpression' class='togglex'>BLE_AllChecksForExpression</a></td><td>STRING, STRING</td><td><span class='label label-success l-Single'>Single</span></td><td><span class='label label-success l-Read'>Read</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-ble_allchecksforexpression--dropdown'>
-<p>Partitioned on parameter 0 which maps to column ENDPOINTID of table <a class='invert' href='#s-CHECK'>CHECK</a>.</p><p>Read-only access to tables: <a href='#s-CHECK'>CHECK</a></p><p>Uses indexes: <a href='#s-CHECK-CHEP'>CHEP</a></p>    <table class='table tableL2 table-condensed'>
+<p>Partitioned on parameter 0 which maps to column ENDPOINTID of table <a class='invert' href='#s-CHECK'>CHECK</a>.</p><p>Read-only access to tables: <a href='#s-CHECK'>CHECK</a></p><p>Uses indexes: <a href='#s-CHECK-CHCOMB'>CHCOMB</a></p>    <table class='table tableL2 table-condensed'>
     <thead><tr><th><span style='white-space: nowrap;'>Statement Name</span></th><th>Statement SQL</th><th>Params</th><th>R/W</th><th>Attributes</th></tr></thead>
     <tbody>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ble_allchecksforexpression-sqlfindtruechecks--icon' class='icon-chevron-right'></i> <a href='#' id='p-ble_allchecksforexpression-sqlfindtruechecks' class='togglex'>sqlFindTrueChecks</a></td><td><tt>SELECT CHECKID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? ORDER BY CHECKID;</td></tt><td>STRING, STRING</td><td><span class='label label-success l-Read'>Read</span></td><td></td></tr>
 <tr class='dropdown2'><td colspan='5' id='p-ble_allchecksforexpression-sqlfindtruechecks--dropdown'>
 <div class='well well-small'><h4>Explain Plan:</h4>
-<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;ORDER&nbsp;BY&nbsp;(SORT)<br/>&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-CHECK'>CHECK</a>"&nbsp;using&nbsp;"<a href='#s-CHECK-CHEP'>CHEP</a>"<br/>&nbsp;&nbsp;&nbsp;scan&nbsp;matches&nbsp;for&nbsp;(ENDPOINTID&nbsp;=&nbsp;?0),&nbsp;filter&nbsp;by&nbsp;(PROPERTYID&nbsp;=&nbsp;?1)<br/></tt></div>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;ORDER&nbsp;BY&nbsp;(SORT)<br/>&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-CHECK'>CHECK</a>"&nbsp;using&nbsp;"<a href='#s-CHECK-CHCOMB'>CHCOMB</a>"<br/>&nbsp;&nbsp;range-scan&nbsp;on&nbsp;2&nbsp;of&nbsp;4&nbsp;cols&nbsp;from&nbsp;(ENDPOINTID&nbsp;=&nbsp;?0)&nbsp;AND&nbsp;(PROPERTYID&nbsp;>=&nbsp;?1)&nbsp;while&nbsp;((PROPERTYID&nbsp;=&nbsp;?1)&nbsp;AND&nbsp;(ENDPOINTID&nbsp;=&nbsp;?0))<br/></tt></div>
 </td></tr>
     </tbody>
     </table>
@@ -550,13 +555,13 @@
 </td></tr>
 <tr class='primaryrow'><td style='white-space: nowrap'><i id='p-ble_checksforexpression--icon' class='icon-chevron-right'></i> <a href='#p-ble_checksforexpression' id='p-ble_checksforexpression' class='togglex'>BLE_ChecksForExpression</a></td><td>STRING, STRING, STRING, TINYINT</td><td><span class='label label-success l-Single'>Single</span></td><td><span class='label label-success l-Read'>Read</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-ble_checksforexpression--dropdown'>
-<p>Partitioned on parameter 0 which maps to column ENDPOINTID of table <a class='invert' href='#s-CHECK'>CHECK</a>.</p><p>Read-only access to tables: <a href='#s-CHECK'>CHECK</a></p><p>Uses indexes: <a href='#s-CHECK-CHEP'>CHEP</a></p>    <table class='table tableL2 table-condensed'>
+<p>Partitioned on parameter 0 which maps to column ENDPOINTID of table <a class='invert' href='#s-CHECK'>CHECK</a>.</p><p>Read-only access to tables: <a href='#s-CHECK'>CHECK</a></p><p>Uses indexes: <a href='#s-CHECK-CHCOMB'>CHCOMB</a></p>    <table class='table tableL2 table-condensed'>
     <thead><tr><th><span style='white-space: nowrap;'>Statement Name</span></th><th>Statement SQL</th><th>Params</th><th>R/W</th><th>Attributes</th></tr></thead>
     <tbody>
-        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ble_checksforexpression-sqlfindmatchingchecks--icon' class='icon-chevron-right'></i> <a href='#' id='p-ble_checksforexpression-sqlfindmatchingchecks' class='togglex'>sqlFindMatchingChecks</a></td><td><tt>SELECT CHECKID, OPERATOR, CHECKVALUE, CHECKPATHID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? AND EXPIRED = ? ORDER BY CHECKID, CHECKPATHID, OPERATOR, CHECKVALUE;</td></tt><td>STRING, STRING, TINYINT</td><td><span class='label label-success l-Read'>Read</span></td><td></td></tr>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ble_checksforexpression-sqlfindmatchingchecks--icon' class='icon-chevron-right'></i> <a href='#' id='p-ble_checksforexpression-sqlfindmatchingchecks' class='togglex'>sqlFindMatchingChecks</a></td><td><tt>SELECT CHECKID, OPERATOR, CHECKVALUE, CHECKPATHID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? AND EXPIRED = ? ORDER BY CHECKID, CHECKVALUE, CHECKPATHID;</td></tt><td>STRING, STRING, TINYINT</td><td><span class='label label-success l-Read'>Read</span></td><td><span class='label label-inverse l-Determinism'>Determinism</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='p-ble_checksforexpression-sqlfindmatchingchecks--dropdown'>
 <div class='well well-small'><h4>Explain Plan:</h4>
-<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;ORDER&nbsp;BY&nbsp;(SORT)<br/>&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-CHECK'>CHECK</a>"&nbsp;using&nbsp;"<a href='#s-CHECK-CHEP'>CHEP</a>"<br/>&nbsp;&nbsp;&nbsp;scan&nbsp;matches&nbsp;for&nbsp;(ENDPOINTID&nbsp;=&nbsp;?0),&nbsp;filter&nbsp;by&nbsp;((EXPIRED&nbsp;=&nbsp;?2)&nbsp;AND&nbsp;(PROPERTYID&nbsp;=&nbsp;?1))<br/></tt></div>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;ORDER&nbsp;BY&nbsp;(SORT)<br/>&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-CHECK'>CHECK</a>"&nbsp;using&nbsp;"<a href='#s-CHECK-CHCOMB'>CHCOMB</a>"<br/>&nbsp;&nbsp;range-scan&nbsp;on&nbsp;2&nbsp;of&nbsp;4&nbsp;cols&nbsp;from&nbsp;(ENDPOINTID&nbsp;=&nbsp;?0)&nbsp;AND&nbsp;(PROPERTYID&nbsp;>=&nbsp;?1)&nbsp;while&nbsp;((PROPERTYID&nbsp;=&nbsp;?1)&nbsp;AND&nbsp;(ENDPOINTID&nbsp;=&nbsp;?0)),&nbsp;filter&nbsp;by&nbsp;(EXPIRED&nbsp;=&nbsp;?2)<br/></tt></div>
 </td></tr>
     </tbody>
     </table>
@@ -791,7 +796,7 @@
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-improvedfindmatchingchecksequal-sqlupdatetruechecks--icon' class='icon-chevron-right'></i> <a href='#' id='p-improvedfindmatchingchecksequal-sqlupdatetruechecks' class='togglex'>sqlUpdateTrueChecks</a></td><td><tt>UPDATE CHECK SET STATE = 1 WHERE ENDPOINTID = ? AND PROPERTYID = ? AND CHECKVALUE = ? AND OPERATOR = ? AND EXPIRED = ?;</td></tt><td>STRING, STRING, STRING, STRING, TINYINT</td><td><span class='label label-warning l-Write'>Write</span></td><td></td></tr>
 <tr class='dropdown2'><td colspan='5' id='p-improvedfindmatchingchecksequal-sqlupdatetruechecks--dropdown'>
 <div class='well well-small'><h4>Explain Plan:</h4>
-<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;AGGREGATION&nbsp;ops:&nbsp;SUM(VOLT_TEMP_TABLE.modified_tuples)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;UPDATE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-CHECK'>CHECK</a>"&nbsp;using&nbsp;"CHEP"<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scan&nbsp;matches&nbsp;for&nbsp;(ENDPOINTID&nbsp;=&nbsp;?0),&nbsp;filter&nbsp;by&nbsp;(((((((((PROPERTYID&nbsp;=&nbsp;?1)&nbsp;AND&nbsp;(CHECKVALUE&nbsp;=&nbsp;?2))&nbsp;AND&nbsp;(ENDPOINTID&nbsp;=&nbsp;?0))&nbsp;AND&nbsp;(EXPIRED&nbsp;=&nbsp;?4))&nbsp;AND&nbsp;(OPERATOR&nbsp;=&nbsp;?3))&nbsp;AND&nbsp;(PROPERTYID&nbsp;=&nbsp;?1))&nbsp;AND&nbsp;(CHECKVALUE&nbsp;=&nbsp;?2))&nbsp;AND&nbsp;(EXPIRED&nbsp;=&nbsp;?4))&nbsp;AND&nbsp;(OPERATOR&nbsp;=&nbsp;?3))<br/></tt></div>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;AGGREGATION&nbsp;ops:&nbsp;SUM(VOLT_TEMP_TABLE.modified_tuples)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;UPDATE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-CHECK'>CHECK</a>"&nbsp;using&nbsp;"CHCOMB"<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;range-scan&nbsp;on&nbsp;2&nbsp;of&nbsp;4&nbsp;cols&nbsp;from&nbsp;(ENDPOINTID&nbsp;=&nbsp;?0)&nbsp;AND&nbsp;(PROPERTYID&nbsp;>=&nbsp;?1)&nbsp;while&nbsp;((PROPERTYID&nbsp;=&nbsp;?1)&nbsp;AND&nbsp;(ENDPOINTID&nbsp;=&nbsp;?0)),&nbsp;filter&nbsp;by&nbsp;((((((((PROPERTYID&nbsp;=&nbsp;?1)&nbsp;AND&nbsp;(CHECKVALUE&nbsp;=&nbsp;?2))&nbsp;AND&nbsp;(ENDPOINTID&nbsp;=&nbsp;?0))&nbsp;AND&nbsp;(EXPIRED&nbsp;=&nbsp;?4))&nbsp;AND&nbsp;(OPERATOR&nbsp;=&nbsp;?3))&nbsp;AND&nbsp;(CHECKVALUE&nbsp;=&nbsp;?2))&nbsp;AND&nbsp;(EXPIRED&nbsp;=&nbsp;?4))&nbsp;AND&nbsp;(OPERATOR&nbsp;=&nbsp;?3))<br/></tt></div>
 </td></tr>
     </tbody>
     </table>
@@ -940,6 +945,19 @@
 <tr class='dropdown2'><td colspan='5' id='p-ui_lastlogentryforendpointproperty-selectendpoint--dropdown'>
 <div class='well well-small'><h4>Explain Plan:</h4>
 <tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;LIMIT&nbsp;1<br/>&nbsp;&nbsp;ORDER&nbsp;BY&nbsp;(SORT)<br/>&nbsp;&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-ENDPOINTPROPERTYLOG'>ENDPOINTPROPERTYLOG</a>"&nbsp;using&nbsp;"<a href='#s-ENDPOINTPROPERTYLOG-IDXTSTAMP'>IDXTSTAMP</a>"&nbsp;(for&nbsp;sort&nbsp;order&nbsp;only)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;filter&nbsp;by&nbsp;((ENDPOINTID&nbsp;=&nbsp;?0)&nbsp;AND&nbsp;(PROPERTYID&nbsp;=&nbsp;?1))<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inline&nbsp;LIMIT&nbsp;1<br/></tt></div>
+</td></tr>
+    </tbody>
+    </table>
+</td></tr>
+<tr class='primaryrow'><td style='white-space: nowrap'><i id='p-ui_selectactionsforcheckid--icon' class='icon-chevron-right'></i> <a href='#p-ui_selectactionsforcheckid' id='p-ui_selectactionsforcheckid' class='togglex'>UI_SelectActionsForCheckID</a></td><td>STRING, STRING</td><td><span class='label label-success l-Single'>Single</span></td><td><span class='label label-success l-Read'>Read</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span></td></tr>
+<tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-ui_selectactionsforcheckid--dropdown'>
+<p>Partitioned on parameter 0 which maps to column CHECKPATHID of table <a class='invert' href='#s-OUTBOUNDPROPERTYACTION'>OUTBOUNDPROPERTYACTION</a>.</p><p>Read-only access to tables: <a href='#s-ACTION'>ACTION</a>, <a href='#s-OUTBOUNDPROPERTYACTION'>OUTBOUNDPROPERTYACTION</a></p><p>Uses indexes: <a href='#s-ACTION-RCHECK'>RCHECK</a>, <a href='#s-OUTBOUNDPROPERTYACTION-OUTBOUNDPROPACTION'>OUTBOUNDPROPACTION</a></p>    <table class='table tableL2 table-condensed'>
+    <thead><tr><th><span style='white-space: nowrap;'>Statement Name</span></th><th>Statement SQL</th><th>Params</th><th>R/W</th><th>Attributes</th></tr></thead>
+    <tbody>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_selectactionsforcheckid-sqlfindalldetails--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_selectactionsforcheckid-sqlfindalldetails' class='togglex'>sqlFindAllDetails</a></td><td><tt>SELECT ACTION.ACTIONID, ACTION.ACTIONNAME, ACTION.TARGETENDPOINTID, OUTBOUNDPROPERTYACTION.OUTBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.INBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.CURRENTSTATEPROPERTYID, OUTBOUNDPROPERTYACTION.CUSTOMPAYLOAD FROM ACTION INNER JOIN OUTBOUNDPROPERTYACTION ON ACTION.ACTIONID = OUTBOUNDPROPERTYACTION.ACTIONID AND ACTION.CHECKID = ? ORDER BY ACTION.ACTIONID;</td></tt><td>STRING</td><td><span class='label label-success l-Read'>Read</span></td><td><span class='label label-inverse l-Determinism'>Determinism</span></td></tr>
+<tr class='dropdown2'><td colspan='5' id='p-ui_selectactionsforcheckid-sqlfindalldetails--dropdown'>
+<div class='well well-small'><h4>Explain Plan:</h4>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;ORDER&nbsp;BY&nbsp;(SORT)<br/>&nbsp;&nbsp;NESTLOOP&nbsp;INDEX&nbsp;INNER&nbsp;JOIN<br/>&nbsp;&nbsp;inline&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-OUTBOUNDPROPERTYACTION'>OUTBOUNDPROPERTYACTION</a>"&nbsp;using&nbsp;"<a href='#s-OUTBOUNDPROPERTYACTION-OUTBOUNDPROPACTION'>OUTBOUNDPROPACTION</a>"<br/>&nbsp;&nbsp;&nbsp;scan&nbsp;matches&nbsp;for&nbsp;(ACTIONID&nbsp;=&nbsp;ACTION.ACTIONID)<br/>&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-ACTION'>ACTION</a>"&nbsp;using&nbsp;"<a href='#s-ACTION-RCHECK'>RCHECK</a>"<br/>&nbsp;&nbsp;&nbsp;&nbsp;scan&nbsp;matches&nbsp;for&nbsp;(CHECKID&nbsp;=&nbsp;?0)<br/></tt></div>
 </td></tr>
     </tbody>
     </table>
@@ -1323,7 +1341,7 @@ JAVA VM:          Java HotSpot(TM) 64-Bit Server VM (24.51-b03, mixed mode)<br/>
             <a href='http://voltdb.com/docs'><i class='icon-book'></i> VoltDB Documentation</a>
         </div>
         <div class='span6 text-right'>
-            Generated by VoltDB 4.0.2.3 on 21 Mar 2014 18:22:21 GMT+00:00
+            Generated by VoltDB 4.0.2.3 on 22 Apr 2014 19:51:51 GMT+00:00
         </div>
         </div>
       </footer>
@@ -1333,7 +1351,7 @@ JAVA VM:          Java HotSpot(TM) 64-Bit Server VM (24.51-b03, mixed mode)<br/>
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://assets.voltdb.com/get.py?a=342E302E322E332C31333935343236313431353139&b=r&f=jquery-1.9.1.min.js"></script>
+    <script src="http://assets.voltdb.com/get.py?a=342E302E322E332C31333938313936333232313436&b=r&f=jquery-1.9.1.min.js"></script>
     <script src="http://assets.voltdb.com/b/js/bootstrap.js"></script>
     <script src="http://assets.voltdb.com/t/js/jquery.tablesorter.js"></script>
     <script src="http://assets.voltdb.com/t/js/jquery.tablesorter.widgets.js"></script>
