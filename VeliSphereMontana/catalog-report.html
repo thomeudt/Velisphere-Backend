@@ -82,12 +82,12 @@
             <h4>Catalog Overview Statistics</h4>
             <table class='table table-condensed'>
 <tr><td>Compiled by VoltDB Version</td><td>4.0.2.3</td></tr>
-<tr><td>Compiled on</td><td>Tue, 22 Apr 2014 19:51:51 GMT+00:00</td></tr>
+<tr><td>Compiled on</td><td>Sun, 27 Apr 2014 19:04:43 GMT+00:00</td></tr>
 <tr><td>Table Count</td><td>24 (17 partitioned / 7 replicated)</td></tr>
 <tr><td>Materialized View Count</td><td>0</td></tr>
 <tr><td>Index Count</td><td>45</td></tr>
-<tr><td>Procedure Count</td><td>58 (12 partitioned / 46 replicated) (36 read-only / 22 read-write)</td></tr>
-<tr><td>SQL Statement Count</td><td>68</td></tr>
+<tr><td>Procedure Count</td><td>60 (12 partitioned / 48 replicated) (36 read-only / 24 read-write)</td></tr>
+<tr><td>SQL Statement Count</td><td>75</td></tr>
 </table>
 
 <h4>Warnings</h4><table class='table table-condensed'>
@@ -100,6 +100,7 @@
 <tr><td><a href='#p-selectallusers'>SelectAllUsers</a></td><td>Procedure SelectAllUsers has a statement with a non-deterministic result - statement: "SELECT * FROM USER ORDER BY USERNAME;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-ui_selectallendpoints'>UI_SelectAllEndpoints</a></td><td>Procedure UI_SelectAllEndpoints has a statement with a non-deterministic result - statement: "SELECT * FROM ENDPOINT ORDER BY ENDPOINTNAME;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-improvedfindmatchingchecksequal'>ImprovedFindMatchingChecksEqual</a></td><td>Procedure ImprovedFindMatchingChecksEqual is RW and has a statement whose result has a non-deterministic ordering - statement: "SELECT * FROM CHECK WHERE STATE = 1 AND ENDPOINTID = ?;", reason: the query result does not guarantee a consistent ordering</td></tr>
+<tr><td><a href='#p-ui_deleteallactionsforcheckid'>UI_DeleteAllActionsForCheckID</a></td><td>Procedure UI_DeleteAllActionsForCheckID is RW and has a statement whose result has a non-deterministic ordering - statement: "SELECT ACTIONID FROM ACTION WHERE CHECKID = ?;", reason: the query result does not guarantee a consistent ordering</td></tr>
 <tr><td><a href='#p-ui_selectactpropertiesforendpoint'>UI_SelectActPropertiesForEndpoint</a></td><td>Procedure UI_SelectActPropertiesForEndpoint has a statement with a non-deterministic result - statement: "select * from endpoint, property, endpointclass where endpoint.endpointclassid = property.endpointclassid and endpointclass.endpointclassid = property.endpointclassid and endpoint.endpointid = ? and property.act = 1 ORDER BY endpoint.endpointname;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-ui_selectactionsforcheckid'>UI_SelectActionsForCheckID</a></td><td>Procedure UI_SelectActionsForCheckID has a statement with a non-deterministic result - statement: "SELECT ACTION.ACTIONID, ACTION.ACTIONNAME, ACTION.TARGETENDPOINTID, OUTBOUNDPROPERTYACTION.OUTBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.INBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.CURRENTSTATEPROPERTYID, OUTBOUNDPROPERTYACTION.CUSTOMPAYLOAD FROM ACTION INNER JOIN OUTBOUNDPROPERTYACTION ON ACTION.ACTIONID = OUTBOUNDPROPERTYACTION.ACTIONID AND ACTION.CHECKID = ? ORDER BY ACTION.ACTIONID;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-ui_selectendpointsforuser'>UI_SelectEndpointsForUser</a></td><td>Procedure UI_SelectEndpointsForUser has a statement with a non-deterministic result - statement: "SELECT * FROM ENDPOINT JOIN ENDPOINT_USER_LINK ON ENDPOINT.ENDPOINTID = ENDPOINT_USER_LINK.ENDPOINTID AND ENDPOINT_USER_LINK.USERID = ?;", reason: the query result does not guarantee a consistent ordering</td></tr>
@@ -141,12 +142,12 @@
                 <tr class='primaryrow'><td style='white-space: nowrap;'><i id='s-action--icon' class='icon-chevron-right'></i> <a href='#' id='s-action' class='togglex'>ACTION</a></td><td><span class='label label l-Table'>Table</span></td><td style='whitespace: nowrap;'><span class='label label-success l-Partitioned'>Partitioned</span><small> on CHECKPATHID</small></td><td>8</td><td>3</td><td><span class='label label-info l-Has-PKey'>Has-PKey</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='s-action--dropdown'>
 <p><pre>CREATE TABLE ACTION (     ACTIONID VARCHAR(36) NOT NULL,    ACTIONNAME VARCHAR(255) NOT NULL,    TARGETENDPOINTID VARCHAR(36),    TGTEPIDFROMINBOUNDPROP VARCHAR(36),    EXPIRED TINYINT,    CHECKID VARCHAR(36),    MULTICHECKID VARCHAR(36),    CHECKPATHID VARCHAR(36) NOT NULL,    PRIMARY KEY (ACTIONID,CHECKPATHID)  );</pre></p>
-<p>Read-only by procedures: <a href='#p-AME_DetailsForAction'>AME_DetailsForAction</a>, <a href='#p-BLE_FindActionsForCheckID'>BLE_FindActionsForCheckID</a>, <a href='#p-BLE_FindActionsForMultiCheckID'>BLE_FindActionsForMultiCheckID</a>, <a href='#p-UI_SelectActionsForCheckID'>UI_SelectActionsForCheckID</a></p>    <table class='table tableL2 table-condensed'>
+<p>Read-only by procedures: <a href='#p-AME_DetailsForAction'>AME_DetailsForAction</a>, <a href='#p-BLE_FindActionsForCheckID'>BLE_FindActionsForCheckID</a>, <a href='#p-BLE_FindActionsForMultiCheckID'>BLE_FindActionsForMultiCheckID</a>, <a href='#p-UI_SelectActionsForCheckID'>UI_SelectActionsForCheckID</a></p><p>Read/Write by procedures: <a href='#p-UI_DeleteAllActionsForCheckID'>UI_DeleteAllActionsForCheckID</a>, <a href='#p-UI_UpsertActionsForCheckID'>UI_UpsertActionsForCheckID</a></p>    <table class='table tableL2 table-condensed'>
     <thead><tr><th>Index Name</th><th>Type</th><th>Columns</th><th>Uniqueness</th></tr></thead>
     <tbody>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-action-rcheck--icon' class='icon-chevron-right'></i> <a href='#' id='s-action-rcheck' class='togglex'>RCHECK</a></td><td>BALANCED_TREE</td><td>CHECKID</td><td><span class='label label-info l-Nonunique'>Nonunique</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-action-rcheck--dropdown'>
-<p>Used by procedures: <a href='#p-BLE_FindActionsForCheckID'>BLE_FindActionsForCheckID</a>, <a href='#p-UI_SelectActionsForCheckID'>UI_SelectActionsForCheckID</a></p></td></tr>
+<p>Used by procedures: <a href='#p-BLE_FindActionsForCheckID'>BLE_FindActionsForCheckID</a>, <a href='#p-UI_DeleteAllActionsForCheckID'>UI_DeleteAllActionsForCheckID</a>, <a href='#p-UI_SelectActionsForCheckID'>UI_SelectActionsForCheckID</a></p></td></tr>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-action-rmcheck--icon' class='icon-chevron-right'></i> <a href='#' id='s-action-rmcheck' class='togglex'>RMCHECK</a></td><td>BALANCED_TREE</td><td>MULTICHECKID</td><td><span class='label label-info l-Nonunique'>Nonunique</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-action-rmcheck--dropdown'>
 <p>Used by procedures: <a href='#p-BLE_FindActionsForMultiCheckID'>BLE_FindActionsForMultiCheckID</a></p></td></tr>
@@ -411,7 +412,7 @@
 <tr class='primaryrow'><td style='white-space: nowrap;'><i id='s-outboundpropertyaction--icon' class='icon-chevron-right'></i> <a href='#' id='s-outboundpropertyaction' class='togglex'>OUTBOUNDPROPERTYACTION</a></td><td><span class='label label l-Table'>Table</span></td><td style='whitespace: nowrap;'><span class='label label-success l-Partitioned'>Partitioned</span><small> on CHECKPATHID</small></td><td>8</td><td>2</td><td><span class='label label-info l-Has-PKey'>Has-PKey</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='s-outboundpropertyaction--dropdown'>
 <p><pre>CREATE TABLE OUTBOUNDPROPERTYACTION (     OUTBOUNDPROPERTYACTIONID VARCHAR(36) NOT NULL,    OUTBOUNDPROPERTYID VARCHAR(36),    INBOUNDPROPERTYID VARCHAR(36),    CURRENTSTATEPROPERTYID VARCHAR(36),    CURRENTSTATEENDPOINTID VARCHAR(36),    CUSTOMPAYLOAD VARCHAR(32768),    ACTIONID VARCHAR(36) NOT NULL,    CHECKPATHID VARCHAR(36) NOT NULL,    PRIMARY KEY (OUTBOUNDPROPERTYACTIONID, CHECKPATHID) );</pre></p>
-<p>Read-only by procedures: <a href='#p-AME_DetailsForAction'>AME_DetailsForAction</a>, <a href='#p-UI_SelectActionsForCheckID'>UI_SelectActionsForCheckID</a></p>    <table class='table tableL2 table-condensed'>
+<p>Read-only by procedures: <a href='#p-AME_DetailsForAction'>AME_DetailsForAction</a>, <a href='#p-UI_SelectActionsForCheckID'>UI_SelectActionsForCheckID</a></p><p>Read/Write by procedures: <a href='#p-UI_DeleteAllActionsForCheckID'>UI_DeleteAllActionsForCheckID</a>, <a href='#p-UI_UpsertActionsForCheckID'>UI_UpsertActionsForCheckID</a></p>    <table class='table tableL2 table-condensed'>
     <thead><tr><th>Index Name</th><th>Type</th><th>Columns</th><th>Uniqueness</th></tr></thead>
     <tbody>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-outboundpropertyaction-outboundpropaction--icon' class='icon-chevron-right'></i> <a href='#' id='s-outboundpropertyaction-outboundpropaction' class='togglex'>OUTBOUNDPROPACTION</a></td><td>BALANCED_TREE</td><td>ACTIONID</td><td><span class='label label-info l-Nonunique'>Nonunique</span></td></tr>
@@ -841,6 +842,29 @@
 <tr class='dropdown2'><td colspan='5' id='p-selectallusers-selectallusers--dropdown'>
 <div class='well well-small'><h4>Explain Plan:</h4>
 <tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;ORDER&nbsp;BY&nbsp;(SORT)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;SEQUENTIAL&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-USER'>USER</a>"<br/></tt></div>
+</td></tr>
+    </tbody>
+    </table>
+</td></tr>
+<tr class='primaryrow'><td style='white-space: nowrap'><i id='p-ui_deleteallactionsforcheckid--icon' class='icon-chevron-right'></i> <a href='#p-ui_deleteallactionsforcheckid' id='p-ui_deleteallactionsforcheckid' class='togglex'>UI_DeleteAllActionsForCheckID</a></td><td>STRING</td><td><span class='label label-warning l-Multi'>Multi</span></td><td><span class='label label-warning l-Write'>Write</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span></td></tr>
+<tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-ui_deleteallactionsforcheckid--dropdown'>
+<p>Read/Write access to tables: <a href='#s-ACTION'>ACTION</a>, <a href='#s-OUTBOUNDPROPERTYACTION'>OUTBOUNDPROPERTYACTION</a></p><p>Uses indexes: <a href='#s-ACTION-RCHECK'>RCHECK</a></p>    <table class='table tableL2 table-condensed'>
+    <thead><tr><th><span style='white-space: nowrap;'>Statement Name</span></th><th>Statement SQL</th><th>Params</th><th>R/W</th><th>Attributes</th></tr></thead>
+    <tbody>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_deleteallactionsforcheckid-deleteaction--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_deleteallactionsforcheckid-deleteaction' class='togglex'>deleteAction</a></td><td><tt>DELETE FROM ACTION WHERE ACTIONID = ?;</td></tt><td>STRING</td><td><span class='label label-warning l-Write'>Write</span></td><td></td></tr>
+<tr class='dropdown2'><td colspan='5' id='p-ui_deleteallactionsforcheckid-deleteaction--dropdown'>
+<div class='well well-small'><h4>Explain Plan:</h4>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;AGGREGATION&nbsp;ops:&nbsp;SUM(VOLT_TEMP_TABLE.modified_tuples)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;DELETEACTION<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-ACTION'>ACTION</a>"&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;range-scan&nbsp;on&nbsp;1&nbsp;of&nbsp;2&nbsp;cols&nbsp;from&nbsp;(ACTIONID&nbsp;>=&nbsp;?0)&nbsp;while&nbsp;(ACTIONID&nbsp;=&nbsp;?0),&nbsp;filter&nbsp;by&nbsp;(ACTIONID&nbsp;=&nbsp;?0)<br/></tt></div>
+</td></tr>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_deleteallactionsforcheckid-deleteoutboundpropertyaction--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_deleteallactionsforcheckid-deleteoutboundpropertyaction' class='togglex'>deleteOutboundPropertyAction</a></td><td><tt>DELETE FROM OUTBOUNDPROPERTYACTION WHERE ACTIONID = ?;</td></tt><td>STRING</td><td><span class='label label-warning l-Write'>Write</span></td><td></td></tr>
+<tr class='dropdown2'><td colspan='5' id='p-ui_deleteallactionsforcheckid-deleteoutboundpropertyaction--dropdown'>
+<div class='well well-small'><h4>Explain Plan:</h4>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;AGGREGATION&nbsp;ops:&nbsp;SUM(VOLT_TEMP_TABLE.modified_tuples)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;DELETEOUTBOUNDPROPERTYACTION<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-OUTBOUNDPROPERTYACTION'>OUTBOUNDPROPERTYACTION</a>"&nbsp;using&nbsp;"OUTBOUNDPROPACTION"<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scan&nbsp;matches&nbsp;for&nbsp;(ACTIONID&nbsp;=&nbsp;?0),&nbsp;filter&nbsp;by&nbsp;(ACTIONID&nbsp;=&nbsp;?0)<br/></tt></div>
+</td></tr>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_deleteallactionsforcheckid-getactionids--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_deleteallactionsforcheckid-getactionids' class='togglex'>getActionIDs</a></td><td><tt>SELECT ACTIONID FROM ACTION WHERE CHECKID = ?;</td></tt><td>STRING</td><td><span class='label label-success l-Read'>Read</span></td><td><span class='label label-inverse l-Determinism'>Determinism</span></td></tr>
+<tr class='dropdown2'><td colspan='5' id='p-ui_deleteallactionsforcheckid-getactionids--dropdown'>
+<div class='well well-small'><h4>Explain Plan:</h4>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-ACTION'>ACTION</a>"&nbsp;using&nbsp;"<a href='#s-ACTION-RCHECK'>RCHECK</a>"<br/>&nbsp;&nbsp;&nbsp;&nbsp;scan&nbsp;matches&nbsp;for&nbsp;(CHECKID&nbsp;=&nbsp;?0)<br/></tt></div>
 </td></tr>
     </tbody>
     </table>
@@ -1287,6 +1311,34 @@
     </tbody>
     </table>
 </td></tr>
+<tr class='primaryrow'><td style='white-space: nowrap'><i id='p-ui_upsertactionsforcheckid--icon' class='icon-chevron-right'></i> <a href='#p-ui_upsertactionsforcheckid' id='p-ui_upsertactionsforcheckid' class='togglex'>UI_UpsertActionsForCheckID</a></td><td>STRING, STRING, STRING, STRING, STRING, STRING, STRING, STRING</td><td><span class='label label-warning l-Multi'>Multi</span></td><td><span class='label label-warning l-Write'>Write</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span></td></tr>
+<tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-ui_upsertactionsforcheckid--dropdown'>
+<p>Read/Write access to tables: <a href='#s-ACTION'>ACTION</a>, <a href='#s-OUTBOUNDPROPERTYACTION'>OUTBOUNDPROPERTYACTION</a></p>    <table class='table tableL2 table-condensed'>
+    <thead><tr><th><span style='white-space: nowrap;'>Statement Name</span></th><th>Statement SQL</th><th>Params</th><th>R/W</th><th>Attributes</th></tr></thead>
+    <tbody>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_upsertactionsforcheckid-addaction--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_upsertactionsforcheckid-addaction' class='togglex'>addAction</a></td><td><tt>INSERT INTO ACTION VALUES (?, ?, ?, '', 0, ?, '', ?)</td></tt><td>STRING, STRING, STRING, STRING, STRING</td><td><span class='label label-warning l-Write'>Write</span></td><td></td></tr>
+<tr class='dropdown2'><td colspan='5' id='p-ui_upsertactionsforcheckid-addaction--dropdown'>
+<div class='well well-small'><h4>Explain Plan:</h4>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;AGGREGATION&nbsp;ops:&nbsp;SUM(VOLT_TEMP_TABLE.modified_tuples)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;INSERT&nbsp;into&nbsp;"<a href='#s-ACTION'>ACTION</a>"<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MATERIALIZE&nbsp;TUPLE&nbsp;from&nbsp;parameters&nbsp;and/or&nbsp;literals<br/></tt></div>
+</td></tr>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_upsertactionsforcheckid-addoutboundpropertyaction--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_upsertactionsforcheckid-addoutboundpropertyaction' class='togglex'>addOutboundPropertyAction</a></td><td><tt>INSERT INTO OUTBOUNDPROPERTYACTION VALUES (?, ?, ?, '', '', ?, ?, ?)</td></tt><td>STRING, STRING, STRING, STRING, STRING, STRING</td><td><span class='label label-warning l-Write'>Write</span></td><td></td></tr>
+<tr class='dropdown2'><td colspan='5' id='p-ui_upsertactionsforcheckid-addoutboundpropertyaction--dropdown'>
+<div class='well well-small'><h4>Explain Plan:</h4>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;AGGREGATION&nbsp;ops:&nbsp;SUM(VOLT_TEMP_TABLE.modified_tuples)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;INSERT&nbsp;into&nbsp;"<a href='#s-OUTBOUNDPROPERTYACTION'>OUTBOUNDPROPERTYACTION</a>"<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MATERIALIZE&nbsp;TUPLE&nbsp;from&nbsp;parameters&nbsp;and/or&nbsp;literals<br/></tt></div>
+</td></tr>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_upsertactionsforcheckid-updateaction--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_upsertactionsforcheckid-updateaction' class='togglex'>updateAction</a></td><td><tt>UPDATE ACTION SET ACTIONNAME = ?, TARGETENDPOINTID = ?, CHECKID =?, CHECKPATHID = ? WHERE ACTIONID = ?</td></tt><td>STRING, STRING, STRING, STRING, STRING</td><td><span class='label label-warning l-Write'>Write</span></td><td></td></tr>
+<tr class='dropdown2'><td colspan='5' id='p-ui_upsertactionsforcheckid-updateaction--dropdown'>
+<div class='well well-small'><h4>Explain Plan:</h4>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;AGGREGATION&nbsp;ops:&nbsp;SUM(VOLT_TEMP_TABLE.modified_tuples)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;UPDATE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-ACTION'>ACTION</a>"&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;range-scan&nbsp;on&nbsp;1&nbsp;of&nbsp;2&nbsp;cols&nbsp;from&nbsp;(ACTIONID&nbsp;>=&nbsp;?4)&nbsp;while&nbsp;(ACTIONID&nbsp;=&nbsp;?4),&nbsp;filter&nbsp;by&nbsp;(ACTIONID&nbsp;=&nbsp;?4)<br/></tt></div>
+</td></tr>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_upsertactionsforcheckid-updateoutboundpropertyaction--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_upsertactionsforcheckid-updateoutboundpropertyaction' class='togglex'>updateOutboundPropertyAction</a></td><td><tt>UPDATE OUTBOUNDPROPERTYACTION SET OUTBOUNDPROPERTYID = ?, INBOUNDPROPERTYID = ?, CUSTOMPAYLOAD = ?, ACTIONID = ?, CHECKPATHID = ? WHERE OUTBOUNDPROPERTYACTIONID = ?</td></tt><td>STRING, STRING, STRING, STRING, STRING, STRING</td><td><span class='label label-warning l-Write'>Write</span></td><td></td></tr>
+<tr class='dropdown2'><td colspan='5' id='p-ui_upsertactionsforcheckid-updateoutboundpropertyaction--dropdown'>
+<div class='well well-small'><h4>Explain Plan:</h4>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;AGGREGATION&nbsp;ops:&nbsp;SUM(VOLT_TEMP_TABLE.modified_tuples)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;UPDATE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-OUTBOUNDPROPERTYACTION'>OUTBOUNDPROPERTYACTION</a>"&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;range-scan&nbsp;on&nbsp;1&nbsp;of&nbsp;2&nbsp;cols&nbsp;from&nbsp;(OUTBOUNDPROPERTYACTIONID&nbsp;>=&nbsp;?5)&nbsp;while&nbsp;(OUTBOUNDPROPERTYACTIONID&nbsp;=&nbsp;?5),&nbsp;filter&nbsp;by&nbsp;(OUTBOUNDPROPERTYACTIONID&nbsp;=&nbsp;?5)<br/></tt></div>
+</td></tr>
+    </tbody>
+    </table>
+</td></tr>
 <tr class='primaryrow'><td style='white-space: nowrap'><i id='p-updatechecks--icon' class='icon-chevron-right'></i> <a href='#p-updatechecks' id='p-updatechecks' class='togglex'>UpdateChecks</a></td><td>TINYINT, STRING</td><td><span class='label label-warning l-Multi'>Multi</span></td><td><span class='label label-warning l-Write'>Write</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-updatechecks--dropdown'>
 <p>Read/Write access to tables: <a href='#s-CHECK'>CHECK</a></p>    <table class='table tableL2 table-condensed'>
@@ -1341,7 +1393,7 @@ JAVA VM:          Java HotSpot(TM) 64-Bit Server VM (24.51-b03, mixed mode)<br/>
             <a href='http://voltdb.com/docs'><i class='icon-book'></i> VoltDB Documentation</a>
         </div>
         <div class='span6 text-right'>
-            Generated by VoltDB 4.0.2.3 on 22 Apr 2014 19:51:51 GMT+00:00
+            Generated by VoltDB 4.0.2.3 on 27 Apr 2014 19:04:43 GMT+00:00
         </div>
         </div>
       </footer>
@@ -1351,7 +1403,7 @@ JAVA VM:          Java HotSpot(TM) 64-Bit Server VM (24.51-b03, mixed mode)<br/>
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://assets.voltdb.com/get.py?a=342E302E322E332C31333938313936333232313436&b=r&f=jquery-1.9.1.min.js"></script>
+    <script src="http://assets.voltdb.com/get.py?a=342E302E322E332C31333938363235343934333534&b=r&f=jquery-1.9.1.min.js"></script>
     <script src="http://assets.voltdb.com/b/js/bootstrap.js"></script>
     <script src="http://assets.voltdb.com/t/js/jquery.tablesorter.js"></script>
     <script src="http://assets.voltdb.com/t/js/jquery.tablesorter.widgets.js"></script>
