@@ -3,7 +3,7 @@ import org.voltdb.*;
 public class UI_SelectEndpointClassForEndpointClassID extends VoltProcedure {
 
   public final SQLStmt selectEndpoint = new SQLStmt(
-      " SELECT ENDPOINTCLASSID, ENDPOINTCLASSNAME FROM ENDPOINTCLASS WHERE ENDPOINTCLASSID = ? ORDER BY ENDPOINTCLASSNAME;" );
+      " SELECT ENDPOINTCLASSID, ENDPOINTCLASSNAME, ENDPOINTCLASSIMAGEURL FROM ENDPOINTCLASS WHERE ENDPOINTCLASSID = ? ORDER BY ENDPOINTCLASSNAME;" );
 
   public VoltTable[] run(
 		  String endpointClassID)
