@@ -82,17 +82,18 @@
             <h4>Catalog Overview Statistics</h4>
             <table class='table table-condensed'>
 <tr><td>Compiled by VoltDB Version</td><td>4.0.2.3</td></tr>
-<tr><td>Compiled on</td><td>Sun, 3 Aug 2014 18:42:52 GMT+00:00</td></tr>
-<tr><td>Table Count</td><td>27 (17 partitioned / 10 replicated)</td></tr>
+<tr><td>Compiled on</td><td>Sat, 20 Sep 2014 17:48:59 GMT+00:00</td></tr>
+<tr><td>Table Count</td><td>28 (18 partitioned / 10 replicated)</td></tr>
 <tr><td>Materialized View Count</td><td>0</td></tr>
-<tr><td>Index Count</td><td>49</td></tr>
-<tr><td>Procedure Count</td><td>67 (13 partitioned / 54 replicated) (39 read-only / 28 read-write)</td></tr>
-<tr><td>SQL Statement Count</td><td>87</td></tr>
+<tr><td>Index Count</td><td>50</td></tr>
+<tr><td>Procedure Count</td><td>70 (13 partitioned / 57 replicated) (41 read-only / 29 read-write)</td></tr>
+<tr><td>SQL Statement Count</td><td>90</td></tr>
 </table>
 
 <h4>Warnings</h4><table class='table table-condensed'>
 <tr><td><a href='#p-findallchecks'>FindAllChecks</a></td><td>Procedure FindAllChecks has a statement with a non-deterministic result - statement: "SELECT * FROM CHECK ORDER BY CHECKID;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-findallmultichecksforcheck'>FindAllMultichecksForCheck</a></td><td>Procedure FindAllMultichecksForCheck has a statement with a non-deterministic result - statement: "SELECT MULTICHECKID FROM MULTICHECK_CHECK_LINK WHERE CHECKID = ?;", reason: the query result does not guarantee a consistent ordering</td></tr>
+<tr><td><a href='#p-ui_selectallvendors'>UI_SelectAllVendors</a></td><td>Procedure UI_SelectAllVendors has a statement with a non-deterministic result - statement: "SELECT * FROM VENDOR ORDER BY VENDORNAME;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-ui_selectallproperties'>UI_SelectAllProperties</a></td><td>Procedure UI_SelectAllProperties has a statement with a non-deterministic result - statement: "SELECT * FROM PROPERTY ORDER BY PROPERTYNAME;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-ame_detailsforaction'>AME_DetailsForAction</a></td><td>Procedure AME_DetailsForAction has a statement with a non-deterministic result - statement: "SELECT ACTION.ACTIONID, ACTION.TARGETENDPOINTID, ACTION.TGTEPIDFROMINBOUNDPROP, OUTBOUNDPROPERTYACTION.OUTBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.INBOUNDPROPERTYID, OUTBOUNDPROPERTYACTION.CURRENTSTATEPROPERTYID, OUTBOUNDPROPERTYACTION.CUSTOMPAYLOAD FROM ACTION INNER JOIN OUTBOUNDPROPERTYACTION ON ACTION.ACTIONID = OUTBOUNDPROPERTYACTION.ACTIONID AND OUTBOUNDPROPERTYACTION.ACTIONID = ? ORDER BY ACTION.ACTIONID;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-ui_selectchecksforendpoint'>UI_SelectChecksForEndpoint</a></td><td>Procedure UI_SelectChecksForEndpoint has a statement with a non-deterministic result - statement: "select * from check join property on check.propertyid = property.propertyid and check.endpointid = ? ORDER BY name;", reason: insufficient ordering criteria.</td></tr>
@@ -117,10 +118,11 @@
 <tr><td><a href='#p-ui_selectallpropertyclasses'>UI_SelectAllPropertyClasses</a></td><td>Procedure UI_SelectAllPropertyClasses has a statement with a non-deterministic result - statement: "SELECT * FROM PROPERTYCLASS ORDER BY PROPERTYCLASSNAME;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-findchecksformulticheckid'>FindChecksForMultiCheckID</a></td><td>Procedure FindChecksForMultiCheckID has a statement with a non-deterministic result - statement: "SELECT CHECKID FROM MULTICHECK_CHECK_LINK WHERE MULTICHECKID = ?;", reason: the query result does not guarantee a consistent ordering</td></tr>
 <tr><td><a href='#p-findlinkedmultichecksformulticheckid'>FindLinkedMultiChecksForMultiCheckID</a></td><td>Procedure FindLinkedMultiChecksForMultiCheckID has a statement with a non-deterministic result - statement: "SELECT MULTICHECKRID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKLID = ?;", reason: the query result does not guarantee a consistent ordering</td></tr>
+<tr><td><a href='#p-ui_selectvendorforvendorid'>UI_SelectVendorForVendorID</a></td><td>Procedure UI_SelectVendorForVendorID has a statement with a non-deterministic result - statement: "SELECT VENDORID, VENDORNAME, VENDORIMAGEURL FROM VENDOR WHERE VENDORID = ? ORDER BY VENDORNAME;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-ble_checksforexpression'>BLE_ChecksForExpression</a></td><td>Procedure BLE_ChecksForExpression has a statement with a non-deterministic result - statement: "SELECT CHECKID, OPERATOR, CHECKVALUE, CHECKPATHID FROM CHECK WHERE ENDPOINTID = ? AND PROPERTYID = ? AND EXPIRED = ? ORDER BY CHECKID, CHECKVALUE, CHECKPATHID;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-ui_selectsensepropertiesforendpoint'>UI_SelectSensePropertiesForEndpoint</a></td><td>Procedure UI_SelectSensePropertiesForEndpoint has a statement with a non-deterministic result - statement: "select * from endpoint, property, endpointclass where endpoint.endpointclassid = property.endpointclassid and endpointclass.endpointclassid = property.endpointclassid and endpoint.endpointid = ? and property.sense = 1 ORDER BY endpoint.endpointname;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-ui_selectendpointforendpointid'>UI_SelectEndpointForEndpointID</a></td><td>Procedure UI_SelectEndpointForEndpointID has a statement with a non-deterministic result - statement: "SELECT ENDPOINTID, ENDPOINTNAME, ENDPOINTCLASSID FROM ENDPOINT WHERE ENDPOINTID = ? ORDER BY ENDPOINTNAME;", reason: insufficient ordering criteria.</td></tr>
-<tr><td><a href='#p-ui_selectendpointclassforendpointclassid'>UI_SelectEndpointClassForEndpointClassID</a></td><td>Procedure UI_SelectEndpointClassForEndpointClassID has a statement with a non-deterministic result - statement: "SELECT ENDPOINTCLASSID, ENDPOINTCLASSNAME, ENDPOINTCLASSIMAGEURL FROM ENDPOINTCLASS WHERE ENDPOINTCLASSID = ? ORDER BY ENDPOINTCLASSNAME;", reason: insufficient ordering criteria.</td></tr>
+<tr><td><a href='#p-ui_selectendpointclassforendpointclassid'>UI_SelectEndpointClassForEndpointClassID</a></td><td>Procedure UI_SelectEndpointClassForEndpointClassID has a statement with a non-deterministic result - statement: "SELECT ENDPOINTCLASSID, ENDPOINTCLASSNAME, ENDPOINTCLASSIMAGEURL, VENDORID FROM ENDPOINTCLASS WHERE ENDPOINTCLASSID = ? ORDER BY ENDPOINTCLASSNAME;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-ui_selectendpointsforsphere'>UI_SelectEndpointsForSphere</a></td><td>Procedure UI_SelectEndpointsForSphere has a statement with a non-deterministic result - statement: "SELECT * FROM ENDPOINT JOIN ENDPOINT_SPHERE_LINK ON ENDPOINT.ENDPOINTID = ENDPOINT_SPHERE_LINK.ENDPOINTID AND ENDPOINT_SPHERE_LINK.SPHEREID = ?;", reason: the query result does not guarantee a consistent ordering</td></tr>
 <tr><td><a href='#p-ui_selectpropertydetailsforendpointclass'>UI_SelectPropertyDetailsForEndpointClass</a></td><td>Procedure UI_SelectPropertyDetailsForEndpointClass has a statement with a non-deterministic result - statement: "select * from property join propertyclass on property.propertyclassid = propertyclass.propertyclassid and property.endpointclassid = ? ORDER BY propertyname;", reason: insufficient ordering criteria.</td></tr>
 </table>
@@ -287,9 +289,9 @@
     </tbody>
     </table>
 </td></tr>
-<tr class='primaryrow'><td style='white-space: nowrap;'><i id='s-endpointclass--icon' class='icon-chevron-right'></i> <a href='#' id='s-endpointclass' class='togglex'>ENDPOINTCLASS</a></td><td><span class='label label l-Table'>Table</span></td><td style='whitespace: nowrap;'><span class='label label-success l-Partitioned'>Partitioned</span><small> on ENDPOINTCLASSID</small></td><td>3</td><td>1</td><td><span class='label label-info l-Has-PKey'>Has-PKey</span></td></tr>
+<tr class='primaryrow'><td style='white-space: nowrap;'><i id='s-endpointclass--icon' class='icon-chevron-right'></i> <a href='#' id='s-endpointclass' class='togglex'>ENDPOINTCLASS</a></td><td><span class='label label l-Table'>Table</span></td><td style='whitespace: nowrap;'><span class='label label-success l-Partitioned'>Partitioned</span><small> on ENDPOINTCLASSID</small></td><td>4</td><td>1</td><td><span class='label label-info l-Has-PKey'>Has-PKey</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='s-endpointclass--dropdown'>
-<p><pre>CREATE TABLE ENDPOINTCLASS (     ENDPOINTCLASSID VARCHAR(36) NOT NULL,    ENDPOINTCLASSNAME VARCHAR(255) NOT NULL,    ENDPOINTCLASSIMAGEURL VARCHAR(255),    PRIMARY KEY (ENDPOINTCLASSID) );</pre></p>
+<p><pre>CREATE TABLE ENDPOINTCLASS (     ENDPOINTCLASSID VARCHAR(36) NOT NULL,    ENDPOINTCLASSNAME VARCHAR(255) NOT NULL,    ENDPOINTCLASSIMAGEURL VARCHAR(255),    VENDORID VARCHAR(36),    PRIMARY KEY (ENDPOINTCLASSID) );</pre></p>
 <p>Read-only by procedures: <a href='#p-UI_SelectActPropertiesForEndpoint'>UI_SelectActPropertiesForEndpoint</a>, <a href='#p-UI_SelectAllEndpointClasses'>UI_SelectAllEndpointClasses</a>, <a href='#p-UI_SelectEndpointClassForEndpointClassID'>UI_SelectEndpointClassForEndpointClassID</a>, <a href='#p-UI_SelectSensePropertiesForEndpoint'>UI_SelectSensePropertiesForEndpoint</a>, <a href='#p-UI_SelectUnprovisionedEPforIdentifier'>UI_SelectUnprovisionedEPforIdentifier</a></p><p>Read/Write by procedures: <a href='#p-UI_UpdateEndpointClass'>UI_UpdateEndpointClass</a></p>    <table class='table tableL2 table-condensed'>
     <thead><tr><th>Index Name</th><th>Type</th><th>Columns</th><th>Uniqueness</th></tr></thead>
     <tbody>
@@ -530,6 +532,18 @@
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-user-sys_idx_sys_pk_10025_10026--icon' class='icon-chevron-right'></i> <a href='#' id='s-user-sys_idx_sys_pk_10025_10026' class='togglex'>SYS_IDX_SYS_PK_10025_10026</a></td><td>BALANCED_TREE</td><td>USERID</td><td><span class='label label-important l-Unique'>Unique</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-user-sys_idx_sys_pk_10025_10026--dropdown'>
 </td></tr>
+    </tbody>
+    </table>
+</td></tr>
+<tr class='primaryrow'><td style='white-space: nowrap;'><i id='s-vendor--icon' class='icon-chevron-right'></i> <a href='#' id='s-vendor' class='togglex'>VENDOR</a></td><td><span class='label label l-Table'>Table</span></td><td style='whitespace: nowrap;'><span class='label label-success l-Partitioned'>Partitioned</span><small> on VENDORID</small></td><td>3</td><td>1</td><td><span class='label label-info l-Has-PKey'>Has-PKey</span></td></tr>
+<tr class='tablesorter-childRow'><td class='invert' colspan='6' id='s-vendor--dropdown'>
+<p><pre>CREATE TABLE VENDOR (     VENDORID VARCHAR(36) NOT NULL,    VENDORNAME VARCHAR(255) NOT NULL,    VENDORIMAGEURL VARCHAR(255),    PRIMARY KEY (VENDORID) );</pre></p>
+<p>Read-only by procedures: <a href='#p-UI_SelectAllVendors'>UI_SelectAllVendors</a>, <a href='#p-UI_SelectVendorForVendorID'>UI_SelectVendorForVendorID</a></p><p>Read/Write by procedures: <a href='#p-UI_UpdateVendor'>UI_UpdateVendor</a></p>    <table class='table tableL2 table-condensed'>
+    <thead><tr><th>Index Name</th><th>Type</th><th>Columns</th><th>Uniqueness</th></tr></thead>
+    <tbody>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-vendor-sys_idx_sys_pk_10142_10143--icon' class='icon-chevron-right'></i> <a href='#' id='s-vendor-sys_idx_sys_pk_10142_10143' class='togglex'>SYS_IDX_SYS_PK_10142_10143</a></td><td>BALANCED_TREE</td><td>VENDORID</td><td><span class='label label-important l-Unique'>Unique</span></td></tr>
+<tr class='dropdown2'><td colspan='5' id='s-vendor-sys_idx_sys_pk_10142_10143--dropdown'>
+<p>Used by procedures: <a href='#p-UI_SelectVendorForVendorID'>UI_SelectVendorForVendorID</a></p></td></tr>
     </tbody>
     </table>
 </td></tr>
@@ -1169,6 +1183,19 @@
     </tbody>
     </table>
 </td></tr>
+<tr class='primaryrow'><td style='white-space: nowrap'><i id='p-ui_selectallvendors--icon' class='icon-chevron-right'></i> <a href='#p-ui_selectallvendors' id='p-ui_selectallvendors' class='togglex'>UI_SelectAllVendors</a></td><td><i>None</i></td><td><span class='label label-warning l-Multi'>Multi</span></td><td><span class='label label-success l-Read'>Read</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span><span class='label label-important l-Scans'>Scans</span></td></tr>
+<tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-ui_selectallvendors--dropdown'>
+<p>Read-only access to tables: <a href='#s-VENDOR'>VENDOR</a></p>    <table class='table tableL2 table-condensed'>
+    <thead><tr><th><span style='white-space: nowrap;'>Statement Name</span></th><th>Statement SQL</th><th>Params</th><th>R/W</th><th>Attributes</th></tr></thead>
+    <tbody>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_selectallvendors-selectallvendors--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_selectallvendors-selectallvendors' class='togglex'>selectAllVendors</a></td><td><tt>SELECT * FROM VENDOR ORDER BY VENDORNAME;</td></tt><td><i>None</i></td><td><span class='label label-success l-Read'>Read</span></td><td><span class='label label-inverse l-Determinism'>Determinism</span><span class='label label-important l-Scans'>Scans</span></td></tr>
+<tr class='dropdown2'><td colspan='5' id='p-ui_selectallvendors-selectallvendors--dropdown'>
+<div class='well well-small'><h4>Explain Plan:</h4>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;ORDER&nbsp;BY&nbsp;(SORT)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;SEQUENTIAL&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-VENDOR'>VENDOR</a>"<br/></tt></div>
+</td></tr>
+    </tbody>
+    </table>
+</td></tr>
 <tr class='primaryrow'><td style='white-space: nowrap'><i id='p-ui_selectcheckforcheckid--icon' class='icon-chevron-right'></i> <a href='#p-ui_selectcheckforcheckid' id='p-ui_selectcheckforcheckid' class='togglex'>UI_SelectCheckForCheckID</a></td><td>STRING</td><td><span class='label label-warning l-Multi'>Multi</span></td><td><span class='label label-success l-Read'>Read</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-ui_selectcheckforcheckid--dropdown'>
 <p>Read-only access to tables: <a href='#s-CHECK'>CHECK</a></p><p>Uses indexes: <a href='#s-CHECK-SYS_IDX_SYS_PK_10086_10087'>SYS_IDX_SYS_PK_10086_10087</a></p>    <table class='table tableL2 table-condensed'>
@@ -1213,7 +1240,7 @@
 <p>Read-only access to tables: <a href='#s-ENDPOINTCLASS'>ENDPOINTCLASS</a></p><p>Uses indexes: <a href='#s-ENDPOINTCLASS-SYS_IDX_SYS_PK_10048_10049'>SYS_IDX_SYS_PK_10048_10049</a></p>    <table class='table tableL2 table-condensed'>
     <thead><tr><th><span style='white-space: nowrap;'>Statement Name</span></th><th>Statement SQL</th><th>Params</th><th>R/W</th><th>Attributes</th></tr></thead>
     <tbody>
-        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_selectendpointclassforendpointclassid-selectendpoint--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_selectendpointclassforendpointclassid-selectendpoint' class='togglex'>selectEndpoint</a></td><td><tt>SELECT ENDPOINTCLASSID, ENDPOINTCLASSNAME, ENDPOINTCLASSIMAGEURL FROM ENDPOINTCLASS WHERE ENDPOINTCLASSID = ? ORDER BY ENDPOINTCLASSNAME;</td></tt><td>STRING</td><td><span class='label label-success l-Read'>Read</span></td><td><span class='label label-inverse l-Determinism'>Determinism</span></td></tr>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_selectendpointclassforendpointclassid-selectendpoint--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_selectendpointclassforendpointclassid-selectendpoint' class='togglex'>selectEndpoint</a></td><td><tt>SELECT ENDPOINTCLASSID, ENDPOINTCLASSNAME, ENDPOINTCLASSIMAGEURL, VENDORID FROM ENDPOINTCLASS WHERE ENDPOINTCLASSID = ? ORDER BY ENDPOINTCLASSNAME;</td></tt><td>STRING</td><td><span class='label label-success l-Read'>Read</span></td><td><span class='label label-inverse l-Determinism'>Determinism</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='p-ui_selectendpointclassforendpointclassid-selectendpoint--dropdown'>
 <div class='well well-small'><h4>Explain Plan:</h4>
 <tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;ORDER&nbsp;BY&nbsp;(SORT)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-ENDPOINTCLASS'>ENDPOINTCLASS</a>"&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uniquely&nbsp;match&nbsp;(ENDPOINTCLASSID&nbsp;=&nbsp;?0)<br/></tt></div>
@@ -1338,6 +1365,19 @@
     </tbody>
     </table>
 </td></tr>
+<tr class='primaryrow'><td style='white-space: nowrap'><i id='p-ui_selectvendorforvendorid--icon' class='icon-chevron-right'></i> <a href='#p-ui_selectvendorforvendorid' id='p-ui_selectvendorforvendorid' class='togglex'>UI_SelectVendorForVendorID</a></td><td>STRING</td><td><span class='label label-warning l-Multi'>Multi</span></td><td><span class='label label-success l-Read'>Read</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span></td></tr>
+<tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-ui_selectvendorforvendorid--dropdown'>
+<p>Read-only access to tables: <a href='#s-VENDOR'>VENDOR</a></p><p>Uses indexes: <a href='#s-VENDOR-SYS_IDX_SYS_PK_10142_10143'>SYS_IDX_SYS_PK_10142_10143</a></p>    <table class='table tableL2 table-condensed'>
+    <thead><tr><th><span style='white-space: nowrap;'>Statement Name</span></th><th>Statement SQL</th><th>Params</th><th>R/W</th><th>Attributes</th></tr></thead>
+    <tbody>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_selectvendorforvendorid-selectvendor--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_selectvendorforvendorid-selectvendor' class='togglex'>selectVendor</a></td><td><tt>SELECT VENDORID, VENDORNAME, VENDORIMAGEURL FROM VENDOR WHERE VENDORID = ? ORDER BY VENDORNAME;</td></tt><td>STRING</td><td><span class='label label-success l-Read'>Read</span></td><td><span class='label label-inverse l-Determinism'>Determinism</span></td></tr>
+<tr class='dropdown2'><td colspan='5' id='p-ui_selectvendorforvendorid-selectvendor--dropdown'>
+<div class='well well-small'><h4>Explain Plan:</h4>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;ORDER&nbsp;BY&nbsp;(SORT)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-VENDOR'>VENDOR</a>"&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uniquely&nbsp;match&nbsp;(VENDORID&nbsp;=&nbsp;?0)<br/></tt></div>
+</td></tr>
+    </tbody>
+    </table>
+</td></tr>
 <tr class='primaryrow'><td style='white-space: nowrap'><i id='p-ui_updatecheck--icon' class='icon-chevron-right'></i> <a href='#p-ui_updatecheck' id='p-ui_updatecheck' class='togglex'>UI_UpdateCheck</a></td><td>STRING, STRING, STRING, STRING</td><td><span class='label label-warning l-Multi'>Multi</span></td><td><span class='label label-warning l-Write'>Write</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-ui_updatecheck--dropdown'>
 <p>Read/Write access to tables: <a href='#s-CHECK'>CHECK</a></p>    <table class='table tableL2 table-condensed'>
@@ -1377,15 +1417,15 @@
     </tbody>
     </table>
 </td></tr>
-<tr class='primaryrow'><td style='white-space: nowrap'><i id='p-ui_updateendpointclass--icon' class='icon-chevron-right'></i> <a href='#p-ui_updateendpointclass' id='p-ui_updateendpointclass' class='togglex'>UI_UpdateEndpointClass</a></td><td>STRING, STRING, STRING</td><td><span class='label label-warning l-Multi'>Multi</span></td><td><span class='label label-warning l-Write'>Write</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span></td></tr>
+<tr class='primaryrow'><td style='white-space: nowrap'><i id='p-ui_updateendpointclass--icon' class='icon-chevron-right'></i> <a href='#p-ui_updateendpointclass' id='p-ui_updateendpointclass' class='togglex'>UI_UpdateEndpointClass</a></td><td>STRING, STRING, STRING, STRING</td><td><span class='label label-warning l-Multi'>Multi</span></td><td><span class='label label-warning l-Write'>Write</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-ui_updateendpointclass--dropdown'>
 <p>Read/Write access to tables: <a href='#s-ENDPOINTCLASS'>ENDPOINTCLASS</a></p>    <table class='table tableL2 table-condensed'>
     <thead><tr><th><span style='white-space: nowrap;'>Statement Name</span></th><th>Statement SQL</th><th>Params</th><th>R/W</th><th>Attributes</th></tr></thead>
     <tbody>
-        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_updateendpointclass-updateepc--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_updateendpointclass-updateepc' class='togglex'>updateEPC</a></td><td><tt>UPDATE ENDPOINTCLASS SET ENDPOINTCLASSNAME = ?, ENDPOINTCLASSIMAGEURL = ? WHERE ENDPOINTCLASSID = ?;</td></tt><td>STRING, STRING, STRING</td><td><span class='label label-warning l-Write'>Write</span></td><td></td></tr>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_updateendpointclass-updateepc--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_updateendpointclass-updateepc' class='togglex'>updateEPC</a></td><td><tt>UPDATE ENDPOINTCLASS SET ENDPOINTCLASSNAME = ?, ENDPOINTCLASSIMAGEURL = ?, VENDORID = ?  WHERE ENDPOINTCLASSID = ?;</td></tt><td>STRING, STRING, STRING, STRING</td><td><span class='label label-warning l-Write'>Write</span></td><td></td></tr>
 <tr class='dropdown2'><td colspan='5' id='p-ui_updateendpointclass-updateepc--dropdown'>
 <div class='well well-small'><h4>Explain Plan:</h4>
-<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;AGGREGATION&nbsp;ops:&nbsp;SUM(VOLT_TEMP_TABLE.modified_tuples)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;UPDATE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-ENDPOINTCLASS'>ENDPOINTCLASS</a>"&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uniquely&nbsp;match&nbsp;(ENDPOINTCLASSID&nbsp;=&nbsp;?2),&nbsp;filter&nbsp;by&nbsp;(ENDPOINTCLASSID&nbsp;=&nbsp;?2)<br/></tt></div>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;AGGREGATION&nbsp;ops:&nbsp;SUM(VOLT_TEMP_TABLE.modified_tuples)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;UPDATE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-ENDPOINTCLASS'>ENDPOINTCLASS</a>"&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uniquely&nbsp;match&nbsp;(ENDPOINTCLASSID&nbsp;=&nbsp;?3),&nbsp;filter&nbsp;by&nbsp;(ENDPOINTCLASSID&nbsp;=&nbsp;?3)<br/></tt></div>
 </td></tr>
     </tbody>
     </table>
@@ -1438,6 +1478,19 @@
 <tr class='dropdown2'><td colspan='5' id='p-ui_updatespherenameforsphereid-updatespherename--dropdown'>
 <div class='well well-small'><h4>Explain Plan:</h4>
 <tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;AGGREGATION&nbsp;ops:&nbsp;SUM(VOLT_TEMP_TABLE.modified_tuples)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;UPDATE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-SPHERE'>SPHERE</a>"&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uniquely&nbsp;match&nbsp;(SPHEREID&nbsp;=&nbsp;?1),&nbsp;filter&nbsp;by&nbsp;(SPHEREID&nbsp;=&nbsp;?1)<br/></tt></div>
+</td></tr>
+    </tbody>
+    </table>
+</td></tr>
+<tr class='primaryrow'><td style='white-space: nowrap'><i id='p-ui_updatevendor--icon' class='icon-chevron-right'></i> <a href='#p-ui_updatevendor' id='p-ui_updatevendor' class='togglex'>UI_UpdateVendor</a></td><td>STRING, STRING, STRING</td><td><span class='label label-warning l-Multi'>Multi</span></td><td><span class='label label-warning l-Write'>Write</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span></td></tr>
+<tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-ui_updatevendor--dropdown'>
+<p>Read/Write access to tables: <a href='#s-VENDOR'>VENDOR</a></p>    <table class='table tableL2 table-condensed'>
+    <thead><tr><th><span style='white-space: nowrap;'>Statement Name</span></th><th>Statement SQL</th><th>Params</th><th>R/W</th><th>Attributes</th></tr></thead>
+    <tbody>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_updatevendor-updatevendor--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_updatevendor-updatevendor' class='togglex'>updateVendor</a></td><td><tt>UPDATE VENDOR SET VENDORNAME = ?, VENDORIMAGEURL = ? WHERE VENDORID = ?;</td></tt><td>STRING, STRING, STRING</td><td><span class='label label-warning l-Write'>Write</span></td><td></td></tr>
+<tr class='dropdown2'><td colspan='5' id='p-ui_updatevendor-updatevendor--dropdown'>
+<div class='well well-small'><h4>Explain Plan:</h4>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;AGGREGATION&nbsp;ops:&nbsp;SUM(VOLT_TEMP_TABLE.modified_tuples)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;UPDATE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-VENDOR'>VENDOR</a>"&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uniquely&nbsp;match&nbsp;(VENDORID&nbsp;=&nbsp;?2),&nbsp;filter&nbsp;by&nbsp;(VENDORID&nbsp;=&nbsp;?2)<br/></tt></div>
 </td></tr>
     </tbody>
     </table>
@@ -1552,7 +1605,7 @@ JAVA VM:          Java HotSpot(TM) 64-Bit Server VM (24.51-b03, mixed mode)<br/>
             <a href='http://voltdb.com/docs'><i class='icon-book'></i> VoltDB Documentation</a>
         </div>
         <div class='span6 text-right'>
-            Generated by VoltDB 4.0.2.3 on 3 Aug 2014 18:42:52 GMT+00:00
+            Generated by VoltDB 4.0.2.3 on 20 Sep 2014 17:48:59 GMT+00:00
         </div>
         </div>
       </footer>
@@ -1562,7 +1615,7 @@ JAVA VM:          Java HotSpot(TM) 64-Bit Server VM (24.51-b03, mixed mode)<br/>
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://assets.voltdb.com/get.py?a=342E302E322E332C31343037303931333833363135&b=r&f=jquery-1.9.1.min.js"></script>
+    <script src="http://assets.voltdb.com/get.py?a=342E302E322E332C31343131323335333439393639&b=r&f=jquery-1.9.1.min.js"></script>
     <script src="http://assets.voltdb.com/b/js/bootstrap.js"></script>
     <script src="http://assets.voltdb.com/t/js/jquery.tablesorter.js"></script>
     <script src="http://assets.voltdb.com/t/js/jquery.tablesorter.widgets.js"></script>
