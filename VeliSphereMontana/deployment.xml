@@ -7,5 +7,4 @@
    <httpd enabled="true">
       <jsonapi enabled="true" />
    </httpd>
-   
 </deployment>
