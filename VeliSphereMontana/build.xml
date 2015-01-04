@@ -34,7 +34,7 @@
           Start the server after compiling the DDL and stored procedures              
          ================================= -->
 <target name="serverStart" depends="catalog">
-	<echo message="Starting VeliSphere Montana v0.7.6"/>
+	<echo message="Starting VeliSphere Montana v0.7.7"/>
 	<parallel>
         <exec executable="${VoltHome}/bin/voltdb">
         	<arg value="create"/>
