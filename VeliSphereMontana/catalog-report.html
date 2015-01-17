@@ -82,16 +82,17 @@
             <h4>Catalog Overview Statistics</h4>
             <table class='table table-condensed'>
 <tr><td>Compiled by VoltDB Version</td><td>4.0.2.3</td></tr>
-<tr><td>Compiled on</td><td>Sun, 4 Jan 2015 20:49:22 GMT+00:00</td></tr>
+<tr><td>Compiled on</td><td>Sat, 17 Jan 2015 16:16:36 GMT+00:00</td></tr>
 <tr><td>Table Count</td><td>28 (18 partitioned / 10 replicated)</td></tr>
 <tr><td>Materialized View Count</td><td>0</td></tr>
 <tr><td>Index Count</td><td>50</td></tr>
-<tr><td>Procedure Count</td><td>73 (14 partitioned / 59 replicated) (44 read-only / 29 read-write)</td></tr>
-<tr><td>SQL Statement Count</td><td>93</td></tr>
+<tr><td>Procedure Count</td><td>75 (14 partitioned / 61 replicated) (45 read-only / 30 read-write)</td></tr>
+<tr><td>SQL Statement Count</td><td>95</td></tr>
 </table>
 
 <h4>Warnings</h4><table class='table table-condensed'>
 <tr><td><a href='#p-findallchecks'>FindAllChecks</a></td><td>Procedure FindAllChecks has a statement with a non-deterministic result - statement: "SELECT * FROM CHECK ORDER BY CHECKID;", reason: insufficient ordering criteria.</td></tr>
+<tr><td><a href='#p-ui_selectspheresforuser'>UI_SelectSpheresForUser</a></td><td>Procedure UI_SelectSpheresForUser has a statement with a non-deterministic result - statement: "SELECT * FROM SPHERE JOIN SPHERE_USER_LINK ON SPHERE.SPHEREID = SPHERE_USER_LINK.SPHEREID AND SPHERE_USER_LINK.USERID = ? ORDER BY SPHERENAME;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-findallmultichecksforcheck'>FindAllMultichecksForCheck</a></td><td>Procedure FindAllMultichecksForCheck has a statement with a non-deterministic result - statement: "SELECT MULTICHECKID FROM MULTICHECK_CHECK_LINK WHERE CHECKID = ?;", reason: the query result does not guarantee a consistent ordering</td></tr>
 <tr><td><a href='#p-ui_selectallvendors'>UI_SelectAllVendors</a></td><td>Procedure UI_SelectAllVendors has a statement with a non-deterministic result - statement: "SELECT * FROM VENDOR ORDER BY VENDORNAME;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-ui_selectallproperties'>UI_SelectAllProperties</a></td><td>Procedure UI_SelectAllProperties has a statement with a non-deterministic result - statement: "SELECT * FROM PROPERTY ORDER BY PROPERTYNAME;", reason: insufficient ordering criteria.</td></tr>
@@ -113,8 +114,8 @@
 <tr><td><a href='#p-ui_lastlogentryforendpointproperty'>UI_LastLogEntryForEndpointProperty</a></td><td>Procedure UI_LastLogEntryForEndpointProperty has a statement with a non-deterministic result - statement: "SELECT TOP 1 ENDPOINTID, PROPERTYID, PROPERTYENTRY, TIME_STAMP FROM ENDPOINTPROPERTYLOG WHERE ENDPOINTID = ? AND  PROPERTYID = ? ORDER BY TIME_STAMP DESC;" , reason: index scan may provide insufficient ordering</td></tr>
 <tr><td><a href='#p-ui_selectallcheckpaths'>UI_SelectAllCheckpaths</a></td><td>Procedure UI_SelectAllCheckpaths has a statement with a non-deterministic result - statement: "SELECT CHECKPATHID, CHECKPATHNAME FROM CHECKPATH WHERE OWNERID = ? ORDER BY CHECKPATHNAME;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-ui_finduserforemail'>UI_FindUserForEmail</a></td><td>Procedure UI_FindUserForEmail has a statement with a non-deterministic result - statement: "SELECT * FROM USER WHERE USEREMAIL = ?;", reason: the query result does not guarantee a consistent ordering</td></tr>
-<tr><td><a href='#p-ui_selectallspheres'>UI_SelectAllSpheres</a></td><td>Procedure UI_SelectAllSpheres has a statement with a non-deterministic result - statement: "SELECT * FROM SPHERE ORDER BY SPHERENAME;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-improvedfindallmultichecksforcheck'>ImprovedFindAllMultichecksForCheck</a></td><td>Procedure ImprovedFindAllMultichecksForCheck is RW and has a statement whose result has a non-deterministic ordering - statement: "SELECT MULTICHECKID FROM MULTICHECK_CHECK_LINK WHERE CHECKID = ?;", reason: the query result does not guarantee a consistent ordering</td></tr>
+<tr><td><a href='#p-ui_selectallspheres'>UI_SelectAllSpheres</a></td><td>Procedure UI_SelectAllSpheres has a statement with a non-deterministic result - statement: "SELECT * FROM SPHERE ORDER BY SPHERENAME;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-ui_deleteallactionsformulticheckid'>UI_DeleteAllActionsForMulticheckID</a></td><td>Procedure UI_DeleteAllActionsForMulticheckID is RW and has a statement whose result has a non-deterministic ordering - statement: "SELECT ACTIONID FROM ACTION WHERE MULTICHECKID = ?;", reason: the query result does not guarantee a consistent ordering</td></tr>
 <tr><td><a href='#p-ui_selectallpropertyclasses'>UI_SelectAllPropertyClasses</a></td><td>Procedure UI_SelectAllPropertyClasses has a statement with a non-deterministic result - statement: "SELECT * FROM PROPERTYCLASS ORDER BY PROPERTYCLASSNAME;", reason: insufficient ordering criteria.</td></tr>
 <tr><td><a href='#p-findchecksformulticheckid'>FindChecksForMultiCheckID</a></td><td>Procedure FindChecksForMultiCheckID has a statement with a non-deterministic result - statement: "SELECT CHECKID FROM MULTICHECK_CHECK_LINK WHERE MULTICHECKID = ?;", reason: the query result does not guarantee a consistent ordering</td></tr>
@@ -194,7 +195,7 @@
 <tr class='primaryrow'><td style='white-space: nowrap;'><i id='s-checkpath--icon' class='icon-chevron-right'></i> <a href='#' id='s-checkpath' class='togglex'>CHECKPATH</a></td><td><span class='label label l-Table'>Table</span></td><td style='whitespace: nowrap;'><span class='label label-success l-Partitioned'>Partitioned</span><small> on CHECKPATHID</small></td><td>4</td><td>2</td><td><span class='label label-info l-Has-PKey'>Has-PKey</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='s-checkpath--dropdown'>
 <p><pre>CREATE TABLE CHECKPATH (     CHECKPATHID VARCHAR(36) NOT NULL,    CHECKPATHNAME VARCHAR(255),    UIOBJECT VARCHAR(32768),    OWNERID VARCHAR(36),    PRIMARY KEY (CHECKPATHID) );</pre></p>
-<p>Read-only by procedures: <a href='#p-UI_SelectAllCheckpaths'>UI_SelectAllCheckpaths</a>, <a href='#p-UI_SelectCheckpathForCheckpathID'>UI_SelectCheckpathForCheckpathID</a></p><p>Read/Write by procedures: <a href='#p-UI_UpdateCheckpathName'>UI_UpdateCheckpathName</a>, <a href='#p-UI_UpdateCheckpath'>UI_UpdateCheckpath</a></p>    <table class='table tableL2 table-condensed'>
+<p>Read-only by procedures: <a href='#p-UI_SelectActionsForCheckpathID'>UI_SelectActionsForCheckpathID</a>, <a href='#p-UI_SelectAllCheckpaths'>UI_SelectAllCheckpaths</a>, <a href='#p-UI_SelectCheckpathForCheckpathID'>UI_SelectCheckpathForCheckpathID</a></p><p>Read/Write by procedures: <a href='#p-UI_UpdateCheckpathName'>UI_UpdateCheckpathName</a>, <a href='#p-UI_UpdateCheckpath'>UI_UpdateCheckpath</a></p>    <table class='table tableL2 table-condensed'>
     <thead><tr><th>Index Name</th><th>Type</th><th>Columns</th><th>Uniqueness</th></tr></thead>
     <tbody>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-checkpath-cpownid--icon' class='icon-chevron-right'></i> <a href='#' id='s-checkpath-cpownid' class='togglex'>CPOWNID</a></td><td>BALANCED_TREE</td><td>OWNERID</td><td><span class='label label-info l-Nonunique'>Nonunique</span></td></tr>
@@ -202,7 +203,7 @@
 <p>Used by procedures: <a href='#p-UI_SelectAllCheckpaths'>UI_SelectAllCheckpaths</a></p></td></tr>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-checkpath-sys_idx_sys_pk_10109_10110--icon' class='icon-chevron-right'></i> <a href='#' id='s-checkpath-sys_idx_sys_pk_10109_10110' class='togglex'>SYS_IDX_SYS_PK_10109_10110</a></td><td>BALANCED_TREE</td><td>CHECKPATHID</td><td><span class='label label-important l-Unique'>Unique</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-checkpath-sys_idx_sys_pk_10109_10110--dropdown'>
-<p>Used by procedures: <a href='#p-UI_SelectCheckpathForCheckpathID'>UI_SelectCheckpathForCheckpathID</a></p></td></tr>
+<p>Used by procedures: <a href='#p-UI_SelectActionsForCheckpathID'>UI_SelectActionsForCheckpathID</a>, <a href='#p-UI_SelectCheckpathForCheckpathID'>UI_SelectCheckpathForCheckpathID</a></p></td></tr>
     </tbody>
     </table>
 </td></tr>
@@ -491,19 +492,19 @@
 <tr class='primaryrow'><td style='white-space: nowrap;'><i id='s-sphere--icon' class='icon-chevron-right'></i> <a href='#' id='s-sphere' class='togglex'>SPHERE</a></td><td><span class='label label l-Table'>Table</span></td><td style='whitespace: nowrap;'><span class='label label-success l-Partitioned'>Partitioned</span><small> on SPHEREID</small></td><td>3</td><td>1</td><td><span class='label label-info l-Has-PKey'>Has-PKey</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='s-sphere--dropdown'>
 <p><pre>CREATE TABLE SPHERE (     SPHEREID VARCHAR(36) NOT NULL,    SPHERENAME VARCHAR(255) NOT NULL,    PUBLIC TINYINT,    PRIMARY KEY (SPHEREID) );</pre></p>
-<p>Read-only by procedures: <a href='#p-UI_SelectAllSpheresForUserID'>UI_SelectAllSpheresForUserID</a>, <a href='#p-UI_SelectAllSpheres'>UI_SelectAllSpheres</a>, <a href='#p-UI_SelectSphereForSphereID'>UI_SelectSphereForSphereID</a></p><p>Read/Write by procedures: <a href='#p-UI_UpdateSpherenameForSphereID'>UI_UpdateSpherenameForSphereID</a></p>    <table class='table tableL2 table-condensed'>
+<p>Read-only by procedures: <a href='#p-UI_SelectAllSpheresForUserID'>UI_SelectAllSpheresForUserID</a>, <a href='#p-UI_SelectAllSpheres'>UI_SelectAllSpheres</a>, <a href='#p-UI_SelectSphereForSphereID'>UI_SelectSphereForSphereID</a>, <a href='#p-UI_SelectSpheresForUser'>UI_SelectSpheresForUser</a></p><p>Read/Write by procedures: <a href='#p-UI_UpdatePublicStateForSphereID'>UI_UpdatePublicStateForSphereID</a>, <a href='#p-UI_UpdateSpherenameForSphereID'>UI_UpdateSpherenameForSphereID</a></p>    <table class='table tableL2 table-condensed'>
     <thead><tr><th>Index Name</th><th>Type</th><th>Columns</th><th>Uniqueness</th></tr></thead>
     <tbody>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-sphere-sys_idx_sys_pk_10044_10045--icon' class='icon-chevron-right'></i> <a href='#' id='s-sphere-sys_idx_sys_pk_10044_10045' class='togglex'>SYS_IDX_SYS_PK_10044_10045</a></td><td>BALANCED_TREE</td><td>SPHEREID</td><td><span class='label label-important l-Unique'>Unique</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-sphere-sys_idx_sys_pk_10044_10045--dropdown'>
-<p>Used by procedures: <a href='#p-UI_SelectAllSpheresForUserID'>UI_SelectAllSpheresForUserID</a>, <a href='#p-UI_SelectSphereForSphereID'>UI_SelectSphereForSphereID</a></p></td></tr>
+<p>Used by procedures: <a href='#p-UI_SelectAllSpheresForUserID'>UI_SelectAllSpheresForUserID</a>, <a href='#p-UI_SelectSphereForSphereID'>UI_SelectSphereForSphereID</a>, <a href='#p-UI_SelectSpheresForUser'>UI_SelectSpheresForUser</a></p></td></tr>
     </tbody>
     </table>
 </td></tr>
 <tr class='primaryrow'><td style='white-space: nowrap;'><i id='s-sphere_user_link--icon' class='icon-chevron-right'></i> <a href='#' id='s-sphere_user_link' class='togglex'>SPHERE_USER_LINK</a></td><td><span class='label label l-Table'>Table</span></td><td style='whitespace: nowrap;'><span class='label label-success l-Partitioned'>Partitioned</span><small> on SPHEREID</small></td><td>3</td><td>1</td><td><span class='label label-info l-Has-PKey'>Has-PKey</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='s-sphere_user_link--dropdown'>
 <p><pre>CREATE TABLE SPHERE_USER_LINK (     LINKID VARCHAR(36) NOT NULL,    SPHEREID VARCHAR(36) NOT NULL,    USERID VARCHAR(36) NOT NULL,    PRIMARY KEY (LINKID, SPHEREID) );</pre></p>
-<p>Read-only by procedures: <a href='#p-UI_SelectAllSpheresForUserID'>UI_SelectAllSpheresForUserID</a></p>    <table class='table tableL2 table-condensed'>
+<p>Read-only by procedures: <a href='#p-UI_SelectAllSpheresForUserID'>UI_SelectAllSpheresForUserID</a>, <a href='#p-UI_SelectSpheresForUser'>UI_SelectSpheresForUser</a></p>    <table class='table tableL2 table-condensed'>
     <thead><tr><th>Index Name</th><th>Type</th><th>Columns</th><th>Uniqueness</th></tr></thead>
     <tbody>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-sphere_user_link-sys_idx_sys_pk_10040_10041--icon' class='icon-chevron-right'></i> <a href='#' id='s-sphere_user_link-sys_idx_sys_pk_10040_10041' class='togglex'>SYS_IDX_SYS_PK_10040_10041</a></td><td>BALANCED_TREE</td><td>LINKID, SPHEREID</td><td><span class='label label-important l-Unique'>Unique</span></td></tr>
@@ -1069,13 +1070,13 @@
 </td></tr>
 <tr class='primaryrow'><td style='white-space: nowrap'><i id='p-ui_selectactionsforcheckpathid--icon' class='icon-chevron-right'></i> <a href='#p-ui_selectactionsforcheckpathid' id='p-ui_selectactionsforcheckpathid' class='togglex'>UI_SelectActionsForCheckpathID</a></td><td>STRING</td><td><span class='label label-success l-Single'>Single</span></td><td><span class='label label-success l-Read'>Read</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span><span class='label label-important l-Scans'>Scans</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-ui_selectactionsforcheckpathid--dropdown'>
-<p>Partitioned on parameter 0 which maps to column CHECKPATHID of table <a class='invert' href='#s-ACTION'>ACTION</a>.</p><p>Read-only access to tables: <a href='#s-ACTION'>ACTION</a></p><p>Uses indexes: <a href='#s-ACTION-SYS_IDX_SYS_PK_10124_10125'>SYS_IDX_SYS_PK_10124_10125</a></p>    <table class='table tableL2 table-condensed'>
+<p>Partitioned on parameter 0 which maps to column CHECKPATHID of table <a class='invert' href='#s-ACTION'>ACTION</a>.</p><p>Read-only access to tables: <a href='#s-ACTION'>ACTION</a>, <a href='#s-CHECKPATH'>CHECKPATH</a></p><p>Uses indexes: <a href='#s-ACTION-SYS_IDX_SYS_PK_10124_10125'>SYS_IDX_SYS_PK_10124_10125</a>, <a href='#s-CHECKPATH-SYS_IDX_SYS_PK_10109_10110'>SYS_IDX_SYS_PK_10109_10110</a></p>    <table class='table tableL2 table-condensed'>
     <thead><tr><th><span style='white-space: nowrap;'>Statement Name</span></th><th>Statement SQL</th><th>Params</th><th>R/W</th><th>Attributes</th></tr></thead>
     <tbody>
-        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_selectactionsforcheckpathid-sql--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_selectactionsforcheckpathid-sql' class='togglex'>sql</a></td><td><tt>SELECT ACTIONID, TARGETENDPOINTID FROM ACTION WHERE CHECKPATHID = ? ORDER BY ACTIONID;</td></tt><td>STRING</td><td><span class='label label-success l-Read'>Read</span></td><td><span class='label label-important l-Scans'>Scans</span></td></tr>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_selectactionsforcheckpathid-sql--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_selectactionsforcheckpathid-sql' class='togglex'>sql</a></td><td><tt>SELECT ACTIONID, TARGETENDPOINTID, CHECKPATHNAME FROM ACTION JOIN CHECKPATH ON CHECKPATH.CHECKPATHID = ACTION.CHECKPATHID WHERE ACTION.CHECKPATHID = ? ORDER BY ACTIONID;</td></tt><td>STRING</td><td><span class='label label-success l-Read'>Read</span></td><td><span class='label label-important l-Scans'>Scans</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='p-ui_selectactionsforcheckpathid-sql--dropdown'>
 <div class='well well-small'><h4>Explain Plan:</h4>
-<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-ACTION'>ACTION</a>"&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index&nbsp;(for&nbsp;sort&nbsp;order&nbsp;only)<br/>&nbsp;&nbsp;filter&nbsp;by&nbsp;(CHECKPATHID&nbsp;=&nbsp;?0)<br/></tt></div>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;NESTLOOP&nbsp;INDEX&nbsp;INNER&nbsp;JOIN&nbsp;(ASC)<br/>&nbsp;inline&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-CHECKPATH'>CHECKPATH</a>"&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index<br/>&nbsp;&nbsp;uniquely&nbsp;match&nbsp;(CHECKPATHID&nbsp;=&nbsp;ACTION.CHECKPATHID)<br/>&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-ACTION'>ACTION</a>"&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index&nbsp;(for&nbsp;sort&nbsp;order&nbsp;only)<br/>&nbsp;&nbsp;&nbsp;filter&nbsp;by&nbsp;(CHECKPATHID&nbsp;=&nbsp;?0)<br/></tt></div>
 </td></tr>
     </tbody>
     </table>
@@ -1392,6 +1393,19 @@
     </tbody>
     </table>
 </td></tr>
+<tr class='primaryrow'><td style='white-space: nowrap'><i id='p-ui_selectspheresforuser--icon' class='icon-chevron-right'></i> <a href='#p-ui_selectspheresforuser' id='p-ui_selectspheresforuser' class='togglex'>UI_SelectSpheresForUser</a></td><td>STRING</td><td><span class='label label-warning l-Multi'>Multi</span></td><td><span class='label label-success l-Read'>Read</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span><span class='label label-important l-Scans'>Scans</span></td></tr>
+<tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-ui_selectspheresforuser--dropdown'>
+<p>Read-only access to tables: <a href='#s-SPHERE'>SPHERE</a>, <a href='#s-SPHERE_USER_LINK'>SPHERE_USER_LINK</a></p><p>Uses indexes: <a href='#s-SPHERE-SYS_IDX_SYS_PK_10044_10045'>SYS_IDX_SYS_PK_10044_10045</a></p>    <table class='table tableL2 table-condensed'>
+    <thead><tr><th><span style='white-space: nowrap;'>Statement Name</span></th><th>Statement SQL</th><th>Params</th><th>R/W</th><th>Attributes</th></tr></thead>
+    <tbody>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_selectspheresforuser-findspheresforuserid--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_selectspheresforuser-findspheresforuserid' class='togglex'>findSpheresForUserID</a></td><td><tt>SELECT * FROM SPHERE JOIN SPHERE_USER_LINK ON SPHERE.SPHEREID = SPHERE_USER_LINK.SPHEREID AND SPHERE_USER_LINK.USERID = ? ORDER BY SPHERENAME;</td></tt><td>STRING</td><td><span class='label label-success l-Read'>Read</span></td><td><span class='label label-inverse l-Determinism'>Determinism</span><span class='label label-important l-Scans'>Scans</span></td></tr>
+<tr class='dropdown2'><td colspan='5' id='p-ui_selectspheresforuser-findspheresforuserid--dropdown'>
+<div class='well well-small'><h4>Explain Plan:</h4>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;ORDER&nbsp;BY&nbsp;(SORT)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;NESTLOOP&nbsp;INDEX&nbsp;INNER&nbsp;JOIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;inline&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-SPHERE'>SPHERE</a>"&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uniquely&nbsp;match&nbsp;(SPHEREID&nbsp;=&nbsp;SPHERE_USER_LINK.SPHEREID)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEQUENTIAL&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-SPHERE_USER_LINK'>SPHERE_USER_LINK</a>"<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;filter&nbsp;by&nbsp;(USERID&nbsp;=&nbsp;?0)<br/></tt></div>
+</td></tr>
+    </tbody>
+    </table>
+</td></tr>
 <tr class='primaryrow'><td style='white-space: nowrap'><i id='p-ui_selectunprovisionedepforidentifier--icon' class='icon-chevron-right'></i> <a href='#p-ui_selectunprovisionedepforidentifier' id='p-ui_selectunprovisionedepforidentifier' class='togglex'>UI_SelectUnprovisionedEPforIdentifier</a></td><td>STRING</td><td><span class='label label-warning l-Multi'>Multi</span></td><td><span class='label label-success l-Read'>Read</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span><span class='label label-important l-Scans'>Scans</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-ui_selectunprovisionedepforidentifier--dropdown'>
 <p>Read-only access to tables: <a href='#s-ENDPOINTCLASS'>ENDPOINTCLASS</a>, <a href='#s-UNPROVISIONED_ENDPOINT'>UNPROVISIONED_ENDPOINT</a></p><p>Uses indexes: <a href='#s-ENDPOINTCLASS-SYS_IDX_SYS_PK_10048_10049'>SYS_IDX_SYS_PK_10048_10049</a></p>    <table class='table tableL2 table-condensed'>
@@ -1505,6 +1519,19 @@
 <tr class='dropdown2'><td colspan='5' id='p-ui_updatepropertyclass-updatepc--dropdown'>
 <div class='well well-small'><h4>Explain Plan:</h4>
 <tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;LIMIT&nbsp;1<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;UPDATE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-PROPERTYCLASS'>PROPERTYCLASS</a>"&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uniquely&nbsp;match&nbsp;(PROPERTYCLASSID&nbsp;=&nbsp;?3),&nbsp;filter&nbsp;by&nbsp;(PROPERTYCLASSID&nbsp;=&nbsp;?3)<br/></tt></div>
+</td></tr>
+    </tbody>
+    </table>
+</td></tr>
+<tr class='primaryrow'><td style='white-space: nowrap'><i id='p-ui_updatepublicstateforsphereid--icon' class='icon-chevron-right'></i> <a href='#p-ui_updatepublicstateforsphereid' id='p-ui_updatepublicstateforsphereid' class='togglex'>UI_UpdatePublicStateForSphereID</a></td><td>STRING, INTEGER</td><td><span class='label label-warning l-Multi'>Multi</span></td><td><span class='label label-warning l-Write'>Write</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span></td></tr>
+<tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-ui_updatepublicstateforsphereid--dropdown'>
+<p>Read/Write access to tables: <a href='#s-SPHERE'>SPHERE</a></p>    <table class='table tableL2 table-condensed'>
+    <thead><tr><th><span style='white-space: nowrap;'>Statement Name</span></th><th>Statement SQL</th><th>Params</th><th>R/W</th><th>Attributes</th></tr></thead>
+    <tbody>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_updatepublicstateforsphereid-updatepublicstate--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_updatepublicstateforsphereid-updatepublicstate' class='togglex'>updatePublicState</a></td><td><tt>UPDATE SPHERE SET PUBLIC = ? WHERE SPHEREID = ?;</td></tt><td>TINYINT, STRING</td><td><span class='label label-warning l-Write'>Write</span></td><td></td></tr>
+<tr class='dropdown2'><td colspan='5' id='p-ui_updatepublicstateforsphereid-updatepublicstate--dropdown'>
+<div class='well well-small'><h4>Explain Plan:</h4>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;AGGREGATION&nbsp;ops:&nbsp;SUM(VOLT_TEMP_TABLE.modified_tuples)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;UPDATE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;"<a href='#s-SPHERE'>SPHERE</a>"&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uniquely&nbsp;match&nbsp;(SPHEREID&nbsp;=&nbsp;?1),&nbsp;filter&nbsp;by&nbsp;(SPHEREID&nbsp;=&nbsp;?1)<br/></tt></div>
 </td></tr>
     </tbody>
     </table>
@@ -1645,7 +1672,7 @@ JAVA VM:          Java HotSpot(TM) 64-Bit Server VM (24.51-b03, mixed mode)<br/>
             <a href='http://voltdb.com/docs'><i class='icon-book'></i> VoltDB Documentation</a>
         </div>
         <div class='span6 text-right'>
-            Generated by VoltDB 4.0.2.3 on 4 Jan 2015 20:49:22 GMT+00:00
+            Generated by VoltDB 4.0.2.3 on 17 Jan 2015 16:16:36 GMT+00:00
         </div>
         </div>
       </footer>
@@ -1655,7 +1682,7 @@ JAVA VM:          Java HotSpot(TM) 64-Bit Server VM (24.51-b03, mixed mode)<br/>
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://assets.voltdb.com/get.py?a=342E302E322E332C31343230343034353633343430&b=r&f=jquery-1.9.1.min.js"></script>
+    <script src="http://assets.voltdb.com/get.py?a=342E302E322E332C31343231353131333936363638&b=r&f=jquery-1.9.1.min.js"></script>
     <script src="http://assets.voltdb.com/b/js/bootstrap.js"></script>
     <script src="http://assets.voltdb.com/t/js/jquery.tablesorter.js"></script>
     <script src="http://assets.voltdb.com/t/js/jquery.tablesorter.widgets.js"></script>
