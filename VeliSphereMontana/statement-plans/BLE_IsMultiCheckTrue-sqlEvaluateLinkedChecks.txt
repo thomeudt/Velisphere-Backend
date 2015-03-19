@@ -1,8 +1,8 @@
-SQL: SELECT CHECKID, STATE FROM CHECKSTATE WHERE CHECKID IN ? ORDER BY CHECKID
+SQL: SELECT CHECKID, STATE FROM CHECKSTATE WHERE CHECKID IN ? ORDER BY CHECKID;
 PLAN:
 RETURN RESULTS TO STORED PROCEDURE
  NESTLOOP INDEX INNER JOIN (ASC)
- inline INDEX SCAN of "CHECKSTATE" using its primary key index
- range-scan on 1 of 2 cols from (CHECKID >= materialized_temp_table.list_element) while (CHECKID = materialized_temp_table.list_element)
+  inline INDEX SCAN of "CHECKSTATE" using its primary key index
+  range-scan on 1 of 2 cols from (CHECKID >= materialized_temp_table.list_element) while (CHECKID = materialized_temp_table.list_element)
   MATERIALIZED SCAN of SQL-IN-LIST (Sort ASC)
 

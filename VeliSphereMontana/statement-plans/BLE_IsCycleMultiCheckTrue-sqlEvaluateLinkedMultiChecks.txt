@@ -2,7 +2,7 @@ SQL: SELECT MULTICHECKID, STATE FROM MULTICHECK WHERE MULTICHECKID IN ? ORDER BY
 PLAN:
 RETURN RESULTS TO STORED PROCEDURE
  NESTLOOP INDEX INNER JOIN (ASC)
- inline INDEX SCAN of "MULTICHECK" using its primary key index
- range-scan on 1 of 2 cols from (MULTICHECKID >= materialized_temp_table.list_element) while (MULTICHECKID = materialized_temp_table.list_element)
+  inline INDEX SCAN of "MULTICHECK" using its primary key index
+  range-scan on 1 of 2 cols from (MULTICHECKID >= materialized_temp_table.list_element) while (MULTICHECKID = materialized_temp_table.list_element)
   MATERIALIZED SCAN of SQL-IN-LIST (Sort ASC)
 

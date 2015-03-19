@@ -4,7 +4,7 @@ public class UI_DeleteMulticheckCheckLink extends VoltProcedure {
 
 	
 	public final SQLStmt deleteCheck = new SQLStmt(" DELETE FROM MULTICHECK_CHECK_LINK WHERE " +
-			"MULTICHECKID = ?;");
+			"LINKID = ?;");
 		
 
   public VoltTable[] run(

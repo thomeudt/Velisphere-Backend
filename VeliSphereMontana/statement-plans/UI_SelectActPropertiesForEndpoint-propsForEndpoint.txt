@@ -5,11 +5,11 @@ RETURN RESULTS TO STORED PROCEDURE
   RECEIVE FROM ALL PARTITIONS
    SEND PARTITION RESULTS TO COORDINATOR
     NESTLOOP INDEX INNER JOIN
-    inline INDEX SCAN of "ENDPOINTCLASS" using its primary key index
-     uniquely match (ENDPOINTCLASSID = PROPERTY.ENDPOINTCLASSID)
+     inline INDEX SCAN of "ENDPOINTCLASS" using its primary key index
+      uniquely match (ENDPOINTCLASSID = PROPERTY.ENDPOINTCLASSID)
      NESTLOOP INDEX INNER JOIN
-     inline INDEX SCAN of "PROPERTY" using "PREPC"
-      scan matches for (ENDPOINTCLASSID = ENDPOINT.ENDPOINTCLASSID), filter by (ACT = 1)
+      inline INDEX SCAN of "PROPERTY" using "PREPC"
+       scan matches for (ENDPOINTCLASSID = ENDPOINT.ENDPOINTCLASSID), filter by (ACT = 1)
       INDEX SCAN of "ENDPOINT" using its primary key index
        uniquely match (ENDPOINTID = ?0)
 

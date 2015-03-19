@@ -5,8 +5,8 @@ RETURN RESULTS TO STORED PROCEDURE
   RECEIVE FROM ALL PARTITIONS
    SEND PARTITION RESULTS TO COORDINATOR
     NESTLOOP INDEX INNER JOIN
-    inline INDEX SCAN of "PROPERTY" using its primary key index
-     uniquely match (PROPERTYID = CHECK.PROPERTYID)
+     inline INDEX SCAN of "PROPERTY" using its primary key index
+      uniquely match (PROPERTYID = CHECK.PROPERTYID)
      INDEX SCAN of "CHECK" using "CHEP"
       scan matches for (ENDPOINTID = ?0)
 
