@@ -72,12 +72,12 @@
                     </div>
                     <div class="dataBlockContent" style="padding:0;"> <table class='table table-condensed'>
 <tr><td>Compiled by VoltDB Version</td><td>4.9.2</td></tr>
-<tr><td>Compiled on</td><td>Thu, 19 Mar 2015 20:38:25 GMT+00:00</td></tr>
+<tr><td>Compiled on</td><td>Sat, 21 Mar 2015 19:04:45 GMT+00:00</td></tr>
 <tr><td>Table Count</td><td>28 (17 partitioned / 11 replicated)</td></tr>
 <tr><td>Materialized View Count</td><td>0</td></tr>
 <tr><td>Index Count</td><td>50</td></tr>
-<tr><td>Procedure Count</td><td>78 (14 partitioned / 64 replicated) (48 read-only / 30 read-write)</td></tr>
-<tr><td>SQL Statement Count</td><td>98</td></tr>
+<tr><td>Procedure Count</td><td>79 (14 partitioned / 65 replicated) (48 read-only / 31 read-write)</td></tr>
+<tr><td>SQL Statement Count</td><td>99</td></tr>
 </table>
 
 <h4>Warnings</h4><table class='table table-condensed'>
@@ -250,14 +250,14 @@
 <tr class='primaryrow'><td style='white-space: nowrap;'><i id='s-endpoint--icon' class='icon-chevron-right'></i> <a href='#' id='s-endpoint' class='togglex'>ENDPOINT</a></td><td><span class='label label l-Table'>Table</span></td><td style='whitespace: nowrap;'><span class='label label-warning l-Replicated'>Replicated</span></td><td>5</td><td>2 (1 unused)</td><td><span class='label label-info l-Has-PKey'>Has-PKey</span></td><td><span class='label label l-No-limit'>No-limit</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='7' id='s-endpoint--dropdown'>
 <p><pre>CREATE TABLE ENDPOINT (     ENDPOINTID VARCHAR(36) NOT NULL,    ENDPOINTNAME VARCHAR(255) NOT NULL,    ENDPOINTCLASSID VARCHAR(36) NOT NULL,    ENDPOINTPROVDATE TIMESTAMP,    ENDPOINTSTATE VARCHAR(10) NOT NULL,    PRIMARY KEY (ENDPOINTID) );</pre></p>
-<p>Read-only by procedures: <a href='#p-UI_SelectActPropertiesForEndpoint'>UI_SelectActPropertiesForEndpoint</a>, <a href='#p-UI_SelectAllEndpoints'>UI_SelectAllEndpoints</a>, <a href='#p-UI_SelectEndpointForEndpointID'>UI_SelectEndpointForEndpointID</a>, <a href='#p-UI_SelectEndpointsForSphere'>UI_SelectEndpointsForSphere</a>, <a href='#p-UI_SelectEndpointsForUser'>UI_SelectEndpointsForUser</a>, <a href='#p-UI_SelectSensePropertiesForEndpoint'>UI_SelectSensePropertiesForEndpoint</a></p><p>Read/Write by procedures: <a href='#p-UI_UpdateEndpointnameForEndpointID'>UI_UpdateEndpointnameForEndpointID</a></p>    <table class='table tableL2 table-condensed'>
+<p>Read-only by procedures: <a href='#p-UI_SelectActPropertiesForEndpoint'>UI_SelectActPropertiesForEndpoint</a>, <a href='#p-UI_SelectAllEndpoints'>UI_SelectAllEndpoints</a>, <a href='#p-UI_SelectEndpointForEndpointID'>UI_SelectEndpointForEndpointID</a>, <a href='#p-UI_SelectEndpointsForSphere'>UI_SelectEndpointsForSphere</a>, <a href='#p-UI_SelectEndpointsForUser'>UI_SelectEndpointsForUser</a>, <a href='#p-UI_SelectSensePropertiesForEndpoint'>UI_SelectSensePropertiesForEndpoint</a></p><p>Read/Write by procedures: <a href='#p-SRV_UpdateEndpointState'>SRV_UpdateEndpointState</a>, <a href='#p-UI_UpdateEndpointnameForEndpointID'>UI_UpdateEndpointnameForEndpointID</a></p>    <table class='table tableL2 table-condensed'>
     <thead><tr><th>Index Name</th><th>Type</th><th>Columns</th><th>Attributes</th></tr>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-endpoint-epepc--icon' class='icon-chevron-right'></i> <a href='#' id='s-endpoint-epepc' class='togglex'>EPEPC</a></td><td>BALANCED_TREE</td><td>ENDPOINTCLASSID</td><td><span class='label label-info l-Nonunique'>Nonunique</span> <span class='label label-important l-Unused'>Unused</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-endpoint-epepc--dropdown'>
 </td></tr>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-endpoint-voltdb_autogen_idx_pk_endpoint_endpointid--icon' class='icon-chevron-right'></i> <a href='#' id='s-endpoint-voltdb_autogen_idx_pk_endpoint_endpointid' class='togglex'>VOLTDB_AUTOGEN_IDX_PK_ENDPOINT_ENDPOINTID</a></td><td>BALANCED_TREE</td><td>ENDPOINTID</td><td><span class='label label-success l-Unique'>Unique</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-endpoint-voltdb_autogen_idx_pk_endpoint_endpointid--dropdown'>
-<p>Used by procedures: <a href='#p-UI_SelectActPropertiesForEndpoint'>UI_SelectActPropertiesForEndpoint</a>, <a href='#p-UI_SelectEndpointForEndpointID'>UI_SelectEndpointForEndpointID</a>, <a href='#p-UI_SelectEndpointsForSphere'>UI_SelectEndpointsForSphere</a>, <a href='#p-UI_SelectEndpointsForUser'>UI_SelectEndpointsForUser</a>, <a href='#p-UI_SelectSensePropertiesForEndpoint'>UI_SelectSensePropertiesForEndpoint</a>, <a href='#p-UI_UpdateEndpointnameForEndpointID'>UI_UpdateEndpointnameForEndpointID</a></p></td></tr>
+<p>Used by procedures: <a href='#p-SRV_UpdateEndpointState'>SRV_UpdateEndpointState</a>, <a href='#p-UI_SelectActPropertiesForEndpoint'>UI_SelectActPropertiesForEndpoint</a>, <a href='#p-UI_SelectEndpointForEndpointID'>UI_SelectEndpointForEndpointID</a>, <a href='#p-UI_SelectEndpointsForSphere'>UI_SelectEndpointsForSphere</a>, <a href='#p-UI_SelectEndpointsForUser'>UI_SelectEndpointsForUser</a>, <a href='#p-UI_SelectSensePropertiesForEndpoint'>UI_SelectSensePropertiesForEndpoint</a>, <a href='#p-UI_UpdateEndpointnameForEndpointID'>UI_UpdateEndpointnameForEndpointID</a></p></td></tr>
     </thead>
     </table>
 </td></tr>
@@ -889,6 +889,9 @@ CREATE PROCEDURE
    FROM CLASS SelectAllUsers;
 
 CREATE PROCEDURE 
+   FROM CLASS SRV_UpdateEndpointState;
+
+CREATE PROCEDURE 
    FROM CLASS UI_DeleteAllActionsForCheckID;
 
 CREATE PROCEDURE 
@@ -1398,6 +1401,18 @@ CREATE PROCEDURE
     </thead>
     </table>
 </td></tr>
+<tr class='primaryrow'><td style='white-space: nowrap'><i id='p-srv_updateendpointstate--icon' class='icon-chevron-right'></i> <a href='#p-srv_updateendpointstate' id='p-srv_updateendpointstate' class='togglex'>SRV_UpdateEndpointState</a></td><td>STRING, STRING</td><td><span class='label label-warning l-Multi'>Multi</span></td><td><span class='label label-warning l-Write'>Write</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span></td></tr>
+<tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-srv_updateendpointstate--dropdown'>
+<p>Read/Write access to tables: <a href='#s-ENDPOINT'>ENDPOINT</a></p><p>Uses indexes: <a href='#s-ENDPOINT-VOLTDB_AUTOGEN_IDX_PK_ENDPOINT_ENDPOINTID'>VOLTDB_AUTOGEN_IDX_PK_ENDPOINT_ENDPOINTID</a></p>    <table class='table tableL2 table-condensed'>
+    <thead><tr><th><span style='white-space: nowrap;'>Statement Name</span></th><th>Statement SQL</th><th>Params</th><th>R/W</th><th>Attributes</th></tr>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-srv_updateendpointstate-updateendpointstate--icon' class='icon-chevron-right'></i> <a href='#' id='p-srv_updateendpointstate-updateendpointstate' class='togglex'>updateEndpointState</a></td><td><tt>UPDATE ENDPOINT SET ENDPOINTSTATE = ? WHERE ENDPOINTID = ?;</td></tt><td>STRING, STRING</td><td><span class='label label-warning l-Write'>Write</span></td><td></td></tr>
+<tr class='dropdown2'><td colspan='5' id='p-srv_updateendpointstate-updateendpointstate--dropdown'>
+<div class='well well-small'><h4>Explain Plan:</h4>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;LIMIT&nbsp;1<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;UPDATE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;&quot;ENDPOINT&quot;&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uniquely&nbsp;match&nbsp;(ENDPOINTID&nbsp;=&nbsp;?1),&nbsp;filter&nbsp;by&nbsp;(ENDPOINTID&nbsp;=&nbsp;?1)<br/></tt></div>
+</td></tr>
+    </thead>
+    </table>
+</td></tr>
 <tr class='primaryrow'><td style='white-space: nowrap'><i id='p-ui_deleteallactionsforcheckid--icon' class='icon-chevron-right'></i> <a href='#p-ui_deleteallactionsforcheckid' id='p-ui_deleteallactionsforcheckid' class='togglex'>UI_DeleteAllActionsForCheckID</a></td><td>STRING</td><td><span class='label label-warning l-Multi'>Multi</span></td><td><span class='label label-warning l-Write'>Write</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-ui_deleteallactionsforcheckid--dropdown'>
 <p>Read/Write access to tables: <a href='#s-ACTION'>ACTION</a>, <a href='#s-OUTBOUNDPROPERTYACTION'>OUTBOUNDPROPERTYACTION</a></p><p>Uses indexes: <a href='#s-ACTION-RCHECK'>RCHECK</a>, <a href='#s-ACTION-VOLTDB_AUTOGEN_IDX_PK_ACTION_ACTIONID_CHECKPATHID'>VOLTDB_AUTOGEN_IDX_PK_ACTION_ACTIONID_CHECKPATHID</a>, <a href='#s-OUTBOUNDPROPERTYACTION-OUTBOUNDPROPACTION'>OUTBOUNDPROPACTION</a></p>    <table class='table tableL2 table-condensed'>
@@ -1734,7 +1749,7 @@ CREATE PROCEDURE
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-ui_selectendpointforendpointid--dropdown'>
 <p>Read-only access to tables: <a href='#s-ENDPOINT'>ENDPOINT</a></p><p>Uses indexes: <a href='#s-ENDPOINT-VOLTDB_AUTOGEN_IDX_PK_ENDPOINT_ENDPOINTID'>VOLTDB_AUTOGEN_IDX_PK_ENDPOINT_ENDPOINTID</a></p>    <table class='table tableL2 table-condensed'>
     <thead><tr><th><span style='white-space: nowrap;'>Statement Name</span></th><th>Statement SQL</th><th>Params</th><th>R/W</th><th>Attributes</th></tr>
-        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_selectendpointforendpointid-selectendpoint--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_selectendpointforendpointid-selectendpoint' class='togglex'>selectEndpoint</a></td><td><tt>SELECT ENDPOINTID, ENDPOINTNAME, ENDPOINTCLASSID, ENDPOINTPROVDATE FROM ENDPOINT WHERE ENDPOINTID = ? ORDER BY ENDPOINTNAME;</td></tt><td>STRING</td><td><span class='label label-success l-Read'>Read</span></td><td></td></tr>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-ui_selectendpointforendpointid-selectendpoint--icon' class='icon-chevron-right'></i> <a href='#' id='p-ui_selectendpointforendpointid-selectendpoint' class='togglex'>selectEndpoint</a></td><td><tt>SELECT ENDPOINTID, ENDPOINTNAME, ENDPOINTCLASSID, ENDPOINTPROVDATE, ENDPOINTSTATE FROM ENDPOINT WHERE ENDPOINTID = ? ORDER BY ENDPOINTNAME;</td></tt><td>STRING</td><td><span class='label label-success l-Read'>Read</span></td><td></td></tr>
 <tr class='dropdown2'><td colspan='5' id='p-ui_selectendpointforendpointid-selectendpoint--dropdown'>
 <div class='well well-small'><h4>Explain Plan:</h4>
 <tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;ORDER&nbsp;BY&nbsp;(SORT)<br/>&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;&quot;ENDPOINT&quot;&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index<br/>&nbsp;&nbsp;&nbsp;uniquely&nbsp;match&nbsp;(ENDPOINTID&nbsp;=&nbsp;?0)<br/></tt></div>
@@ -2379,7 +2394,7 @@ JAVA VM:          Java HotSpot(TM) 64-Bit Server VM (24.51-b03, mixed mode)<br/>
 </td></tr>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-endpoint-voltdb_autogen_idx_pk_endpoint_endpointid--icon' class='icon-chevron-right'></i> <a href='#' id='s-endpoint-voltdb_autogen_idx_pk_endpoint_endpointid' class='togglex'>VOLTDB_AUTOGEN_IDX_PK_ENDPOINT_ENDPOINTID</a></td><td>BALANCED_TREE</td><td>ENDPOINTID</td><td><span class='label label-success l-Unique'>Unique</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-endpoint-voltdb_autogen_idx_pk_endpoint_endpointid--dropdown'>
-<p>Used by procedures: <a href='#p-UI_SelectActPropertiesForEndpoint'>UI_SelectActPropertiesForEndpoint</a>, <a href='#p-UI_SelectEndpointForEndpointID'>UI_SelectEndpointForEndpointID</a>, <a href='#p-UI_SelectEndpointsForSphere'>UI_SelectEndpointsForSphere</a>, <a href='#p-UI_SelectEndpointsForUser'>UI_SelectEndpointsForUser</a>, <a href='#p-UI_SelectSensePropertiesForEndpoint'>UI_SelectSensePropertiesForEndpoint</a>, <a href='#p-UI_UpdateEndpointnameForEndpointID'>UI_UpdateEndpointnameForEndpointID</a></p></td></tr>
+<p>Used by procedures: <a href='#p-SRV_UpdateEndpointState'>SRV_UpdateEndpointState</a>, <a href='#p-UI_SelectActPropertiesForEndpoint'>UI_SelectActPropertiesForEndpoint</a>, <a href='#p-UI_SelectEndpointForEndpointID'>UI_SelectEndpointForEndpointID</a>, <a href='#p-UI_SelectEndpointsForSphere'>UI_SelectEndpointsForSphere</a>, <a href='#p-UI_SelectEndpointsForUser'>UI_SelectEndpointsForUser</a>, <a href='#p-UI_SelectSensePropertiesForEndpoint'>UI_SelectSensePropertiesForEndpoint</a>, <a href='#p-UI_UpdateEndpointnameForEndpointID'>UI_UpdateEndpointnameForEndpointID</a></p></td></tr>
     </thead>
     </table>
 </td></tr>
@@ -2881,7 +2896,7 @@ JAVA VM:          Java HotSpot(TM) 64-Bit Server VM (24.51-b03, mixed mode)<br/>
             </div>
 
         </div>
-        <div class="documentation"> <a href="http://voltdb.com/docs" class="icon-document" id="iconDoc">VoltDB Documentation</a> <span>Generated by VoltDB 4.9.2 on 19 Mar 2015 20:38:25 GMT+00:00</span>
+        <div class="documentation"> <a href="http://voltdb.com/docs" class="icon-document" id="iconDoc">VoltDB Documentation</a> <span>Generated by VoltDB 4.9.2 on 21 Mar 2015 19:04:45 GMT+00:00</span>
             <div class="clear"></div>
         </div>
     </div>
