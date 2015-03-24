@@ -11,7 +11,7 @@
     </description>
 	
 	<echo message="Starting Script for VeliSphere Montana, the In Memory Database Component for VeliSphere, built on VoltDB..."/>
-	<echo message="This is VeliSphere Montana Version 0.8.0a"/>
+	<echo message="This is VeliSphere Montana Version 0.8.1a"/>
 	<echo message="Copyright (C) 2015 by Thorsten Meudt, all rights reserved."/>
 	
 	<property name="ddlLocation" location="./ddl"/>
@@ -36,7 +36,7 @@
           Start the server after compiling the DDL and stored procedures              
          ================================= -->
 <target name="serverStart" depends="catalog">
-	<echo message="Starting VeliSphere Montana v0.7.9"/>
+	<echo message="Starting VeliSphere Montana v0.8.1a"/>
 	<parallel>
         <exec executable="${VoltHome}/bin/voltdb">
         	<arg value="create"/>
