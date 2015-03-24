@@ -72,12 +72,12 @@
                     </div>
                     <div class="dataBlockContent" style="padding:0;"> <table class='table table-condensed'>
 <tr><td>Compiled by VoltDB Version</td><td>4.9.2</td></tr>
-<tr><td>Compiled on</td><td>Sat, 21 Mar 2015 19:04:45 GMT+00:00</td></tr>
+<tr><td>Compiled on</td><td>Tue, 24 Mar 2015 15:02:02 GMT+00:00</td></tr>
 <tr><td>Table Count</td><td>28 (17 partitioned / 11 replicated)</td></tr>
 <tr><td>Materialized View Count</td><td>0</td></tr>
 <tr><td>Index Count</td><td>50</td></tr>
-<tr><td>Procedure Count</td><td>79 (14 partitioned / 65 replicated) (48 read-only / 31 read-write)</td></tr>
-<tr><td>SQL Statement Count</td><td>99</td></tr>
+<tr><td>Procedure Count</td><td>81 (14 partitioned / 67 replicated) (50 read-only / 31 read-write)</td></tr>
+<tr><td>SQL Statement Count</td><td>101</td></tr>
 </table>
 
 <h4>Warnings</h4><table class='table table-condensed'>
@@ -95,8 +95,8 @@
 <tr><td><a href='#p-selectallusers'>SelectAllUsers</a></td><td>Procedure SelectAllUsers has a statement with a non-deterministic result - statement: &quot;SELECT * FROM USER ORDER BY USERNAME;&quot;, reason: the query result does not guarantee a consistent ordering</td></tr>
 <tr><td><a href='#p-ui_selectsphereforsphereid'>UI_SelectSphereForSphereID</a></td><td>Procedure UI_SelectSphereForSphereID has a statement with a non-deterministic result - statement: &quot;SELECT SPHERENAME, PUBLIC FROM SPHERE WHERE SPHEREID = ? ORDER BY SPHERENAME;&quot;, reason: the query result does not guarantee a consistent ordering</td></tr>
 <tr><td><a href='#p-ui_selectunprovisionedepforidentifier'>UI_SelectUnprovisionedEPforIdentifier</a></td><td>Procedure UI_SelectUnprovisionedEPforIdentifier has a statement with a non-deterministic result - statement: &quot;select UEPID, IDENTIFIER, ENDPOINTCLASSNAME, ENDPOINTCLASSID, TIME_STAMP from UNPROVISIONED_ENDPOINT JOIN ENDPOINTCLASS ON UNPROVISIONED_ENDPOINT.ENDPOINTCLASSID = ENDPOINTCLASS.ENDPOINTCLASSID WHERE IDENTIFIER = ?;&quot;, reason: the query result does not guarantee a consistent ordering</td></tr>
-<tr><td><a href='#p-ui_selectallendpoints'>UI_SelectAllEndpoints</a></td><td>Procedure UI_SelectAllEndpoints has a statement with a non-deterministic result - statement: &quot;SELECT * FROM ENDPOINT ORDER BY ENDPOINTNAME;&quot;, reason: the query result does not guarantee a consistent ordering</td></tr>
 <tr><td><a href='#p-findmultichecksformulticheckid'>FindMultiChecksForMultiCheckID</a></td><td>Procedure FindMultiChecksForMultiCheckID has a statement with a non-deterministic result - statement: &quot;SELECT MULTICHECKID, STATE, OPERATOR FROM MULTICHECK WHERE MULTICHECKID = ?;&quot;, reason: the query result does not guarantee a consistent ordering</td></tr>
+<tr><td><a href='#p-ui_selectallendpoints'>UI_SelectAllEndpoints</a></td><td>Procedure UI_SelectAllEndpoints has a statement with a non-deterministic result - statement: &quot;SELECT * FROM ENDPOINT ORDER BY ENDPOINTNAME;&quot;, reason: the query result does not guarantee a consistent ordering</td></tr>
 <tr><td><a href='#p-ui_selectcheckforcheckid'>UI_SelectCheckForCheckID</a></td><td>Procedure UI_SelectCheckForCheckID has a statement with a non-deterministic result - statement: &quot;select checkid, name from check where checkid = ?;&quot;, reason: the query result does not guarantee a consistent ordering</td></tr>
 <tr><td><a href='#p-improvedfindmatchingchecksequal'>ImprovedFindMatchingChecksEqual</a></td><td>Procedure ImprovedFindMatchingChecksEqual is RW and has a statement whose result has a non-deterministic ordering - statement: &quot;SELECT * FROM CHECK WHERE STATE = 1 AND ENDPOINTID = ?;&quot;, reason: the query result does not guarantee a consistent ordering</td></tr>
 <tr><td><a href='#p-ui_deleteallactionsforcheckid'>UI_DeleteAllActionsForCheckID</a></td><td>Procedure UI_DeleteAllActionsForCheckID is RW and has a statement whose result has a non-deterministic ordering - statement: &quot;SELECT ACTIONID FROM ACTION WHERE CHECKID = ?;&quot;, reason: the query result does not guarantee a consistent ordering</td></tr>
@@ -247,17 +247,17 @@
     </thead>
     </table>
 </td></tr>
-<tr class='primaryrow'><td style='white-space: nowrap;'><i id='s-endpoint--icon' class='icon-chevron-right'></i> <a href='#' id='s-endpoint' class='togglex'>ENDPOINT</a></td><td><span class='label label l-Table'>Table</span></td><td style='whitespace: nowrap;'><span class='label label-warning l-Replicated'>Replicated</span></td><td>5</td><td>2 (1 unused)</td><td><span class='label label-info l-Has-PKey'>Has-PKey</span></td><td><span class='label label l-No-limit'>No-limit</span></td></tr>
+<tr class='primaryrow'><td style='white-space: nowrap;'><i id='s-endpoint--icon' class='icon-chevron-right'></i> <a href='#' id='s-endpoint' class='togglex'>ENDPOINT</a></td><td><span class='label label l-Table'>Table</span></td><td style='whitespace: nowrap;'><span class='label label-warning l-Replicated'>Replicated</span></td><td>6</td><td>2 (1 unused)</td><td><span class='label label-info l-Has-PKey'>Has-PKey</span></td><td><span class='label label l-No-limit'>No-limit</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='7' id='s-endpoint--dropdown'>
-<p><pre>CREATE TABLE ENDPOINT (     ENDPOINTID VARCHAR(36) NOT NULL,    ENDPOINTNAME VARCHAR(255) NOT NULL,    ENDPOINTCLASSID VARCHAR(36) NOT NULL,    ENDPOINTPROVDATE TIMESTAMP,    ENDPOINTSTATE VARCHAR(10) NOT NULL,    PRIMARY KEY (ENDPOINTID) );</pre></p>
-<p>Read-only by procedures: <a href='#p-UI_SelectActPropertiesForEndpoint'>UI_SelectActPropertiesForEndpoint</a>, <a href='#p-UI_SelectAllEndpoints'>UI_SelectAllEndpoints</a>, <a href='#p-UI_SelectEndpointForEndpointID'>UI_SelectEndpointForEndpointID</a>, <a href='#p-UI_SelectEndpointsForSphere'>UI_SelectEndpointsForSphere</a>, <a href='#p-UI_SelectEndpointsForUser'>UI_SelectEndpointsForUser</a>, <a href='#p-UI_SelectSensePropertiesForEndpoint'>UI_SelectSensePropertiesForEndpoint</a></p><p>Read/Write by procedures: <a href='#p-SRV_UpdateEndpointState'>SRV_UpdateEndpointState</a>, <a href='#p-UI_UpdateEndpointnameForEndpointID'>UI_UpdateEndpointnameForEndpointID</a></p>    <table class='table tableL2 table-condensed'>
+<p><pre>CREATE TABLE ENDPOINT (     ENDPOINTID VARCHAR(36) NOT NULL,    ENDPOINTNAME VARCHAR(255) NOT NULL,    ENDPOINTCLASSID VARCHAR(36) NOT NULL,    ENDPOINTPROVDATE TIMESTAMP,    ENDPOINTSTATE VARCHAR(10) NOT NULL,    SECRET VARCHAR(100) NOT NULL,    PRIMARY KEY (ENDPOINTID) );</pre></p>
+<p>Read-only by procedures: <a href='#p-SEC_SelectSecretForEndpointID'>SEC_SelectSecretForEndpointID</a>, <a href='#p-UI_SelectActPropertiesForEndpoint'>UI_SelectActPropertiesForEndpoint</a>, <a href='#p-UI_SelectAllEndpoints'>UI_SelectAllEndpoints</a>, <a href='#p-UI_SelectEndpointForEndpointID'>UI_SelectEndpointForEndpointID</a>, <a href='#p-UI_SelectEndpointsForSphere'>UI_SelectEndpointsForSphere</a>, <a href='#p-UI_SelectEndpointsForUser'>UI_SelectEndpointsForUser</a>, <a href='#p-UI_SelectSensePropertiesForEndpoint'>UI_SelectSensePropertiesForEndpoint</a></p><p>Read/Write by procedures: <a href='#p-SRV_UpdateEndpointState'>SRV_UpdateEndpointState</a>, <a href='#p-UI_UpdateEndpointnameForEndpointID'>UI_UpdateEndpointnameForEndpointID</a></p>    <table class='table tableL2 table-condensed'>
     <thead><tr><th>Index Name</th><th>Type</th><th>Columns</th><th>Attributes</th></tr>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-endpoint-epepc--icon' class='icon-chevron-right'></i> <a href='#' id='s-endpoint-epepc' class='togglex'>EPEPC</a></td><td>BALANCED_TREE</td><td>ENDPOINTCLASSID</td><td><span class='label label-info l-Nonunique'>Nonunique</span> <span class='label label-important l-Unused'>Unused</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-endpoint-epepc--dropdown'>
 </td></tr>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-endpoint-voltdb_autogen_idx_pk_endpoint_endpointid--icon' class='icon-chevron-right'></i> <a href='#' id='s-endpoint-voltdb_autogen_idx_pk_endpoint_endpointid' class='togglex'>VOLTDB_AUTOGEN_IDX_PK_ENDPOINT_ENDPOINTID</a></td><td>BALANCED_TREE</td><td>ENDPOINTID</td><td><span class='label label-success l-Unique'>Unique</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-endpoint-voltdb_autogen_idx_pk_endpoint_endpointid--dropdown'>
-<p>Used by procedures: <a href='#p-SRV_UpdateEndpointState'>SRV_UpdateEndpointState</a>, <a href='#p-UI_SelectActPropertiesForEndpoint'>UI_SelectActPropertiesForEndpoint</a>, <a href='#p-UI_SelectEndpointForEndpointID'>UI_SelectEndpointForEndpointID</a>, <a href='#p-UI_SelectEndpointsForSphere'>UI_SelectEndpointsForSphere</a>, <a href='#p-UI_SelectEndpointsForUser'>UI_SelectEndpointsForUser</a>, <a href='#p-UI_SelectSensePropertiesForEndpoint'>UI_SelectSensePropertiesForEndpoint</a>, <a href='#p-UI_UpdateEndpointnameForEndpointID'>UI_UpdateEndpointnameForEndpointID</a></p></td></tr>
+<p>Used by procedures: <a href='#p-SEC_SelectSecretForEndpointID'>SEC_SelectSecretForEndpointID</a>, <a href='#p-SRV_UpdateEndpointState'>SRV_UpdateEndpointState</a>, <a href='#p-UI_SelectActPropertiesForEndpoint'>UI_SelectActPropertiesForEndpoint</a>, <a href='#p-UI_SelectEndpointForEndpointID'>UI_SelectEndpointForEndpointID</a>, <a href='#p-UI_SelectEndpointsForSphere'>UI_SelectEndpointsForSphere</a>, <a href='#p-UI_SelectEndpointsForUser'>UI_SelectEndpointsForUser</a>, <a href='#p-UI_SelectSensePropertiesForEndpoint'>UI_SelectSensePropertiesForEndpoint</a>, <a href='#p-UI_UpdateEndpointnameForEndpointID'>UI_UpdateEndpointnameForEndpointID</a></p></td></tr>
     </thead>
     </table>
 </td></tr>
@@ -489,14 +489,14 @@
     </thead>
     </table>
 </td></tr>
-<tr class='primaryrow'><td style='white-space: nowrap;'><i id='s-unprovisioned_endpoint--icon' class='icon-chevron-right'></i> <a href='#' id='s-unprovisioned_endpoint' class='togglex'>UNPROVISIONED_ENDPOINT</a></td><td><span class='label label l-Table'>Table</span></td><td style='whitespace: nowrap;'><span class='label label-warning l-Replicated'>Replicated</span></td><td>4</td><td>1 (1 unused)</td><td><span class='label label-info l-Has-PKey'>Has-PKey</span></td><td><span class='label label l-No-limit'>No-limit</span></td></tr>
+<tr class='primaryrow'><td style='white-space: nowrap;'><i id='s-unprovisioned_endpoint--icon' class='icon-chevron-right'></i> <a href='#' id='s-unprovisioned_endpoint' class='togglex'>UNPROVISIONED_ENDPOINT</a></td><td><span class='label label l-Table'>Table</span></td><td style='whitespace: nowrap;'><span class='label label-warning l-Replicated'>Replicated</span></td><td>5</td><td>1</td><td><span class='label label-info l-Has-PKey'>Has-PKey</span></td><td><span class='label label l-No-limit'>No-limit</span></td></tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='7' id='s-unprovisioned_endpoint--dropdown'>
-<p><pre>CREATE TABLE UNPROVISIONED_ENDPOINT (     UEPID VARCHAR(36) NOT NULL,    IDENTIFIER VARCHAR(128),    ENDPOINTCLASSID VARCHAR(36),    TIME_STAMP TIMESTAMP,    PRIMARY KEY (UEPID) );</pre></p>
-<p>Read-only by procedures: <a href='#p-UI_SelectUnprovisionedEPforIdentifier'>UI_SelectUnprovisionedEPforIdentifier</a></p>    <table class='table tableL2 table-condensed'>
+<p><pre>CREATE TABLE UNPROVISIONED_ENDPOINT (     UEPID VARCHAR(36) NOT NULL,    IDENTIFIER VARCHAR(128),    ENDPOINTCLASSID VARCHAR(36),    TIME_STAMP TIMESTAMP,    SECRET VARCHAR(100) NOT NULL,    PRIMARY KEY (UEPID) );</pre></p>
+<p>Read-only by procedures: <a href='#p-SEC_SelectSecretForUEPID'>SEC_SelectSecretForUEPID</a>, <a href='#p-UI_SelectUnprovisionedEPforIdentifier'>UI_SelectUnprovisionedEPforIdentifier</a></p>    <table class='table tableL2 table-condensed'>
     <thead><tr><th>Index Name</th><th>Type</th><th>Columns</th><th>Attributes</th></tr>
-        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-unprovisioned_endpoint-voltdb_autogen_idx_pk_unprovisioned_endpoint_uepid--icon' class='icon-chevron-right'></i> <a href='#' id='s-unprovisioned_endpoint-voltdb_autogen_idx_pk_unprovisioned_endpoint_uepid' class='togglex'>VOLTDB_AUTOGEN_IDX_PK_UNPROVISIONED_ENDPOINT_UEPID</a></td><td>BALANCED_TREE</td><td>UEPID</td><td><span class='label label-success l-Unique'>Unique</span> <span class='label label-important l-Unused'>Unused</span></td></tr>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-unprovisioned_endpoint-voltdb_autogen_idx_pk_unprovisioned_endpoint_uepid--icon' class='icon-chevron-right'></i> <a href='#' id='s-unprovisioned_endpoint-voltdb_autogen_idx_pk_unprovisioned_endpoint_uepid' class='togglex'>VOLTDB_AUTOGEN_IDX_PK_UNPROVISIONED_ENDPOINT_UEPID</a></td><td>BALANCED_TREE</td><td>UEPID</td><td><span class='label label-success l-Unique'>Unique</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-unprovisioned_endpoint-voltdb_autogen_idx_pk_unprovisioned_endpoint_uepid--dropdown'>
-</td></tr>
+<p>Used by procedures: <a href='#p-SEC_SelectSecretForUEPID'>SEC_SelectSecretForUEPID</a></p></td></tr>
     </thead>
     </table>
 </td></tr>
@@ -616,6 +616,7 @@ CREATE TABLE ENDPOINT (
    ENDPOINTCLASSID varchar(36) NOT NULL,
    ENDPOINTPROVDATE timestamp,
    ENDPOINTSTATE varchar(10) NOT NULL,
+   SECRET varchar(100) NOT NULL,
    PRIMARY KEY (ENDPOINTID)
 );
 CREATE INDEX EPEPC ON ENDPOINT (ENDPOINTCLASSID);
@@ -789,6 +790,7 @@ CREATE TABLE UNPROVISIONED_ENDPOINT (
    IDENTIFIER varchar(128),
    ENDPOINTCLASSID varchar(36),
    TIME_STAMP timestamp,
+   SECRET varchar(100) NOT NULL,
    PRIMARY KEY (UEPID)
 );
 
@@ -884,6 +886,12 @@ PARTITION PROCEDURE LGE_InsertEndpointPropertyLog ON TABLE ENDPOINTPROPERTYLOG C
 
 CREATE PROCEDURE 
    FROM CLASS ResetChecks;
+
+CREATE PROCEDURE 
+   FROM CLASS SEC_SelectSecretForEndpointID;
+
+CREATE PROCEDURE 
+   FROM CLASS SEC_SelectSecretForUEPID;
 
 CREATE PROCEDURE 
    FROM CLASS SelectAllUsers;
@@ -1385,6 +1393,30 @@ CREATE PROCEDURE
 <tr class='dropdown2'><td colspan='5' id='p-resetchecks-sql--dropdown'>
 <div class='well well-small'><h4>Explain Plan:</h4>
 <tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;Serial&nbsp;AGGREGATION&nbsp;ops:&nbsp;SUM(VOLT_TEMP_TABLE.modified_tuples)<br/>&nbsp;&nbsp;RECEIVE&nbsp;FROM&nbsp;ALL&nbsp;PARTITIONS<br/>&nbsp;&nbsp;&nbsp;SEND&nbsp;PARTITION&nbsp;RESULTS&nbsp;TO&nbsp;COORDINATOR<br/>&nbsp;&nbsp;&nbsp;&nbsp;UPDATE<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;&quot;CHECK&quot;&nbsp;using&nbsp;&quot;CHEP&quot;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scan&nbsp;matches&nbsp;for&nbsp;(ENDPOINTID&nbsp;=&nbsp;?0),&nbsp;filter&nbsp;by&nbsp;(ENDPOINTID&nbsp;=&nbsp;?0)<br/></tt></div>
+</td></tr>
+    </thead>
+    </table>
+</td></tr>
+<tr class='primaryrow'><td style='white-space: nowrap'><i id='p-sec_selectsecretforendpointid--icon' class='icon-chevron-right'></i> <a href='#p-sec_selectsecretforendpointid' id='p-sec_selectsecretforendpointid' class='togglex'>SEC_SelectSecretForEndpointID</a></td><td>STRING</td><td><span class='label label-warning l-Multi'>Multi</span></td><td><span class='label label-success l-Read'>Read</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span></td></tr>
+<tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-sec_selectsecretforendpointid--dropdown'>
+<p>Read-only access to tables: <a href='#s-ENDPOINT'>ENDPOINT</a></p><p>Uses indexes: <a href='#s-ENDPOINT-VOLTDB_AUTOGEN_IDX_PK_ENDPOINT_ENDPOINTID'>VOLTDB_AUTOGEN_IDX_PK_ENDPOINT_ENDPOINTID</a></p>    <table class='table tableL2 table-condensed'>
+    <thead><tr><th><span style='white-space: nowrap;'>Statement Name</span></th><th>Statement SQL</th><th>Params</th><th>R/W</th><th>Attributes</th></tr>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-sec_selectsecretforendpointid-selectendpoint--icon' class='icon-chevron-right'></i> <a href='#' id='p-sec_selectsecretforendpointid-selectendpoint' class='togglex'>selectEndpoint</a></td><td><tt>SELECT SECRET FROM ENDPOINT WHERE ENDPOINTID = ? ORDER BY ENDPOINTNAME;</td></tt><td>STRING</td><td><span class='label label-success l-Read'>Read</span></td><td></td></tr>
+<tr class='dropdown2'><td colspan='5' id='p-sec_selectsecretforendpointid-selectendpoint--dropdown'>
+<div class='well well-small'><h4>Explain Plan:</h4>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;ORDER&nbsp;BY&nbsp;(SORT)<br/>&nbsp;&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;&quot;ENDPOINT&quot;&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index<br/>&nbsp;&nbsp;&nbsp;uniquely&nbsp;match&nbsp;(ENDPOINTID&nbsp;=&nbsp;?0)<br/></tt></div>
+</td></tr>
+    </thead>
+    </table>
+</td></tr>
+<tr class='primaryrow'><td style='white-space: nowrap'><i id='p-sec_selectsecretforuepid--icon' class='icon-chevron-right'></i> <a href='#p-sec_selectsecretforuepid' id='p-sec_selectsecretforuepid' class='togglex'>SEC_SelectSecretForUEPID</a></td><td>STRING</td><td><span class='label label-warning l-Multi'>Multi</span></td><td><span class='label label-success l-Read'>Read</span></td><td><i>None</i></td><td><span class='label label-info l-Java'>Java</span></td></tr>
+<tr class='tablesorter-childRow'><td class='invert' colspan='6' id='p-sec_selectsecretforuepid--dropdown'>
+<p>Read-only access to tables: <a href='#s-UNPROVISIONED_ENDPOINT'>UNPROVISIONED_ENDPOINT</a></p><p>Uses indexes: <a href='#s-UNPROVISIONED_ENDPOINT-VOLTDB_AUTOGEN_IDX_PK_UNPROVISIONED_ENDPOINT_UEPID'>VOLTDB_AUTOGEN_IDX_PK_UNPROVISIONED_ENDPOINT_UEPID</a></p>    <table class='table tableL2 table-condensed'>
+    <thead><tr><th><span style='white-space: nowrap;'>Statement Name</span></th><th>Statement SQL</th><th>Params</th><th>R/W</th><th>Attributes</th></tr>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='p-sec_selectsecretforuepid-selectendpoint--icon' class='icon-chevron-right'></i> <a href='#' id='p-sec_selectsecretforuepid-selectendpoint' class='togglex'>selectEndpoint</a></td><td><tt>SELECT SECRET FROM UNPROVISIONED_ENDPOINT WHERE UEPID = ? ORDER BY UEPID;</td></tt><td>STRING</td><td><span class='label label-success l-Read'>Read</span></td><td></td></tr>
+<tr class='dropdown2'><td colspan='5' id='p-sec_selectsecretforuepid-selectendpoint--dropdown'>
+<div class='well well-small'><h4>Explain Plan:</h4>
+<tt>RETURN&nbsp;RESULTS&nbsp;TO&nbsp;STORED&nbsp;PROCEDURE<br/>&nbsp;INDEX&nbsp;SCAN&nbsp;of&nbsp;&quot;UNPROVISIONED_ENDPOINT&quot;&nbsp;using&nbsp;its&nbsp;primary&nbsp;key&nbsp;index<br/>&nbsp;&nbsp;uniquely&nbsp;match&nbsp;(UEPID&nbsp;=&nbsp;?0)<br/></tt></div>
 </td></tr>
     </thead>
     </table>
@@ -2378,15 +2410,15 @@ JAVA VM:          Java HotSpot(TM) 64-Bit Server VM (24.51-b03, mixed mode)<br/>
 <td><span class='label label l-Table'>Table</span></td>
 <td><div class='ecount'><input type='text' class='form-control count-input' id='s-size-7-count' onblur='sizes_update_all();' value='1000' class='form-control' placeholder='.ecount'></input>
 </div></td>
-<td id='s-size-7-rmin' class='right-cell'>337</td>
-<td id='s-size-7-rmax' class='right-cell'>2065</td>
+<td id='s-size-7-rmin' class='right-cell'>433</td>
+<td id='s-size-7-rmax' class='right-cell'>2609</td>
 <td id='s-size-7-imin' class='right-cell'>96</td>
 <td id='s-size-7-imax' class='right-cell'>96</td>
-<td id='s-size-7-tmin' class='right-cell calculated-cell'>433000</td>
-<td id='s-size-7-tmax' class='right-cell calculated-cell'>2161000</td>
+<td id='s-size-7-tmin' class='right-cell calculated-cell'>529000</td>
+<td id='s-size-7-tmax' class='right-cell calculated-cell'>2705000</td>
 </tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='s-size-7--dropdown'>
-<p><pre>CREATE TABLE ENDPOINT (     ENDPOINTID VARCHAR(36) NOT NULL,    ENDPOINTNAME VARCHAR(255) NOT NULL,    ENDPOINTCLASSID VARCHAR(36) NOT NULL,    ENDPOINTPROVDATE TIMESTAMP,    ENDPOINTSTATE VARCHAR(10) NOT NULL,    PRIMARY KEY (ENDPOINTID) );</pre></p>
+<p><pre>CREATE TABLE ENDPOINT (     ENDPOINTID VARCHAR(36) NOT NULL,    ENDPOINTNAME VARCHAR(255) NOT NULL,    ENDPOINTCLASSID VARCHAR(36) NOT NULL,    ENDPOINTPROVDATE TIMESTAMP,    ENDPOINTSTATE VARCHAR(10) NOT NULL,    SECRET VARCHAR(100) NOT NULL,    PRIMARY KEY (ENDPOINTID) );</pre></p>
     <table class='table tableL2 table-condensed'>
     <thead><tr><th>Index Name</th><th>Type</th><th>Columns</th><th>Attributes</th></tr>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-endpoint-epepc--icon' class='icon-chevron-right'></i> <a href='#' id='s-endpoint-epepc' class='togglex'>EPEPC</a></td><td>BALANCED_TREE</td><td>ENDPOINTCLASSID</td><td><span class='label label-info l-Nonunique'>Nonunique</span> <span class='label label-important l-Unused'>Unused</span></td></tr>
@@ -2394,7 +2426,7 @@ JAVA VM:          Java HotSpot(TM) 64-Bit Server VM (24.51-b03, mixed mode)<br/>
 </td></tr>
         <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-endpoint-voltdb_autogen_idx_pk_endpoint_endpointid--icon' class='icon-chevron-right'></i> <a href='#' id='s-endpoint-voltdb_autogen_idx_pk_endpoint_endpointid' class='togglex'>VOLTDB_AUTOGEN_IDX_PK_ENDPOINT_ENDPOINTID</a></td><td>BALANCED_TREE</td><td>ENDPOINTID</td><td><span class='label label-success l-Unique'>Unique</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-endpoint-voltdb_autogen_idx_pk_endpoint_endpointid--dropdown'>
-<p>Used by procedures: <a href='#p-SRV_UpdateEndpointState'>SRV_UpdateEndpointState</a>, <a href='#p-UI_SelectActPropertiesForEndpoint'>UI_SelectActPropertiesForEndpoint</a>, <a href='#p-UI_SelectEndpointForEndpointID'>UI_SelectEndpointForEndpointID</a>, <a href='#p-UI_SelectEndpointsForSphere'>UI_SelectEndpointsForSphere</a>, <a href='#p-UI_SelectEndpointsForUser'>UI_SelectEndpointsForUser</a>, <a href='#p-UI_SelectSensePropertiesForEndpoint'>UI_SelectSensePropertiesForEndpoint</a>, <a href='#p-UI_UpdateEndpointnameForEndpointID'>UI_UpdateEndpointnameForEndpointID</a></p></td></tr>
+<p>Used by procedures: <a href='#p-SEC_SelectSecretForEndpointID'>SEC_SelectSecretForEndpointID</a>, <a href='#p-SRV_UpdateEndpointState'>SRV_UpdateEndpointState</a>, <a href='#p-UI_SelectActPropertiesForEndpoint'>UI_SelectActPropertiesForEndpoint</a>, <a href='#p-UI_SelectEndpointForEndpointID'>UI_SelectEndpointForEndpointID</a>, <a href='#p-UI_SelectEndpointsForSphere'>UI_SelectEndpointsForSphere</a>, <a href='#p-UI_SelectEndpointsForUser'>UI_SelectEndpointsForUser</a>, <a href='#p-UI_SelectSensePropertiesForEndpoint'>UI_SelectSensePropertiesForEndpoint</a>, <a href='#p-UI_UpdateEndpointnameForEndpointID'>UI_UpdateEndpointnameForEndpointID</a></p></td></tr>
     </thead>
     </table>
 </td></tr>
@@ -2810,20 +2842,20 @@ JAVA VM:          Java HotSpot(TM) 64-Bit Server VM (24.51-b03, mixed mode)<br/>
 <td><span class='label label l-Table'>Table</span></td>
 <td><div class='ecount'><input type='text' class='form-control count-input' id='s-size-26-count' onblur='sizes_update_all();' value='1000' class='form-control' placeholder='.ecount'></input>
 </div></td>
-<td id='s-size-26-rmin' class='right-cell'>296</td>
-<td id='s-size-26-rmax' class='right-cell'>1256</td>
+<td id='s-size-26-rmin' class='right-cell'>392</td>
+<td id='s-size-26-rmax' class='right-cell'>1800</td>
 <td id='s-size-26-imin' class='right-cell'>48</td>
 <td id='s-size-26-imax' class='right-cell'>48</td>
-<td id='s-size-26-tmin' class='right-cell calculated-cell'>344000</td>
-<td id='s-size-26-tmax' class='right-cell calculated-cell'>1304000</td>
+<td id='s-size-26-tmin' class='right-cell calculated-cell'>440000</td>
+<td id='s-size-26-tmax' class='right-cell calculated-cell'>1848000</td>
 </tr>
 <tr class='tablesorter-childRow'><td class='invert' colspan='6' id='s-size-26--dropdown'>
-<p><pre>CREATE TABLE UNPROVISIONED_ENDPOINT (     UEPID VARCHAR(36) NOT NULL,    IDENTIFIER VARCHAR(128),    ENDPOINTCLASSID VARCHAR(36),    TIME_STAMP TIMESTAMP,    PRIMARY KEY (UEPID) );</pre></p>
+<p><pre>CREATE TABLE UNPROVISIONED_ENDPOINT (     UEPID VARCHAR(36) NOT NULL,    IDENTIFIER VARCHAR(128),    ENDPOINTCLASSID VARCHAR(36),    TIME_STAMP TIMESTAMP,    SECRET VARCHAR(100) NOT NULL,    PRIMARY KEY (UEPID) );</pre></p>
     <table class='table tableL2 table-condensed'>
     <thead><tr><th>Index Name</th><th>Type</th><th>Columns</th><th>Attributes</th></tr>
-        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-unprovisioned_endpoint-voltdb_autogen_idx_pk_unprovisioned_endpoint_uepid--icon' class='icon-chevron-right'></i> <a href='#' id='s-unprovisioned_endpoint-voltdb_autogen_idx_pk_unprovisioned_endpoint_uepid' class='togglex'>VOLTDB_AUTOGEN_IDX_PK_UNPROVISIONED_ENDPOINT_UEPID</a></td><td>BALANCED_TREE</td><td>UEPID</td><td><span class='label label-success l-Unique'>Unique</span> <span class='label label-important l-Unused'>Unused</span></td></tr>
+        <tr class='primaryrow2'><td style='white-space: nowrap'><i id='s-unprovisioned_endpoint-voltdb_autogen_idx_pk_unprovisioned_endpoint_uepid--icon' class='icon-chevron-right'></i> <a href='#' id='s-unprovisioned_endpoint-voltdb_autogen_idx_pk_unprovisioned_endpoint_uepid' class='togglex'>VOLTDB_AUTOGEN_IDX_PK_UNPROVISIONED_ENDPOINT_UEPID</a></td><td>BALANCED_TREE</td><td>UEPID</td><td><span class='label label-success l-Unique'>Unique</span></td></tr>
 <tr class='dropdown2'><td colspan='5' id='s-unprovisioned_endpoint-voltdb_autogen_idx_pk_unprovisioned_endpoint_uepid--dropdown'>
-</td></tr>
+<p>Used by procedures: <a href='#p-SEC_SelectSecretForUEPID'>SEC_SelectSecretForUEPID</a></p></td></tr>
     </thead>
     </table>
 </td></tr>
@@ -2883,11 +2915,11 @@ JAVA VM:          Java HotSpot(TM) 64-Bit Server VM (24.51-b03, mixed mode)<br/>
                     <div class="dataBlockContent">
                         <div class="tblScroll">
                         <table class='table size-summary-table'>
-<tr><td id='s-size-summary-table-count' class='right-cell'>28</td><td>tables whose row data  is expected to use between&nbsp;</td><td id='s-size-summary-table-min' class='right-cell calculated-cell'>9886000</td><td>&nbsp;and&nbsp;</td><td id='s-size-summary-table-max' class='right-cell calculated-cell'>513502000</td><td>&nbsp; of memory.&nbsp;</td></tr>
+<tr><td id='s-size-summary-table-count' class='right-cell'>28</td><td>tables whose row data  is expected to use between&nbsp;</td><td id='s-size-summary-table-min' class='right-cell calculated-cell'>10078000</td><td>&nbsp;and&nbsp;</td><td id='s-size-summary-table-max' class='right-cell calculated-cell'>514590000</td><td>&nbsp; of memory.&nbsp;</td></tr>
 <tr><td id='s-size-summary-view-count' class='right-cell'>0</td><td>materialized views whose row data  is expected to use about&nbsp;</td><td id='s-size-summary-view-min' class='right-cell calculated-cell'>0</td><td colspan='3'>&nbsp; of memory.&nbsp;</td></tr>
 <tr><td id='s-size-summary-index-count' class='right-cell'>50</td><td>indexes whose key data and overhead  is expected to use about&nbsp;</td><td id='s-size-summary-index-min' class='right-cell calculated-cell'>2515</td><td colspan='3'>&nbsp; of memory.&nbsp;</td></tr>
 <tr><td colspan='6'>&nbsp;</td></tr>
-<tr><td colspan='2'><b>Total user data is expected to use between</b>&nbsp;</td><td id='s-size-summary-total-min' class='right-cell calculated-cell'>9888515</td><td>&nbsp;<b>and</b>&nbsp;</td><td id='s-size-summary-total-max' class='right-cell calculated-cell'>513504515</td><td>&nbsp<b>of memory.</b></td></tr>
+<tr><td colspan='2'><b>Total user data is expected to use between</b>&nbsp;</td><td id='s-size-summary-total-min' class='right-cell calculated-cell'>10080515</td><td>&nbsp;<b>and</b>&nbsp;</td><td id='s-size-summary-total-max' class='right-cell calculated-cell'>514592515</td><td>&nbsp<b>of memory.</b></td></tr>
 </table>
 
                         </div>
@@ -2896,7 +2928,7 @@ JAVA VM:          Java HotSpot(TM) 64-Bit Server VM (24.51-b03, mixed mode)<br/>
             </div>
 
         </div>
-        <div class="documentation"> <a href="http://voltdb.com/docs" class="icon-document" id="iconDoc">VoltDB Documentation</a> <span>Generated by VoltDB 4.9.2 on 21 Mar 2015 19:04:45 GMT+00:00</span>
+        <div class="documentation"> <a href="http://voltdb.com/docs" class="icon-document" id="iconDoc">VoltDB Documentation</a> <span>Generated by VoltDB 4.9.2 on 24 Mar 2015 15:02:02 GMT+00:00</span>
             <div class="clear"></div>
         </div>
     </div>
