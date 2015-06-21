@@ -6,7 +6,7 @@ import org.voltdb.*;
 public class UI_DeleteAllActionsForMulticheckID extends VoltProcedure {
 
 	
-	public final SQLStmt getActionIDs = new SQLStmt(" SELECT ACTIONID FROM ACTION WHERE MULTICHECKID = ?;");
+	public final SQLStmt getActionIDs = new SQLStmt(" SELECT ACTIONID FROM ACTION WHERE MULTICHECKID = ? ORDER BY ACTIONID;");
 	
 	public final SQLStmt deleteAction = new SQLStmt(" DELETE FROM ACTION WHERE " +
 			"ACTIONID = ?;");

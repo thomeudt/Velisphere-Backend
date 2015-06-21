@@ -6,7 +6,7 @@ import org.voltdb.*;
 public class UI_DeleteAllActionsForCheckID extends VoltProcedure {
 
 	
-	public final SQLStmt getActionIDs = new SQLStmt(" SELECT ACTIONID FROM ACTION WHERE CHECKID = ?;");
+	public final SQLStmt getActionIDs = new SQLStmt(" SELECT ACTIONID FROM ACTION WHERE CHECKID = ? ORDER BY ACTIONID;");
 	
 	public final SQLStmt deleteAction = new SQLStmt(" DELETE FROM ACTION WHERE " +
 			"ACTIONID = ?;");
