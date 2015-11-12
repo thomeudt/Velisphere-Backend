@@ -8,9 +8,11 @@ public class FindAllChecks extends VoltProcedure {
 
 
 	public final SQLStmt sql = new SQLStmt(
-			"SELECT * FROM CHECK ORDER BY CHECKID;"
+			"SELECT CHECKID, ENDPOINTID, PROPERTYID, "
+			+ "CHECKVALUE, OPERATOR, STATE, EXPIRED, NAME, CHECKPATHID"
+			+ " FROM CHECK ORDER BY CHECKID, ENDPOINTID, PROPERTYID, CHECKPATHID;"
 			);
-
+	
 	public VoltTable[] run()
 					throws VoltAbortException {
 		// voltQueueSQL( sql, endpointID, propertyID, checkValue, operator, expired );
