@@ -8,7 +8,8 @@ public class FindMultiChecksForMultiCheckID extends VoltProcedure {
 
 
 	public final SQLStmt sql = new SQLStmt(
-			"SELECT MULTICHECKID, STATE, OPERATOR FROM MULTICHECK WHERE MULTICHECKID = ?;"
+			"SELECT MULTICHECKID, STATE, OPERATOR FROM MULTICHECK WHERE MULTICHECKID = ?"
+			+ " ORDER BY MULTICHECKID, STATE, OPERATOR;"
 			);
 
 	public VoltTable[] run(

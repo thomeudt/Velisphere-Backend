@@ -8,7 +8,7 @@ public class FindChecksForCheckID extends VoltProcedure {
 
 
 	public final SQLStmt sql = new SQLStmt(
-			"SELECT CHECKID, STATE FROM CHECK WHERE CHECKID = ?;"
+			"SELECT CHECKID, STATE FROM CHECK WHERE CHECKID = ? ORDER BY CHECKID, STATE;"
 			);
 
 	public VoltTable[] run(

@@ -3,7 +3,7 @@ import org.voltdb.*;
 public class SelectAllUsers extends VoltProcedure {
 
   public final SQLStmt selectAllUsers = new SQLStmt(
-      " SELECT * FROM USER ORDER BY USERNAME;" );
+      " SELECT USERID, USERNAME, USEREMAIL, USERPWHASH, PLANID FROM USER ORDER BY USERNAME, USERID, USEREMAIL, USERPWHASH, PLANID;" );
 
   public VoltTable[] run()
       throws VoltAbortException {

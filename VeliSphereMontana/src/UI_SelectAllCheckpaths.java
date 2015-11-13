@@ -3,7 +3,8 @@ import org.voltdb.*;
 public class UI_SelectAllCheckpaths extends VoltProcedure {
 
   public final SQLStmt selectAllCheckpaths = new SQLStmt(
-      " SELECT CHECKPATHID, CHECKPATHNAME FROM CHECKPATH WHERE OWNERID = ? AND UIOBJECT != 'ALERT' ORDER BY CHECKPATHNAME;" );
+      " SELECT CHECKPATHID, CHECKPATHNAME FROM CHECKPATH WHERE OWNERID = ? AND UIOBJECT != 'ALERT' "
+      + "ORDER BY CHECKPATHNAME, CHECKPATHID;" );
 
   public VoltTable[] run(
 		  String userID)

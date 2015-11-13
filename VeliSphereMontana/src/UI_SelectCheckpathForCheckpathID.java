@@ -4,7 +4,7 @@ public class UI_SelectCheckpathForCheckpathID extends VoltProcedure {
 
 	
 	public final SQLStmt CheckpathForCheckpathID = new SQLStmt(" select checkpathid, checkpathname, uiobject from checkpath " +
-			"where checkpathid = ?;");
+			"where checkpathid = ? order by checkpathname, checkpathid, uiobject;");
 		
 
   public VoltTable[] run(

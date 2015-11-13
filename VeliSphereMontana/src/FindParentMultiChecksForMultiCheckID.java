@@ -8,7 +8,8 @@ public class FindParentMultiChecksForMultiCheckID extends VoltProcedure {
 
 
 	public final SQLStmt sql = new SQLStmt(
-			"SELECT MULTICHECKLID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKRID = ?;"
+			"SELECT MULTICHECKLID FROM MULTICHECK_MULTICHECK_LINK WHERE MULTICHECKRID = ?"
+			+ " ORDER BY MULTICHECKLID;"
 			);
 
 	public VoltTable[] run(

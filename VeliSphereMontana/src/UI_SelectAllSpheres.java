@@ -3,7 +3,7 @@ import org.voltdb.*;
 public class UI_SelectAllSpheres extends VoltProcedure {
 
   public final SQLStmt selectAllSpheres = new SQLStmt(
-      " SELECT * FROM SPHERE ORDER BY SPHERENAME;" );
+      " SELECT SPHEREID, SPHERENAME, PUBLIC FROM SPHERE ORDER BY SPHERENAME, SPHEREID, PUBLIC;" );
 
   public VoltTable[] run()
       throws VoltAbortException {

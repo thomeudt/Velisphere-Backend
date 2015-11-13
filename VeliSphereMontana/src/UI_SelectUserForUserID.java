@@ -6,7 +6,7 @@ public class UI_SelectUserForUserID extends VoltProcedure {
 	
 	public final SQLStmt findUserForUserID = new SQLStmt(" SELECT USERID, USERNAME, USEREMAIL "
 			+ "FROM USER " +
-			"WHERE USERID = ? ORDER BY USERNAME;");
+			"WHERE USERID = ? ORDER BY USERNAME, USERID, USEREMAIL;");
 		
 
   public VoltTable[] run(

@@ -15,7 +15,9 @@ public class ImprovedFindMatchingChecksEqual extends VoltProcedure {
 			);
 	
 	public final SQLStmt sqlSelectTrueChecks = new SQLStmt(
-			"SELECT * FROM CHECK WHERE STATE = 1 AND ENDPOINTID = ? ORDER BY CHECKID;"
+			"SELECT CHECKID, ENDPOINTID, PROPERTYID, CHECKVALUE, OPERATOR, STATE, EXPIRED, NAME, CHECKPATHID FROM CHECK "
+			+ "WHERE STATE = 1 AND ENDPOINTID = ? "
+			+ "ORDER BY CHECKID, ENDPOINTID, PROPERTYID, CHECKVALUE, OPERATOR, STATE, EXPIRED, NAME, CHECKPATHID;"
 			);
 		
 	public VoltTable[] run( 	

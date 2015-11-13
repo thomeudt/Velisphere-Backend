@@ -8,7 +8,7 @@ public class FindAllMultichecksForCheck extends VoltProcedure {
 
 
 	public final SQLStmt sql = new SQLStmt(
-			"SELECT MULTICHECKID FROM MULTICHECK_CHECK_LINK WHERE CHECKID = ?;"
+			"SELECT MULTICHECKID FROM MULTICHECK_CHECK_LINK WHERE CHECKID = ? ORDER BY MULTICHECKID;"
 			);
 
 	public VoltTable[] run(
