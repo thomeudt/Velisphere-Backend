@@ -13,8 +13,8 @@ public class UI_SelectActPropertiesForEndpoint extends VoltProcedure {
 			"and endpoint.endpointid = ? " +
 			"and property.act = 1 " +
 			"ORDER BY endpoint.endpointname, "
-			+ "endpoint.endpointid, endpoint.endpointclassid, endpoint.endpointprovdate, endpoint.endpointstate, endpoint.secret, "
-			+ "property.propertyid, property.propertyname, property.propertyclassid, property.endpointclassid, property.act, property.sense, property.status, property.configurable, "
+			+ "property.propertyname, endpoint.endpointid, endpoint.endpointclassid, endpoint.endpointprovdate, endpoint.endpointstate, endpoint.secret, "
+			+ "property.propertyid, property.propertyclassid, property.endpointclassid, property.act, property.sense, property.status, property.configurable, "
 			+ "endpointclass.endpointclassid, endpointclass.endpointclassname, endpointclass.endpointclassimageurl, endpointclass.vendorid;");
 		
 
