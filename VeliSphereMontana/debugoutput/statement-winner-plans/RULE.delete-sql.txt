@@ -1,0 +1,6 @@
+SQL: DELETE FROM RULE WHERE (RULEID = ?);
+COST: 6.0
+PLAN:
+DELETE
+ INDEX SCAN of "RULE" using "SYS_IDX_SYS_PK_10099_10100" (unique-scan covering)
+

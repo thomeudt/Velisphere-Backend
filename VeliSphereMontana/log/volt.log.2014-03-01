@@ -1,0 +1,47 @@
+2014-03-02 00:00:30,010   INFO  [Periodic Work] HOST: Host id of this node is: 0
+2014-03-02 00:00:30,082   INFO  [Periodic Work] HOST: URL of deployment info: deployment.xml
+2014-03-02 00:00:30,104   INFO  [Periodic Work] HOST: Database start action is Create.
+2014-03-02 00:00:30,104   INFO  [Periodic Work] HOST: PID of this Volt process is 26795
+2014-03-02 00:00:30,104   INFO  [Periodic Work] HOST: Listening for native wire protocol clients on port 21212.
+2014-03-02 00:00:30,104   INFO  [Periodic Work] HOST: Listening for admin wire protocol clients on port 21211.
+2014-03-02 00:00:30,104   INFO  [Periodic Work] HOST: Local machine HTTP monitoring is listening on port 8080.
+2014-03-02 00:00:30,104   INFO  [Periodic Work] HOST: Json API over HTTP enabled at path /api/1.0/, listening on port 8080.
+2014-03-02 00:00:30,104   INFO  [Periodic Work] HOST: Available JVM arguments: -Xmx2048m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp -XX:-ReduceInitialCardMarks -Dlog4j.configuration=file:///home/thorsten/voltdb-4.0.2.3/voltdb/log4j.xml -Djava.library.path=/home/thorsten/voltdb-4.0.2.3/voltdb
+2014-03-02 00:00:30,117   INFO  [Periodic Work] HOST: JVM class path: /home/thorsten/voltdb-4.0.2.3/voltdb/voltdb-4.0.2.3.jar:/home/thorsten/voltdb-4.0.2.3/lib/jna.jar:/home/thorsten/voltdb-4.0.2.3/lib/servlet-api-2.5.jar:/home/thorsten/voltdb-4.0.2.3/lib/tomcat-juli.jar:/home/thorsten/voltdb-4.0.2.3/lib/log4j-1.2.16.jar:/home/thorsten/voltdb-4.0.2.3/lib/snappy-java-1.1.0.1.jar:/home/thorsten/voltdb-4.0.2.3/lib/slf4j-nop-1.6.2.jar:/home/thorsten/voltdb-4.0.2.3/lib/commons-cli-1.2.jar:/home/thorsten/voltdb-4.0.2.3/lib/groovy-all-2.1.7-indy.jar:/home/thorsten/voltdb-4.0.2.3/lib/jsch-0.1.50.jar:/home/thorsten/voltdb-4.0.2.3/lib/super-csv-2.1.0.jar:/home/thorsten/voltdb-4.0.2.3/lib/jetty-io-7.6.1.v20120215.jar:/home/thorsten/voltdb-4.0.2.3/lib/commons-lang3-3.0.jar:/home/thorsten/voltdb-4.0.2.3/lib/jetty-server-7.6.1.v20120215.jar:/home/thorsten/voltdb-4.0.2.3/lib/jetty-util-7.6.1.v20120215.jar:/home/thorsten/voltdb-4.0.2.3/lib/jline-2.10.jar:/home/thorsten/voltdb-4.0.2.3/lib/protobuf-java-2.4.1.jar:/home/thorsten/voltdb-4.0.2.3/lib/slf4j-api-1.6.2.jar:/home/thorsten/voltdb-4.0.2.3/lib/tomcat-jdbc.jar:/home/thorsten/voltdb-4.0.2.3/lib/jetty-http-7.6.1.v20120215.jar:/home/thorsten/voltdb-4.0.2.3/lib/jetty-continuation-7.6.1.v20120215.jar:/home/thorsten/voltdb-4.0.2.3/lib/zmq-2.1.11.jar
+2014-03-02 00:00:30,117   INFO  [Periodic Work] HOST: Maximum usable Java heap set to 1820 mb.
+2014-03-02 00:00:30,118   INFO  [Periodic Work] HOST: Minimum required Java heap for catalog and server config is 654 MB.
+2014-03-02 00:00:30,129   INFO  [Periodic Work] HOST: Cluster has 1 hosts with leader hostname: "localhost". 3 sites per host. K = 0.
+2014-03-02 00:00:30,129   INFO  [Periodic Work] HOST: The entire cluster has 1 copy of each of the 3 logical partitions.
+2014-03-02 00:00:30,129   INFO  [Periodic Work] HOST: Detection of network partitions in the cluster is enabled.
+2014-03-02 00:00:30,129   INFO  [Periodic Work] HOST: Client authentication is not enabled. Anonymous clients accepted.
+2014-03-02 00:00:30,129   INFO  [Periodic Work] HOST: No schedule set for automated snapshots.
+2014-03-02 00:00:30,129   INFO  [Periodic Work] HOST: Using "voltdbroot" for voltdbroot directory.
+2014-03-02 00:00:30,135   INFO  [Periodic Work] HOST: CPU INFO:         2 Cores (Reported by Java), -1 Sockets, 2 Hardware Threads
+2014-03-02 00:00:30,135   INFO  [Periodic Work] HOST: CPU DESC:         Intel(R) Core(TM) i5-3570K CPU @ 3.40GHz 6144 KB cache
+2014-03-02 00:00:30,135   INFO  [Periodic Work] HOST: HOST MEMORY (MB): 2703
+2014-03-02 00:00:30,135   INFO  [Periodic Work] HOST: OS PROFILE:       Linux 2.6.32-358.el6.x86_64 amd64 en_US
+2014-03-02 00:00:30,136   INFO  [Periodic Work] HOST: JAVA VERSION:     1.7.0_51
+2014-03-02 00:00:30,136   INFO  [Periodic Work] HOST: JAVA RUNTIME:     Java(TM) SE Runtime Environment (1.7.0_51-b13)
+2014-03-02 00:00:30,136   INFO  [Periodic Work] HOST: JAVA VM:          Java HotSpot(TM) 64-Bit Server VM (24.51-b03, mixed mode)
+2014-03-02 00:00:30,146   INFO  [Periodic Work] HOST: About to list cluster interfaces for all nodes with format [ip1 ip2 ... ipN] client-port:admin-port:http-port
+2014-03-02 00:00:30,146   INFO  [Periodic Work] HOST:   Host id: 0 with interfaces: 16.1.1.110 2a02:8070:8333:b700:20c:29ff:fe99:4c48%2 21212,21211,8080 [SELF]
+2014-03-02 01:17:28,012   ERROR [Volt Network - 0] NETWORK: VoltPort died due to an unexpected exception
+java.io.IOException: Connection timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.voltcore.network.NIOReadStream.read(NIOReadStream.java:127)
+	at org.voltcore.network.VoltPort.fillReadStream(VoltPort.java:206)
+	at org.voltcore.network.VoltPort.run(VoltPort.java:169)
+	at org.voltcore.network.VoltNetwork.callPort(VoltNetwork.java:393)
+	at org.voltcore.network.VoltNetwork.invokeCallbacks(VoltNetwork.java:425)
+	at org.voltcore.network.VoltNetwork.run(VoltNetwork.java:299)
+	at java.lang.Thread.run(Thread.java:744)
+2014-03-02 01:19:43,454   WARN  [Volt Network - 0] org.voltcore.network.VoltNetwork: Network was 2675 milliseconds late in updating the estimated time
+2014-03-02 01:20:21,425   WARN  [Periodic Work] NETWORK: Closing connection to org.voltcore.network.VoltPort@6444ec9:/16.1.1.107:58769 because it hasn't read a response that was pending for 30187 milliseconds
+2014-03-02 01:20:51,455   WARN  [Volt Network - 0] org.voltcore.network.VoltNetwork: Network was 4364 milliseconds late in updating the estimated time
+2014-03-02 01:23:01,004   WARN  [Volt Network - 0] org.voltcore.network.VoltNetwork: Network was 3335 milliseconds late in updating the estimated time
+2014-03-02 01:23:01,004   WARN  [Volt Network - 0] org.voltcore.network.VoltNetwork: Network was 64462 milliseconds late in updating the estimated time
+2014-03-02 01:24:06,921   WARN  [Volt Network - 0] org.voltcore.network.VoltNetwork: Network was 5987 milliseconds late in updating the estimated time

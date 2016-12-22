@@ -1,3 +1,0 @@
-UPDATE
- INDEX SCAN of "RULE" using "SYS_IDX_SYS_PK_10087_10088" (unique-scan covering)
-

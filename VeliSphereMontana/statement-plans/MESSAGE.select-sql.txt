@@ -1,0 +1,6 @@
+SQL: SELECT * FROM MESSAGE WHERE (MESSAGEID = ?);
+PLAN:
+RETURN RESULTS TO STORED PROCEDURE
+ INDEX SCAN of "MESSAGE" using its primary key index
+  uniquely match (MESSAGEID = ?0)
+

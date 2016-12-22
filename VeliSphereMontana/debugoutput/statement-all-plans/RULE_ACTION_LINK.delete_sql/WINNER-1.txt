@@ -1,0 +1,3 @@
+DELETE
+ INDEX SCAN of "RULE_ACTION_LINK" using "SYS_IDX_SYS_PK_10141_10142" (unique-scan covering)
+

@@ -1,0 +1,6 @@
+SQL: DELETE FROM CHECKPATH WHERE (CHECKPATHID = ?);
+PLAN:
+DELETE CHECKPATH
+ INDEX SCAN of "CHECKPATH" using its primary key index
+  uniquely match (CHECKPATHID = ?0)
+

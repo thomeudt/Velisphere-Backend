@@ -1,0 +1,5 @@
+SQL: INSERT INTO RULE_ACTION_LINK VALUES (?, ?, ?);
+PLAN:
+INSERT into "RULE_ACTION_LINK"
+ MATERIALIZE TUPLE from parameters and/or literals
+

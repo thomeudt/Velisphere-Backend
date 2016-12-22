@@ -1,3 +1,0 @@
-DELETE
- INDEX SCAN of "MULTICHECK" using "SYS_IDX_SYS_PK_10090_10091" (unique-scan covering)
-

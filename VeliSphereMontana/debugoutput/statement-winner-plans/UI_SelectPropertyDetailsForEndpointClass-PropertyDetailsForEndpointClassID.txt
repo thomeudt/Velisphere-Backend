@@ -1,0 +1,9 @@
+SQL: select * from property join propertyclass on property.propertyclassid = propertyclass.propertyclassid and property.endpointclassid = ? ORDER BY propertyname;
+COST: 3972.0
+PLAN:
+RETURN RESULTS TO STORED PROCEDURE
+ ORDER BY (SORT)
+  NESTLOOP INDEX JOIN
+  inline (INDEX SCAN of "PROPERTYCLASS" using "SYS_IDX_SYS_PK_10067_10068" (unique-scan covering))
+   INDEX SCAN of "PROPERTY" using "PREPC" (unique-scan covering)
+

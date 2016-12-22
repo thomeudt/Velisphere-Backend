@@ -1,0 +1,6 @@
+SQL: DELETE FROM USER WHERE (USERID = ?);
+PLAN:
+DELETE USER
+ INDEX SCAN of "USER" using its primary key index
+  uniquely match (USERID = ?0)
+

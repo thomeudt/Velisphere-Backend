@@ -1,0 +1,446 @@
+Received remote hangup from foreign host localhost/127.0.0.1:58260
+
+****** Current Thread ****** 
+java.lang.Thread.dumpThreads(Native Method)
+java.lang.Thread.getAllStackTraces(Thread.java:1639)
+org.voltdb.VoltDB.printStackTraces(VoltDB.java:612)
+org.voltdb.VoltDB.printStackTraces(VoltDB.java:600)
+org.voltdb.VoltDB.dropStackTrace(VoltDB.java:580)
+org.voltcore.messaging.ForeignHost$FHInputHandler.stopping(ForeignHost.java:84)
+org.voltcore.network.VoltPort.unregistering(VoltPort.java:362)
+org.voltcore.network.VoltNetwork$2.run(VoltNetwork.java:220)
+org.voltcore.network.VoltNetwork.installInterests(VoltNetwork.java:365)
+org.voltcore.network.VoltNetwork.callPort(VoltNetwork.java:412)
+org.voltcore.network.VoltNetwork.invokeCallbacks(VoltNetwork.java:425)
+org.voltcore.network.VoltNetwork.run(VoltNetwork.java:299)
+java.lang.Thread.run(Thread.java:744)
+****** All Threads ******
+
+****** Thread[RO MP Iv2ExecutionSite - 0:3 - 5,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:735)
+java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:644)
+java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1137)
+org.voltdb.iv2.SiteTaskerQueue.take(SiteTaskerQueue.java:45)
+org.voltdb.iv2.MpRoSite.run(MpRoSite.java:265)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[Volt Network - 1,5,main] ******
+java.lang.Thread.dumpThreads(Native Method)
+java.lang.Thread.getAllStackTraces(Thread.java:1639)
+org.voltdb.VoltDB.printStackTraces(VoltDB.java:612)
+org.voltdb.VoltDB.printStackTraces(VoltDB.java:600)
+org.voltdb.VoltDB.dropStackTrace(VoltDB.java:580)
+org.voltcore.messaging.ForeignHost$FHInputHandler.stopping(ForeignHost.java:84)
+org.voltcore.network.VoltPort.unregistering(VoltPort.java:362)
+org.voltcore.network.VoltNetwork$2.run(VoltNetwork.java:220)
+org.voltcore.network.VoltNetwork.installInterests(VoltNetwork.java:365)
+org.voltcore.network.VoltNetwork.callPort(VoltNetwork.java:412)
+org.voltcore.network.VoltNetwork.invokeCallbacks(VoltNetwork.java:425)
+org.voltcore.network.VoltNetwork.run(VoltNetwork.java:299)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[SystemCatalogAgent,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2043)
+java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1079)
+java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:807)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[Fault Distributor,5,main] ******
+java.lang.Object.wait(Native Method)
+java.lang.Object.wait(Object.java:503)
+org.voltdb.fault.FaultDistributor.run(FaultDistributor.java:251)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[Periodic Work,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2082)
+java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1090)
+java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:807)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[Iv2ExecutionSite: 0:3,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:735)
+java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:644)
+java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1137)
+org.voltdb.iv2.SiteTaskerQueue.take(SiteTaskerQueue.java:45)
+org.voltdb.iv2.Site.run(Site.java:506)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[Ad Hoc Planner - 0,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2043)
+java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[ZooKeeperServer,5,main] ******
+java.lang.Object.wait(Native Method)
+org.voltcore.messaging.SiteMailbox.recvBlocking(SiteMailbox.java:138)
+org.voltcore.messaging.SiteMailbox.recvBlocking(SiteMailbox.java:74)
+org.voltcore.agreement.AgreementSite.run(AgreementSite.java:230)
+org.apache.zookeeper_voltpatches.server.ZooKeeperServer.run(ZooKeeperServer.java:1199)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[SnapshotCompletionMonitor,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2043)
+java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[main-SendThread(localhost:2181),5,main] ******
+sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:87)
+sun.nio.ch.SelectorImpl.select(SelectorImpl.java:98)
+org.apache.zookeeper_voltpatches.ClientCnxn$SendThread.run(ClientCnxn.java:1118)
+
+****** Thread[ClientPort connection acceptor,5,main] ******
+sun.nio.ch.ServerSocketChannelImpl.accept0(Native Method)
+sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:241)
+org.voltdb.ClientInterface$ClientAcceptor.run(ClientInterface.java:382)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[Client authenticator - 12,5,Client authentication threads] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:359)
+java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:942)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[StatsAgent,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2082)
+java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1090)
+java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:807)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[VoltDB Client Reaper Thread - 0,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2082)
+java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1090)
+java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:807)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[Iv2ExecutionSite: 0:1,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:735)
+java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:644)
+java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1137)
+org.voltdb.iv2.SiteTaskerQueue.take(SiteTaskerQueue.java:45)
+org.voltdb.iv2.Site.run(Site.java:506)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[qtp786634838-280,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:834)
+java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedInterruptibly(AbstractQueuedSynchronizer.java:994)
+java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1303)
+java.util.concurrent.CountDownLatch.await(CountDownLatch.java:236)
+org.voltdb.HTTPClientInterface$JSONProcCallback.waitForResponse(HTTPClientInterface.java:82)
+org.voltdb.HTTPClientInterface.process(HTTPClientInterface.java:203)
+org.voltdb.utils.HTTPAdminListener$RequestHandler.handle(HTTPAdminListener.java:170)
+org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1033)
+org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:969)
+org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:250)
+org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:111)
+org.eclipse.jetty.server.Server.handle(Server.java:349)
+org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:452)
+org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:47)
+org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:884)
+org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:938)
+org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:634)
+org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:230)
+org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:66)
+org.eclipse.jetty.server.bio.SocketConnector$ConnectorEndPoint.run(SocketConnector.java:254)
+org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:599)
+org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:534)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[RO MP Iv2ExecutionSite - 0:3 - 1,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:735)
+java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:644)
+java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1137)
+org.voltdb.iv2.SiteTaskerQueue.take(SiteTaskerQueue.java:45)
+org.voltdb.iv2.MpRoSite.run(MpRoSite.java:265)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[Reverse DNS lookups - 504,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:359)
+java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:942)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[DestroyJavaVM,5,main] ******
+
+****** Thread[Volt Network - 0,5,main] ******
+sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:87)
+sun.nio.ch.SelectorImpl.select(SelectorImpl.java:98)
+org.voltcore.network.VoltNetwork.run(VoltNetwork.java:284)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[MpInitiator deliver,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:735)
+java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:644)
+java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1137)
+org.voltdb.iv2.MpInitiatorMailbox$1.run(MpInitiatorMailbox.java:54)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[RO MP Iv2ExecutionSite - 0:3 - 2,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:735)
+java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:644)
+java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1137)
+org.voltdb.iv2.SiteTaskerQueue.take(SiteTaskerQueue.java:45)
+org.voltdb.iv2.MpRoSite.run(MpRoSite.java:265)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[Reverse DNS lookups - 505,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:359)
+java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:942)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[RO MP Iv2ExecutionSite - 0:3 - 0,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:735)
+java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:644)
+java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1137)
+org.voltdb.iv2.SiteTaskerQueue.take(SiteTaskerQueue.java:45)
+org.voltdb.iv2.MpRoSite.run(MpRoSite.java:265)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[RO MP Iv2ExecutionSite - 0:3 - 6,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:735)
+java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:644)
+java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1137)
+org.voltdb.iv2.SiteTaskerQueue.take(SiteTaskerQueue.java:45)
+org.voltdb.iv2.MpRoSite.run(MpRoSite.java:265)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[RO MP Iv2ExecutionSite - 0:3 - 7,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:735)
+java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:644)
+java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1137)
+org.voltdb.iv2.SiteTaskerQueue.take(SiteTaskerQueue.java:45)
+org.voltdb.iv2.MpRoSite.run(MpRoSite.java:265)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[Periodic Priority Work,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2082)
+java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1090)
+java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:807)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[SnapshotDaemon,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2082)
+java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1090)
+java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:807)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[Finalizer,8,system] ******
+java.lang.Object.wait(Native Method)
+java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:151)
+java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:189)
+
+****** Thread[Volt Network - 0,5,main] ******
+sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:87)
+sun.nio.ch.SelectorImpl.select(SelectorImpl.java:98)
+org.voltcore.network.VoltNetwork.run(VoltNetwork.java:284)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[Reference Handler,10,system] ******
+java.lang.Object.wait(Native Method)
+java.lang.Object.wait(Object.java:503)
+java.lang.ref.Reference$ReferenceHandler.run(Reference.java:133)
+
+****** Thread[Socket Joiner,5,main] ******
+sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:87)
+sun.nio.ch.SelectorImpl.select(SelectorImpl.java:98)
+sun.nio.ch.SelectorImpl.select(SelectorImpl.java:102)
+org.voltcore.messaging.SocketJoiner.runPrimary(SocketJoiner.java:359)
+org.voltcore.messaging.SocketJoiner.access$000(SocketJoiner.java:62)
+org.voltcore.messaging.SocketJoiner$2.run(SocketJoiner.java:189)
+java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+java.util.concurrent.FutureTask.run(FutureTask.java:262)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[NIOServerCxn.Factory:/127.0.0.1:2181,5,main] ******
+sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:87)
+sun.nio.ch.SelectorImpl.select(SelectorImpl.java:98)
+org.apache.zookeeper_voltpatches.server.NIOServerCnxn$Factory.run(NIOServerCnxn.java:245)
+
+****** Thread[main-EventThread,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2043)
+java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+org.apache.zookeeper_voltpatches.ClientCnxn$EventThread.run(ClientCnxn.java:511)
+
+****** Thread[qtp786634838-27 Acceptor0 SocketConnector@0.0.0.0:8080,5,main] ******
+java.net.PlainSocketImpl.socketAccept(Native Method)
+java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:398)
+java.net.ServerSocket.implAccept(ServerSocket.java:530)
+java.net.ServerSocket.accept(ServerSocket.java:498)
+org.eclipse.jetty.server.bio.SocketConnector.accept(SocketConnector.java:112)
+org.eclipse.jetty.server.AbstractConnector$Acceptor.run(AbstractConnector.java:933)
+org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:599)
+org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:534)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[Signal Dispatcher,9,system] ******
+
+****** Thread[Iv2ExecutionSite: 0:0,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:735)
+java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:644)
+java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1137)
+org.voltdb.iv2.SiteTaskerQueue.take(SiteTaskerQueue.java:45)
+org.voltdb.iv2.Site.run(Site.java:506)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[RO MP Iv2ExecutionSite - 0:3 - 4,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:735)
+java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:644)
+java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1137)
+org.voltdb.iv2.SiteTaskerQueue.take(SiteTaskerQueue.java:45)
+org.voltdb.iv2.MpRoSite.run(MpRoSite.java:265)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[MpInitiator send,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:735)
+java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:644)
+java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1137)
+org.voltdb.iv2.MpInitiatorMailbox$2.run(MpInitiatorMailbox.java:72)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[Iv2ExecutionSite: 0:2,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:735)
+java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:644)
+java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1137)
+org.voltdb.iv2.SiteTaskerQueue.take(SiteTaskerQueue.java:45)
+org.voltdb.iv2.Site.run(Site.java:506)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[RO MP Iv2ExecutionSite - 0:3 - 3,5,main] ******
+sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:735)
+java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:644)
+java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1137)
+org.voltdb.iv2.SiteTaskerQueue.take(SiteTaskerQueue.java:45)
+org.voltdb.iv2.MpRoSite.run(MpRoSite.java:265)
+org.voltcore.utils.CoreUtils$1$1.run(CoreUtils.java:274)
+java.lang.Thread.run(Thread.java:744)
+
+****** Thread[AdminPort connection acceptor,5,main] ******
+sun.nio.ch.ServerSocketChannelImpl.accept0(Native Method)
+sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:241)
+org.voltdb.ClientInterface$ClientAcceptor.run(ClientInterface.java:382)
+java.lang.Thread.run(Thread.java:744)

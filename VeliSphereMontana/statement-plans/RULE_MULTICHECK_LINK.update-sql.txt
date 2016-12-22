@@ -1,0 +1,6 @@
+SQL: UPDATE RULE_MULTICHECK_LINK SET LINKID = ?, RULEID = ?, MULTICHECKID = ? WHERE (LINKID = ?) AND (RULEID = ?);
+PLAN:
+UPDATE
+ INDEX SCAN of "RULE_MULTICHECK_LINK" using its primary key index
+  uniquely match (LINKID = ?3) AND (RULEID = ?4)
+

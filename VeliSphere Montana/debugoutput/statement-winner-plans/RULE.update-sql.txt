@@ -1,6 +1,0 @@
-SQL: UPDATE RULE SET RULEID = ?, RULENAME = ?, STATE = ?, EXPIRED = ? WHERE (RULEID = ?);
-COST: 6.0
-PLAN:
-UPDATE
- INDEX SCAN of "RULE" using "SYS_IDX_SYS_PK_10087_10088" (unique-scan covering)
-

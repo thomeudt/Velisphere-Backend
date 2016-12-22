@@ -1,6 +1,0 @@
-SQL: INSERT INTO PROPERTY VALUES (?, ?, ?, ?);
-COST: 0.0
-PLAN:
-INSERT into "PROPERTY"
- MATERIALIZE TUPLE from parameters and/or literals
-

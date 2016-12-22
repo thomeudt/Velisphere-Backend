@@ -1,0 +1,6 @@
+SQL: UPDATE MESSAGE SET MESSAGEID = ?, EXPRESSIONCOUNT = ?, TIME_STAMP = ? WHERE (MESSAGEID = ?);
+PLAN:
+UPDATE
+ INDEX SCAN of "MESSAGE" using its primary key index
+  uniquely match (MESSAGEID = ?3)
+

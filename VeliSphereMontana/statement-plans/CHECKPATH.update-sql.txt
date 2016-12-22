@@ -1,0 +1,6 @@
+SQL: UPDATE CHECKPATH SET CHECKPATHID = ?, CHECKPATHNAME = ?, UIOBJECT = ?, OWNERID = ? WHERE (CHECKPATHID = ?);
+PLAN:
+UPDATE
+ INDEX SCAN of "CHECKPATH" using its primary key index
+  uniquely match (CHECKPATHID = ?4)
+

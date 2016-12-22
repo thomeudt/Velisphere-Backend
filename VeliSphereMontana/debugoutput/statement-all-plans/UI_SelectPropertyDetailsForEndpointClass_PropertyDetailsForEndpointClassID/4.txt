@@ -1,0 +1,5 @@
+ORDER BY (SORT)
+ NEST LOOP JOIN
+  SEQUENTIAL SCAN of "PROPERTYCLASS"
+  INDEX SCAN of "PROPERTY" using "PREPC" (unique-scan covering)
+

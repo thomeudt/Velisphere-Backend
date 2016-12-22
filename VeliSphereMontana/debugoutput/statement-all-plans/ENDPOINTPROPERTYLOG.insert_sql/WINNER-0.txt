@@ -1,0 +1,3 @@
+INSERT into "ENDPOINTPROPERTYLOG"
+ MATERIALIZE TUPLE from parameters and/or literals
+
